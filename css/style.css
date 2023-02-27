@@ -1,4 +1,18 @@
+html {
+  margin: 0;
+}
+
 body {
   background-color: black;
   color: green;
+  font-family: monospace;
+  margin: 0;
+  padding: 10px;
+}
+
+#date {
+  font-size: 12px;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
 }/*# sourceMappingURL=style.css.map */
