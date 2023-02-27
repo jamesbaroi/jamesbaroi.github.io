@@ -1,7 +1,5 @@
-/**Timestamp */
-var date = document.getElementById('date')
+const year = document.getElementById('year')
 
-/**Clock */
-setInterval(() => {
-  date.innerHTML = new Date()
-}, 1000)
+if (year) {
+  year.innerHTML = new Date().getFullYear()
+}
