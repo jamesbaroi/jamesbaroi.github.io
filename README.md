@@ -1,4 +1,4 @@
-Welcome to my personal site at <a href="https://jamesbaroi.com" target="_blank">jamesbaroi.com</a> currently under development.
+Welcome to my personal site at [jamesbaroi.com](jamesbaroi.com){target="_blank"} currently under development.
 
 <!--
 **jamesbaroi/jamesbaroi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
