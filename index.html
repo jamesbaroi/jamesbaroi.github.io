@@ -9,28 +9,99 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
-  <!-- Google tag (gtag.js)
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-4R2HPVTYL3');
-  </script>
-   -->
+  <script defer src="https://kit.fontawesome.com/5cda094748.js" crossorigin="anonymous"></script>
+  <!-- <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script> -->
+  <script defer src="/js/script.js"></script>
 </head>
 <body>
-  <div id="notice">Site under development</div>
+  <i id="btn-menu" class="fa-solid fa-bars"></i>
   <div id="profile">
-    <img id="pic" src="https://lh3.googleusercontent.com/a/AGNmyxb23bPOVgl_eLUucVidaoJCo35rlC2Mfvc_HRCsRQ=s288">
+    <img id="pic" src="https://lh3.googleusercontent.com/a/AGNmyxb23bPOVgl_eLUucVidaoJCo35rlC2Mfvc_HRCsRQ=s288" alt="profile picture of James A. Baroi's smiling face">
     <h1>James A. Baroi</h1>
-    <h3>Web Developer</h3>
+    <h3 class="color">Web Developer</h3>
   </div>
-
+  <div class="banner center">
+    <div>Making web dreams come true.</div>
+  </div>
+  <div id="notice">Site under development</div>
+  <div id="main" class="grid">
+    <div id="menu">
+      <div id="btn-home" class="menu-item" onclick="showHome()">Home</div>
+      <div id="btn-about" class="menu-item" onclick="showAbout()">About</div>
+      <div id="btn-service" class="menu-item" onclick="showService()">Service</div>
+      <div id="btn-contact" class="menu-item" onclick="showContact()">Contact</div>
+      <a href="/blog/index" target="_blank"><div id="btn-blog" class="menu-item">Blog <i class="fa-solid fa-up-right-from-square"></i></div></a>
+    </div>
+    <div id="content">
+      <div id="page-home">
+        <div class="card">
+          <div class="heading">Welcome</div>
+          <div class="text">Hello and welcome to the start of your dream website.</div>
+          <div class="text">Whether you need a <span class="color">static site</span> for yourself or your business, a <span class="color">dynamic web app</span>, project <span class="color">consultation</span>, instructive <span class="color">tutoring</span>, or simply a helping hand, you will find it here.</div>
+          <div class="text">Click on the menu icon (on mobile) to learn more. Get in touch with me directly at <a href="mailto:james.a.baroi@gmail.com" target="_blank">james.a.baroi@gmail.com <i class="fa-solid fa-up-right-from-square"></i></a>.</div>
+        </div>
+        <div class="card">
+          <div class="heading">For Students</div>
+          <div class="text">If you are seeking effective tutelage to create a site or starting your journey to become a web developer, get in touch for my live, one-on-one, <span class="color">online course</span> to significantly reduce time to proficiency.</div>
+        </div>
+        <div class="card">
+          <div class="list-title">Built on modern web principles</div>
+          <div class="list">
+            <div class="list-item">
+              <i class="fa-solid fa-angle-right color"></i>
+              <span class="list-heading">Mobile First</span>
+              <div class="list-text">Optimized to serve mobile phones.</div>
+            </div>
+            <div class="list-item">
+              <i class="fa-solid fa-angle-right color"></i>
+              <span class="list-heading">Responsive</span>
+              <div class="list-text">Designed to look good on any device.</div>
+            </div>
+            <div class="list-item">
+              <i class="fa-solid fa-angle-right color"></i>
+              <span class="list-heading">Pixel Perfect</span>
+              <div class="list-text">Styled with precision to meet exacting standards.</div>
+            </div>
+            <div class="list-item">
+              <i class="fa-solid fa-angle-right color"></i>
+              <span class="list-heading">Single Paginated</span>
+              <div class="list-text">Reduced server requests and cost.</div>
+            </div>
+            <div class="list-item">
+              <i class="fa-solid fa-angle-right color"></i>
+              <span class="list-heading">Safety Secured</span>
+              <div class="list-text">Using industry standard encryption.</div>
+            </div>
+            <div class="list-item">
+              <i class="fa-solid fa-angle-right color"></i>
+              <span class="list-heading">Legally Compliant</span>
+              <div class="list-text">DMCA, GDPR, CalOPPA, ADA, HIPAA, and more.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="page-about">
+        <div class="card">
+          <div class="heading">About</div>
+        </div>
+      </div>
+      <div id="page-service">
+        <div class="card">
+          <div class="heading">Service</div>
+        </div>
+      </div>
+      <div id="page-contact">
+        <div class="card">
+          <div class="heading">Contact</div>
+        </div>
+      </div>
+      <!-- <div id="dmca">
+        <a href="//www.dmca.com/Protection/Status.aspx?ID=40d46c06-9e3e-4d0b-a237-faa13985b568" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca-badge-w150-5x1-02.png?ID=40d46c06-9e3e-4d0b-a237-faa13985b568"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+      </div> -->
+    </div>
+  </div>
   <div id=copyright>
-    Copyright &#169; <span id="year"></span> James A. Baroi. All rights reserved. Contact james.a.baroi@gmail.com.
+    Copyright &#169; <span id="year"></span> James A. Baroi. All rights reserved.
   </div>
-  <script src="/js/script.js"></script>
 </body>
 </html>

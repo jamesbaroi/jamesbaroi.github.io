@@ -1,0 +1,54 @@
+html {
+  margin: 0;
+}
+
+body {
+  background-color: #F1F3F4;
+  color: #121218;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  height: 100%;
+  margin: 0;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+#top-bar {
+  align-items: center;
+  background-color: #202130;
+  color: #F1F3F4;
+  display: flex;
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: 600;
+  justify-content: center;
+  padding: 8px;
+}
+
+#pic {
+  border-radius: 50%;
+  box-sizing: border-box;
+  filter: contrast(1.2);
+  height: 30px;
+  margin: 0 8px;
+  width: 30px;
+  transition: 0.1s;
+}
+
+.card {
+  display: grid;
+  padding: 20px 20px 0;
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: 400;
+  padding: 16px 16px 0;
+}
+
+.text {
+  font-size: 16px;
+  padding: 16px 16px 0;
+  line-height: 32px;
+}/*# sourceMappingURL=blog.css.map */
