@@ -17,7 +17,9 @@
   <script defer src="/js/script.js"></script>
 </head>
 <body>
-  <canvas id="canvas"></canvas>
+  <div id="canvas-container">
+    <canvas id="canvas"></canvas>
+  </div>
   <div id="notice" class="color">Notice</div>
   <div id="profile">
     <img id="pic" src="https://lh3.googleusercontent.com/a/AGNmyxb23bPOVgl_eLUucVidaoJCo35rlC2Mfvc_HRCsRQ=s288" alt="profile picture of James A. Baroi's smiling face">
@@ -28,15 +30,15 @@
   <div id="main">
     <i id="btn-menu" class="fa-solid fa-bars" onclick="toggleMenu()"></i>
     <div id="menu">
-      <div id="btn-home" class="menu-item" onclick="showHome()">Home</div>
-      <div id="btn-about" class="menu-item" onclick="showAbout()">About</div>
-      <div id="btn-contact" class="menu-item" onclick="showContact()">Contact</div>
+      <a href="#home"><div class="menu-item" >Home</div></a>
+      <a href="#about"><div class="menu-item" >About</div></a>
+      <a href="#contact"><div class="menu-item" >Contact</div></a>
       <a href="/blog" target="_blank">
         <div class="menu-item">Blog <i class="fa-solid fa-up-right-from-square"></i></div>
       </a>
     </div>
     <div id="content">
-      <div id="page-home">
+      <div id="home">
         <div class="card">
           <div class="heading">Welcome</div>
           <div class="text">Hello and welcome to the start of your dream website.</div>
@@ -83,45 +85,23 @@
           </div>
         </div>
       </div>
-      <div id="page-about">
+      <div id="about">
         <div class="card">
           <div class="heading">About</div>
-          <div class="text">I am a full stack, javascript web developer. Read on to learn about my origin, philosophy, expertise, and mission.</div>
+          <div class="text">I am a full stack, javascript web developer. Read on to learn about my origin, expertise, and mission.</div>
           <div class="sub-heading bold color">Origin</div>
           <div class="text">I began my journey to become a self taught web developer a few years ago after having completed formal education in the natural sciences and gained years of experience teaching undergradutes in the classroom.</div>
           <div class="text">My initial desire to supplement my career as an aspiring scientist and educator, by learning computer programming, ignited a passion for web development that has materialized into this very web page and that continues to this day.</div>
-          <div class="sub-heading bold color">Philosophy</div>
-          <div class="text">Over the few years of developing my craft I have been able to abstract away some kernels of wisdom not only of the trade but also of myself that I apply to my work.</div>
-          <div class="text">
-            <i class="fa-solid fa-angle-right"></i>
-            <span class="list-heading bold">Tech Agnostic</span>
-            <div class="list-text">While I have personal preferences and expertise, I recognize that the needs of the project dictate the use of specific technologies.</div>
-            <div class="list-text">I am always eager to refresh my memory on that which I may have forgotten or quickly learn that which the project demands.</div>
-          </div>
-          <div class="text">
-            <i class="fa-solid fa-angle-right"></i>
-            <span class="list-heading bold">Under Optimized</span>
-            <div class="list-text">I can say with near certainty that this site could be improved. I can probably say the same about almost anything.</div>
-            <div class="list-text">I have learned to not over optimize but to launch a project when it is somewhere better than good enough but always less than perfect.</div>
-          </div>
-          <div class="text">
-            <i class="fa-solid fa-angle-right"></i>
-            <span class="list-heading bold">I Do Not Know</span>
-            <div class="list-text">Perhaps the most important aspect of my philosophy and my work is the recognition of my own ignorance. There is much I still do not know and have yet to learn about web development and programming in general and perhaps even more that I never will.</div>
-            <div class="list-text">I lament not having discovered my passion sooner but now that I have I am grateful and excited for the opportunites ahead.</div>
-          </div>
           <div class="sub-heading bold color">Expertise</div>
-          <div class="text">As a full stack javascript web developer I use javascript unavoidably on the front-end and preferably on the back-end with Node.js as the runtime environment, often with the Express.js framework and MySQL or MongoDB as the database.</div>
-          <div class="text">I have experimented with launching applications on Amazon Web Services (AWS) using EC2 instances.</div>
-          <div class="text">I have sampled front-end frameworks, namely Angular, React, and Bootstrap but prefer to do without them given the choice.</div>
-          <div class="text">I have some minimal experience tinkering with python and php.</div>
+          <div class="text">I use javascript unavoidably on the front-end and preferably on the back-end with Node.js as the runtime environment, often with the Express.js framework and MySQL or MongoDB as the database.</div>
+          <div class="text">I have launched applications on Amazon Web Services (AWS) using EC2 instances.</div>
+          <div class="text">I have sampled front-end frameworks, namely Angular, React, and Bootstrap but prefer to do without them.</div>
+          <div class="text">I have tinkered with python and php, C++ and C#.</div>
           <div class="sub-heading bold color">Mission</div>
           <div class="text">My mission is to build web applications.</div>
-          <div class="sub-heading bold color">Further Reading</div>
-          <div class="text">If you are not yet convinced of my utility to your project, check out my blog (coming soon!) for more insight into my skills and abilities, research, opinions, and character. Click on my contact page and get in touch.</div>
         </div>
       </div>
-      <div id="page-contact">
+      <div id="contact">
         <div class="card">
           <div class="heading">Contact</div>
           <div class="text">To engage my service, for inquiries, price quotes, or just to say hello, contact me directly (preferably by email) at:</div>
