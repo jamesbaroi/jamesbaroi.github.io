@@ -11,12 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
   <script defer src="https://kit.fontawesome.com/5cda094748.js" crossorigin="anonymous"></script>
   <!-- <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script> -->
+  <script defer src="/js/elements.js"></script>
+  <script defer src="/js/cookies.js"></script>
   <script defer src="/js/conway.js"></script>
   <script defer src="/js/script.js"></script>
 </head>
 <body>
   <canvas id="canvas"></canvas>
-  <!-- <div id="notice" class="color"></div> -->
+  <div id="notice" class="color">Notice</div>
   <div id="profile">
     <img id="pic" src="https://lh3.googleusercontent.com/a/AGNmyxb23bPOVgl_eLUucVidaoJCo35rlC2Mfvc_HRCsRQ=s288" alt="profile picture of James A. Baroi's smiling face">
     <div id="name">James A. Baroi</div>
@@ -24,7 +26,7 @@
   </div>
   <div id="motto">Making web dreams come true.</div>
   <div id="main">
-    <i id="btn-menu" class="fa-solid fa-bars" onclick="showMenu()"></i>
+    <i id="btn-menu" class="fa-solid fa-bars" onclick="toggleMenu()"></i>
     <div id="menu">
       <div id="btn-home" class="menu-item" onclick="showHome()">Home</div>
       <div id="btn-about" class="menu-item" onclick="showAbout()">About</div>
