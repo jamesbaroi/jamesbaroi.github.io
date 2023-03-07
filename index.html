@@ -141,15 +141,15 @@
         <a href="/policy/cookie-policy" target="_blank">Cookie Policy <i class="fa-solid fa-up-right-from-square"></i></a>
       </div>
     </div>
-    <div id="cookie" class="scroller">
-      <div class="card">
+    <div id="cookie">
+      <div class="card scroller">
         <div class="card-text">
           <div class="bold color">
             <i class="fa-solid fa-cookie-bite"></i>
             <span>Cookie Notice</span>
           </div>
           <small>
-            <span>By clicking "Accept" you agree to the use of all cookies on this site. Read this site's</span>
+            <span>By clicking "Accept all cookies" you agree to the use of all cookies on this site. Read this site's</span>
             <span class="keep-together">
               <a href="/policy/user-agreement" target="_blank">
                 <span class="policy">User Agreement <i class="fa-solid fa-up-right-from-square"></i></span>
@@ -167,7 +167,7 @@
                 <span class="policy">Cookie Policy <i class="fa-solid fa-up-right-from-square"></i></span>
               </a>
             </span>
-            <span>for more information. Change your preference anytime in Menu &#8250; Settings.</span>
+            <span>for more information.</span>
           </small>
           <small id="configure">
             <div>
@@ -176,11 +176,10 @@
               class="cookieConcentForm"
               name="cookieConcentForm"
               action="/"
-              onsubmit="return submitCookieForm()"
-              method="POST">
+              method="GET">
                 <legend>
                   <div>
-                    By clicking "Confirm" you agree to the use of the categories of cookies you select below.
+                    By clicking "Confirm selection" you agree to the use of the cookies you select below as well as all necessary cookies.
                   </div>
                 </legend>
                 <fieldset>
@@ -205,7 +204,7 @@
                   <div id="per-i" onclick="iPer()">
                     <i class="fa-solid fa-circle-info"></i>
                   </div>
-                  <label for="ckPer">Performance
+                  <label for="ckPer" class="label">Performance
                     <input type="checkbox"
                     id="ckPer"
                     name="ckPer">
@@ -219,7 +218,7 @@
                   <div id="fun-i" onclick="iFun()">
                     <i class="fa-solid fa-circle-info"></i>
                   </div>
-                  <label for="ckFun">Functional
+                  <label for="ckFun" class="label">Functional
                     <input type="checkbox"
                     id="ckFun"
                     name="ckFun">
@@ -233,7 +232,7 @@
                   <div id="tar-i" onclick="iTar()">
                     <i class="fa-solid fa-circle-info"></i>
                   </div>
-                  <label for="ckTar">Targeting
+                  <label for="ckTar" class="label">Targeting
                     <input type="checkbox"
                     id="ckTar"
                     name="ckTar">
@@ -243,18 +242,15 @@
                 <div id="tar-d">
                   These cookies are used to optimize advertisements.
                 </div>
-                <div id="cookie-config-btns">
-                  <button id="btn-cookie-cancel" type="reset" onclick="toggleCookieConfig()" type="submit">Cancel</button>
-                  <button id="btn-cookie-confirm" type="submit">Confirm</button>
-                </div>
+                <div id="btn-cookie-confirm" type="none" onclick="selectCookiesConfirmed()">Confirm selection</div>
               </form>
             </div>
           </small>
           <div id="cookie-btns">
-            <div id="btn-decline" onclick="declineCookies()">Decline</div>
             <div id="btn-configure" onclick="toggleCookieConfig()">Customize</div>
-            <div id="btn-accept">Accept</div>
+            <div id="btn-accept" onclick="allCookiesAccepted()">Accept all cookies</div>
           </div>
+          
         </div>
       </div>
     </div>
