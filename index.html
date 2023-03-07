@@ -13,7 +13,7 @@
   <!-- <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script> -->
   <script defer src="/public/js/elements.js"></script>
   <script defer src="/public/js/cookies.js"></script>
-  <script defer src="/public/js/conway.js"></script>
+  <!-- <script defer src="/public/js/conway.js"></script> -->
   <script defer src="/public/js/script.js"></script>
 </head>
 <body>
@@ -58,13 +58,10 @@
           <div class="text">Whether you need a <span class="color">static site</span> for yourself or your business, a <span class="color">dynamic web app</span>, project <span class="color">consultation</span>, instructive <span class="color">tutoring</span>, or simply a helping hand, I offer my service to realize your web dream.</div>
           <div class="text">Get in touch with me directly at <a class="color" href="mailto:james.a.baroi@gmail.com" target="_blank">james.a.baroi@gmail.com <i class="fa-solid fa-up-right-from-square"></i></a>.</div>
         </div>
-        <div class="frame">
+        <!-- <div class="frame">
           <div class="heading">For Students</div>
           <div class="text">If you are seeking tutoring to create a site or starting your journey to become a web developer, get in touch for my live, one-on-one, <span class="color">online course</span> to significantly reduce time to proficiency.</div>
-        </div>
-        <div class="frame">
-          
-        </div>
+        </div> -->
         <div class="frame">
           <div class="card-title bold color">
             <div>Built on modern web principles:</div>
@@ -144,7 +141,7 @@
         <a href="/policy/cookie-policy" target="_blank">Cookie Policy <i class="fa-solid fa-up-right-from-square"></i></a>
       </div>
     </div>
-    <div id="cookie">
+    <div id="cookie" class="scroller">
       <div class="card">
         <div class="card-text">
           <div class="bold color">
@@ -169,19 +166,93 @@
               <a href="/policy/cookie-policy" target="_blank">
                 <span class="policy">Cookie Policy <i class="fa-solid fa-up-right-from-square"></i></span>
               </a>
-              <span>.</span>
             </span>
-            <span>Change your preference anytime in Menu &#8250; Settings.</span>
+            <span>for more information. Change your preference anytime in Menu &#8250; Settings.</span>
           </small>
           <small id="configure">
             <div>
-              <div class="bold color">Configure</div>
-              <div></div>
+              <div class="bold color">Customize Cookies</div>
+              <form id="cookieConcentForm"
+              class="cookieConcentForm"
+              name="cookieConcentForm"
+              action="/"
+              onsubmit="return submitCookieForm()"
+              method="POST">
+                <legend>
+                  <div>
+                    By clicking "Confirm" you agree to the use of the categories of cookies you select below.
+                  </div>
+                </legend>
+                <fieldset>
+                  <div id="nec-i" onclick="iNec()">
+                    <i class="fa-solid fa-circle-info"></i>
+                  </div>
+                  <label for="ckNec">
+                    <span>Necessary</span>
+                    <input type="checkbox"
+                    id="ckNec"
+                    name="ckNec"
+                    checked
+                    disabled>
+                    <span id="disabledCookie">Always on</span>
+                    <span class="chNec"></span>
+                  </label>
+                </fieldset>
+                <div id="nec-d">
+                  These cookies are necessary for this site to function properly and cannot be disabled.
+                </div>
+                <fieldset>
+                  <div id="per-i" onclick="iPer()">
+                    <i class="fa-solid fa-circle-info"></i>
+                  </div>
+                  <label for="ckPer">Performance
+                    <input type="checkbox"
+                    id="ckPer"
+                    name="ckPer">
+                    <span class="chPer"></span>
+                  </label>
+                </fieldset>
+                <div id="per-d">
+                  These cookies are used to improve site performance.
+                </div>
+                <fieldset>
+                  <div id="fun-i" onclick="iFun()">
+                    <i class="fa-solid fa-circle-info"></i>
+                  </div>
+                  <label for="ckFun">Functional
+                    <input type="checkbox"
+                    id="ckFun"
+                    name="ckFun">
+                    <span class="chFun"></span>
+                  </label>
+                </fieldset>
+                <div id="fun-d">
+                  These cookies are used to provide additional functionality.
+                </div>
+                <fieldset>
+                  <div id="tar-i" onclick="iTar()">
+                    <i class="fa-solid fa-circle-info"></i>
+                  </div>
+                  <label for="ckTar">Targeting
+                    <input type="checkbox"
+                    id="ckTar"
+                    name="ckTar">
+                    <span class="chTar"></span>
+                  </label>
+                </fieldset>
+                <div id="tar-d">
+                  These cookies are used to optimize advertisements.
+                </div>
+                <div id="cookie-config-btns">
+                  <button id="btn-cookie-cancel" type="reset" onclick="toggleCookieConfig()" type="submit">Cancel</button>
+                  <button id="btn-cookie-confirm" type="submit">Confirm</button>
+                </div>
+              </form>
             </div>
           </small>
           <div id="cookie-btns">
             <div id="btn-decline" onclick="declineCookies()">Decline</div>
-            <div id="btn-configure" onclick="toggleCookieConfig()">Configure</div>
+            <div id="btn-configure" onclick="toggleCookieConfig()">Customize</div>
             <div id="btn-accept">Accept</div>
           </div>
         </div>
