@@ -40,7 +40,7 @@ header > section {
 }
 
 header > section > h1 {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 100;
 }
 
@@ -100,11 +100,10 @@ main {
 
 section {
   background-color: white;
-  padding-top: 40px;
 }
 
 .content {
-  padding: 20px 0;
+  padding: 40px 0;
 }
 
 h1,
@@ -134,38 +133,26 @@ p {
   padding: 0 0 40px;
 }
 
-.blue-card > h1 {
-  margin: 0;
-  padding: 40px 40px 0;
-}
-
+.blue-card > h1,
 .black-card > h1 {
-  margin: 0;
   padding: 40px 40px 0;
 }
 
-.blue-card > h3 {
+.blue-card > h2 {
   background-color: royalblue;
   color: white;
   margin: 0;
-  padding: 100px 0 60px;
+  padding: 80px 0 40px;
   text-align: center;
 }
 
-.black-card > h3 {
-  color: royalblue;
-  margin: auto;
-  padding: 80px 40px 40px;
-  text-align: center;
+.black-card > h1,
+.blue-card > h1 {
+  margin: 0 auto;
 }
 
-.blue-card > p {
-  margin: 0;
-  padding: 1em 40px 0;
-}
-
+.blue-card > p,
 .black-card > p {
-  margin: 0;
   padding: 1em 40px 0;
 }
 
@@ -176,7 +163,7 @@ ul {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   list-style-position: inside;
   margin: 0;
-  padding: 60px 40px;
+  padding: 100px 40px 60px;
 }
 
 ul > div {
@@ -232,25 +219,25 @@ footer {
 /**Responsive */
 @media only screen and (min-width: 752px) {
   .content {
-    margin: auto;
+    margin: 0 auto;
     min-width: 752px;
     width: -moz-fit-content;
     width: fit-content;
   }
   .blue-card > h1 {
-    margin: auto;
+    margin: 0 auto;
     max-width: 672px;
   }
   .blue-card > p {
-    margin: auto;
+    margin: 0 auto;
     max-width: 672px;
   }
   .black-card > h1 {
-    margin: auto;
+    margin: 0 auto;
     max-width: 672px;
   }
   .black-card > p {
-    margin: auto;
+    margin: 0 auto;
     max-width: 672px;
   }
 }/*# sourceMappingURL=style.css.map */

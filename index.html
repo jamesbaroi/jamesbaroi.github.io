@@ -71,7 +71,7 @@
     </section>
     <section>
       <div class="blue-card">
-        <h3>Built on modern web principles.</h3>
+        <h2>Built on modern web principles.</h2>
       </div>
       <div class="black-card">
         <ul>
@@ -226,17 +226,14 @@
 
     /**IMPLEMENT */
 
-    /**Show current copyright year */
-    if (document.getElementById('copyright-year')) {
-      showYear('copyright-year')
-    } else {
-      console.log('The element id "copyright-year" does not exist.')
-    }
+    showYear('copyright-year')
 
     scrollUp('scroll-btn')
 
-    /**Show scroll button */
-    window.onscroll = () => { showScroller('scroll-btn') }
+    window.onscroll = () => {
+
+      showScroller('scroll-btn')
+    }
   </script>
 </body>
 </html>
