@@ -8,6 +8,21 @@
   <link rel="stylesheet" href="/public/css/style.css">
   <script defer src="https://kit.fontawesome.com/5cda094748.js" crossorigin="anonymous"></script>
   <title>James A. Baroi - Web Developer</title>
+  <style>
+    /**Scroll button */
+    #scroll-btn {
+      background-color: royalblue;
+      border: 2px solid rgb(32, 33, 36);
+      border-radius: 50%;
+      color: rgb(32, 33, 36);
+      cursor: default;
+      opacity: 0;
+      padding: 10px 11px;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -136,13 +151,94 @@
           Take a moment to read this site's
           <a class="policy-color" href="/policy/user-agreement" target="_blank">User Agreement <small><i class="fa-solid fa-up-right-from-square"></i></small></a>,
           <a class="policy-color" href="/policy/privacy-policy" target="_blank">Privacy Policy <small><i class="fa-solid fa-up-right-from-square"></i></small></a>, and
-          <a class="policy-color" href="/policy/cookie-policy" target="_blank">Cookie Policy <small><i class="fa-solid fa-up-right-from-square"></i></small></a>.
+          <a class="policy-color" href="/policy/cookie-policy" target="_blank">Cookie Policy <small><i class="fa-solid fa-up-right-from-square"></i></small></a>
+          and be informed of your rights and responsibilities.
         </p>
       </div>
     </section>
+    <i id="scroll-btn" class="fa-solid fa-angle-up"></i>
   </main>
   <footer>
-    <small>Copyright &#169;2023 James A. Baroi. All rights reserved.</small>
+    <small>Copyright &#169;<span id="copyright-year"></span> James A. Baroi. All rights reserved.</small>
   </footer>
+  <script>
+    /**CREATE */
+
+    /**Show current year in element by id */
+    function showYear(elemId) {
+
+      let e = document.getElementById(elemId)
+
+      if (!e) {
+
+        console.log(`The element id "${elemId}" does not exist.`)
+        return
+      } else {
+
+        e.innerHTML = new Date().getFullYear()
+      }
+    }
+
+    /**Scroll up to top of page by element id */
+    function scrollUp(elemId) {
+
+      let e = document.getElementById(elemId)
+
+      if (!e) {
+
+        console.log(`The element id "${elemId}" does not exist.`)
+        return
+      } else {
+
+        e.addEventListener('click', () => {
+
+          document.body.scrollTop = 0 /**For safari */
+          document.documentElement.scrollTop = 0
+        })
+      }
+    }
+
+    /**Show scroll button */
+    function showScroller(btnId) {
+
+      let e = document.getElementById(btnId)
+
+      if (!e) {
+
+        console.log(`The element id "${btnId}" does not exist.`)
+        return
+      } else {
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+
+          e.style.opacity = 1
+          e.style.cursor = 'pointer'
+        } else {
+
+          e.style.opacity = 0
+          e.style.cursor = 'default'
+        }
+      }
+
+    }
+
+    /**IMPLEMENT */
+
+    /**Show current copyright year */
+    if (document.getElementById('copyright-year')) {
+      showYear('copyright-year')
+    } else {
+      console.log('The element id "copyright-year" does not exist.')
+    }
+
+    scrollUp('scroll-btn')
+
+    /**Show scroll button */
+    window.onscroll = () => { showScroller('scroll-btn') }
+
+
+  </script>
 </body>
 </html>

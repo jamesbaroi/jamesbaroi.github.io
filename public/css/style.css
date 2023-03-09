@@ -40,11 +40,12 @@ header > section {
 }
 
 header > section > h1 {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 100;
 }
 
 header > section > h3 {
+  font-size: 24px;
   font-weight: 700;
 }
 
@@ -56,13 +57,13 @@ img {
 }
 
 nav {
-  background-color: white;
+  background-color: rgb(32, 33, 36);
   position: sticky;
   top: 0;
 }
 
 nav > div {
-  background-color: white;
+  background-color: rgb(32, 33, 36);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -71,6 +72,7 @@ nav > div {
 }
 
 nav > div > a {
+  color: royalblue;
   cursor: pointer;
   flex: 1 1 0px;
   flex-grow: 1;
@@ -80,8 +82,9 @@ nav > div > a {
 
 @media (hover: hover) {
   nav > div > a:hover {
-    background-color: royalblue;
-    color: white;
+    background-color: white;
+    color: rgb(32, 33, 36);
+    font-weight: 700;
   }
 }
 #home,
@@ -104,8 +107,13 @@ section {
   padding: 20px 0;
 }
 
-h1, h4 {
+h1,
+h4 {
   padding: 0 40px;
+}
+
+h1 {
+  font-size: 32px;
 }
 
 p {
@@ -138,9 +146,9 @@ p {
 
 .blue-card > h3 {
   background-color: royalblue;
-  color: rgb(32, 33, 36);
+  color: white;
   margin: 0;
-  padding: 80px 0 60px;
+  padding: 100px 0 60px;
   text-align: center;
 }
 
