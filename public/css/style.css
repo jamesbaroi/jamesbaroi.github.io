@@ -93,7 +93,7 @@ nav > div > a {
 
 main {
   display: grid;
-  padding: 0 0 100vh;
+  padding: 0 0 40px;
 }
 
 section {
