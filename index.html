@@ -13,7 +13,7 @@
   <!-- <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script> -->
   <script defer src="/public/js/elements.js"></script>
   <script defer src="/public/js/cookies.js"></script>
-  <!-- <script defer src="/public/js/conway.js"></script> -->
+  <script defer src="/public/js/conway.js"></script>
   <script defer src="/public/js/script.js"></script>
 </head>
 <body>
@@ -207,7 +207,12 @@
                   <label for="ckPer" class="label">Performance
                     <input type="checkbox"
                     id="ckPer"
-                    name="ckPer">
+                    name="ckPer"
+                    onclick="onPer()">
+                    <span class="onOff">
+                      <span id="perOn">On</span>
+                      <span id="perOff">Off</span>
+                    </span>
                     <span class="chPer"></span>
                   </label>
                 </fieldset>
@@ -221,7 +226,12 @@
                   <label for="ckFun" class="label">Functional
                     <input type="checkbox"
                     id="ckFun"
-                    name="ckFun">
+                    name="ckFun"
+                    onclick="onFun()">
+                    <span class="onOff">
+                      <span id="funOn">On</span>
+                      <span id="funOff">Off</span>
+                    </span>
                     <span class="chFun"></span>
                   </label>
                 </fieldset>
@@ -235,7 +245,12 @@
                   <label for="ckTar" class="label">Targeting
                     <input type="checkbox"
                     id="ckTar"
-                    name="ckTar">
+                    name="ckTar"
+                    onclick="onTar()">
+                    <span class="onOff">
+                      <span id="tarOn">On</span>
+                      <span id="tarOff">Off</span>
+                    </span>
                     <span class="chTar"></span>
                   </label>
                 </fieldset>
