@@ -11,9 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
   <script defer src="https://kit.fontawesome.com/5cda094748.js" crossorigin="anonymous"></script>
   <!-- <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script> -->
-  <script defer src="/public/js/elements.js"></script>
   <script defer src="/public/js/cookies.js"></script>
-  <script defer src="/public/js/conway.js"></script>
+  <!-- <script defer src="/public/js/conway.js"></script> -->
   <script defer src="/public/js/script.js"></script>
 </head>
 <body>
@@ -29,14 +28,14 @@
     </div>
   </div>
   <div id="main">
-    <div id="conway">
-      <canvas id="canvas"></canvas>
-    </div>
-    <div id="notice">
+    <div id="header">
       <!-- <a class="color" href="https://www.jamesbaroi.com">jamesbaroi.com</a> -->
       <i class="fa-solid fa-triangle-exclamation color"></i>
       SITE UNDER DEVELOPMENT
       <i class="fa-solid fa-triangle-exclamation color"></i>
+    </div>
+    <div id="conway">
+      <canvas id="canvas"></canvas>
     </div>
     <div id="intro">
       <img id="pic" src="/public/img/profile.jpg" alt="Picture of James">
@@ -150,18 +149,6 @@
           </div>
           <small>
             <span>By clicking "Accept all cookies" you agree to the use of all cookies on this site. Read the</span>
-            <!-- <span class="keep-together">
-              <a href="/policy/user-agreement" target="_blank">
-                <span class="policy">User Agreement <i class="fa-solid fa-up-right-from-square"></i></span>
-              </a>
-              <span>,</span>
-            </span>
-            <span class="keep-together">
-              <a href="/policy/privacy-policy" target="_blank">
-                <span class="policy">Privacy Policy <i class="fa-solid fa-up-right-from-square"></i></span>
-              </a>
-              <span>, and</span>
-            </span> -->
             <span class="keep-together">
               <a href="/policy/cookie-policy" target="_blank">
                 <span class="policy">Cookie Policy <i class="fa-solid fa-up-right-from-square"></i></span>
@@ -179,7 +166,7 @@
               method="GET">
                 <legend>
                   <div>
-                    By clicking "Confirm selection" you agree to the use of the cookies you select below as well as all necessary cookies.
+                    By clicking "Confirm selection" you agree to the use of selected cookies below as well as necessary cookies.
                   </div>
                 </legend>
                 <fieldset>
@@ -265,7 +252,6 @@
             <div id="btn-configure" onclick="toggleCookieConfig()">Customize</div>
             <div id="btn-accept" onclick="allCookiesAccepted()">Accept all cookies</div>
           </div>
-          
         </div>
       </div>
     </div>
