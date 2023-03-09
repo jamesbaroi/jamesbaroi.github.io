@@ -165,13 +165,13 @@
     /**CREATE */
 
     /**Show current year in element by id */
-    function showYear(elemId) {
+    function showYear(eId) {
 
-      let e = document.getElementById(elemId)
+      let e = document.getElementById(eId)
 
       if (!e) {
 
-        console.log(`The element id "${elemId}" does not exist.`)
+        console.log(`The element id "${eId}" does not exist.`)
         return
       } else {
 
@@ -180,13 +180,13 @@
     }
 
     /**Scroll up to top of page by element id */
-    function scrollUp(elemId) {
+    function scrollUp(eId) {
 
-      let e = document.getElementById(elemId)
+      let e = document.getElementById(eId)
 
       if (!e) {
 
-        console.log(`The element id "${elemId}" does not exist.`)
+        console.log(`The element id "${eId}" does not exist.`)
         return
       } else {
 
@@ -199,13 +199,13 @@
     }
 
     /**Show scroll button */
-    function showScroller(btnId) {
+    function showScroller(eId) {
 
-      let e = document.getElementById(btnId)
+      let e = document.getElementById(eId)
 
       if (!e) {
 
-        console.log(`The element id "${btnId}" does not exist.`)
+        console.log(`The element id "${eId}" does not exist.`)
         return
       } else {
         if (
@@ -237,8 +237,6 @@
 
     /**Show scroll button */
     window.onscroll = () => { showScroller('scroll-btn') }
-
-
   </script>
 </body>
 </html>
