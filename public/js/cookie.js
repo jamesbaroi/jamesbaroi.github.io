@@ -20,18 +20,7 @@ function createCookie() {
     `
   })
 
-  cookie.style.cssText = `
-  background-color: rgb(32, 33, 36);
-  border-top: 1px solid royalblue;
-  color: white;
-  display: grid;
-  line-height: 2em;
-  padding: 8px 16px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-`
+
 
   footer[0].after(cookie)
 }

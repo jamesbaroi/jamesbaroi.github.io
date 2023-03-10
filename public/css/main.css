@@ -28,8 +28,6 @@ a[href^=mailto] {
 header {
   background-color: royalblue;
   color: rgb(210, 210, 210);
-  display: grid;
-  justify-content: center;
   min-height: 30vh;
   padding: 60px 0 20px;
   text-align: center;
@@ -77,22 +75,31 @@ nav > div > a {
   cursor: pointer;
   flex: 1 1 0px;
   flex-grow: 1;
-  padding: 1em 0;
+  font-weight: 700;
+  padding: 16px 0;
   text-align: center;
+  transition: 0.2s;
 }
 
 @media (hover: hover) {
   nav > div > a:hover {
     background-color: rgb(210, 210, 210);
     color: rgb(32, 33, 36);
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 8px 0;
   }
 }
 #home,
 #about,
 #contact,
-#policy {
+#projects {
   scroll-margin-top: 48px;
+}
+
+#policy {
+  padding: 40px 0 30vh;
+  text-align: center;
 }
 
 main {
@@ -139,14 +146,6 @@ p {
   padding: 0 0 40px;
 }
 
-.blue-card > h3 {
-  background-color: royalblue;
-  color: rgb(210, 210, 210);
-  margin: 0;
-  padding: 80px 0 40px;
-  text-align: center;
-}
-
 .black-card > h1,
 .blue-card > h1 {
   margin: 0 auto;
@@ -158,46 +157,15 @@ p {
   padding: 0 40px;
 }
 
-ul {
-  border-radius: 4px;
-  display: grid;
-  gap: 2em;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  list-style-position: inside;
-  margin: 0;
-  padding: 100px 40px 60px;
-}
-
-ul > div {
-  display: grid;
-  grid-template-rows: auto 1fr;
-}
-
-ul > div > p {
-  background-color: rgb(32, 33, 36);
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  color: rgb(210, 210, 210);
-  margin: 0;
-  padding: 0 1em 1em;
-}
-
-li {
-  background-color: rgb(32, 33, 36);
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  color: royalblue;
-  display: grid;
-  font-weight: 700;
-  margin: 0;
-  padding: 1em;
-}
-
 footer {
   background-color: rgb(32, 33, 36);
   box-sizing: border-box;
   color: royalblue;
-  padding: 1em 1em 100vh;
+  padding: 8px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   text-align: center;
 }
 
@@ -207,11 +175,13 @@ footer {
 
 .policy-color {
   color: hotpink;
+  transition: 0.2s;
 }
 
 @media (hover: hover) {
   .policy-color:hover {
     color: yellowgreen;
+    font-size: 16px;
   }
 }
 /**Responsive */
@@ -219,12 +189,13 @@ footer {
   .content {
     margin-left: auto;
     margin-right: auto;
-    min-width: 752px;
+    min-width: 672px;
     width: -moz-fit-content;
     width: fit-content;
   }
   .blue-card > h1,
-  .black-card > h1 {
+  .black-card > h1,
+  .black-card > h4 {
     margin: 0 auto;
     max-width: 672px;
   }
