@@ -57,3 +57,29 @@ function showScroller(eId) {
     }
   }
 }
+
+
+function hideHashLink() {
+
+  let a = document.getElementsByTagName('a')
+
+  Array.prototype.forEach.call(a, function(elem, index) {
+
+    let href = elem.getAttribute('href')
+
+    if (href && href.includes('#')) {
+
+      elem.addEventListener('click', function(e) {
+
+        e.preventDefault()
+
+        document.getElementById(href.replace(/#/g, '')).scrollIntoView({
+
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
+        })
+      })
+    }
+  })
+}
