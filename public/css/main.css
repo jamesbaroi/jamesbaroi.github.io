@@ -184,6 +184,24 @@ footer {
     font-size: 16px;
   }
 }
+/**Scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(32, 33, 36);
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: royalblue;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(32, 33, 36);
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
 /**Responsive */
 @media only screen and (min-width: 752px) {
   .content {
