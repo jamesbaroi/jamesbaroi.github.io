@@ -5,11 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="/public/css/main.css">
   <script defer src="https://kit.fontawesome.com/5cda094748.js" crossorigin="anonymous"></script>
   <title>James A. Baroi - Web Developer</title>
   <style>
-    /**Scroll button */
+    /**Set in-doc style for script dependency */
     #scroll-btn {
       background-color: royalblue;
       border: 2px solid rgb(32, 33, 36);
@@ -21,6 +21,7 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
+      z-index: 1;
     }
   </style>
 </head>
@@ -71,7 +72,7 @@
     </section>
     <section>
       <div class="blue-card">
-        <h2>Built on modern web principles.</h2>
+        <h3>Built on modern web principles.</h3>
       </div>
       <div class="black-card">
         <ul>
@@ -111,9 +112,8 @@
         </p>
         <h4>Origin</h4>
         <p>
-          I began my journey to become a web developer a few years ago after having
-          completed formal education in the <span class="color">natural sciences</span>
-          (MS Chemistry - CSU Frenso, BS Environmental Science - UC Riverside).
+          I began my journey to become a web developer a few years ago having completed
+          formal education in the <span class="color">natural sciences</span>.
         </p>
         <p>
           My initial desire to supplement my career by learning computer programming,
@@ -161,71 +161,9 @@
   <footer>
     <small>Copyright &#169;<span id="copyright-year"></span> James A. Baroi. All rights reserved.</small>
   </footer>
+  <script src="/public/js/main.js"></script>
   <script>
-    /**CREATE */
-
-    /**Show current year in element by id */
-    function showYear(eId) {
-
-      let e = document.getElementById(eId)
-
-      if (!e) {
-
-        console.log(`The element id "${eId}" does not exist.`)
-        return
-      } else {
-
-        e.innerHTML = new Date().getFullYear()
-      }
-    }
-
-    /**Scroll up to top of page by element id */
-    function scrollUp(eId) {
-
-      let e = document.getElementById(eId)
-
-      if (!e) {
-
-        console.log(`The element id "${eId}" does not exist.`)
-        return
-      } else {
-
-        e.addEventListener('click', () => {
-
-          document.body.scrollTop = 0 /**For safari */
-          document.documentElement.scrollTop = 0
-        })
-      }
-    }
-
-    /**Show scroll button */
-    function showScroller(eId) {
-
-      let e = document.getElementById(eId)
-
-      if (!e) {
-
-        console.log(`The element id "${eId}" does not exist.`)
-        return
-      } else {
-        if (
-          document.body.scrollTop > 200 ||
-          document.documentElement.scrollTop > 200
-        ) {
-
-          e.style.opacity = 1
-          e.style.cursor = 'pointer'
-        } else {
-
-          e.style.opacity = 0
-          e.style.cursor = 'default'
-        }
-      }
-
-    }
-
-    /**IMPLEMENT */
-
+    /**Implement in-doc main.js script dependent on in-doc css */
     showYear('copyright-year')
 
     scrollUp('scroll-btn')
@@ -235,5 +173,6 @@
       showScroller('scroll-btn')
     }
   </script>
+  <script src="/public/js/cookie.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+/**Landing page css -> no dependency */
 * {
   scroll-behavior: smooth !important;
 }
@@ -17,16 +18,16 @@ a {
 }
 
 a[href^=tel] {
-  color: white;
+  color: rgb(210, 210, 210);
 }
 
 a[href^=mailto] {
-  color: white;
+  color: rgb(210, 210, 210);
 }
 
 header {
   background-color: royalblue;
-  color: white;
+  color: rgb(210, 210, 210);
   display: grid;
   justify-content: center;
   min-height: 30vh;
@@ -50,7 +51,7 @@ header > section > h3 {
 }
 
 img {
-  border: 4px solid white;
+  border: 4px solid rgb(210, 210, 210);
   border-radius: 50%;
   height: 80px;
   width: 80px;
@@ -82,7 +83,7 @@ nav > div > a {
 
 @media (hover: hover) {
   nav > div > a:hover {
-    background-color: white;
+    background-color: rgb(210, 210, 210);
     color: rgb(32, 33, 36);
     font-weight: 700;
   }
@@ -99,7 +100,7 @@ main {
 }
 
 section {
-  background-color: white;
+  background-color: rgb(210, 210, 210);
 }
 
 .content {
@@ -107,7 +108,10 @@ section {
 }
 
 h1,
+h2,
+h3,
 h4 {
+  margin: 20px auto;
   padding: 0 40px;
 }
 
@@ -117,30 +121,27 @@ h1 {
 
 p {
   line-height: 2em;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 672px;
   padding: 0 40px;
 }
 
 .blue-card {
   background-color: royalblue;
-  color: white;
+  color: rgb(210, 210, 210);
   padding: 0 0 40px;
 }
 
 .black-card {
   background-color: rgb(32, 33, 36);
-  color: white;
+  color: rgb(210, 210, 210);
   padding: 0 0 40px;
 }
 
-.blue-card > h1,
-.black-card > h1 {
-  padding: 40px 40px 0;
-}
-
-.blue-card > h2 {
+.blue-card > h3 {
   background-color: royalblue;
-  color: white;
+  color: rgb(210, 210, 210);
   margin: 0;
   padding: 80px 0 40px;
   text-align: center;
@@ -149,11 +150,12 @@ p {
 .black-card > h1,
 .blue-card > h1 {
   margin: 0 auto;
+  padding: 60px 40px 0;
 }
 
 .blue-card > p,
 .black-card > p {
-  padding: 1em 40px 0;
+  padding: 0 40px;
 }
 
 ul {
@@ -175,7 +177,7 @@ ul > div > p {
   background-color: rgb(32, 33, 36);
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  color: white;
+  color: rgb(210, 210, 210);
   margin: 0;
   padding: 0 1em 1em;
 }
@@ -199,10 +201,6 @@ footer {
   text-align: center;
 }
 
-.bold {
-  font-weight: 700;
-}
-
 .color {
   color: royalblue;
 }
@@ -219,25 +217,21 @@ footer {
 /**Responsive */
 @media only screen and (min-width: 752px) {
   .content {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     min-width: 752px;
     width: -moz-fit-content;
     width: fit-content;
   }
-  .blue-card > h1 {
-    margin: 0 auto;
-    max-width: 672px;
-  }
-  .blue-card > p {
-    margin: 0 auto;
-    max-width: 672px;
-  }
+  .blue-card > h1,
   .black-card > h1 {
     margin: 0 auto;
     max-width: 672px;
   }
+  .blue-card > p,
   .black-card > p {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 672px;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */
