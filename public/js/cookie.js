@@ -1,32 +1,26 @@
 /**Create cookie */
 
-function createCookie(app) {
+function createCookie() {
 
-  let e = document.getElementById(app)
+  let footer = document.querySelectorAll('footer')
 
-  if(!e) {
+  let cookie = Object.assign(document.createElement('div'), {
+    id: 'cookie',
+    innerHTML: `
 
-    console.log(`The element with id "${app}" does not exist.`)
-  } else {
+    <div style="color:royalblue;">
+      <i class="fa-solid fa-cookie-bite"></i>
+      <span>Cookie Notice</span>
+    </div>
+    <small>
+      By clicking "Accept all cookies" you agree to
+      the use of all cookies on this site.
+    <small>
 
-    let cookie = Object.assign(document.createElement('div'), {
-      id: 'cookie',
-      innerHTML: `
-  
-      <div style="color:royalblue;">
-        <i class="fa-solid fa-cookie-bite"></i>
-        <span>Cookie Notice</span>
-      </div>
-      <small>
-        By clicking "Accept all cookies" you agree to
-        the use of all cookies on this site.
-      <small>
-  
-      `
-    })
+    `
+  })
 
-    e.after(cookie)
-  }
+  footer[0].after(cookie)
 }
 
-createCookie('app')
+createCookie()
