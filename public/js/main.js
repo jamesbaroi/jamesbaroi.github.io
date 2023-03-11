@@ -14,6 +14,47 @@ function showYear(eId) {
   }
 }
 
+/**Show drop-down menu */
+function toggleMenu(eId, tgClass) {
+
+  let e = document.getElementById(eId)
+
+  if (!e) {
+
+    console.log(`The element id ${eId} does not exist.`)
+    return
+  } else {
+    e.addEventListener('click', () => {
+      document.body.classList.toggle(tgClass)
+    })
+  }
+}
+
+/**Close menu on element click with exception */
+function closeMenu(eId, tgClass) {
+
+  let e = document.getElementById(eId)
+
+  if (!e) {
+
+    console.log(`The element id "${eId}" does not exist.`)
+    return
+  } else {
+
+    e.addEventListener('click', (e) => {
+      /**Do nothing if menu not shown or
+       * when menu icon/items clicked
+       */
+      if(!document.body.classList.contains(tgClass)
+        ) {
+        return
+      } else {
+        document.body.classList.toggle(tgClass)
+      }
+    })
+  }
+}
+
 /**Scroll up to top of page by element id */
 function scrollUp(eId) {
 
@@ -58,7 +99,7 @@ function showScroller(eId) {
   }
 }
 
-
+/**Hide #id scroll to links */
 function hideHashLink() {
 
   let a = document.getElementsByTagName('a')

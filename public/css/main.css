@@ -3,9 +3,16 @@
   scroll-behavior: smooth !important;
 }
 
+html {
+  margin: 0;
+}
+
 body {
   background-color: royalblue;
-  margin: 0;
+  margin-bottom: 0;
+  margin-left: calc(100vw - 100%);
+  margin-right: 0;
+  margin-top: 0;
   font-family: "Roboto";
   -webkit-text-size-adjust: none;
      -moz-text-size-adjust: none;
@@ -57,12 +64,15 @@ img {
 
 nav {
   background-color: rgb(32, 33, 36);
+  box-sizing: border-box;
+  display: none;
   position: sticky;
   top: 0;
 }
 
 nav > div {
   background-color: rgb(32, 33, 36);
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -71,6 +81,7 @@ nav > div {
 }
 
 nav > div > a {
+  box-sizing: border-box;
   color: royalblue;
   cursor: pointer;
   flex: 1 1 0px;
@@ -85,11 +96,82 @@ nav > div > a {
   nav > div > a:hover {
     background-color: rgb(210, 210, 210);
     color: rgb(32, 33, 36);
-    font-size: 24px;
-    font-weight: 400;
-    padding: 8px 0;
+    font-size: 18px;
+    padding: 14px 0;
+  }
+  nav > div > a:active {
+    background-color: royalblue;
+    color: rgb(32, 33, 36);
+    font-size: 18px;
+    padding: 14px 0;
   }
 }
+menu {
+  background-color: rgb(32, 33, 36);
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  top: 0;
+}
+
+menu > div {
+  display: grid;
+}
+
+menu > div > a {
+  color: royalblue;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px;
+}
+
+menu > div > a:hover {
+  background-color: rgb(210, 210, 210);
+  color: rgb(32, 33, 36);
+  font-size: 18px;
+  padding: 14.5px 16px;
+}
+
+menu > div > a:active {
+  background-color: royalblue;
+  color: rgb(32, 33, 36);
+  font-size: 18px;
+  padding: 14.5px 16px;
+}
+
+#menu-btn {
+  min-height: 51px;
+}
+
+#menu-icon {
+  background-color: rgb(32, 33, 36);
+  color: royalblue;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-top: auto;
+  padding: 16px;
+  z-index: 1;
+}
+
+@media (hover: hover) {
+  menu:hover #menu-icon {
+    color: rgb(210, 210, 210);
+  }
+}
+#menu-drop {
+  display: none;
+}
+
+#menu-drop > a {
+  border-top: 0.1px solid rgb(83, 83, 83);
+}
+
+.toggle-menu #menu-drop {
+  display: grid;
+}
+
 #home,
 #about,
 #contact,
@@ -98,6 +180,7 @@ nav > div > a {
 }
 
 #policy {
+  min-height: 100vh;
   padding: 40px 0;
   text-align: center;
 }
@@ -202,7 +285,15 @@ footer {
 }
 
 /**Responsive */
-@media only screen and (min-width: 752px) {
+@media only screen and (min-width: 480px) {
+  menu {
+    display: none;
+  }
+  nav {
+    display: block;
+  }
+}
+@media only screen and (min-width: 768px) {
   .content {
     margin-left: auto;
     margin-right: auto;

@@ -39,8 +39,7 @@
   </style>
 </head>
 <body>
-
-  <header>
+  <header id="header">
     <section>
       <img src="/public/img/profile.jpg" alt="picture of James">
       <h1>James A. Baroi</h1>
@@ -52,16 +51,26 @@
       </p>
     </section>
   </header>
-  <nav>
+  <nav id="nav">
     <div>
       <a href="#home"><small>Home</small></a>
       <a href="#about"><small>About</small></a>
-      <!-- <a href="#projects"><small>Projects</small></a> -->
       <a href="#contact"><small>Contact</small></a>
+      <a href="/projects" target="_blank"><small>Projects <i class="fa-solid fa-up-right-from-square"></i></small></a>
       <a href="/blog" target="_blank"><small>Blog <i class="fa-solid fa-up-right-from-square"></i></small></a>
     </div>
   </nav>
-  <main>
+  <menu id="menu">
+    <div id="menu-btn"><i id="menu-icon" class="fa-solid fa-bars"></i></div>
+    <div id="menu-drop">
+      <a id="home-btn" href="#home"><small>Home</small></a>
+      <a id="about-btn" href="#about"><small>About</small></a>
+      <a id="contact-btn" href="#contact"><small>Contact</small></a>
+      <a id="projects-btn" href="/projects" target="_blank"><small>Projects <i class="fa-solid fa-up-right-from-square"></i></small></a>
+      <a id="blog-btn" href="/blog" target="_blank"><small>Blog <i class="fa-solid fa-up-right-from-square"></i></small></a>
+    </div>
+  </menu>
+  <main id="main">
     <section>
       <div id="home" class="content">
         <h1>Welcome</h1>
@@ -125,18 +134,30 @@
     </section>
     <i id="scroll-btn" class="fa-solid fa-angle-up"></i>
   </main>
-  <footer>
+  <footer id="footer">
     <small>Copyright &#169;<span id="copyright-year"></span> James A. Baroi. All rights reserved.</small>
   </footer>
 
   <script src="/public/js/main.js"></script>
   <script>
 
-    hideHashLink()
-
     showYear('copyright-year')
 
+    toggleMenu('menu-btn', 'toggle-menu')
+
+    /**Click on element to close menu */
+    closeMenu('home-btn', 'toggle-menu')
+    closeMenu('about-btn', 'toggle-menu')
+    closeMenu('projects-btn', 'toggle-menu')
+    closeMenu('blog-btn', 'toggle-menu')
+    closeMenu('contact-btn', 'toggle-menu')
+    closeMenu('header', 'toggle-menu')
+    closeMenu('main', 'toggle-menu')
+    closeMenu('footer', 'toggle-menu')
+
     scrollUp('scroll-btn')
+
+    hideHashLink()
 
     window.onscroll = () => {
 
