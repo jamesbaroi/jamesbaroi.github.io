@@ -5,9 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>James A. Baroi - Web Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/public/css/main.css">
   <link rel="stylesheet" href="/public/css/cookie.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+  <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script>
   <script defer src="https://kit.fontawesome.com/5cda094748.js" crossorigin="anonymous"></script>
   <style>
     /**Set in-doc style for script dependency */
@@ -81,8 +84,8 @@
           simply a bit of help, I offer my service to realize your web dream.
         </p>
         <p>
-          Check out my sample <a class="color" href="/projects" target="_blank">projects <small><i class="fa-solid fa-up-right-from-square"></i></small></a>,
-          and read my <a class="color" href="/blog" target="_blank">blog <small><i class="fa-solid fa-up-right-from-square"></i></small></a>.
+          Check out my sample <a class="color keep-together" href="/projects" target="_blank">projects <small><i class="fa-solid fa-up-right-from-square"></i></small></a>,
+          and read my <a class="color keep-together" href="/blog" target="_blank">blog <small><i class="fa-solid fa-up-right-from-square"></i></small></a>.
         </p>
       </div>
     </section>
@@ -135,9 +138,9 @@
       </div>
       <div id="policy" class="black-card">
         <small>
-          <a class="policy-color" href="/policy/user-agreement" target="_blank">User Agreement <small><i class="fa-solid fa-up-right-from-square"></i></small></a> -
-          <a class="policy-color" href="/policy/privacy-policy" target="_blank">Privacy Policy <small><i class="fa-solid fa-up-right-from-square"></i></small></a> -
-          <a class="policy-color" href="/policy/cookie-policy" target="_blank">Cookie Policy <small><i class="fa-solid fa-up-right-from-square"></i></small></a>
+          <a class="policy-color keep-together" href="/policy/user-agreement" target="_blank">User Agreement <small><i class="fa-solid fa-up-right-from-square"></i></small></a> -
+          <a class="policy-color keep-together" href="/policy/privacy-policy" target="_blank">Privacy Policy <small><i class="fa-solid fa-up-right-from-square"></i></small></a> -
+          <a class="policy-color keep-together" href="/policy/cookie-policy" target="_blank">Cookie Policy <small><i class="fa-solid fa-up-right-from-square"></i></small></a>
         </small>
       </div>
     </section>
@@ -163,6 +166,7 @@
     closeClass('projects-btn', 'toggle-menu')
     closeClass('blog-btn', 'toggle-menu')
     closeClass('contact-btn', 'toggle-menu')
+    closeClass('cookie', 'toggle-menu')
     closeClass('header', 'toggle-menu')
     closeClass('main', 'toggle-menu')
     closeClass('footer', 'toggle-menu')
@@ -175,9 +179,6 @@
 
     /**Show scroll btn on scroll-down */
     window.onscroll = () => { showScroller('scroll-btn') }
-
-    /**Show cookie customizer on cookie policy notice */
-    toggleClass('cookie-btn-customize', 'toggle-cookie-customize')
   </script>
 </body>
 </html>

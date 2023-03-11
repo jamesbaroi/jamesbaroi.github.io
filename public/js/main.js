@@ -1,4 +1,7 @@
-/**Create main.js -> no dependency */
+/**[ CREATE ONLY ]
+ * [ NO IMPLEMENTATION ]
+ * [ NO DEPENDENCY]
+ * */
 /**Show current year in element by id */
 function showYear(eId) {
 
