@@ -159,10 +159,12 @@ p {
 
 footer {
   background-color: rgb(32, 33, 36);
+  border-top: 0.1px solid rgb(83, 83, 83);
   box-sizing: border-box;
   color: royalblue;
-  min-height: 100vh;
   padding: 8px 0;
+  position: sticky;
+  bottom: 0;
   text-align: center;
 }
 
