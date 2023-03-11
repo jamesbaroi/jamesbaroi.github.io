@@ -116,60 +116,61 @@ menu {
   top: 0;
 }
 
-menu > div {
-  display: grid;
-}
-
-menu > div > a {
-  color: royalblue;
-  font-size: 16px;
-  font-weight: 700;
-  padding: 16px;
-}
-
-menu > div > a:hover {
-  background-color: rgb(210, 210, 210);
-  color: rgb(32, 33, 36);
-  font-size: 18px;
-  padding: 14.5px 16px;
-}
-
-menu > div > a:active {
-  background-color: royalblue;
-  color: rgb(32, 33, 36);
-  font-size: 18px;
-  padding: 14.5px 16px;
-}
-
 #menu-btn {
+  border-bottom: 0.1px solid rgb(83, 83, 83);
+  display: flex;
+  justify-content: space-between;
   min-height: 51px;
+}
+
+#menu-btn > span {
+  color: rgb(210, 210, 210);
+  padding: 16px;
 }
 
 #menu-icon {
   background-color: rgb(32, 33, 36);
-  color: royalblue;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-top: auto;
+  color: rgb(210, 210, 210);
   padding: 16px;
   z-index: 1;
 }
 
 @media (hover: hover) {
   menu:hover #menu-icon {
-    color: rgb(210, 210, 210);
+    color: royalblue;
+  }
+  menu:hover #menu-btn > span {
+    color: royalblue;
   }
 }
 #menu-drop {
   display: none;
 }
 
-#menu-drop > a {
-  border-top: 0.1px solid rgb(83, 83, 83);
-}
-
 .toggle-menu #menu-drop {
   display: grid;
+}
+
+#menu-drop > a {
+  border-bottom: 0.1px solid rgb(83, 83, 83);
+  color: royalblue;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px;
+}
+
+#menu-drop > a:hover {
+  background-color: rgb(210, 210, 210);
+  color: rgb(32, 33, 36);
+  font-size: 18px;
+  padding: 14.5px 16px;
+}
+
+#menu-drop > a:active {
+  background-color: royalblue;
+  color: rgb(32, 33, 36);
+  font-size: 18px;
+  padding: 14.5px 16px;
 }
 
 #home,
