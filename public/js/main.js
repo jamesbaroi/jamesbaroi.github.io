@@ -14,8 +14,8 @@ function showYear(eId) {
   }
 }
 
-/**Show drop-down menu */
-function toggleMenu(eId, tgClass) {
+/**Toggle css class */
+function toggleClass(eId, tgClass) {
 
   let e = document.getElementById(eId)
 
@@ -30,8 +30,8 @@ function toggleMenu(eId, tgClass) {
   }
 }
 
-/**Close menu on element click with exception */
-function closeMenu(eId, tgClass) {
+/**Close css class */
+function closeClass(eId, tgClass) {
 
   let e = document.getElementById(eId)
 
@@ -124,4 +124,3 @@ function hideHashLink() {
     }
   })
 }
-

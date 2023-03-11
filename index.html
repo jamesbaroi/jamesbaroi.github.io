@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>James A. Baroi - Web Developer</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/public/css/main.css">
   <link rel="stylesheet" href="/public/css/cookie.css">
   <script defer src="https://kit.fontawesome.com/5cda094748.js" crossorigin="anonymous"></script>
-  <title>James A. Baroi - Web Developer</title>
   <style>
     /**Set in-doc style for script dependency */
     #scroll-btn {
@@ -148,31 +148,36 @@
   </footer>
 
   <script src="/public/js/main.js"></script>
+  <script src="/public/js/cookie.js"></script>
   <script>
 
+    /**Show current year as copyright */
     showYear('copyright-year')
 
-    toggleMenu('menu-btn', 'toggle-menu')
+    /**Show drop-down menu */
+    toggleClass('menu-btn', 'toggle-menu')
 
-    /**Click on element to close menu */
-    closeMenu('home-btn', 'toggle-menu')
-    closeMenu('about-btn', 'toggle-menu')
-    closeMenu('projects-btn', 'toggle-menu')
-    closeMenu('blog-btn', 'toggle-menu')
-    closeMenu('contact-btn', 'toggle-menu')
-    closeMenu('header', 'toggle-menu')
-    closeMenu('main', 'toggle-menu')
-    closeMenu('footer', 'toggle-menu')
+    /**Click on element id to close toggle-menu class */
+    closeClass('home-btn', 'toggle-menu')
+    closeClass('about-btn', 'toggle-menu')
+    closeClass('projects-btn', 'toggle-menu')
+    closeClass('blog-btn', 'toggle-menu')
+    closeClass('contact-btn', 'toggle-menu')
+    closeClass('header', 'toggle-menu')
+    closeClass('main', 'toggle-menu')
+    closeClass('footer', 'toggle-menu')
 
+    /**Scroll to top of page */
     scrollUp('scroll-btn')
 
+    /**Hide scroll to #links */
     hideHashLink()
 
-    window.onscroll = () => {
+    /**Show scroll btn on scroll-down */
+    window.onscroll = () => { showScroller('scroll-btn') }
 
-      showScroller('scroll-btn')
-    }
+    /**Show cookie customizer on cookie policy notice */
+    toggleClass('cookie-btn-customize', 'toggle-cookie-customize')
   </script>
-  <script src="/public/js/cookie.js"></script>
 </body>
 </html>

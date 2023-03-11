@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  background-color: royalblue;
+  background-color: rgb(32, 33, 36);
   margin-bottom: 0;
   margin-left: calc(100vw - 100%);
   margin-right: 0;
@@ -243,12 +243,9 @@ p {
 
 footer {
   background-color: rgb(32, 33, 36);
-  border-top: 0.1px solid rgb(83, 83, 83);
   box-sizing: border-box;
   color: royalblue;
   padding: 8px 0;
-  position: sticky;
-  bottom: 0;
   text-align: center;
 }
 
@@ -269,15 +266,15 @@ footer {
 }
 /**Scrollbar */
 ::-webkit-scrollbar-thumb {
-  background-color: royalblue;
+  background-color: rgb(32, 33, 36);
   border-radius: 1px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-track {
   background-color: rgb(32, 33, 36);
 }
 
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track:hover {
   background-color: royalblue;
 }
 
