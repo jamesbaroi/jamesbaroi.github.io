@@ -21,7 +21,7 @@ body {
 }
 
 a {
-  color: black;
+  color: rgb(32, 33, 36);
   text-decoration: none;
 }
 
@@ -261,9 +261,28 @@ footer {
   background-color: rgb(32, 33, 36);
   box-sizing: border-box;
   color: royalblue;
-  padding: 8px 0;
-  position: sticky;
+  margin-left: calc(100vw - 100%);
+  position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#thanks {
+  background-color: royalblue;
+  color: rgb(210, 210, 210);
+  font-size: 32px;
+  font-weight: 100;
+  max-width: 100%;
+  padding: 20vh 0;
+  text-align: center;
+  width: 100%;
+}
+
+#copyright {
+  font-size: small;
+  margin: auto;
+  padding: 8px 0;
   text-align: center;
 }
 
