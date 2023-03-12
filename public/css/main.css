@@ -261,11 +261,8 @@ footer {
   background-color: rgb(32, 33, 36);
   box-sizing: border-box;
   color: royalblue;
-  margin-left: calc(100vw - 100%);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: relative;
+  z-index: 3;
 }
 
 #thanks {
@@ -274,9 +271,12 @@ footer {
   font-size: 32px;
   font-weight: 100;
   max-width: 100%;
-  padding: 20vh 0;
+  padding: 40px 0;
+  position: sticky;
+  top: 52px;
   text-align: center;
   width: 100%;
+  z-index: 3;
 }
 
 #copyright {
