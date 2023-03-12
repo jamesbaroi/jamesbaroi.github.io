@@ -35,13 +35,16 @@ a[href^=mailto] {
 header {
   background-color: royalblue;
   color: rgb(210, 210, 210);
-  min-height: 30vh;
   padding: 100px 0 20px;
   text-align: center;
 }
 
 header > section {
+  align-items: end;
   background-color: royalblue;
+  display: grid;
+  gap: 20px;
+  justify-content: center;
   margin: auto;
 }
 
@@ -60,6 +63,7 @@ header > section > h3 {
 }
 
 header > section > p {
+  margin: auto;
   position: relative;
   z-index: 1;
 }
@@ -68,6 +72,7 @@ img {
   border: 4px solid rgb(210, 210, 210);
   border-radius: 50%;
   height: 80px;
+  margin: auto;
   position: relative;
   width: 80px;
   z-index: 1;
@@ -191,19 +196,18 @@ menu {
 
 #home,
 #about,
-#contact,
-#projects {
+#contact {
   scroll-margin-top: 48px;
 }
 
 #policy {
-  padding: 40px 0;
   text-align: center;
 }
 
 main {
   display: grid;
   min-height: 100vh;
+  padding-bottom: 100vh;
   position: relative;
   z-index: 1;
 }
@@ -213,6 +217,8 @@ section {
 }
 
 .content {
+  background-color: rgb(210, 210, 210);
+  margin: auto;
   padding: 40px 0;
 }
 
@@ -220,7 +226,8 @@ h1,
 h2,
 h3,
 h4 {
-  margin: 20px auto;
+  margin: auto;
+  max-width: 672px;
   padding: 0 40px;
 }
 
@@ -236,27 +243,18 @@ p {
   padding: 0 40px;
 }
 
+.black-card,
 .blue-card {
-  background-color: royalblue;
   color: rgb(210, 210, 210);
-  padding: 0 0 40px;
+  padding: 40px 0;
 }
 
 .black-card {
   background-color: rgb(32, 33, 36);
-  color: rgb(210, 210, 210);
-  padding: 0 0 40px;
 }
 
-.black-card > h1,
-.blue-card > h1 {
-  margin: 0 auto;
-  padding: 60px 40px 0;
-}
-
-.blue-card > p,
-.black-card > p {
-  padding: 0 40px;
+.blue-card {
+  background-color: royalblue;
 }
 
 footer {
@@ -264,6 +262,8 @@ footer {
   box-sizing: border-box;
   color: royalblue;
   padding: 8px 0;
+  position: sticky;
+  bottom: 0;
   text-align: center;
 }
 
@@ -312,26 +312,5 @@ footer {
   }
   nav {
     display: block;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .content {
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 672px;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-  .blue-card > h1,
-  .black-card > h1,
-  .black-card > h4 {
-    margin: 0 auto;
-    max-width: 672px;
-  }
-  .blue-card > p,
-  .black-card > p {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 672px;
   }
 }/*# sourceMappingURL=main.css.map */
