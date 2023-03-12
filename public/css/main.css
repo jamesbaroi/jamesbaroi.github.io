@@ -13,6 +13,7 @@ body {
   margin-left: calc(100vw - 100%);
   margin-right: 0;
   margin-top: 0;
+  padding-bottom: 100vh;
   font-family: "Roboto";
   -webkit-text-size-adjust: none;
      -moz-text-size-adjust: none;
@@ -207,7 +208,6 @@ menu {
 main {
   display: grid;
   min-height: 100vh;
-  padding-bottom: 100vh;
   position: relative;
   z-index: 1;
 }
