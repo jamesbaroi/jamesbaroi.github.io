@@ -26,16 +26,16 @@ a {
 }
 
 a[href^=tel] {
-  color: rgb(210, 210, 210);
+  color: white;
 }
 
 a[href^=mailto] {
-  color: rgb(210, 210, 210);
+  color: white;
 }
 
 header {
   background-color: royalblue;
-  color: rgb(210, 210, 210);
+  color: white;
   padding: 100px 0 20px;
   text-align: center;
 }
@@ -70,7 +70,7 @@ header > section > p {
 }
 
 img {
-  border: 4px solid rgb(210, 210, 210);
+  border: 4px solid white;
   border-radius: 50%;
   height: 80px;
   margin: auto;
@@ -112,7 +112,7 @@ nav > div > a {
 
 @media (hover: hover) {
   nav > div > a:hover {
-    background-color: rgb(210, 210, 210);
+    background-color: white;
     color: rgb(32, 33, 36);
     font-size: 18px;
     padding: 14px 0;
@@ -146,13 +146,13 @@ menu {
 }
 
 #menu-btn > span {
-  color: rgb(210, 210, 210);
+  color: white;
   padding: 16px;
 }
 
 #menu-icon {
   background-color: rgb(32, 33, 36);
-  color: rgb(210, 210, 210);
+  color: white;
   padding: 16px;
   z-index: 1;
 }
@@ -182,7 +182,7 @@ menu {
 }
 
 #menu-drop > a:hover {
-  background-color: rgb(210, 210, 210);
+  background-color: white;
   color: rgb(32, 33, 36);
   font-size: 18px;
   padding: 14.5px 16px;
@@ -213,11 +213,11 @@ main {
 }
 
 section {
-  background-color: rgb(210, 210, 210);
+  background-color: white;
 }
 
 .content {
-  background-color: rgb(210, 210, 210);
+  background-color: white;
   margin: auto;
   padding: 40px 0;
 }
@@ -245,7 +245,7 @@ p {
 
 .black-card,
 .blue-card {
-  color: rgb(210, 210, 210);
+  color: white;
   padding: 40px 0;
 }
 
@@ -267,7 +267,7 @@ footer {
 
 #thanks {
   background-color: royalblue;
-  color: rgb(210, 210, 210);
+  color: white;
   font-size: 32px;
   font-weight: 100;
   max-width: 100%;

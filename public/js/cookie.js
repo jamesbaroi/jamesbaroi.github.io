@@ -15,8 +15,6 @@ function activateGtag() {
 
   gtag('js', new Date())
   gtag('config', 'G-4R2HPVTYL3')
-
-  console.log('gtag activated')
 }
 
 /**Toggle cookie css class */
@@ -137,12 +135,6 @@ function cookieDecline(eId) {
 
     e.addEventListener('click', () => {
 
-      /**Set necessary cookie = true */
-      setCookie('ckNec', 'true', 365)
-
-      /**Set hide notice cookie = false */
-      setCookie('ckHid', 'true', 1)
-
       /**Hide cookie notice */
       document.getElementById('cookie').style.display = 'none'
     })
@@ -209,7 +201,6 @@ function cookieSelect(eId, form, per, fun, tar) {
         /**Set functional cookie = true */
         setCookie('ckFun', 'true', 365)
 
-        activateTheme()
       } else {
 
         setCookie('ckFun', 'true', 0)
