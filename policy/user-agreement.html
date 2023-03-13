@@ -4,19 +4,89 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+  <script defer src="https://kit.fontawesome.com/5cda094748.js" crossorigin="anonymous"></script>
   <title>User Agreement</title>
   <style>
     body {
+      background-color: rgb(210, 210, 210);;
       font-family: 'Roboto';
+      line-height: 2.5em;
+      margin: auto;
+      max-width: 672px;
+      padding: 40px 40px 100vh;
+    }
+    a {
+      color: royalblue;
+      text-decoration: none;
     }
     h1 {
       font-weight: 300;
+      max-width: 672px;
+    }
+    h4 {
+      font-weight: 400;
+      max-width: 672px;
+    }
+    p {
+      font-size: 16px;
+      margin: 0;
+    }
+    .indent::first-letter {
+      margin-left: 32px;
+    }
+    .keep-together {
+      display: inline-block;
+      word-break: keep-all!important;
+    }
+    .center {
+      text-align: center;
+    }
+    #update {
+      background-color: rgb(210, 210, 210);
+      border-top: 0.1px solid rgb(83, 83, 83);
+      line-height: 1em;
+      padding: 1em;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
   </style>
 </head>
 <body>
-  <h1>User Agreement</h1>
-  <p>Coming soon!</p>
+  <h1 class="center">User Agreement</h1>
+  <h4 class="center">jamesbaroi.com</h4>
+  <p class="indent">
+    By continuing to use this site you acknowledge that
+    you <span class="keep-together">(1) have</span>
+    read and understood this site's
+    <a class="keep-together" href="/policy/privacy-policy" target="_blank">
+      Privacy Policy
+      <small><i class="fa-solid fa-up-right-from-square"></i></small>
+    </a>
+    and
+    <a class="keep-together" href="/policy/cookie-policy" target="_blank">
+      Cookie Policy
+      <small><i class="fa-solid fa-up-right-from-square"></i></small>
+    </a>,
+    <span class="keep-together">(2) have</span> read, understood, and agreed
+    to the terms and conditions of this User Agreement, and
+    <span class="keep-together">(3) do</span> not and will not hold this site
+    or its owner or owners to be legally liable for any negative consequence
+    incurred as a result of your use of this site or any other site or server
+    that can be accessed from this site.
+  </p>
+  <p class="indent">
+    This User Agreement is subject to change at any time for any reason without
+    notice. Any change to this User Agreement is applicable from the moment the
+    change has been applied to and made available through this document.
+  </p>
+  <div id="update" class="center">
+    <small>This document was last updated on March 12, 2023.</small>
+  </div>
 </body>
 </html>
