@@ -288,6 +288,10 @@ footer {
   text-align: center;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .color {
   color: royalblue;
 }
@@ -299,7 +303,7 @@ footer {
 
 @media (hover: hover) {
   .policy-color:hover {
-    color: yellowgreen;
+    color: royalblue;
     font-size: 16px;
   }
 }
