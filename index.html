@@ -153,7 +153,7 @@
     /**Show drop-down menu */
     toggleClass('menu-btn', 'toggle-menu')
 
-    /**Click on element id to close toggle-menu class */
+    /**Close toggle-menu class on element id click */
     closeClass('home-btn', 'toggle-menu')
     closeClass('about-btn', 'toggle-menu')
     closeClass('projects-btn', 'toggle-menu')
@@ -163,6 +163,13 @@
     closeClass('header', 'toggle-menu')
     closeClass('main', 'toggle-menu')
     closeClass('footer', 'toggle-menu')
+
+    /**Close toggle-cookie-customize class on element id click */
+    closeCookieClass('menu', 'toggle-cookie-customize')
+    closeCookieClass('nav', 'toggle-cookie-customize')
+    closeCookieClass('header', 'toggle-cookie-customize')
+    closeCookieClass('main', 'toggle-cookie-customize')
+    closeCookieClass('footer', 'toggle-cookie-customize')
 
     /**Scroll to top of page */
     scrollUp('scroll-btn')

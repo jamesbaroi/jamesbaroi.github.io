@@ -369,13 +369,6 @@ toggleCookieClass('ckPer', 'toggle-per-onOff')
 toggleCookieClass('ckFun', 'toggle-fun-onOff')
 toggleCookieClass('ckTar', 'toggle-tar-onOff')
 
-/**Close toggle-cookie-customize class on element id click */
-closeCookieClass('menu', 'toggle-cookie-customize')
-closeCookieClass('nav', 'toggle-cookie-customize')
-closeCookieClass('header', 'toggle-cookie-customize')
-closeCookieClass('main', 'toggle-cookie-customize')
-closeCookieClass('footer', 'toggle-cookie-customize')
-
 /**Decline all cookies */
 cookieDecline('cookie-btn-decline')
 
