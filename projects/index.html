@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>J. A. Baroi's Projects</title>
+  <link rel="stylesheet" href="/public/css/projects.css">
   <link rel="stylesheet" href="/public/css/cookie.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,46 +19,7 @@
   <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script>
   <script defer src="https://kit.fontawesome.com/5cda094748.js" crossorigin="anonymous"></script>
   <style>
-    body {
-      font-family: 'Roboto';
-      margin: 0;
-      padding: 0;
-      text-size-adjust: none;
-    }
-    a {
-      color: unset;
-      text-decoration: none;
-    }
-    header {
-      background-color: royalblue;
-      color: white;
-      font-weight: 300;
-      padding: 1em;
-      text-align: center;
-    }
-    main {
-      background-color: white;
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      grid-auto-rows: min-content;
-      padding: 20px;
-    }
-    section {
-      border: 0.1px solid rgb(32, 33, 36);
-      border-radius: 4px;
-    }
-    h1 {
-      font-weight: 100;
-    }
-    h1, h4 {
-      margin: 0;
-      padding: 20px;
-    }
-    p {
-      margin: 0;
-      padding: 20px;
-    }
+
   </style>
 </head>
 <body>
@@ -66,6 +28,10 @@
   </header>
   <main id="main">
     <h1>Coming soon!</h1>
+    <section id="newest-container">
+      <div id="newest"></div>
+    </section>
+    <section id="projects"></section>
   </main>
   <footer></footer>
   <script src="/public/js/cookie.js"></script>
@@ -75,59 +41,121 @@
     closeCookieClass('header', 'toggle-cookie-customize')
     closeCookieClass('main', 'toggle-cookie-customize')
 
+
+
     /**Render json */
     const render = (data) => {
 
-      for (let i in data) {
+      /**Render newest project */
 
-        /**Get elements */
-        const main = document.getElementById('main')
+      /**Get projects container */
+      const newest = document.getElementById('newest')
 
-        /**Create elements */
-        const section = document.createElement('section')
-        const title = document.createElement('h1')
-        const subtitle = document.createElement('h4')
-        const category = document.createElement('div')
-        const description = document.createElement('p')
-        const url = document.createElement('a')
+      /**Create project elements */
+      let section = document.createElement('section')
+      let title = document.createElement('h1')
+      let image = document.createElement('img')
+      let subtitle = document.createElement('h4')
+      let description = document.createElement('p')
+      let tag = document.createElement('div')
+      let url = document.createElement('a')
+
+      /**Set element attributes */
+      title.setAttribute('style',
+        `
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        background-color:${data[data.length - 1].style.backgroundColor};
+        color:${data[data.length - 1].style.color}
+        `
+      )
+
+      url.setAttribute('href', data[data.length - 1].url)
+      url.setAttribute('target', '_blank')
+      url.setAttribute('class', 'a-active')
+
+      image.setAttribute('src', data[data.length - 1].img)
+      image.setAttribute('alt', data[data.length - 1].alt)
+      image.setAttribute('onerror', 'this.style.display="none"')
+      image.setAttribute('style', 'border: 0;')
+
+      tag.setAttribute('style',
+        `
+        color: magenta;
+        font-weight: bold;
+        padding: 0 20px 20px;
+        text-align: right;
+        `
+      )
+
+      /**Create data */
+      title.innerHTML = data[data.length - 1].title
+      subtitle.innerHTML = data[data.length - 1].subtitle
+      description.innerHTML = data[data.length - 1].description
+      tag.innerHTML = 'NEW'
+
+      /**Append elements */
+      section.append(title)
+      section.append(image)
+      section.append(subtitle)
+      section.append(description)
+      section.append(tag)
+
+      /**Append project as link */
+      url.append(section)
+
+      newest.append(url)
+
+      /**Reverse iterate all except newest project */
+      for (var i = data.length - 2; i >= 0; i--) {
+
+        /**Get projects container */
+        const projects = document.getElementById('projects')
+
+        /**Create project elements */
+        let section = document.createElement('section')
+        let title = document.createElement('h1')
+        let image = document.createElement('img')
+        let subtitle = document.createElement('h4')
+        let description = document.createElement('p')
+        let url = document.createElement('a')
 
         /**Set element attributes */
         title.setAttribute('style',
           `
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px;
           background-color:${data[i].style.backgroundColor};
           color:${data[i].style.color}
           `
         )
 
-        category.setAttribute('style',
-          `
-          font-size: small;
-          font-weight: bold;
-          padding: 0 20px;
-          `
-        )
-
         url.setAttribute('href', data[i].url)
         url.setAttribute('target', '_blank')
+        url.setAttribute('class', 'a-active')
+
+        image.setAttribute('src', data[i].img)
+        image.setAttribute('alt', data[i].alt)
+        image.setAttribute('onerror', 'this.style.display="none"')
 
         /**Create data */
         title.innerHTML = data[i].title
         subtitle.innerHTML = data[i].subtitle
-        category.innerHTML = data[i].category
         description.innerHTML = data[i].description
 
         /**Append elements */
         section.append(title)
+        section.append(image)
         section.append(subtitle)
-        section.append(category)
         section.append(description)
 
+        /**Append project as link */
         url.append(section)
 
-        main.append(url)
+        /**Append project link to container */
+        projects.append(url)
       }
     }
-
 
     /**Fetch json */
     const fetchJson = () => {
@@ -138,6 +166,8 @@
     }
 
     // fetchJson()
+
+
   </script>
 </body>
 </html>

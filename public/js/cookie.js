@@ -261,11 +261,11 @@ const createCookie = () => {
               By clicking "Confirm" you consent to the use of the cookies selected below.
             </div>
           </legend>
-          <fieldset>
+          <fieldset class="cookie-fieldset">
             <div id="nec-i">
               <i class="fa-solid fa-circle-info"></i>
             </div>
-            <label for="ckNec">
+            <label class="cookie-label for="ckNec">
               <span>Necessary</span>
               <input type="checkbox"
               id="ckNec"
@@ -279,11 +279,11 @@ const createCookie = () => {
           <div id="nec-d">
             These cookies are necessary for this site to function properly and are required.
           </div>
-          <fieldset>
+          <fieldset class="cookie-fieldset">
             <div id="per-i">
               <i class="fa-solid fa-circle-info"></i>
             </div>
-            <label for="ckPer" class="label">Performance
+            <label for="ckPer" class="cookie-label label">Performance
               <input type="checkbox"
               id="ckPer"
               name="ckPer">
@@ -297,11 +297,11 @@ const createCookie = () => {
           <div id="per-d">
             These cookies are used to improve site performance.
           </div>
-          <fieldset>
+          <fieldset class="cookie-fieldset">
             <div id="fun-i">
               <i class="fa-solid fa-circle-info"></i>
             </div>
-            <label for="ckFun" class="label">Functional
+            <label for="ckFun" class="cookie-label label">Functional
               <input type="checkbox"
               id="ckFun"
               name="ckFun">
@@ -315,11 +315,11 @@ const createCookie = () => {
           <div id="fun-d">
             These cookies are used to provide additional functionality.
           </div>
-          <fieldset>
+          <fieldset class="cookie-fieldset">
             <div id="tar-i">
               <i class="fa-solid fa-circle-info"></i>
             </div>
-            <label for="ckTar" class="label">Targeting
+            <label for="ckTar" class="cookie-label label">Targeting
               <input type="checkbox"
               id="ckTar"
               name="ckTar">

@@ -150,13 +150,13 @@ main {
 }
 
 /**Cookie customizer form */
-form {
+#cookie-consent-form {
   background-color: rgb(210, 210, 210);
   margin: 0;
   padding: 8px 8px 8px 16px;
 }
 
-fieldset {
+.cookie-fieldset {
   align-content: center;
   background-color: rgb(210, 210, 210);
   border: none;
@@ -168,7 +168,7 @@ fieldset {
   padding: 0;
 }
 
-label {
+.cookie-label {
   display: flex;
   justify-content: space-between;
   margin-left: 4px;
