@@ -5,14 +5,12 @@
 
 html {
   margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: royalblue;
-  margin-bottom: 0;
-  margin-left: calc(100vw - 100%);
-  margin-right: 0;
-  margin-top: 0;
+  margin: 0;
   font-family: "Roboto";
   -webkit-text-size-adjust: none;
      -moz-text-size-adjust: none;
@@ -309,24 +307,6 @@ footer {
 .keep-together {
   display: inline-block;
   word-break: keep-all !important;
-}
-
-/**Scrollbar */
-::-webkit-scrollbar-thumb {
-  background-color: royalblue;
-  border-radius: 1px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: royalblue;
-}
-
-::-webkit-scrollbar-track:hover {
-  background-color: rgb(32, 33, 36);
-}
-
-::-webkit-scrollbar {
-  width: 16px;
 }
 
 /**Responsive */
