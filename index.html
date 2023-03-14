@@ -17,7 +17,6 @@
   <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script>
   <script defer src="https://kit.fontawesome.com/5cda094748.js" crossorigin="anonymous"></script>
   <style>
-    /**Set in-doc style for script dependency */
     #scroll-btn {
       background-color: royalblue;
       border: 2px solid rgb(32, 33, 36);
@@ -29,7 +28,7 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 4;
+      z-index: 3;
     }
     @media (hover: hover) {
       #scroll-btn:hover {
@@ -169,16 +168,16 @@
   </main>
   <i id="scroll-btn" class="fa-solid fa-angle-up"></i>
   <footer id="footer">
-    <!-- <h2 id="thanks">Thank you for visiting.</h2>
-    <p id="copyright">Copyright &#169;<span id="copyright-year"></span> James A. Baroi. All rights reserved.</p> -->
+    <h2 id="thanks">Thank you for visiting.</h2>
+    <p id="copyright">Copyright &#169;<span id="copyright-year"></span> James A. Baroi. All rights reserved.</p>
   </footer>
   <script src="/public/js/main.js"></script>
-  <script src="/public/js/conway.js"></script>
+  <!-- <script src="/public/js/conway.js"></script> -->
   <script src="/public/js/cookie.js"></script>
   <script>
 
     /**Show current year as copyright */
-    // showYear('copyright-year')
+    showYear('copyright-year')
 
     /**Show drop-down menu */
     toggleClass('menu-btn', 'toggle-menu')

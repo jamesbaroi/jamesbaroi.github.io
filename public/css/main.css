@@ -4,11 +4,12 @@
 }
 
 html {
+  background-color: royalblue !important;
   margin: 0;
 }
 
 body {
-  background-color: royalblue;
+  background-color: royalblue !important;
   margin-bottom: 0;
   margin-left: calc(100vw - 100%);
   margin-right: 0;
