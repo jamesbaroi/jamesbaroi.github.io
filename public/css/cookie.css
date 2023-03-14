@@ -28,6 +28,10 @@ main {
   font-weight: 700;
 }
 
+.cookie-small {
+  font-size: small;
+}
+
 .cookie-color {
   color: royalblue;
 }

@@ -239,14 +239,14 @@ const createCookie = () => {
         <div>
           <a class="cookie-policy-color" href="/policy/cookie-policy" target="_blank">
             <i class="fa-solid fa-cookie-bite"></i>
-            Cookie Policy <small><i class="fa-solid fa-up-right-from-square"></i></small>
+            Cookie Policy <span class="cookie-small"><i class="fa-solid fa-up-right-from-square"></i></span>
           </a>
         </div>
         <div>
-          <small>
+          <div class="cookie-small">
             By clicking "Accept" you consent to the use of all cookies on this site.
             Click on the "Cookie Policy" above to learn more.
-          </small>
+          </div>
         </div>
       </div>
       <div id="cookie-customize">
