@@ -35,21 +35,28 @@
       padding: 1em;
       text-align: center;
     }
-    nav,
-    menu {
-      margin: 0;
-      padding: 0;
-    }
     main {
       background-color: white;
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-auto-rows: min-content;
+      padding: 20px;
+    }
+    section {
+      border: 0.1px solid rgb(32, 33, 36);
+      border-radius: 4px;
     }
     h1 {
       font-weight: 100;
-      margin: 20px 0;
-      padding: 0 20px;
+    }
+    h1, h4 {
+      margin: 0;
+      padding: 20px;
     }
     p {
-      padding: 0 20px;
+      margin: 0;
+      padding: 20px;
     }
   </style>
 </head>
@@ -58,15 +65,79 @@
     <div>jamesbaroi.com / projects</div>
   </header>
   <main id="main">
-    <h1>Projects</h1>
-    <p>Coming soon!</p>
+    <h1>Coming soon!</h1>
   </main>
   <footer></footer>
   <script src="/public/js/cookie.js"></script>
   <script>
+
     /**Close toggle-cookie-customize class on element id click */
     closeCookieClass('header', 'toggle-cookie-customize')
     closeCookieClass('main', 'toggle-cookie-customize')
+
+    /**Render json */
+    const render = (data) => {
+
+      for (let i in data) {
+
+        /**Get elements */
+        const main = document.getElementById('main')
+
+        /**Create elements */
+        const section = document.createElement('section')
+        const title = document.createElement('h1')
+        const subtitle = document.createElement('h4')
+        const category = document.createElement('div')
+        const description = document.createElement('p')
+        const url = document.createElement('a')
+
+        /**Set element attributes */
+        title.setAttribute('style',
+          `
+          background-color:${data[i].style.backgroundColor};
+          color:${data[i].style.color}
+          `
+        )
+
+        category.setAttribute('style',
+          `
+          font-size: small;
+          font-weight: bold;
+          padding: 0 20px;
+          `
+        )
+
+        url.setAttribute('href', data[i].url)
+        url.setAttribute('target', '_blank')
+
+        /**Create data */
+        title.innerHTML = data[i].title
+        subtitle.innerHTML = data[i].subtitle
+        category.innerHTML = data[i].category
+        description.innerHTML = data[i].description
+
+        /**Append elements */
+        section.append(title)
+        section.append(subtitle)
+        section.append(category)
+        section.append(description)
+
+        url.append(section)
+
+        main.append(url)
+      }
+    }
+
+
+    /**Fetch json */
+    const fetchJson = () => {
+
+      fetch('/projects/index.json')
+      .then(x => x.json())
+      .then(y => render(y))
+    }
+
+    // fetchJson()
   </script>
 </body>
 </html>

@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>J. A. Baroi's Blog</title>
+  <!--Change document title-->
+  <title>Html Template</title>
   <link rel="stylesheet" href="/public/css/cookie.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,57 +21,32 @@
   <style>
     body {
       font-family: 'Roboto';
-      margin: 0;
-      padding: 0;
-      text-size-adjust: none;
-    }
-    a {
-      color: unset;
-      text-decoration: none;
-    }
-    header {
-      background-color: royalblue;
-      color: white;
-      font-weight: 300;
-      padding: 1em;
-      text-align: center;
-    }
-    nav,
-    menu {
-      margin: 0;
-      padding: 0;
-    }
-    main {
-      background-color: white;
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      grid-auto-rows: min-content;
-      padding: 20px;
     }
     h1 {
-      font-weight: 100;
-      margin: 20px 0;
-      padding: 0 20px;
-    }
-    p {
-      padding: 0 20px;
+      font-weight: 300;
     }
   </style>
 </head>
 <body>
   <header id="header">
-    <div>jamesbaroi.com / blog</div>
+    <nav id="nav"></nav>
+    <menu id="menu"></menu>
   </header>
   <main id="main">
-    <h1>Coming soon!</h1>
+    <!--Replace [START]-->
+    <!--Replace all elements from here-->
+    <h1>Template</h1>
+    <p>Use this html template to create new pages.</p>
+    <p>&#8226; Font enabled (fontawesome.com)</p>
+    <p>&#8226; Cookie notice enabled (cookie.js, cookie.css)</p>
+    <p>&#8226; Google analytics enabled (gtag)</p>
+    <!--Replace all elements up to here-->
+    <!--Replace [END]-->
   </main>
-  <footer></footer>
+  <footer id="footer"></footer>
   <script src="/public/js/cookie.js"></script>
   <script>
     /**Close toggle-cookie-customize class on element id click */
-    closeCookieClass('header', 'toggle-cookie-customize')
-    closeCookieClass('main', 'toggle-cookie-customize')
   </script>
 </body>
 </html>

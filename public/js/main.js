@@ -4,7 +4,7 @@
  * */
 
 /**Toggle css class */
-function toggleClass(eId, tgClass) {
+const toggleClass = (eId, tgClass) => {
 
   let e = document.getElementById(eId)
 
@@ -20,7 +20,7 @@ function toggleClass(eId, tgClass) {
 }
 
 /**Close css class */
-function closeClass(eId, tgClass) {
+const closeClass = (eId, tgClass) => {
 
   let e = document.getElementById(eId)
 
@@ -44,7 +44,7 @@ function closeClass(eId, tgClass) {
 }
 
 /**Scroll up to top of page by element id */
-function scrollUp(eId) {
+const scrollUp = (eId) => {
 
   let e = document.getElementById(eId)
 
@@ -63,7 +63,7 @@ function scrollUp(eId) {
 }
 
 /**Show scroll button */
-function showScroller(eId) {
+const showScroller = (eId) => {
 
   let e = document.getElementById(eId)
 
@@ -88,7 +88,7 @@ function showScroller(eId) {
 }
 
 /**Hide #id scroll to links */
-function hideHashLink() {
+const hideHashLink = () => {
 
   let a = document.getElementsByTagName('a')
 

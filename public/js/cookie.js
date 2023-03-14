@@ -3,10 +3,10 @@
  */
 
 /**Activate color theme cookie */
-function activateTheme() { console.log('theme activated') }
+const activateTheme = () => { console.log('theme activated') }
 
 /**Activate google analytics gtag cookie */
-function activateGtag() {
+const activateGtag = () => {
   window.dataLayer = window.dataLayer || []
 
   function gtag() {
@@ -18,7 +18,7 @@ function activateGtag() {
 }
 
 /**Toggle cookie css class */
-function toggleCookieClass(eId, tgClass) {
+const toggleCookieClass = (eId, tgClass) => {
 
   let e = document.getElementById(eId)
 
@@ -34,7 +34,7 @@ function toggleCookieClass(eId, tgClass) {
 }
 
 /**Close cookie css class */
-function closeCookieClass(eId, tgClass) {
+const closeCookieClass = (eId, tgClass) => {
 
   let e = document.getElementById(eId)
 
@@ -59,7 +59,7 @@ function closeCookieClass(eId, tgClass) {
 }
 
 /**Set cookie */
-function setCookie(cname, cvalue, exdays) {
+const setCookie = (cname, cvalue, exdays) => {
 
   let d = new Date()
 
@@ -71,7 +71,7 @@ function setCookie(cname, cvalue, exdays) {
 }
 
 /**Get cookie */
-function getCookie(cname) {
+const getCookie = (cname) => {
 
   let name = cname + "="
   let ca = document.cookie.split(';')
@@ -95,7 +95,7 @@ function getCookie(cname) {
 }
 
 /**Check cookie */
-function checkCookie(cname) {
+const checkCookie = (cname) => {
 
   let cookieValue = getCookie(cname)
 
@@ -109,7 +109,7 @@ function checkCookie(cname) {
 }
 
 /**Clear cookie */
-function clearCookie(cname) {
+const clearCookie = (cname) => {
 
   let cookieValue = getCookie(cname)
 
@@ -123,7 +123,7 @@ function clearCookie(cname) {
 }
 
 /**Decline all cookies */
-function cookieDecline(eId) {
+const cookieDecline = (eId) => {
 
   let e = document.getElementById(eId)
 
@@ -142,7 +142,7 @@ function cookieDecline(eId) {
 }
 
 /**Accept all cookies */
-function cookieAccept(eId) {
+const cookieAccept = (eId) => {
 
   let e = document.getElementById(eId)
 
@@ -168,7 +168,7 @@ function cookieAccept(eId) {
 }
 
 /**Accept selected cookies */
-function cookieSelect(eId, form, per, fun, tar) {
+const cookieSelect = (eId, form, per, fun, tar) => {
 
   let e = document.getElementById(eId)
 
@@ -227,7 +227,7 @@ function cookieSelect(eId, form, per, fun, tar) {
 
 /**Create cookie
  * [ DEPENDENCY ] requires at least 1 footer tag in html */
-function createCookie() {
+const createCookie = () => {
 
   let footer = document.querySelectorAll('footer')
   let footerLast = footer.length - 1

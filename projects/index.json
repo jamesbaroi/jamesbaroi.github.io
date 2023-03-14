@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Conway's Game",
+    "subtitle": "Cellular Automaton",
+    "category": "Game",
+    "description": "John Conway's game of life: a cellular automaton.",
+    "url": "/projects/conways-game",
+    "img": "",
+    "style": {
+      "backgroundColor": "royalblue",
+      "color": "white"
+    }
+  },
+  {
+    "title": "Periodic Table",
+    "subtitle": "Vertically Responsive",
+    "category": "Utility",
+    "description": "A periodic table of the elements built for mobile.",
+    "url": "/projects/periodic-table",
+    "img": "",
+    "style": {
+      "backgroundColor": "rgb(32, 33, 36)",
+      "color": "orangered"
+    }
+  }
+]
