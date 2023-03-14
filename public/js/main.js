@@ -31,13 +31,12 @@ function closeClass(eId, tgClass) {
   } else {
 
     e.addEventListener('click', (e) => {
-      /**Do nothing if menu not shown or
-       * when menu icon/items clicked
-       */
-      if(!document.body.classList.contains(tgClass)
-        ) {
+
+      if(!document.body.classList.contains(tgClass)) {
+
         return
       } else {
+
         document.body.classList.toggle(tgClass)
       }
     })
