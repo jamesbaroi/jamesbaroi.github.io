@@ -30,7 +30,7 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 3;
+      z-index: 99;
     }
     @media (hover: hover) {
       #scroll-btn:hover {
@@ -136,20 +136,16 @@
         <p>Country: United States</p>
       </div>
     </section>
+    <div id="policy">
+      <small>
+        <a class="policy-color keep-together" href="/policy/user-agreement" target="_blank">User Agreement <small><i class="fa-solid fa-up-right-from-square"></i></small></a> -
+        <a class="policy-color keep-together" href="/policy/privacy-policy" target="_blank">Privacy Policy <small><i class="fa-solid fa-up-right-from-square"></i></small></a> -
+        <a class="policy-color keep-together" href="/policy/cookie-policy" target="_blank">Cookie Policy <small><i class="fa-solid fa-up-right-from-square"></i></small></a>
+      </small>
+    </div>
   </main>
   <i id="scroll-btn" class="fa-solid fa-angle-up"></i>
-  <footer id="footer">
-    <section>
-      <div id="policy">
-        <small>
-          <a class="policy-color keep-together" href="/policy/user-agreement" target="_blank">User Agreement <small><i class="fa-solid fa-up-right-from-square"></i></small></a> -
-          <a class="policy-color keep-together" href="/policy/privacy-policy" target="_blank">Privacy Policy <small><i class="fa-solid fa-up-right-from-square"></i></small></a> -
-          <a class="policy-color keep-together" href="/policy/cookie-policy" target="_blank">Cookie Policy <small><i class="fa-solid fa-up-right-from-square"></i></small></a>
-        </small>
-      </div>
-    </section>
-    <!-- <p id="copyright">Copyright &#169;<span id="copyright-year"></span> James A. Baroi. All rights reserved.</p> -->
-  </footer>
+  <footer id="footer"></footer>
   <script src="/public/js/main.js"></script>
   <script src="/public/js/cookie.js"></script>
   <script>

@@ -13,7 +13,6 @@ body {
   margin-left: calc(100vw - 100%);
   margin-right: 0;
   margin-top: 0;
-  padding-bottom: 100vh;
   font-family: "Roboto";
   -webkit-text-size-adjust: none;
      -moz-text-size-adjust: none;
@@ -95,7 +94,7 @@ nav > div {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: auto;
-  max-width: 672px;
+  max-width: 752px;
 }
 
 nav > div > a {
@@ -215,8 +214,10 @@ menu {
 #policy {
   background-color: rgb(32, 33, 36);
   margin: auto;
-  padding: 1em;
+  max-width: 752px;
+  padding: 1em 0;
   text-align: center;
+  width: 100%;
 }
 
 main {
@@ -227,9 +228,8 @@ main {
 }
 
 section {
-  background-color: royalblue;
+  background-color: rgb(32, 33, 36);
   margin: auto;
-  max-width: 672px;
 }
 
 .content {
@@ -276,6 +276,7 @@ p {
 footer {
   box-sizing: border-box;
   color: royalblue;
+  padding-bottom: 100vh;
   position: relative;
   z-index: 3;
 }
