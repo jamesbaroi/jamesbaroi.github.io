@@ -277,7 +277,7 @@ function createCookie() {
             </label>
           </fieldset>
           <div id="nec-d">
-            These cookies are necessary for this site to function properly and cannot be disabled.
+            These cookies are necessary for this site to function properly and are required.
           </div>
           <fieldset>
             <div id="per-i">
