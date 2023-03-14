@@ -214,7 +214,8 @@ menu {
 
 #policy {
   background-color: rgb(32, 33, 36);
-  padding: 1em 0;
+  margin: auto;
+  padding: 1em;
   text-align: center;
 }
 
@@ -226,7 +227,9 @@ main {
 }
 
 section {
-  background-color: white;
+  background-color: royalblue;
+  margin: auto;
+  max-width: 672px;
 }
 
 .content {
@@ -271,7 +274,6 @@ p {
 }
 
 footer {
-  background-color: rgb(32, 33, 36);
   box-sizing: border-box;
   color: royalblue;
   position: relative;
