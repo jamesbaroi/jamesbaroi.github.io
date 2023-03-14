@@ -47,6 +47,7 @@ main {
   line-height: 2em;
   margin: auto;
   margin-left: calc(100vw - 100%);
+  max-width: 1080px;
   padding: 8px;
   position: fixed;
   bottom: 0;

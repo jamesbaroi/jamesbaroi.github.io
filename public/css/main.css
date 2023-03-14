@@ -4,12 +4,11 @@
 }
 
 html {
-  background-color: royalblue !important;
   margin: 0;
 }
 
 body {
-  background-color: royalblue !important;
+  background-color: royalblue;
   margin-bottom: 0;
   margin-left: calc(100vw - 100%);
   margin-right: 0;
@@ -81,8 +80,7 @@ img {
 }
 
 nav {
-  background-color: rgb(32, 33, 36);
-  border-top: 0.1px solid rgb(83, 83, 83);
+  background-color: royalblue;
   box-sizing: border-box;
   display: none;
   position: sticky;
@@ -91,7 +89,7 @@ nav {
 }
 
 nav > div {
-  background-color: rgb(32, 33, 36);
+  background-color: royalblue;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
@@ -102,7 +100,7 @@ nav > div {
 
 nav > div > a {
   box-sizing: border-box;
-  color: royalblue;
+  color: white;
   cursor: pointer;
   flex: 1 1 0px;
   flex-grow: 1;
@@ -115,20 +113,19 @@ nav > div > a {
 @media (hover: hover) {
   nav > div > a:hover {
     background-color: white;
-    color: rgb(32, 33, 36);
+    color: royalblue;
     font-size: 18px;
     padding: 14px 0;
   }
   nav > div > a:active {
     background-color: royalblue;
-    color: rgb(32, 33, 36);
-    font-size: 18px;
-    padding: 14px 0;
+    color: white;
+    font-size: 16px;
+    padding: 16px 0;
   }
 }
 menu {
-  background-color: rgb(32, 33, 36);
-  border-top: 0.1px solid rgb(83, 83, 83);
+  background-color: royalblue;
   box-sizing: border-box;
   cursor: pointer;
   margin: 0;
@@ -142,7 +139,6 @@ menu {
 }
 
 #menu-btn {
-  border-bottom: 0.1px solid rgb(83, 83, 83);
   display: flex;
   justify-content: space-between;
   min-height: 51px;
@@ -150,21 +146,24 @@ menu {
 
 #menu-btn > span {
   color: white;
+  font-weight: 700;
   padding: 16px;
 }
 
 #menu-icon {
-  background-color: rgb(32, 33, 36);
+  background-color: royalblue;
   color: white;
   padding: 16px;
   z-index: 1;
 }
 
 @media (hover: hover) {
-  menu:hover #menu-icon {
-    color: royalblue;
+  menu:hover #menu-btn {
+    background-color: rgb(32, 33, 36);
   }
+  menu:hover #menu-icon,
   menu:hover #menu-btn > span {
+    background-color: rgb(32, 33, 36);
     color: royalblue;
   }
 }
@@ -175,9 +174,18 @@ menu {
 .toggle-menu #menu-drop {
   display: grid;
 }
+.toggle-menu #menu-btn {
+  background-color: rgb(32, 33, 36);
+}
+.toggle-menu #menu-icon,
+.toggle-menu #menu-btn > span {
+  background-color: rgb(32, 33, 36);
+  color: royalblue;
+}
 
 #menu-drop > a {
-  border-bottom: 0.1px solid rgb(83, 83, 83);
+  background-color: white;
+  border-bottom: 0.1px solid rgb(186, 188, 190);
   color: royalblue;
   font-size: 16px;
   font-weight: 700;
@@ -185,17 +193,17 @@ menu {
 }
 
 #menu-drop > a:hover {
-  background-color: white;
-  color: rgb(32, 33, 36);
+  background-color: rgb(32, 33, 36);
+  color: royalblue;
   font-size: 18px;
   padding: 14.5px 16px;
 }
 
 #menu-drop > a:active {
   background-color: royalblue;
-  color: rgb(32, 33, 36);
-  font-size: 18px;
-  padding: 14.5px 16px;
+  color: white;
+  font-size: 16px;
+  padding: 16px 16px;
 }
 
 #home,
@@ -205,6 +213,8 @@ menu {
 }
 
 #policy {
+  background-color: rgb(32, 33, 36);
+  padding: 1em 0;
   text-align: center;
 }
 
@@ -265,20 +275,6 @@ footer {
   box-sizing: border-box;
   color: royalblue;
   position: relative;
-  z-index: 3;
-}
-
-#thanks {
-  background-color: royalblue;
-  color: white;
-  font-size: 32px;
-  font-weight: 100;
-  max-width: 100%;
-  padding: 40px 0;
-  position: sticky;
-  top: 52px;
-  text-align: center;
-  width: 100%;
   z-index: 3;
 }
 

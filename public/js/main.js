@@ -2,20 +2,6 @@
  * [ NO IMPLEMENTATION ]
  * [ NO DEPENDENCY]
  * */
-/**Show current year in element by id */
-function showYear(eId) {
-
-  let e = document.getElementById(eId)
-
-  if (!e) {
-
-    console.log(`The element id "${eId}" does not exist.`)
-    return
-  } else {
-
-    e.innerHTML = new Date().getFullYear()
-  }
-}
 
 /**Toggle css class */
 function toggleClass(eId, tgClass) {

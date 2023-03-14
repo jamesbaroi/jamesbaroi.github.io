@@ -42,20 +42,6 @@
         color: rgb(210, 210, 210);
       }
     }
-    #conway {
-      background-color: rgb(32, 33, 36);
-      margin: auto;
-      position: relative;
-      z-index: 0;
-    }
-    #conway > #canvas {
-      background-color: royalblue;
-      height: fit-content;
-      margin: auto;
-      position: fixed;
-      top: 0;
-      width: 100%;
-    }
   </style>
 </head>
 <body>
@@ -71,9 +57,6 @@
       </p> -->
     </section>
   </header>
-  <div id="conway">
-    <canvas id="canvas"></canvas>
-  </div>
   <nav id="nav">
     <div>
       <a href="#home"><small>Home</small></a>
@@ -106,11 +89,6 @@
         <p>
           Check out my sample <a class="color keep-together" href="/projects" target="_blank">projects <small><i class="fa-solid fa-up-right-from-square"></i></small></a>,
           and read my <a class="color keep-together" href="/blog" target="_blank">blog <small><i class="fa-solid fa-up-right-from-square"></i></small></a> (coming soon!).
-        </p>
-        <h4>Site slowing down your device?</h4>
-        <p>
-          Click on the animation of <a class="color keep-together" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">Conway's Game <small><i class="fa-solid fa-up-right-from-square"></i></small></a>
-          to pause.
         </p>
       </div>
     </section>
@@ -156,28 +134,23 @@
         <p>Country: United States</p>
       </div>
     </section>
-    <section>
-      <div id="policy" class="content">
-        <small>
-          <a class="bold policy-color keep-together" href="/policy/user-agreement" target="_blank">User Agreement <small><i class="fa-solid fa-up-right-from-square"></i></small></a> -
-          <a class="bold policy-color keep-together" href="/policy/privacy-policy" target="_blank">Privacy Policy <small><i class="fa-solid fa-up-right-from-square"></i></small></a> -
-          <a class="bold policy-color keep-together" href="/policy/cookie-policy" target="_blank">Cookie Policy <small><i class="fa-solid fa-up-right-from-square"></i></small></a>
-        </small>
-      </div>
-    </section>
   </main>
   <i id="scroll-btn" class="fa-solid fa-angle-up"></i>
   <footer id="footer">
-    <h2 id="thanks">Thank you for visiting.</h2>
-    <p id="copyright">Copyright &#169;<span id="copyright-year"></span> James A. Baroi. All rights reserved.</p>
+    <section>
+      <div id="policy">
+        <small>
+          <a class="policy-color keep-together" href="/policy/user-agreement" target="_blank">User Agreement <small><i class="fa-solid fa-up-right-from-square"></i></small></a> -
+          <a class="policy-color keep-together" href="/policy/privacy-policy" target="_blank">Privacy Policy <small><i class="fa-solid fa-up-right-from-square"></i></small></a> -
+          <a class="policy-color keep-together" href="/policy/cookie-policy" target="_blank">Cookie Policy <small><i class="fa-solid fa-up-right-from-square"></i></small></a>
+        </small>
+      </div>
+    </section>
+    <!-- <p id="copyright">Copyright &#169;<span id="copyright-year"></span> James A. Baroi. All rights reserved.</p> -->
   </footer>
   <script src="/public/js/main.js"></script>
-  <script src="/public/js/conway.js"></script>
   <script src="/public/js/cookie.js"></script>
   <script>
-
-    /**Show current year as copyright */
-    showYear('copyright-year')
 
     /**Show drop-down menu */
     toggleClass('menu-btn', 'toggle-menu')
