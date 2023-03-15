@@ -8,17 +8,27 @@
   border-radius: 4px;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.6);
 }
-#projects-container .a-active:hover {
-  background-color: royalblue;
-  color: white;
-}
-#projects-container .a-active:hover div > h1 {
-  background-color: rgb(32, 33, 36) !important;
-  color: white !important;
-}
-#projects-container .a-active:active {
-  background-color: rgb(32, 33, 36);
-  box-shadow: none;
+@media (hover: hover) {
+  #projects-container .a-active:hover {
+    background-color: royalblue;
+    color: white;
+  }
+  #projects-container .a-active:hover div > h1 {
+    background-color: rgb(32, 33, 36) !important;
+    color: white !important;
+  }
+  #projects-container .a-active:hover div > h4, #projects-container .a-active:hover p {
+    background-color: royalblue !important;
+    color: white !important;
+  }
+  #projects-container .a-active:active {
+    background-color: rgb(32, 33, 36) !important;
+    box-shadow: none;
+  }
+  #projects-container .a-active:active div > h4, #projects-container .a-active:active p {
+    background-color: rgb(32, 33, 36) !important;
+    color: rgb(95, 99, 104);
+  }
 }
 #projects-container img {
   background-color: rgb(32, 33, 36);
