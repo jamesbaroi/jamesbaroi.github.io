@@ -1,126 +1,154 @@
-body {
-  font-family: "Roboto";
-  margin: 0;
-  padding: 0;
-  -webkit-text-size-adjust: none;
-     -moz-text-size-adjust: none;
-          text-size-adjust: none;
-}
-
-a {
+#projects-container a {
   color: unset;
   text-decoration: none;
 }
-
-.a-active {
+#projects-container .a-active {
   background-color: white;
   border: 0;
   border-radius: 4px;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.6);
 }
-
-.a-active:active {
-  border: 0.1px solid rgb(186, 188, 190);
+#projects-container .a-active:hover {
+  background-color: royalblue;
+  color: white;
+}
+#projects-container .a-active:hover div > h1 {
+  background-color: rgb(32, 33, 36) !important;
+  color: white !important;
+}
+#projects-container .a-active:active {
+  background-color: rgb(32, 33, 36);
   box-shadow: none;
 }
-
-img {
+#projects-container img {
   background-color: rgb(32, 33, 36);
   background-size: cover;
   border-style: none;
   display: block;
   outline: none;
 }
-
-header {
-  background-color: royalblue;
-  color: white;
-  font-weight: 300;
-  padding: 1em;
-  text-align: center;
-}
-
-main {
-  padding-bottom: 100vh;
-}
-
-#newest {
-  display: grid;
-  margin: auto;
-  max-width: 580px;
-  padding: 20px;
-}
-
-#projects {
-  background-color: white;
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  grid-auto-rows: min-content;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  #newest {
-    padding: 40px;
-  }
-  #projects {
-    gap: 40px;
-    padding: 40px;
-  }
-}
-@media only screen and (min-width: 920px) {
-  #newest {
-    padding: 80px 100px;
-  }
-  #projects {
-    gap: 80px;
-    padding: 80px 100px;
-  }
-}
-@media only screen and (min-width: 1080px) {
-  #newest {
-    padding: 100px;
-  }
-  #projects {
-    padding: 100px 200px 200px;
-  }
-}
-@media only screen and (min-width: 1700px) {
-  #newest {
-    padding: 100px;
-  }
-  #projects {
-    padding: 100px 300px 200px;
-  }
-}
-h1 {
-  font-weight: 100;
-  margin: 0;
-  padding: 20px;
-}
-
-h4 {
+#projects-container h4 {
+  color: rgb(32, 33, 36);
   margin: 0;
   padding: 20px 20px 0;
 }
-
-img {
+#projects-container img {
   height: 100%;
   margin: auto;
   -o-object-fit: scale-down;
      object-fit: scale-down;
   width: 100%;
 }
-
-small {
+#projects-container small {
   font-weight: bold;
   padding: 0 20px;
 }
 
-p {
+#newest-project-container {
+  background-color: white;
+  color: rgb(32, 33, 36);
+  margin: auto;
+  max-width: 752px;
+}
+
+#newest-project {
+  background-color: white;
+  display: grid;
+  margin: auto;
+  max-width: 580px;
+  padding: 20px;
+}
+#newest-project h1 {
+  font-weight: 100;
+  margin: 0;
+  padding: 20px;
+}
+#newest-project p {
+  color: rgb(32, 33, 36);
   line-height: 2em;
   margin: 0;
   padding: 0.67em 20px 1em;
+}
+
+#projects {
+  background-color: white;
+  display: none;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-auto-rows: min-content;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+#projects h1 {
+  font-weight: 100;
+  margin: 0;
+  padding: 20px;
+}
+#projects p {
+  color: rgb(32, 33, 36);
+  line-height: 2em;
+  margin: 0;
+  padding: 0.67em 20px 1em;
+}
+
+#toggle-projects-btn {
+  background-color: royalblue;
+  border-radius: 4px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.6);
+  color: white;
+  cursor: pointer;
+  margin: 20px auto;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 20px;
+  width: 100%;
+}
+
+.toggle-projects #projects {
+  display: grid;
+}
+
+@media (hover: hover) {
+  #toggle-projects-btn:hover {
+    background-color: orangered;
+  }
+  #toggle-projects-btn:active {
+    background-color: rgb(32, 33, 36);
+    box-shadow: none;
+    color: rgb(95, 99, 104);
+  }
+}
+@media only screen and (min-width: 768px) {
+  #newest-project {
+    padding: 20px 40px;
+  }
+  #projects {
+    gap: 40px;
+    padding: 0 40px 100px;
+  }
+}
+@media only screen and (min-width: 920px) {
+  #newest-project {
+    padding: 20px 100px;
+  }
+  #projects {
+    gap: 80px;
+    padding: 0 100px 100px;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  #newest-project {
+    padding: 20px 100px;
+  }
+  #projects {
+    padding: 0 200px 100px;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  #newest-project {
+    padding: 20px 100px;
+  }
+  #projects {
+    padding: 0 300px 100px;
+  }
 }/*# sourceMappingURL=projects.css.map */

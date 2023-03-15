@@ -1,0 +1,30 @@
+* {
+  scroll-behavior: smooth !important;
+}
+
+#scroll-btn {
+  background-color: royalblue;
+  border: 2px solid rgb(32, 33, 36);
+  border-radius: 50%;
+  color: rgb(32, 33, 36);
+  cursor: default;
+  opacity: 0;
+  padding: 10px 11px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+}
+
+@media (hover: hover) {
+  #scroll-btn:hover {
+    background-color: rgb(210, 210, 210);
+    border-color: royalblue;
+    color: royalblue;
+  }
+  #scroll-btn:active {
+    background-color: rgb(32, 33, 36);
+    border-color: rgb(210, 210, 210);
+    color: rgb(210, 210, 210);
+  }
+}/*# sourceMappingURL=scroll.css.map */

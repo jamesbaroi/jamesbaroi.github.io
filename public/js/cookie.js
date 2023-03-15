@@ -225,8 +225,9 @@ const cookieSelect = (eId, form, per, fun, tar) => {
   }
 }
 
-/**Create cookie
- * [ DEPENDENCY ] requires at least 1 footer tag in html */
+/**Create cookie 
+ * [ DEPENDENCY ] requires at least 1 footer tag in html
+*/
 const createCookie = () => {
 
   let footer = document.querySelectorAll('footer')

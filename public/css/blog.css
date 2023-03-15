@@ -1,0 +1,46 @@
+body {
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+header {
+  background-color: royalblue;
+  color: white;
+  font-weight: 300;
+  padding: 1em;
+  text-align: center;
+}
+
+nav,
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: white;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-rows: min-content;
+  padding: 20px;
+}
+
+h1 {
+  font-weight: 300;
+  margin: 20px 0;
+  padding: 0 20px;
+}
+
+p {
+  padding: 0 20px;
+}/*# sourceMappingURL=blog.css.map */
