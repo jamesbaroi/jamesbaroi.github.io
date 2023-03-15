@@ -95,6 +95,7 @@ main {
 #cookie-btn-customize,
 #cookie-btn-confirm {
   background-color: royalblue;
+  border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
   font-weight: 700;
@@ -176,6 +177,7 @@ main {
 }
 
 .label {
+  border-radius: 16px;
   cursor: pointer;
   transition: 0.2s;
   -webkit-user-select: none;
