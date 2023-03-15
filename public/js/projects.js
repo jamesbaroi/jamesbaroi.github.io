@@ -37,7 +37,7 @@ const render = (data) => {
 
   tag.setAttribute('style',
     `
-    color: orangered;
+    color: red;
     font-weight: bold;
     padding: 0 20px 20px;
     text-align: right;
