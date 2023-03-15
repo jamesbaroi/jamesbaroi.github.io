@@ -7,6 +7,7 @@
   <title>James A. Baroi - Web Developer</title>
   <link rel="stylesheet" href="/public/css/main.css">
   <link rel="stylesheet" href="/public/css/projects.css">
+  <link rel="stylesheet" href="/public/css/blog.css">
   <link rel="stylesheet" href="/public/css/scroll.css">
   <link rel="stylesheet" href="/public/css/cookie.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,8 +40,8 @@
       <a href="#home"><small>Home</small></a>
       <a href="#about"><small>About</small></a>
       <a href="#projects-container"><small>Projects</small></a>
+      <a href="#blogs-container"><small>Blog</small></a>
       <a href="#contact"><small>Contact</small></a>
-      <a href="/blog" target="_blank"><small>Blog <i class="fa-solid fa-up-right-from-square"></i></small></a>
     </div>
   </nav>
   <menu id="menu">
@@ -49,8 +50,8 @@
       <a href="#home" id="home-btn"><small>Home</small></a>
       <a href="#about" id="about-btn"><small>About</small></a>
       <a href="#projects-container" id="projects-btn"><small>Projects</small></a>
+      <a href="#blogs-container" id="blogs-btn"><small>Blog</small></a>
       <a href="#contact" id="contact-btn"><small>Contact</small></a>
-      <a href="/blog" id="blog-btn" target="_blank"><small>Blog <i class="fa-solid fa-up-right-from-square"></i></small></a>
     </div>
   </menu>
   <main id="main">
@@ -114,6 +115,19 @@
       </div>
     </section>
     <section>
+      <div id="blogs-container">
+        <div id="newest-blog-container" class="content">
+          <h1>Blog</h1>
+          <p>Click on the latest blog to open in a new tab. Click on the button below to view all blogs.</p>
+          <div id="newest-blog"></div>
+          <div id="toggle-blogs-btn">Click to view all blogs</div>
+        </div>
+        <div id="blogs">
+          <h1 style="font-weight: 300; text-align: center;">Coming soon!</h1>
+        </div>
+      </div>
+    </section>
+    <section>
       <div id="contact" class="blue-card">
         <h1>Contact</h1>
         <p>Get in touch to engage my service, get price quotes, ask questions, comment, or just to say hello.</p>
@@ -135,6 +149,7 @@
   <footer id="footer"></footer>
   <script src="/public/js/main.js"></script>
   <script src="/public/js/projects.js"></script>
+  <script src="/public/js/blog.js"></script>
   <script src="/public/js/scroll.js"></script>
   <script src="/public/js/cookie.js"></script>
   <script>
@@ -146,7 +161,7 @@
     closeClass('home-btn', 'toggle-menu')
     closeClass('about-btn', 'toggle-menu')
     closeClass('projects-btn', 'toggle-menu')
-    closeClass('blog-btn', 'toggle-menu')
+    closeClass('blogs-btn', 'toggle-menu')
     closeClass('contact-btn', 'toggle-menu')
     closeClass('cookie', 'toggle-menu')
     closeClass('header', 'toggle-menu')
@@ -161,9 +176,11 @@
     closeCookieClass('footer', 'toggle-cookie-customize')
   </script>
   <script>
-    fetchJson()
+    fetchProjects()
+    fetchBlog()
 
     toggleClass('toggle-projects-btn', 'toggle-projects')
+    toggleClass('toggle-blogs-btn', 'toggle-blogs')
 
     /**Hide scroll to #links
      * Implement here in html or else scroll malfunctions

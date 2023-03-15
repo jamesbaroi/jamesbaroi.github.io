@@ -1,13 +1,13 @@
 /**CREATE */
 /**Render json */
-const renderProjects = (data) => {
+const renderBlog = (data) => {
 
-  /**Render newest project */
+  /**Render newest blog */
 
-  /**Get projects container */
-  const newestProject = document.getElementById('newest-project')
+  /**Get blogs container */
+  const newestBlog = document.getElementById('newest-blog')
 
-  /**Create project elements */
+  /**Create blog elements */
   let div = document.createElement('div')
   let title = document.createElement('h1')
   let image = document.createElement('img')
@@ -57,18 +57,18 @@ const renderProjects = (data) => {
   div.append(description)
   div.append(tag)
 
-  /**Append project as link */
+  /**Append blog as link */
   url.append(div)
 
-  newestProject.append(url)
+  newestBlog.append(url)
 
-  /**Reverse iterate all except newest project */
+  /**Reverse iterate all except newest blog */
   for (let i = data.length - 2; i >= 0; i--) {
 
-    /**Get projects container */
-    const projects = document.getElementById('projects')
+    /**Get blogs container */
+    const blogs = document.getElementById('blogs')
 
-    /**Create project elements */
+    /**Create blog elements */
     div = document.createElement('div')
     title = document.createElement('h1')
     image = document.createElement('img')
@@ -105,18 +105,18 @@ const renderProjects = (data) => {
     div.append(subtitle)
     div.append(description)
 
-    /**Append project as link */
+    /**Append blog as link */
     url.append(div)
 
-    /**Append project link to container */
-    projects.append(url)
+    /**Append blog link to container */
+    blogs.append(url)
   }
 }
 
 /**Fetch json */
-const fetchProjects = () => {
+const fetchBlog = () => {
 
-  fetch('/projects/index.json')
+  fetch('/blog/index.json')
   .then(x => x.json())
-  .then(y => renderProjects(y))
+  .then(y => renderBlog(y))
 }

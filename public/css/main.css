@@ -203,7 +203,8 @@ menu {
 #home,
 #about,
 #contact,
-#projects-container {
+#projects-container,
+#blogs-container {
   scroll-margin-top: 48px;
 }
 
