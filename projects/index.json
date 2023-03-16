@@ -7,6 +7,7 @@
     "img": "/public/img/conways-game.jpg",
     "alt": "Image of Conway's game.",
     "tag": "Coming soon!",
+    "date": "",
     "style": {
       "backgroundColor": "darkred",
       "color": "white"

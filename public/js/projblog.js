@@ -9,14 +9,15 @@ const createElem = () => {
   let section = document.createElement('div')
   let div = document.createElement('div')
   let title = document.createElement('h1')
-  let image = document.createElement('img')
   let subtitle = document.createElement('h4')
   let description = document.createElement('p')
-  let tag = document.createElement('div')
   let url = document.createElement('a')
+  let image = document.createElement('img')
+  let tag = document.createElement('div')
+  let date = document.createElement('div')
 
   return {
-    section, div, title, image, subtitle, description, tag, url
+    section, div, title, subtitle, description, url, image, tag, date
   }
 }
 
@@ -38,6 +39,7 @@ const processData = (e, input, i) => {
   e.image.setAttribute('alt', input[i].alt)
   e.image.setAttribute('onerror', 'this.style.display="none"')
   e.image.setAttribute('style', 'border: 0;')
+  e.date.setAttribute('class', 'date')
   e.tag.setAttribute('style',
     `
     color: red;
@@ -52,13 +54,17 @@ const processData = (e, input, i) => {
   e.subtitle.innerHTML = input[i].subtitle
   e.description.innerHTML = input[i].description
   e.tag.innerHTML = input[i].tag
+  e.date.innerHTML = input[i].date
+  
 
   /**Append elements */
-  e.div.append(e.title)
-  e.div.append(e.image)
-  e.div.append(e.subtitle)
-  e.div.append(e.description)
-  e.div.append(e.tag)
+  if (input[i].title) { e.div.append(e.title) }
+  if (input[i].img) { e.div.append(e.image) }
+  if (input[i].subtitle) { e.div.append(e.subtitle) }
+  if (input[i].date) { e.div.append(e.date) }
+  if (input[i].description) { e.div.append(e.description) }
+  if (input[i].tag) { e.div.append(e.tag) }
+
   e.url.append(e.div)
   e.section.append(e.url)
 }

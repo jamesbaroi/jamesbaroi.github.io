@@ -1,11 +1,11 @@
 #projects-container a,
 #blogs-container a {
-  color: unset;
   text-decoration: none;
 }
 #projects-container .a-active,
 #blogs-container .a-active {
   background-color: white;
+  border-radius: 4px;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.6);
   position: relative;
 }
@@ -27,15 +27,23 @@
     color: white;
   }
   #projects-container .a-active:hover div > h1,
+  #projects-container .a-active:hover div > h4,
+  #projects-container .a-active:hover div > p,
+  #projects-container .a-active:hover div > .date,
+  #blogs-container .a-active:hover div > h1,
+  #blogs-container .a-active:hover div > h4,
+  #blogs-container .a-active:hover div > p,
+  #blogs-container .a-active:hover div > .date {
+    color: white !important;
+  }
+  #projects-container .a-active:hover div > h1,
   #blogs-container .a-active:hover div > h1 {
     background-color: rgb(32, 33, 36) !important;
-    color: white !important;
   }
   #projects-container .a-active:hover div > h4, #projects-container .a-active:hover p,
   #blogs-container .a-active:hover div > h4,
   #blogs-container .a-active:hover p {
     background-color: royalblue !important;
-    color: white !important;
   }
   #projects-container .a-active:active,
   #blogs-container .a-active:active {
@@ -55,7 +63,12 @@
   background-size: cover;
   border-style: none;
   display: block;
+  height: 100%;
+  margin: auto;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
   outline: none;
+  width: 100%;
 }
 #projects-container h4,
 #blogs-container h4 {
@@ -63,13 +76,11 @@
   margin: 0;
   padding: 20px 20px 0;
 }
-#projects-container img,
-#blogs-container img {
-  height: 100%;
-  margin: auto;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
-  width: 100%;
+#projects-container .date,
+#blogs-container .date {
+  color: rgb(95, 99, 104);
+  font-size: small;
+  padding: 16px 20px 0;
 }
 #projects-container small,
 #blogs-container small {
@@ -104,7 +115,7 @@
   color: rgb(32, 33, 36);
   line-height: 2em;
   margin: 0;
-  padding: 0.67em 20px 1em;
+  padding: 16px 20px;
 }
 
 #projects,
@@ -112,7 +123,7 @@
   background-color: white;
   display: none;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: auto;
   grid-auto-rows: min-content;
   margin: 0 auto;
   padding: 0 20px 40px;
@@ -128,7 +139,7 @@
   color: rgb(32, 33, 36);
   line-height: 2em;
   margin: 0;
-  padding: 0.67em 20px 1em;
+  padding: 16px 20px;
 }
 
 #toggle-projects-btn,
@@ -142,6 +153,9 @@
   max-width: -moz-fit-content;
   max-width: fit-content;
   padding: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   width: 100%;
 }
 
@@ -165,6 +179,12 @@
     color: rgb(95, 99, 104);
   }
 }
+@media only screen and (min-width: 565px) {
+  #projects,
+  #blogs {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
 @media only screen and (min-width: 768px) {
   #newest-project,
   #newest-blog {
@@ -173,6 +193,7 @@
   #projects,
   #blogs {
     gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     padding: 0 40px 100px;
   }
 }
