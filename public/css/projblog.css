@@ -1,107 +1,138 @@
-#projects-container a {
+#projects-container a,
+#blogs-container a {
   color: unset;
   text-decoration: none;
 }
-#projects-container .a-active {
+#projects-container .a-active,
+#blogs-container .a-active {
   background-color: white;
-  border: 0;
-  border-radius: 4px;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+#projects-container .a-active > a > div > h1,
+#blogs-container .a-active > a > div > h1 {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+#projects-container .a-active > a > div > p,
+#blogs-container .a-active > a > div > p {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 @media (hover: hover) {
-  #projects-container .a-active:hover {
+  #projects-container .a-active:hover,
+  #blogs-container .a-active:hover {
     background-color: royalblue;
+    border-radius: 4px;
     color: white;
   }
-  #projects-container .a-active:hover div > h1 {
+  #projects-container .a-active:hover div > h1,
+  #blogs-container .a-active:hover div > h1 {
     background-color: rgb(32, 33, 36) !important;
     color: white !important;
   }
-  #projects-container .a-active:hover div > h4, #projects-container .a-active:hover p {
+  #projects-container .a-active:hover div > h4, #projects-container .a-active:hover p,
+  #blogs-container .a-active:hover div > h4,
+  #blogs-container .a-active:hover p {
     background-color: royalblue !important;
     color: white !important;
   }
-  #projects-container .a-active:active {
+  #projects-container .a-active:active,
+  #blogs-container .a-active:active {
     background-color: rgb(32, 33, 36) !important;
     box-shadow: none;
   }
-  #projects-container .a-active:active div > h4, #projects-container .a-active:active p {
+  #projects-container .a-active:active div > h4, #projects-container .a-active:active p,
+  #blogs-container .a-active:active div > h4,
+  #blogs-container .a-active:active p {
     background-color: rgb(32, 33, 36) !important;
     color: rgb(95, 99, 104);
   }
 }
-#projects-container img {
+#projects-container img,
+#blogs-container img {
   background-color: rgb(32, 33, 36);
   background-size: cover;
   border-style: none;
   display: block;
   outline: none;
 }
-#projects-container h4 {
+#projects-container h4,
+#blogs-container h4 {
   color: rgb(32, 33, 36);
   margin: 0;
   padding: 20px 20px 0;
 }
-#projects-container img {
+#projects-container img,
+#blogs-container img {
   height: 100%;
   margin: auto;
   -o-object-fit: scale-down;
      object-fit: scale-down;
   width: 100%;
 }
-#projects-container small {
+#projects-container small,
+#blogs-container small {
   font-weight: bold;
   padding: 0 20px;
 }
 
-#newest-project-container {
+#newest-project-container,
+#newest-blog-container {
   background-color: white;
   color: rgb(32, 33, 36);
   margin: auto;
   max-width: 752px;
 }
 
-#newest-project {
+#newest-project,
+#newest-blog {
   background-color: white;
   display: grid;
   margin: auto;
   max-width: 580px;
   padding: 20px;
 }
-#newest-project h1 {
+#newest-project h1,
+#newest-blog h1 {
   font-weight: 100;
   margin: 0;
   padding: 20px;
 }
-#newest-project p {
+#newest-project p,
+#newest-blog p {
   color: rgb(32, 33, 36);
   line-height: 2em;
   margin: 0;
   padding: 0.67em 20px 1em;
 }
 
-#projects {
+#projects,
+#blogs {
   background-color: white;
   display: none;
   gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-auto-rows: min-content;
   margin: 0 auto;
   padding: 0 20px 40px;
 }
-#projects h1 {
+#projects h1,
+#blogs h1 {
   font-weight: 100;
   margin: 0;
   padding: 20px;
 }
-#projects p {
+#projects p,
+#blogs p {
   color: rgb(32, 33, 36);
   line-height: 2em;
   margin: 0;
   padding: 0.67em 20px 1em;
 }
 
-#toggle-projects-btn {
+#toggle-projects-btn,
+#toggle-blogs-btn {
   background-color: royalblue;
   border-radius: 4px;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.6);
@@ -118,47 +149,61 @@
   display: grid;
 }
 
+.toggle-blogs #blogs {
+  display: grid;
+}
+
 @media (hover: hover) {
-  #toggle-projects-btn:hover {
+  #toggle-projects-btn:hover,
+  #toggle-blogs-btn:hover {
     background-color: orangered;
   }
-  #toggle-projects-btn:active {
+  #toggle-projects-btn:active,
+  #toggle-blogs-btn:active {
     background-color: rgb(32, 33, 36);
     box-shadow: none;
     color: rgb(95, 99, 104);
   }
 }
 @media only screen and (min-width: 768px) {
-  #newest-project {
+  #newest-project,
+  #newest-blog {
     padding: 20px 40px;
   }
-  #projects {
+  #projects,
+  #blogs {
     gap: 40px;
     padding: 0 40px 100px;
   }
 }
 @media only screen and (min-width: 920px) {
-  #newest-project {
+  #newest-project,
+  #newest-blog {
     padding: 20px 100px;
   }
-  #projects {
+  #projects,
+  #blogs {
     gap: 80px;
     padding: 0 100px 100px;
   }
 }
 @media only screen and (min-width: 1080px) {
-  #newest-project {
+  #newest-project,
+  #newest-blog {
     padding: 20px 100px;
   }
-  #projects {
+  #projects,
+  #blogs {
     padding: 0 200px 100px;
   }
 }
 @media only screen and (min-width: 1700px) {
-  #newest-project {
+  #newest-project,
+  #newest-blog {
     padding: 20px 100px;
   }
-  #projects {
+  #projects,
+  #blogs {
     padding: 0 300px 100px;
   }
-}/*# sourceMappingURL=projects.css.map */
+}/*# sourceMappingURL=projblog.css.map */

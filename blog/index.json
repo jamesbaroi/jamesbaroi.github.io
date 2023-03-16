@@ -6,6 +6,7 @@
     "url": "/blog/conways-game",
     "img": "/public/img/conways-game.jpg",
     "alt": "Image of Conway's game.",
+    "tag": "Coming soon!",
     "style": {
       "backgroundColor": "darkgreen",
       "color": "white"

@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>James A. Baroi - Web Developer</title>
   <link rel="stylesheet" href="/public/css/main.css">
-  <link rel="stylesheet" href="/public/css/projects.css">
-  <link rel="stylesheet" href="/public/css/blog.css">
+  <link rel="stylesheet" href="/public/css/projblog.css">
   <link rel="stylesheet" href="/public/css/scroll.css">
   <link rel="stylesheet" href="/public/css/cookie.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,8 +64,19 @@
           simply a bit of help, I offer my service to realize your web dream.
         </p>
         <p>
-          Check out my sample <a class="bold color keep-together" href="#projects-container">projects</a> below and read my
-          <a class="bold color keep-together" href="/blog" target="_blank">blog <small><i class="fa-solid fa-up-right-from-square"></i></small></a> (coming soon!).
+          Learn more
+          <a class="bold color" href="#about">about</a>
+          me, check out my sample
+          <span class="keep-together">
+            <a class="bold color" href="#projects-container">projects</a>,
+          </span>
+          read my
+          <span class="keep-together">
+            <a class="bold color" href="#blogs-container">blog</a>,
+          </span>
+          and
+          <a class="bold color" href="#contact">contact</a>
+          me to make your web dream come true.
         </p>
       </div>
     </section>
@@ -148,12 +158,10 @@
   </main>
   <footer id="footer"></footer>
   <script src="/public/js/main.js"></script>
-  <script src="/public/js/projects.js"></script>
-  <script src="/public/js/blog.js"></script>
+  <script src="/public/js/projblog.js"></script>
   <script src="/public/js/scroll.js"></script>
   <script src="/public/js/cookie.js"></script>
   <script>
-
     /**Show drop-down menu */
     toggleClass('menu-btn', 'toggle-menu')
 
@@ -174,11 +182,12 @@
     closeCookieClass('header', 'toggle-cookie-customize')
     closeCookieClass('main', 'toggle-cookie-customize')
     closeCookieClass('footer', 'toggle-cookie-customize')
-  </script>
-  <script>
-    fetchProjects()
-    fetchBlog()
 
+    /**Fetch data */
+    fetchProjects()
+    fetchBlogs()
+
+    /**Show data */
     toggleClass('toggle-projects-btn', 'toggle-projects')
     toggleClass('toggle-blogs-btn', 'toggle-blogs')
 

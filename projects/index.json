@@ -6,6 +6,20 @@
     "url": "/projects/conways-game",
     "img": "/public/img/conways-game.jpg",
     "alt": "Image of Conway's game.",
+    "tag": "",
+    "style": {
+      "backgroundColor": "darkred",
+      "color": "white"
+    }
+  },
+  {
+    "title": "Conway's Game",
+    "subtitle": "Cellular Automaton",
+    "description": "John Conway's game of life: a cellular automaton.",
+    "url": "/projects/conways-game",
+    "img": "/public/img/conways-game.jpg",
+    "alt": "Image of Conway's game.",
+    "tag": "Coming soon!",
     "style": {
       "backgroundColor": "darkred",
       "color": "white"
