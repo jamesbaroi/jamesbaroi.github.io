@@ -1,15 +1,19 @@
-/**CREATE */
+/**[ CREATE ONLY ]
+ * [ NO IMPLEMENTATION ]
+ * [ NO DEPENDENCY]
+ * */
+
 /**Create elements */
 const createElem = () => {
 
-  var section = document.createElement('div')
-  var div = document.createElement('div')
-  var title = document.createElement('h1')
-  var image = document.createElement('img')
-  var subtitle = document.createElement('h4')
-  var description = document.createElement('p')
-  var tag = document.createElement('div')
-  var url = document.createElement('a')
+  let section = document.createElement('div')
+  let div = document.createElement('div')
+  let title = document.createElement('h1')
+  let image = document.createElement('img')
+  let subtitle = document.createElement('h4')
+  let description = document.createElement('p')
+  let tag = document.createElement('div')
+  let url = document.createElement('a')
 
   return {
     section, div, title, image, subtitle, description, tag, url
@@ -79,42 +83,20 @@ const renderAll = (input, eId, i) => {
   document.getElementById(eId).append(e.section)
 }
 
-/**IMPLEMENT */
-/**Render projects */
-const renderProj = (data) => {
+/**Render all */
+const render = (data, newData, allData) => {
 
-  /**Render newest project */
-  renderNew(data, 'newest-project')
-
-  /**Reverse iterate all except newest project */
-  for (let i = data.length - 2; i >= 0; i--) {
-
-    renderAll(data, 'projects', i)
-  }
-}
-
-const renderBlogs = (data, blog) => {
-
-  renderNew(data, 'newest-blog')
+  renderNew(data, newData)
 
   for (let i = data.length - 2; i >= 0; i--) {
 
-    renderAll(data, 'blogs', i)
+    renderAll(data, allData, i)
   }
 }
 
-/**Fetch projects */
-const fetchProjects = () => {
-
-  fetch('/projects/index.json')
+/**Fetch json */
+const fetchJson = (url, newData, allData) => {
+  fetch(url)
   .then(x => x.json())
-  .then(y => renderProj(y))
-}
-
-/**Fetch bogs */
-const fetchBlogs = () => {
-
-  fetch('/blog/index.json')
-  .then(x => x.json())
-  .then(y => renderBlogs(y))
+  .then(y => render(y, newData, allData))
 }

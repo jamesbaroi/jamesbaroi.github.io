@@ -183,9 +183,9 @@
     closeCookieClass('main', 'toggle-cookie-customize')
     closeCookieClass('scroll-btn', 'toggle-cookie-customize')
 
-    /**Fetch data */
-    fetchProjects()
-    fetchBlogs()
+    /**Fetch json */
+    fetchJson('/projects/index.json', 'newest-project', 'projects')
+    fetchJson('/blog/index.json', 'newest-blog', 'blogs')
 
     /**Show data */
     toggleClass('toggle-projects-btn', 'toggle-projects')
