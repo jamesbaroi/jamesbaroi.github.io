@@ -349,7 +349,7 @@ const createCookie = () => {
     `
   })
 
-  footer[footerLast].after(cookie)
+  footer[footerLast].append(cookie)
 }
 
 /**[ IMPLEMENT ] */

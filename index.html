@@ -148,13 +148,13 @@
         <p>Country: United States</p>
       </div>
     </section>
-    <div id="policy">
-      <small>
-        <a class="policy-color keep-together" href="/policy/user-agreement" target="_blank">User Agreement <small><i class="fa-solid fa-up-right-from-square"></i></small></a> -
-        <a class="policy-color keep-together" href="/policy/privacy-policy" target="_blank">Privacy Policy <small><i class="fa-solid fa-up-right-from-square"></i></small></a> -
-        <a class="policy-color keep-together" href="/policy/cookie-policy" target="_blank">Cookie Policy <small><i class="fa-solid fa-up-right-from-square"></i></small></a>
-      </small>
-    </div>
+    <section>
+      <div id="policy">
+        <span class="keep-together"><a class="policy-color" href="/policy/user-agreement" target="_blank">User Agreement <small><i class="fa-solid fa-up-right-from-square"></i></small></a></span>
+        <span class="keep-together">&#160;&#160;&#160;&#160;<a class="policy-color" href="/policy/privacy-policy" target="_blank">Privacy Policy <small><i class="fa-solid fa-up-right-from-square"></i></small></a></span>
+        <span class="keep-together">&#160;&#160;&#160;&#160;<a class="policy-color" href="/policy/cookie-policy" target="_blank">Cookie Policy <small><i class="fa-solid fa-up-right-from-square"></i></small></a></span>
+      </div>
+    </section>
   </main>
   <footer id="footer"></footer>
   <script src="/public/js/main.js"></script>
@@ -181,7 +181,7 @@
     closeCookieClass('nav', 'toggle-cookie-customize')
     closeCookieClass('header', 'toggle-cookie-customize')
     closeCookieClass('main', 'toggle-cookie-customize')
-    closeCookieClass('footer', 'toggle-cookie-customize')
+    closeCookieClass('scroll-btn', 'toggle-cookie-customize')
 
     /**Fetch data */
     fetchProjects()

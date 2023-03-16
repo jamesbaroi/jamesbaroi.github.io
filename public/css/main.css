@@ -209,6 +209,7 @@ menu {
 }
 
 #policy {
+  font-size: small;
   font-weight: 700;
   margin: auto;
   max-width: 752px;

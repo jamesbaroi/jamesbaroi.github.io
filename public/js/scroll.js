@@ -70,11 +70,11 @@ const showScroller = (eId) => {
 }
 
 /**Create scroll btn
- * [ DEPENDENCY ] requires at least one main tag in html
+ * [ DEPENDENCY ] requires at least one footer tag in html
 */
 const createScroll = () => {
-  let main = document.querySelectorAll('main')
-  let mainLast = main.length - 1
+  let footer = document.querySelectorAll('footer')
+  let footerLast = footer.length - 1
 
   let scrollBtn = Object.assign(document.createElement('i'), {
     id: 'scroll-btn'
@@ -82,7 +82,7 @@ const createScroll = () => {
 
   scrollBtn.setAttribute('class', 'fa-solid fa-angle-up')
 
-  main[mainLast].after(scrollBtn)
+  footer[footerLast].append(scrollBtn)
 }
 
 /**IMPLEMENT */
