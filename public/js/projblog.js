@@ -81,7 +81,7 @@ const renderAll = (input, eId, i) => {
 
 /**IMPLEMENT */
 /**Render projects */
-const renderProj = (data, proj) => {
+const renderProj = (data) => {
 
   /**Render newest project */
   renderNew(data, 'newest-project')
