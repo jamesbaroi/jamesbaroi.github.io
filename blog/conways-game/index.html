@@ -7,6 +7,7 @@
   <title>How To Code: Conway's Game</title>
   <link rel="stylesheet" href="/public/css/scroll.css">
   <link rel="stylesheet" href="/public/css/cookie.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/github-dark.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
@@ -18,23 +19,28 @@
   <link rel="manifest" href="/site.webmanifest">
   <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script>
   <script defer src="https://kit.fontawesome.com/5cda094748.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script defer>hljs.highlightAll();</script>
   <style>
-    body {
-      font-family: 'Roboto';
-    }
-    h1 {
-      font-weight: 300;
-    }
+    /**Replace from develop in prod */
   </style>
+  <!--Replace develop in prod-->
+  <link rel="stylesheet" href="/public/css/develop.css">
 </head>
 <body>
   <header id="header">
-    <nav id="nav"></nav>
-    <menu id="menu"></menu>
+    <h1 id="title">How To Code: Conway's Game</h1>
+    <div id="image">
+      <img src="/public/img/conways-game.jpg" alt="Snapshot of Conway's game.">
+    </div>
+    <h4 id="subtitle">Cellular Automaton in JavaScript</h4>
+    <!-- <div id="date">March 16, 2023</div> -->
+    <p id="description">A tutorial on how to create Conway's game of life (coming soon!).</p>
   </header>
   <main id="main">
-    <h1>How To Code: Conway's Game</h1>
-    <p>Coming soon!</p>
+    <h4>Overview</h4>
+    <h4>Prerequisites</h4>
+    <h4>Content</h4>
   </main>
   <footer id="footer"></footer>
   <script src="/public/js/scroll.js"></script>

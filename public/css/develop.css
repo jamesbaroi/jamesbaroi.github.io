@@ -1,0 +1,75 @@
+/**Blog template */
+body {
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+}
+
+#title {
+  background-color: darkred;
+  color: white;
+  font-weight: 100;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+#image {
+  background-color: rgb(32, 33, 36);
+  margin: auto;
+}
+#image img {
+  background-size: cover;
+  border-style: none;
+  display: block;
+  height: 100%;
+  margin: auto;
+  max-width: 752px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  outline: none;
+  width: 100%;
+}
+
+#subtitle, h4 {
+  background-color: white;
+  box-sizing: border-box;
+  color: royalblue;
+  margin: auto;
+  max-width: 752px;
+  padding: 20px 20px 0;
+}
+
+#date {
+  background-color: white;
+  box-sizing: border-box;
+  font-size: small;
+  margin: auto;
+  max-width: 752px;
+  padding: 16px 20px 0;
+}
+
+#description {
+  background-color: white;
+  box-sizing: border-box;
+  line-height: 2em;
+  margin: auto;
+  max-width: 752px;
+  padding: 10px 20px;
+}
+
+pre {
+  margin: auto;
+  max-width: 752px;
+  padding: 0 10px;
+}
+
+code {
+  background-color: rgb(32, 33, 36) !important;
+  border-radius: 4px;
+  padding: 10px 20px !important;
+}
+
+main {
+  display: none;
+}/*# sourceMappingURL=develop.css.map */
