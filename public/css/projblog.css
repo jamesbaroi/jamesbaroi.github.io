@@ -82,12 +82,7 @@
 #blogs-container .date {
   color: rgb(95, 99, 104);
   font-size: small;
-  padding: 16px 20px 0;
-}
-#projects-container small,
-#blogs-container small {
-  font-weight: bold;
-  padding: 0 20px;
+  padding: 0 20px 16px;
 }
 
 #newest-project-container,

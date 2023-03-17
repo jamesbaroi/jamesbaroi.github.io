@@ -5,8 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conway's Game</title>
-  <link rel="stylesheet" href="/public/css/scroll.css">
-  <link rel="stylesheet" href="/public/css/cookie.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
@@ -16,33 +14,27 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-  <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script>
-  <script defer src="https://kit.fontawesome.com/5cda094748.js" crossorigin="anonymous"></script>
+  <script defer src="/projects/conways-game/script.js"></script>
   <style>
     body {
-      font-family: 'Roboto';
+      background-color: rgb(32, 33, 36);
+      display: none;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
     }
-    h1 {
-      font-weight: 300;
+    #grid-container {
+      background-color: rgb(95, 99, 104);
+      box-sizing: border-box;
+      margin: 8px;
+    }
+    #grid-container > canvas {
+      max-height: calc(100vh - 20px);
+      max-width: 100%;
     }
   </style>
 </head>
 <body>
-  <header id="header">
-    <h1>Conway's Game</h1>
-    <p>Coming soon!</p>
-  </header>
-  <main id="main">
-    
-  </main>
-  <footer id="footer"></footer>
-  <script src="/public/js/scroll.js"></script>
-  <script src="/public/js/cookie.js"></script>
-  <script>
-    /**Close toggle-cookie-customize class on element id click */
-    /**Hide scroll to #links
-     * Implement here in html or else scroll malfunctions
-    */
-  </script>
+  <div id="grid-container"></div>
 </body>
 </html>

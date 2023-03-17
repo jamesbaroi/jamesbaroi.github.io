@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How To Code: Conway's Game</title>
-  <link rel="stylesheet" href="/public/css/scroll.css">
   <link rel="stylesheet" href="/public/css/cookie.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/github-dark.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,26 +29,220 @@
 <body>
   <header id="header">
     <h1 id="title">How To Code: Conway's Game</h1>
-    <div id="image">
-      <img src="/public/img/conways-game.jpg" alt="Snapshot of Conway's game.">
-    </div>
-    <h4 id="subtitle">Cellular Automaton in JavaScript</h4>
-    <!-- <div id="date">March 16, 2023</div> -->
-    <p id="description">A tutorial on how to create Conway's game of life (coming soon!).</p>
   </header>
-  <main id="main">
-    <h4>Overview</h4>
-    <h4>Prerequisites</h4>
+  <div id="top-spacer"></div>
+  <nav id="nav">
     <h4>Content</h4>
+    <div>
+      <a href="#overview"><p>i. Overview</p></a>
+      <a href="#prereqs"><p>ii. Prerequisites</p></a>
+      <a href="#plan"><p>1. Plan</p></a>
+      <a href="#area"><p>2. Area</p></a>
+      <a href="#cell"><p>3. Cell</p></a>
+      <a href="#rules"><p>4. Rules</p></a>
+      <a href="#game"><p>5. Game</p></a>
+      <a href="#loop"><p>6. Loop</p></a>
+      <a href="#metrics"><p>7. Metrics</p></a>
+      <a href="#code"><p>8. Code</p></a>
+    </div>
+  </nav>
+  <main id="main">
+    <section id="main-content">
+      <img src="/public/img/conways-game.jpg" alt="Snapshot of Conway's game.">
+      <h4 id="subtitle">Cellular Automaton in JavaScript</h4>
+      <div id="date">March 16, 2023</div>
+      <p id="description">A tutorial on how to create Conway's game of life.</p>
+      <h4 id="overview">Overview</h4>
+      <p>
+        Build John H. Conway's
+        <a class="keep-together" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">
+          game of life <small><i class="fa-solid fa-up-right-from-square"></i></small>
+        </a>
+        in JavaScript using the HTML canvas element to render graphics on a
+        200 x 200 cell grid allowing for controls to set the initial seed
+        probability, configure game rules, reduce grid size, and change cell
+        and grid colors. Implement buttons to pause, resume, and restart the
+        game, and output metrics including population count, frame rate, and
+        latency. Click
+        <a href="/projects/conways-game" target="_blank">here</a>
+        to preview the project. Scroll down to the end for the complete code.
+      </p>
+      <h4 id="prereqs">Prerequisites</h4>
+      <p>
+        This tutorial requires minimal knowledge of HTML, CSS, and JavaScript (JS),
+        the ability to serve these files, and the use of a code editor.
+      </p>
+      <menu id="menu">
+        <div id="menu-btn">
+          <div id="content">Content</div>
+          <small id="content-angle-right">&#160;&#160;<i class="fa-solid fa-angle-right"></i></small>
+          <small id="content-angle-down">&#160;&#160;<i class="fa-solid fa-angle-down"></i></small>
+        </div>
+        <div id="menu-drop">
+          <p><a id="menu-overview" class="underline" href="#overview">i. Overview</a></p>
+          <p><a id="menu-prereqs" class="underline" href="#prereqs">ii. Prerequisites</a></p>
+          <p><a id="menu-plan" class="underline" href="#plan">1. Plan</a></p>
+          <p><a id="menu-area" class="underline" href="#area">2. Area</a></p>
+          <p><a id="menu-cell" class="underline" href="#cell">3. Cell</a></p>
+          <p><a id="menu-rules" class="underline" href="#rules">4. Rules</a></p>
+          <p><a id="menu-game" class="underline" href="#game">5. Game</a></p>
+          <p><a id="menu-loop" class="underline" href="#loop">6. Loop</a></p>
+          <p><a id="menu-metrics" class="underline" href="#metrics">7. Metrics</a></p>
+          <p><a id="menu-code" class="underline" href="#code">8. Code</a></p>
+        </div>
+      </menu>
+      <section id="plan">
+        <h4>Plan</h4>
+        <p>
+          First create a game area in JS and output it to HTML. Then construct
+          cells to place into the grid, configure the game rules, define the
+          game initialization and loop, and calculate and output metrics.
+          Finally, create configurable settings and button controls.
+        </p>
+      </section>
+      <section id="area">
+        <h4>Area</h4>
+        <p>Create a grid container in html to output the game area.</p>
+        <pre><code>
+&lt;!--index.html--&gt;
+
+&lt;body&gt;
+
+  &lt;div id=&quot;grid-container&quot;&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+        </code></pre>
+        <p>
+          Create the game area object in JS, assign to it a grid property that
+          takes in a created canvas element, and setup a starting method.
+        </p>
+        <pre><code>
+/**script.js */
+
+const area = {
+
+  grid: document.createElement(&#039;canvas&#039;),
+
+  start() { }
+}
+        </code></pre>
+        <p>
+          Get the grid-container and pass the canvas grid in the start method.
+          Do a quick test by running the method. Open dev tools to check the
+          canvas element that should appear in the grid container.
+        </p>
+        <pre><code>
+const contGrid = document.getElementById(&#039;grid-container&#039;)
+
+const area = {
+
+  grid: document.createElement(&#039;canvas&#039;),
+
+  start() {
+
+    contGrid.insertBefore(this.grid, contGrid.childNodes[0])
+  }
+}
+
+area.start()
+        </code></pre>
+        <p>
+          Get the canvas 2d context and assign it to the start method. Create
+          grid dimension properties.
+        </p>
+        <pre><code>
+start() {
+
+  contGrid.insertBefore(this.grid, contGrid.childNodes[0])
+
+  this.context = this.grid.getContext(&#039;2d&#039;)
+
+  this.grid.width = 2000
+  this.grid.height = 2000
+
+  this.cols = 200
+  this.rows = 200
+}
+        </code></pre>
+        <p>Add css to visualize the grid perfectly centered on any screen.</p>
+        <pre><code>
+body {
+  background-color: rgb(32, 33, 36);
+  display: grid;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+#grid-container {
+  background-color: rgb(95, 99, 104);
+  box-sizing: border-box;
+  margin: 8px;
+}
+
+#grid-container &gt; canvas {
+  max-height: calc(100vh - 20px);
+  max-width: 100%;
+}
+        </code></pre>
+      </section>
+
+      <section id="cell">
+        <h4>Cell</h4>
+      </section>
+      <section id="rules">
+        <h4>Rules</h4>
+      </section>
+      <section id="game">
+        <h4>Game</h4>
+      </section>
+      <section id="loop">
+        <h4>Loop</h4>
+      </section>
+      <section id="metrics">
+        <h4>Metrics</h4>
+      </section>
+      <section id="code">
+        <h4>Code</h4>
+      </section>
+    </section>
+    <section id="bottom-spacer"></section>
   </main>
-  <footer id="footer"></footer>
+  <footer id="footer">
+  </footer>
+
+  <script src="/public/js/main.js"></script>
   <script src="/public/js/scroll.js"></script>
   <script src="/public/js/cookie.js"></script>
   <script>
+  
+    toggleClass('menu-btn', 'toggle-menu')
+
+    closeClass('menu-overview', 'toggle-menu')
+    closeClass('menu-prereqs', 'toggle-menu')
+    closeClass('menu-plan', 'toggle-menu')
+    closeClass('menu-area', 'toggle-menu')
+    closeClass('menu-cell', 'toggle-menu')
+    closeClass('menu-rules', 'toggle-menu')
+    closeClass('menu-game', 'toggle-menu')
+    closeClass('menu-loop', 'toggle-menu')
+    closeClass('menu-metrics', 'toggle-menu')
+    closeClass('menu-code', 'toggle-menu')
+
+    closeClass('area', 'toggle-menu')
+    closeClass('cell', 'toggle-menu')
+    closeClass('rules', 'toggle-menu')
+    closeClass('game', 'toggle-menu')
+    closeClass('loop', 'toggle-menu')
+    closeClass('metrics', 'toggle-menu')
+    closeClass('code', 'toggle-menu')
+    closeClass('bottom-spacer', 'toggle-menu')
+
     /**Close toggle-cookie-customize class on element id click */
     /**Hide scroll to #links
      * Implement here in html or else scroll malfunctions
     */
+    hideHashLink()
   </script>
 </body>
 </html>

@@ -15,9 +15,10 @@ const createElem = () => {
   let image = document.createElement('img')
   let tag = document.createElement('div')
   let date = document.createElement('div')
+  let flex = document.createElement('div')
 
   return {
-    section, div, title, subtitle, description, url, image, tag, date
+    section, div, title, subtitle, description, url, image, flex, tag, date
   }
 }
 
@@ -39,10 +40,12 @@ const processData = (e, input, i) => {
   e.image.setAttribute('alt', input[i].alt)
   e.image.setAttribute('onerror', 'this.style.display="none"')
   e.image.setAttribute('style', 'border: 0;')
+  e.flex.setAttribute('style', 'display: flex; justify-content: space-between;')
   e.date.setAttribute('class', 'date')
   e.tag.setAttribute('style',
     `
     color: red;
+    font-size: 14px;
     font-weight: bold;
     padding: 0 20px 20px;
     text-align: right;
@@ -61,10 +64,10 @@ const processData = (e, input, i) => {
   if (input[i].title) { e.div.append(e.title) }
   if (input[i].img) { e.div.append(e.image) }
   if (input[i].subtitle) { e.div.append(e.subtitle) }
-  if (input[i].date) { e.div.append(e.date) }
   if (input[i].description) { e.div.append(e.description) }
-  if (input[i].tag) { e.div.append(e.tag) }
-
+  if (input[i].date) { e.flex.append(e.date) }
+  if (input[i].tag) { e.flex.append(e.tag) }
+  e.div.append(e.flex)
   e.url.append(e.div)
   e.section.append(e.url)
 }
