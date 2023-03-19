@@ -6,14 +6,15 @@
 /**Toggle css class */
 const toggleClass = (eId, tgClass) => {
 
-  let e = document.getElementById(eId)
+  let elem = document.getElementById(eId)
 
-  if (!e) {
+  if (!elem) {
 
     console.log(`The element id ${eId} does not exist.`)
     return
   } else {
-    e.addEventListener('click', () => {
+    elem.addEventListener('click', () => {
+
       document.body.classList.toggle(tgClass)
     })
   }
@@ -22,15 +23,15 @@ const toggleClass = (eId, tgClass) => {
 /**Close css class */
 const closeClass = (eId, tgClass) => {
 
-  let e = document.getElementById(eId)
+  let elem = document.getElementById(eId)
 
-  if (!e) {
+  if (!elem) {
 
     console.log(`The element id "${eId}" does not exist.`)
     return
   } else {
 
-    e.addEventListener('click', (e) => {
+    elem.addEventListener('click', () => {
 
       if(!document.body.classList.contains(tgClass)) {
 

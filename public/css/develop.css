@@ -1,13 +1,13 @@
 /**BLOG TEMPLATE START */
 body {
-  --c0: white;
-  --c1: #121212;
+  --c0: rgb(255, 255, 255);
+  --c1: rgb(18, 18, 18);
   --c2: rgb(32, 33, 36);
   --c3: rgb(95, 99, 104);
   --c4: rgb(186, 188, 190);
-  --c5: darkred;
-  --c6: hotpink;
-  --c7: yellowgreen;
+  --c5: rgb(139,0,0);
+  --c6: rgb(255,105,180);
+  --c7: rgb(154,205,50);
 }
 
 body {
@@ -34,15 +34,60 @@ a {
   }
 }
 #top-spacer {
+  align-items: center;
   background-color: var(--c5);
+  display: grid;
   min-height: 78px;
   width: 100%;
 }
 
+#img,
+#img-mobile {
+  border: 2px solid white;
+  border-radius: 50%;
+  height: 40px;
+  margin: auto;
+  position: relative;
+  transition: 0.2s;
+  width: 40px;
+  z-index: 1;
+}
+
+#img {
+  display: none;
+}
+
+#img-mobile {
+  display: block;
+  margin-left: 30px;
+}
+
+@media (hover: hover) {
+  #top-spacer:hover #img {
+    height: 50px;
+    width: 50px;
+  }
+  #top-spacer:active #img {
+    height: 40px;
+    width: 40px;
+  }
+  header > a:hover #img-mobile {
+    height: 50px;
+    width: 50px;
+  }
+  header > a:active #img-mobile {
+    height: 40px;
+    width: 40px;
+  }
+}
 header {
+  align-items: center;
   background-color: var(--c5);
+  display: flex;
   grid-column: 1/3;
   grid-row: 1;
+  margin: auto;
+  max-width: 752px;
 }
 header h1 {
   margin: auto;
@@ -50,7 +95,6 @@ header h1 {
 
 main {
   background-color: var(--c2);
-  border-left: 0.1px solid var(--c2);
   box-sizing: border-box;
   display: grid;
   grid-auto-rows: min-content;
@@ -106,33 +150,55 @@ menu p {
 #menu-btn {
   align-items: center;
   background-color: var(--c2);
-  border-bottom: 0.1px solid var(--c1);
   box-sizing: border-box;
   color: var(--c7);
   cursor: pointer;
   display: flex;
   font-weight: 700;
-  justify-content: left;
-  max-height: 39px;
+  justify-content: space-between;
   max-width: 752px;
-  margin: 0 20px;
-  padding: 20px 10px 20px;
+  padding: 10px 30px;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
 
+@media (hover: hover) {
+  #menu-btn:hover {
+    background-color: var(--c1);
+  }
+}
+#content-note {
+  padding: 0 30px;
+}
+
 #menu-drop {
-  background-color: var(--c2);
+  background-color: var(--c1);
   display: none;
+  margin: 0 0 30px;
   max-width: 752px;
+  padding: 20px 0;
   position: sticky;
   top: 39px;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
+#menu-drop p {
+  padding: 0;
+}
+#menu-drop a {
+  color: rgb(186, 188, 190);
+  font-size: small;
+  padding: 1em 30px;
+}
 
+@media (hover: hover) {
+  #menu-drop a:hover {
+    background-color: var(--c2);
+    color: var(--c6);
+  }
+}
 #content-angle-down {
   display: none;
 }
@@ -182,14 +248,15 @@ img {
 
 #date {
   background-color: var(--c2);
+  color: var(--c3);
   box-sizing: border-box;
-  color: var(--c4);
-  font-size: small;
+  font-size: 10px;
   max-width: 752px;
-  padding: 16px 30px 0;
+  padding: 10px 30px 0;
 }
 
-#description {
+#description,
+#author {
   background-color: var(--c2);
   box-sizing: border-box;
   line-height: 2em;
@@ -217,18 +284,18 @@ code {
 }
 
 code::-webkit-scrollbar-thumb {
-  background-color: var(--c4);
+  background-color: var(--c3);
   border-radius: 4px;
 }
 
 code::-webkit-scrollbar-track {
-  background-color: var(--c2);
+  background-color: var(--c1);
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
 
 code::-webkit-scrollbar {
-  width: 16px;
+  height: 8px !important;
 }
 
 @media (hover: hover) {
@@ -263,12 +330,6 @@ p {
   word-break: keep-all !important;
 }
 
-.underline {
-  border-bottom: 0.1px solid var(--c1);
-  display: flex;
-  width: 100%;
-}
-
 /**Responsive */
 @media only screen and (min-width: 768px) {
   header {
@@ -284,8 +345,11 @@ p {
   menu {
     display: none;
   }
-  #title {
-    text-align: left;
+  #img {
+    display: block;
+  }
+  #img-mobile {
+    display: none;
   }
 }
 /**BLOG TEMPLATE END */
@@ -296,6 +360,7 @@ p {
 #game,
 #loop,
 #metrics,
+#controls,
 #code {
   scroll-margin-top: 39px !important;
 }
@@ -308,6 +373,7 @@ p {
   #game,
   #loop,
   #metrics,
+  #controls,
   #code {
     scroll-margin-top: 0 !important;
   }
@@ -318,7 +384,7 @@ p {
 }
 
 #scroll-btn {
-  background-color: var(--c5);
+  background-color: var(--c3);
   border: 2px solid rgb(32, 33, 36);
   border-radius: 50%;
   color: rgb(32, 33, 36);

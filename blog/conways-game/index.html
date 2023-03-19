@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How To Code: Conway's Game</title>
+  <title>How To Code Conway's Game</title>
   <link rel="stylesheet" href="/public/css/cookie.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/github-dark.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,9 +28,14 @@
 </head>
 <body>
   <header id="header">
-    <h1 id="title">How To Code: Conway's Game</h1>
+    <a href="/"><img id="img-mobile" src="/public/img/profile.jpg" alt="picture of James"></a>
+    <h1 id="title">How To Code Conway's Game</h1>
   </header>
-  <div id="top-spacer"></div>
+  <a href="/">
+    <div id="top-spacer" title="jamesbaroi.com">
+      <img id="img" src="/public/img/profile.jpg" alt="picture of James">
+    </div>
+  </a>
   <nav id="nav">
     <h4>Content</h4>
     <div>
@@ -43,35 +48,57 @@
       <a href="#game"><p>5. Game</p></a>
       <a href="#loop"><p>6. Loop</p></a>
       <a href="#metrics"><p>7. Metrics</p></a>
-      <a href="#code"><p>8. Code</p></a>
+      <a href="#controls"><p>8. Controls</p></a>
+      <a href="#code"><p>9. Code</p></a>
     </div>
   </nav>
   <main id="main">
-    <section id="main-content">
-      <img src="/public/img/conways-game.jpg" alt="Snapshot of Conway's game.">
-      <h4 id="subtitle">Cellular Automaton in JavaScript</h4>
-      <div id="date">March 16, 2023</div>
-      <p id="description">A tutorial on how to create Conway's game of life.</p>
-      <h4 id="overview">Overview</h4>
-      <p>
-        Build John H. Conway's
-        <a class="keep-together" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">
-          game of life <small><i class="fa-solid fa-up-right-from-square"></i></small>
-        </a>
-        in JavaScript using the HTML canvas element to render graphics on a
-        200 x 200 cell grid allowing for controls to set the initial seed
-        probability, configure game rules, reduce grid size, and change cell
-        and grid colors. Implement buttons to pause, resume, and restart the
-        game, and output metrics including population count, frame rate, and
-        latency. Click
-        <a href="/projects/conways-game" target="_blank">here</a>
-        to preview the project. Scroll down to the end for the complete code.
-      </p>
-      <h4 id="prereqs">Prerequisites</h4>
-      <p>
-        This tutorial requires minimal knowledge of HTML, CSS, and JavaScript (JS),
-        the ability to serve these files, and the use of a code editor.
-      </p>
+    <div id="main-content">
+      <section id="intro">
+        <img src="/public/img/conways-game.jpg" alt="Snapshot of Conway's game.">
+        <h4 id="subtitle">Cellular Automaton in JavaScript</h4>
+        <p id="author">James A. Baroi</p>
+        <div id="date">March 16, 2023</div>
+        <p id="description">
+          A tutorial on how to create Conway's game of life.
+        </p>
+      </section>
+      <section id="overview">
+        <h4>Overview</h4>
+        <p>
+          Build John H. Conway's
+          <a class="keep-together" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">
+            game of life <small><i class="fa-solid fa-up-right-from-square"></i></small>
+          </a>
+          in JavaScript using the HTML canvas element to render graphics
+          on a 200 x 200 cell grid allowing for controls to set the
+          initial seed probability, configure game rules, reduce grid
+          size, and change cell and grid colors. Implement buttons to
+          pause, resume, and restart the game, and output metrics
+          including population count, frame rate, and latency. Click
+          <a href="/projects/conways-game" target="_blank">here</a>
+          to preview the project. Scroll down to the end for the
+          complete code.
+        </p>
+      </section>
+      <section id="prereqs">
+        <h4>Prerequisites</h4>
+        <p>
+          This tutorial requires minimal knowledge of HTML, CSS, and
+          JavaScript (JS), the ability to serve these files, and the use
+          of a code editor.
+        </p>
+      </section>
+      <section id="plan">
+        <h4>Plan</h4>
+        <p>
+          First create a game area in JS and output it to HTML. Then
+          construct cells to place into the grid, configure the game
+          rules, define the game initialization and loop, and calculate
+          and output metrics. Finally, create configurable settings and
+          button controls.
+        </p>
+      </section>
       <menu id="menu">
         <div id="menu-btn">
           <div id="content">Content</div>
@@ -79,33 +106,24 @@
           <small id="content-angle-down">&#160;&#160;<i class="fa-solid fa-angle-down"></i></small>
         </div>
         <div id="menu-drop">
-          <p><a id="menu-overview" class="underline" href="#overview">i. Overview</a></p>
-          <p><a id="menu-prereqs" class="underline" href="#prereqs">ii. Prerequisites</a></p>
-          <p><a id="menu-plan" class="underline" href="#plan">1. Plan</a></p>
-          <p><a id="menu-area" class="underline" href="#area">2. Area</a></p>
-          <p><a id="menu-cell" class="underline" href="#cell">3. Cell</a></p>
-          <p><a id="menu-rules" class="underline" href="#rules">4. Rules</a></p>
-          <p><a id="menu-game" class="underline" href="#game">5. Game</a></p>
-          <p><a id="menu-loop" class="underline" href="#loop">6. Loop</a></p>
-          <p><a id="menu-metrics" class="underline" href="#metrics">7. Metrics</a></p>
-          <p><a id="menu-code" class="underline" href="#code">8. Code</a></p>
+          <a id="menu-overview" href="#overview">i. Overview</p></a>
+          <a id="menu-prereqs" href="#prereqs">ii. Prerequisites</p></a>
+          <a id="menu-plan" href="#plan">1. Plan</p></a>
+          <a id="menu-area" href="#area">2. Area</p></a>
+          <a id="menu-cell" href="#cell">3. Cell</p></a>
+          <a id="menu-rules" href="#rules">4. Rules</p></a>
+          <a id="menu-game" href="#game">5. Game</p></a>
+          <a id="menu-loop" href="#loop">6. Loop</p></a>
+          <a id="menu-metrics" href="#metrics">7. Metrics</p></a>
+          <a id="menu-controls" href="#controls">8. Controls</p></a>
+          <a id="menu-code" href="#code">9. Code</p></a>
         </div>
       </menu>
-      <section id="plan">
-        <h4>Plan</h4>
-        <p>
-          First create a game area in JS and output it to HTML. Then construct
-          cells to place into the grid, configure the game rules, define the
-          game initialization and loop, and calculate and output metrics.
-          Finally, create configurable settings and button controls.
-        </p>
-      </section>
+      <p style="padding-top:0">Click to view contents.</p>
       <section id="area">
         <h4>Area</h4>
         <p>Create a grid container in html to output the game area.</p>
-        <pre><code>
-&lt;!--index.html--&gt;
-
+        <pre><code class="language-html">
 &lt;body&gt;
 
   &lt;div id=&quot;grid-container&quot;&gt;&lt;/div&gt;
@@ -113,13 +131,11 @@
 &lt;/body&gt;
         </code></pre>
         <p>
-          Create the game area object in JS, assign to it a grid property that
-          takes in a created canvas element, and setup a starting method.
+          Create the game area object, assign to it a grid property that
+          takes in a created canvas element, and setup a start method.
         </p>
-        <pre><code>
-/**script.js */
-
-const area = {
+        <pre><code class="language-javascript">
+var area = {
 
   grid: document.createElement(&#039;canvas&#039;),
 
@@ -127,14 +143,15 @@ const area = {
 }
         </code></pre>
         <p>
-          Get the grid-container and pass the canvas grid in the start method.
-          Do a quick test by running the method. Open dev tools to check the
-          canvas element that should appear in the grid container.
+          Get the grid-container and pass the canvas grid in the start
+          method. Do a quick test by running the method. Open dev tools
+          to check the canvas element that should appear in the grid
+          container.
         </p>
-        <pre><code>
-const contGrid = document.getElementById(&#039;grid-container&#039;)
+        <pre><code class="language-javascript">
+var contGrid = document.getElementById(&#039;grid-container&#039;)
 
-const area = {
+var area = {
 
   grid: document.createElement(&#039;canvas&#039;),
 
@@ -144,13 +161,13 @@ const area = {
   }
 }
 
-area.start()
+area.start() /**remove after test */
         </code></pre>
         <p>
-          Get the canvas 2d context and assign it to the start method. Create
-          grid dimension properties.
+          Get the canvas 2d context and assign it to the start method.
+          Create grid dimension properties.
         </p>
-        <pre><code>
+        <pre><code class="language-javascript">
 start() {
 
   contGrid.insertBefore(this.grid, contGrid.childNodes[0])
@@ -164,49 +181,274 @@ start() {
   this.rows = 200
 }
         </code></pre>
-        <p>Add css to visualize the grid perfectly centered on any screen.</p>
-        <pre><code>
+        <p>
+          Add css to horizontally center and vertifcally fit the grid.
+        </p>
+        <pre><code class="language-scss">
 body {
-  background-color: rgb(32, 33, 36);
-  display: grid;
-  justify-content: center;
+  background-color: rgb(18, 18, 18);
   margin: 0;
   padding: 0;
 }
 
 #grid-container {
-  background-color: rgb(95, 99, 104);
-  box-sizing: border-box;
   margin: 8px;
+  text-align: center;
 }
 
-#grid-container &gt; canvas {
-  max-height: calc(100vh - 20px);
+canvas {
+  background-color: rgb(32, 33, 36);
+  max-height: calc(100vh - 20px); /**margin * 2 + 4px = 20px */
   max-width: 100%;
 }
         </code></pre>
+        <p>Next create the cells of the grid.</p>
       </section>
-
       <section id="cell">
         <h4>Cell</h4>
+        <p>
+          Create a Cell class with static width and height and setup a
+          constructor.
+        </p>
+        <pre><code class="language-javascript">
+class Cell {
+
+  static width = 10
+  static height = 10
+
+  constructor() { }
+}
+        </code></pre>
+        <p>
+          Create the constructor to take coordinates and the grid area
+          context. Define a property that causes the cell to live by
+          random chance. Setup a method to draw the cell.
+        </p>
+        <pre><code class="language-javascript">
+constructor(x, y) {
+
+  this.x = x
+  this.y = y
+  this.context = area.context
+  this.live = Math.floor(Math.random() &lt; 0.5)
+}
+
+draw() { }
+        </code></pre>
+        <p>
+          Use the canvas 2d fillRect() method to fill the cell with a
+          chosen color if it is alive or the grid color if it is dead.
+        </p>
+        <pre><code class="language-javascript">
+draw() {
+
+  this.context.fillStyle = this.live ? &#039;rgb(85, 122, 170)&#039; : &#039;rgb(18, 18, 18)&#039;
+  this.context.fillRect(
+    this.x * Cell.width,
+    this.y * Cell.height,
+    Cell.width,
+    Cell.height
+  )
+}
+        </code></pre>
+        <p>
+          Declare a globally scoped empty array of cells to hold
+          objects of the cell class.
+        </p>
+        <pre><code class="language-javascript">
+var cells = []
+        </code></pre>
+        <p>
+          Define a globally scoped function to iterate across grid
+          rows and columns, and push cells taking different
+          coordinates to the array.
+        </p>
+        <pre><code  class="language-javascript">
+var grid = () =&gt; {
+
+  for (let y = 0; y &lt; area.rows; y++) {
+
+    for (let x = 0; x &lt; area.cols; x++) {
+
+      cells.push(new Cell(x, y))
+    }
+  }
+}
+        </code></pre>
+        <p>
+          Finally, define a globally scoped function that maps each
+          cell in the array using its x y coordinates to the grid
+          area.
+        </p>
+        <pre><code  class="language-javascript">
+var cToA = (x, y) =&gt; {
+
+  return x + (y * area.cols)
+}
+        </code></pre>
+        <p>
+          Next, create game rules that check each cell's environment
+          and determine whether the cell lives or dies in the next
+          generation.
+        </p>
       </section>
       <section id="rules">
         <h4>Rules</h4>
+        <p>
+          Create a globally scoped function that takes in x y
+          coordinates, checks for grid boundary conditions, and
+          returns a value if the cell is alive, dead, or out of
+          bounds.
+        </p>
+        <pre><code class="language-javascript">
+var cLivz = (x, y) =&gt; {
+
+  if (x &lt; 0 || x &gt;= area.cols || y &lt; 0 || y &gt;= area.rows) {
+
+    return 0 /**out of bounds */
+
+  } else {
+
+    return cells[cToA(x, y)].live ? 1 : 0
+  }
+}
+        </code></pre>
+        <p>
+          Create a globally scoped function that checks the cell's
+          surrounding environment to determine if the cell lives or
+          dies in the next generation. Add the values for each
+          surrounding cell and check against Conway's rules to
+          determine the new value of the cell's live property. Once
+          the new live propety values are tabulated iterate through
+          the cells array and assign the new values.
+        </p>
+        <pre><code class="language-javascript">
+var cEnv = () =&gt; {
+
+  for (let x = 0; x &lt; area.cols; x++) {
+
+    for (let y = 0; y &lt; area.rows; y++) {
+
+      /**Count live neighbors */
+      let n =
+        cLivz(x - 1, y - 1) +
+        cLivz(x, y - 1) +
+        cLivz(x + 1, y - 1) +
+        cLivz(x - 1, y) +
+        cLivz(x + 1, y) +
+        cLivz(x - 1, y + 1) +
+        cLivz(x, y + 1) +
+        cLivz(x + 1, y + 1)
+
+      /**Apply Conway&#039;s rules */
+      if (n == 2) {
+
+        /**Create a new property z on the fly to save
+          * the current live property.
+          * 
+          * This is needed later on to load the values
+          * for all cells at once rather than load each
+          * cell one by one.
+        */
+        cells[cToA(x, y)].z = cells[cToA(x, y)].live
+      }
+
+      else if (n == 3) {
+
+        cells[cToA(x, y)].z = 1
+      }
+
+      else {
+
+        cells[cToA(x, y)].z = 0
+      }
+    }
+  }
+
+  /**Load live cells all at once */
+  for (let i = 0; i &lt; cells.length; i++) {
+
+    cells[i].live = cells[i].z
+  }
+}
+        </code></pre>
+        <p>
+          Next, initialize the game.
+        </p>
       </section>
       <section id="game">
         <h4>Game</h4>
+        <p>
+          Create a globally scoped function that loads the game area,
+          pushes cells to the grid, checks cell environment, and draws
+          the cells to the area. Run the function to test.
+        </p>
+        <pre><code class="language-javascript">
+var game = () =&gt; {
+
+  area.start()
+  grid()
+  cEnv()
+
+  for (let i = 0; i &lt; cells.length; i++) {
+
+    cells[i].draw()
+  }
+}
+
+game()
+        </code></pre>
+        <p>
+          Next, create a game loop to evolve the game across
+          successive generations.
+        </p>
       </section>
       <section id="loop">
         <h4>Loop</h4>
+        <p>
+          First, return to the area object and define a game
+          interval property in the start method that sets an
+          interval for the loop for 80 miliseconds.
+        </p>
+        <pre><code class="language-javascript">
+start() {
+
+  ...
+  
+  /**1000 ms / 80 ms = 12.5 fps */
+  this.gameInterval = setInterval(loop, 80)
+}
+        </code></pre>
+        <p>
+          Finally, define the loop function. Call the check cell
+          environment function and draw the cells. Run the game
+          function and enjoy mathematical beauty.
+        </p>
+        <pre><code class="language-javascript">
+var loop = () =&gt; {
+
+  cEnv()
+
+  for (let i = 0; i &lt; cells.length; i++) {
+
+    cells[i].draw()
+  }
+}
+
+game()
+        </code></pre>
       </section>
       <section id="metrics">
         <h4>Metrics</h4>
       </section>
+      <section id="controls">
+        <h4>Controls</h4>
+      </section>
       <section id="code">
         <h4>Code</h4>
       </section>
-    </section>
-    <section id="bottom-spacer"></section>
+    </div>
+    <div id="bottom-spacer"></div>
   </main>
   <footer id="footer">
   </footer>
@@ -214,30 +456,9 @@ body {
   <script src="/public/js/main.js"></script>
   <script src="/public/js/scroll.js"></script>
   <script src="/public/js/cookie.js"></script>
-  <script>
   
-    toggleClass('menu-btn', 'toggle-menu')
-
-    closeClass('menu-overview', 'toggle-menu')
-    closeClass('menu-prereqs', 'toggle-menu')
-    closeClass('menu-plan', 'toggle-menu')
-    closeClass('menu-area', 'toggle-menu')
-    closeClass('menu-cell', 'toggle-menu')
-    closeClass('menu-rules', 'toggle-menu')
-    closeClass('menu-game', 'toggle-menu')
-    closeClass('menu-loop', 'toggle-menu')
-    closeClass('menu-metrics', 'toggle-menu')
-    closeClass('menu-code', 'toggle-menu')
-
-    closeClass('area', 'toggle-menu')
-    closeClass('cell', 'toggle-menu')
-    closeClass('rules', 'toggle-menu')
-    closeClass('game', 'toggle-menu')
-    closeClass('loop', 'toggle-menu')
-    closeClass('metrics', 'toggle-menu')
-    closeClass('code', 'toggle-menu')
-    closeClass('bottom-spacer', 'toggle-menu')
-
+  <script src="/blog/conways-game/script.js"></script>
+  <script>
     /**Close toggle-cookie-customize class on element id click */
     /**Hide scroll to #links
      * Implement here in html or else scroll malfunctions

@@ -27,7 +27,9 @@ const toggleCookieClass = (eId, tgClass) => {
     console.log(`The element id ${eId} does not exist.`)
     return
   } else {
+
     e.addEventListener('click', () => {
+
       document.body.classList.toggle(tgClass)
     })
   }
@@ -45,13 +47,12 @@ const closeCookieClass = (eId, tgClass) => {
   } else {
 
     e.addEventListener('click', (e) => {
-      /**Do nothing if menu not shown or
-       * when menu icon/items clicked
-       */
-      if(!document.body.classList.contains(tgClass)
-        ) {
+
+      if(!document.body.classList.contains(tgClass)) {
+
         return
       } else {
+
         document.body.classList.toggle(tgClass)
       }
     })
@@ -359,7 +360,8 @@ createCookie()
 /**Show cookie customizer on cookie policy notice */
 toggleCookieClass('cookie-btn-customize', 'toggle-cookie-customize')
 
-/**Shoe cookie info */
+
+/**Show cookie info */
 toggleCookieClass('nec-i', 'toggle-nec-info')
 toggleCookieClass('per-i', 'toggle-per-info')
 toggleCookieClass('fun-i', 'toggle-fun-info')
