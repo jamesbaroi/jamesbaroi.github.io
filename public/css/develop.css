@@ -13,7 +13,7 @@ body {
 body {
   background-color: var(--c5);
   color: var(--c4);
-  display: none;
+  display: grid;
   grid-auto-rows: min-content;
   grid-template-columns: auto 1fr;
   font-family: "Roboto";
