@@ -155,7 +155,7 @@ menu p {
   cursor: pointer;
   display: flex;
   font-weight: 700;
-  justify-content: space-between;
+  justify-content: left;
   max-width: 752px;
   padding: 10px 30px;
   -webkit-user-select: none;
