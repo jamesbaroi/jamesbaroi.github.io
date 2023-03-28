@@ -449,6 +449,201 @@ game()
       </section> -->
       <section id="code">
         <h4>Code</h4>
+        <p>HTML</p>
+        <pre><code class="language-html">
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&quot;grid-container&quot;&gt;&lt;/div&gt;
+  &lt;script src=&quot;/script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+        <p>CSS</p>
+        <pre><code class="language-css">
+body {
+  background-color: rgb(18, 18, 18);
+  margin: 0;
+  padding: 0;
+}
+#grid-container {
+  margin: 8px;
+  text-align: center;
+}
+canvas {
+  background-color: rgb(32, 33, 36);
+  max-height: calc(100vh - 20px);
+  max-width: 100%;
+}
+        </code></pre>
+        <p>JavaScript</p>
+        <pre><code class="language-javascript">
+/**Get html elements */
+var contGrid = document.getElementById(&#039;grid-container&#039;)
+
+/**Create global vars */
+var cells = []
+
+/**Create grid area */
+var area = {
+
+  grid: document.createElement(&#039;canvas&#039;),
+
+  start() {
+
+    contGrid.insertBefore(this.grid, contGrid.childNodes[0])
+
+    this.context = this.grid.getContext(&#039;2d&#039;)
+
+    this.grid.width = 2000
+    this.grid.height = 2000
+
+    this.cols = 200
+    this.rows = 200
+
+    this.gameInterval = setInterval(loop, 80)
+  }
+}
+
+/**Create Cell class */
+class Cell {
+
+  static width = 10
+  static height = 10
+
+  constructor(x, y) {
+
+    this.x = x
+    this.y = y
+    this.context = area.context
+    this.live = Math.floor(Math.random() &lt; 0.5)
+  }
+
+  draw() {
+
+    this.context.fillStyle = this.live ? &#039;rgb(85, 122, 170)&#039; : &#039;rgb(18, 18, 18)&#039;
+    this.context.fillRect(
+      this.x * Cell.width,
+      this.y * Cell.height,
+      Cell.width,
+      Cell.height
+    )
+  }
+}
+
+/**Push cells to array */
+var grid = () =&gt; {
+
+  for (let y = 0; y &lt; area.rows; y++) {
+
+    for (let x = 0; x &lt; area.cols; x++) {
+
+      cells.push(new Cell(x, y))
+    }
+  }
+}
+
+/**Map cell to area */
+var cToA = (x, y) =&gt; {
+
+  return x + (y * area.cols)
+}
+
+/**Check if cell lives */
+var cLivz = (x, y) =&gt; {
+
+  if (x &lt; 0 || x &gt;= area.cols || y &lt; 0 || y &gt;= area.rows) {
+
+    return 0
+
+  } else {
+
+    return cells[cToA(x, y)].live ? 1 : 0
+  }
+}
+
+/**Check cell environment */
+var cEnv = () =&gt; {
+
+  for (let x = 0; x &lt; area.cols; x++) {
+
+    for (let y = 0; y &lt; area.rows; y++) {
+
+      /**Count live neighbors */
+      let n =
+        cLivz(x - 1, y - 1) +
+        cLivz(x, y - 1) +
+        cLivz(x + 1, y - 1) +
+        cLivz(x - 1, y) +
+        cLivz(x + 1, y) +
+        cLivz(x - 1, y + 1) +
+        cLivz(x, y + 1) +
+        cLivz(x + 1, y + 1)
+
+      /**Apply Conway&#039;s rules */
+      if (n == 2) {
+
+        /**Create a new property z on the fly to save
+          * the current live property.
+          * 
+          * This is needed later on to load the values
+          * for all cells at once rather than load each
+          * cell one by one.
+        */
+        cells[cToA(x, y)].z = cells[cToA(x, y)].live
+      }
+
+      else if (n == 3) {
+
+        cells[cToA(x, y)].z = 1
+      }
+
+      else {
+
+        cells[cToA(x, y)].z = 0
+      }
+    }
+  }
+
+  /**Load live cells all at once */
+  for (let i = 0; i &lt; cells.length; i++) {
+
+    cells[i].live = cells[i].z
+  }
+}
+
+/**Initialize the game */
+var game = () =&gt; {
+
+  area.start()
+  grid()
+  cEnv()
+
+  for (let i = 0; i &lt; cells.length; i++) {
+
+    cells[i].draw()
+  }
+}
+
+/**Loop animation */
+var loop = () =&gt; {
+
+  cEnv()
+
+  for (let i = 0; i &lt; cells.length; i++) {
+
+    cells[i].draw()
+  }
+}
+
+game()
+        </code></pre>
       </section>
     </div>
     <div id="bottom-spacer"></div>
