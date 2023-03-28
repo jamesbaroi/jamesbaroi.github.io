@@ -6,8 +6,8 @@
     "url": "/projects/conways-game",
     "img": "/public/img/conways-game.jpg",
     "alt": "Image of Conway's game.",
-    "tag": "March 28, 2023",
-    "date": "",
+    "tag": "New",
+    "date": "March 28, 2023",
     "style": {
       "backgroundColor": "darkred",
       "color": "white"
