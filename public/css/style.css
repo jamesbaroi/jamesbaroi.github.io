@@ -4,18 +4,9 @@ body {
   display: grid;
   font-family: monospace;
   margin: 0;
-  padding: 0;
-  position: fixed;
-  bottom: 20%;
-  left: 0;
-  right: 0;
-  top: 0;
+  padding: 1em;
+  text-align: left;
   -webkit-text-size-adjust: none;
      -moz-text-size-adjust: none;
           text-size-adjust: none;
-}
-
-div {
-  margin: auto;
-  text-align: center;
 }/*# sourceMappingURL=style.css.map */
