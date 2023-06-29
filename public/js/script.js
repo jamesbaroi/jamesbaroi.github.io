@@ -34,7 +34,12 @@ const process = (d, o, i) => {
   d[i].tt
   .replaceAll('.', '')
   .replaceAll(',', '')
+  .replaceAll(':', '')
   .replaceAll('?', '')
+  .replaceAll('(', '')
+  .replaceAll(')', '')
+  .replaceAll('[', '')
+  .replaceAll(']', '')
   .replaceAll(' ', '-')
   .toLowerCase()
 

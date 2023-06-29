@@ -113,11 +113,11 @@ main {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(32, 33, 36);
+  background: rgb(140, 143, 150);
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(16, 17, 18);
+  background: rgb(32, 33, 36);
 }
 
 /**Hovers */
@@ -130,7 +130,7 @@ main {
     text-decoration: underline;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(140, 143, 150);
+    background: rgb(190, 195, 210);
   }
 }
 /**RWS */
