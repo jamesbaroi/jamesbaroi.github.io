@@ -1,12 +1,148 @@
+/**6.5 in */
+html {
+  background-color: rgb(16, 17, 18);
+}
+
 body {
-  background-color: black;
-  color: green;
+  background-color: rgb(16, 17, 18);
+  color: rgb(140, 143, 150);
   display: grid;
   font-family: monospace;
-  margin: 0;
-  padding: 1em;
+  font-size: 12px;
+  line-height: 2em;
+  margin: auto;
+  padding: 0 16px 16px;
   text-align: left;
   -webkit-text-size-adjust: none;
      -moz-text-size-adjust: none;
           text-size-adjust: none;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+header {
+  display: grid;
+  max-width: 624px;
+}
+
+#me {
+  display: grid;
+  justify-content: center;
+  padding-top: 96px;
+}
+
+#img {
+  border-radius: 50%;
+  height: 80px;
+  margin: auto;
+  margin-bottom: 8px;
+  width: 80px;
+}
+
+main {
+  max-width: 624px;
+  padding: 0 0 16px;
+}
+
+/**Blog table */
+.tb {
+  border-top: 1px solid rgb(32, 33, 36);
+  display: grid;
+  gap: 1em;
+  grid-template-columns: auto 1fr auto;
+  max-width: 624px;
+  width: 100%;
+}
+
+/**Toggle classes on button click*/
+#bg, #pb {
+  display: none;
+}
+
+.tgl-bg #bg {
+  display: block;
+}
+
+.tgl-pb #pb {
+  display: block;
+}
+
+/**Tools */
+.a {
+  color: green;
+  cursor: pointer;
+}
+
+.b {
+  font-weight: bold;
+}
+
+.c {
+  margin: auto;
+  text-align: center;
+}
+
+.h {
+  padding-top: 12px;
+}
+
+.i {
+  font-style: italic;
+}
+
+.l {
+  color: rgb(190, 195, 210);
+}
+
+.p {
+  text-indent: 2em;
+}
+
+.u {
+  text-decoration: underline;
+}
+
+/**Scroll */
+::-webkit-scrollbar {
+  width: auto;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(32, 33, 36);
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(16, 17, 18);
+}
+
+/**Hovers */
+@media (hover: hover) {
+  a:hover, .a:hover {
+    color: green;
+    font-weight: bold;
+  }
+  .a:hover {
+    text-decoration: underline;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(140, 143, 150);
+  }
+}
+/**RWS */
+@media only screen and (min-width: 816px) {
+  html {
+    background-color: rgb(32, 33, 36);
+  }
+  body {
+    font-size: 14px;
+    padding: 0 96px 96px;
+  }
+  .h {
+    padding-top: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */
