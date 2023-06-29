@@ -61,4 +61,4 @@ const render = (d) => {
   }
 }
 
-fetch('/article/list.json').then(o => o.json()).then(d => render(d))
+fetch('/article/index.json').then(o => o.json()).then(d => render(d))
