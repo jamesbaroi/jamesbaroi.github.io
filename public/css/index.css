@@ -59,6 +59,10 @@ header {
   max-width: 624px;
 }
 
+h1 {
+  font-size: 24px !important;
+}
+
 #me {
   display: grid;
   justify-content: center;
@@ -246,5 +250,60 @@ main {
   }
   .h {
     padding-top: 14px;
+  }
+}
+@media only screen and (min-width: 656px) {
+  body, .h {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 672px) {
+  body, .h {
+    font-size: 12.2px;
+  }
+}
+@media only screen and (min-width: 688px) {
+  body, .h {
+    font-size: 12.4px;
+  }
+}
+@media only screen and (min-width: 704px) {
+  body, .h {
+    font-size: 12.6px;
+  }
+}
+@media only screen and (min-width: 720px) {
+  body, .h {
+    font-size: 12.8px;
+  }
+}
+@media only screen and (min-width: 736px) {
+  body, .h {
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width: 752px) {
+  body, .h {
+    font-size: 13.2px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body, .h {
+    font-size: 13.4px;
+  }
+}
+@media only screen and (min-width: 784px) {
+  body, .h {
+    font-size: 13.6px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  body, .h {
+    font-size: 13.8px;
+  }
+}
+@media only screen and (min-width: 816px) {
+  body, .h {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=index.css.map */
