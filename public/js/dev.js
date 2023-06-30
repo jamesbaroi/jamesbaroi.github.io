@@ -31,7 +31,7 @@ const siteUnderDev = () => {
   document.body.append(dev)
   document.body.append(cnt)
 
-  console.log('Dev is active.')
+  console.log('Site under developement.')
 }
 
 siteUnderDev()
