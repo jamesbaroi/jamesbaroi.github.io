@@ -189,7 +189,6 @@ const runGtag = () => {
   gtag('config', 'G-4R2HPVTYL3')
 }
 
-/**Activate color theme cookie */
 const actvThm = (e) => {
 
   if(!e) {
@@ -226,6 +225,7 @@ const actvThm = (e) => {
   }
 }
 
+/**Create */
 const crtCk = () => {
 
   let ck = document.createElement('div')
@@ -233,6 +233,7 @@ const crtCk = () => {
   ck.id = 'ck'
 
   ck.innerHTML = `
+
     <div id="ck-ntc">
       <div>
         <a id="ck-hd" href="/policy/cookie-policy" target="_blank">
@@ -252,7 +253,7 @@ const crtCk = () => {
   document.body.append(ck)
 }
 
-/**Activate cookies */
+/**Activate */
 const actvCk = (eId, cId) => {
 
   let e = document.getElementById(eId)
@@ -289,8 +290,7 @@ const actvCk = (eId, cId) => {
   }
 }
 
-/**Implement cookie */
-
+/**Implement */
 const implCk = () => {
 
   let tm = document.getElementById('tm')
@@ -341,7 +341,26 @@ const implCk = () => {
   }
 }
 
+/**Add polcies --------------------------------------------------------------*/
+const addPlc = () => {
+
+  let ckPlc = document.createElement('div')
+
+  ckPlc.innerHTML = `
+
+    <div id="plc">
+      <a class="a" href="/policy/cookie-policy" target="_blank">
+        Cookie Policy
+      </a>
+    </div>
+  `
+
+  document.body.append(ckPlc)
+}
+
 /**Implement ----------------------------------------------------------------*/
 fetch('/article/index.json').then(o => o.json()).then(d => render(d))
 
 implCk()
+
+addPlc()
