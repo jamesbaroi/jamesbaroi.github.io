@@ -167,7 +167,7 @@ main {
 }
 /**Theme */
 #tm {
-  color: rgb(140, 143, 150);
+  color: rgb(140, 143, 150); /**Fixed */
   font-size: 48px;
   position: fixed;
   top: 16px;
