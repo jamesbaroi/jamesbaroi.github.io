@@ -1,4 +1,10 @@
 * {
   background-color: white !important;
   color: black !important;
+}
+
+#tm, #ck {
+  display: none;
+  height: 0;
+  visibility: hidden;
 }/*# sourceMappingURL=print.css.map */
