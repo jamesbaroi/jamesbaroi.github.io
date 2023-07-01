@@ -8,7 +8,7 @@ const siteUnderDev = () => {
 
   if (ck) {
 
-    ck.style.textAlign = 'left'
+    ck.style.display = 'none'
   }
 
   if (plc) {
