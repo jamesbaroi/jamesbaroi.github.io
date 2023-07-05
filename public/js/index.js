@@ -115,7 +115,7 @@ const process = (d, o, i) => {
 
 const render = (d) => {
 
-  let ftr = document.querySelector('footer')
+  let main = document.querySelector('main')
 
   for (let i = d.length - 1; i >= 0; i--) {
 
@@ -123,7 +123,7 @@ const render = (d) => {
 
     process(d, o, i)
 
-    if (ftr) ftr.append(o.ah)
+    if (main) main.append(o.ah)
   }
 }
 
@@ -344,6 +344,7 @@ const implCk = () => {
 /**Add polcies --------------------------------------------------------------*/
 const addPlc = () => {
 
+  let ftr = document.querySelector('footer')
   let ckPlc = document.createElement('div')
 
   ckPlc.innerHTML = `
@@ -355,7 +356,7 @@ const addPlc = () => {
     </div>
   `
 
-  document.body.append(ckPlc)
+  if (ftr) ftr.append(ckPlc)
 }
 
 /**Implement ----------------------------------------------------------------*/
