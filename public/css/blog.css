@@ -1,0 +1,60 @@
+body {
+  padding: 16px;
+}
+
+/**RWS */
+@media only screen and (min-width: 656px) {
+  body {
+    padding: 16px;
+  }
+}
+@media only screen and (min-width: 672px) {
+  body {
+    padding: 24px;
+  }
+}
+@media only screen and (min-width: 688px) {
+  body {
+    padding: 32px;
+  }
+}
+@media only screen and (min-width: 704px) {
+  body {
+    padding: 40px;
+  }
+}
+@media only screen and (min-width: 720px) {
+  body {
+    padding: 48px;
+  }
+}
+@media only screen and (min-width: 736px) {
+  body {
+    padding: 56px;
+  }
+}
+@media only screen and (min-width: 752px) {
+  body {
+    padding: 64px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body {
+    padding: 72px;
+  }
+}
+@media only screen and (min-width: 784px) {
+  body {
+    padding: 80px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  body {
+    padding: 88px;
+  }
+}
+@media only screen and (min-width: 816px) {
+  body {
+    padding: 96px;
+  }
+}/*# sourceMappingURL=blog.css.map */
