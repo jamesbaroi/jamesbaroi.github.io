@@ -1,1 +1,7 @@
-/*# sourceMappingURL=index.css.map */
+body {
+  background-color: rgb(32, 33, 36);
+  color: rgb(140, 143, 150);
+  font-family: monospace;
+  margin: 0;
+  padding: 16px;
+}/*# sourceMappingURL=index.css.map */
