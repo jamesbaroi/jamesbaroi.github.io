@@ -93,7 +93,7 @@ const process = (d, o, i) => {
 
   o.ix.innerHTML = i + 1
   o.tt.innerHTML = d[i].tt
-  o.dt.innerHTML = d[i].dt
+  o.dt.innerHTML = '/ ' + d[i].dt
   o.ah.href = '/article/' +
 
   /**Transform title to href */
