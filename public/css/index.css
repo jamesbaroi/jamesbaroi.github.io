@@ -221,13 +221,11 @@ main {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--c3);
-}
-
+  background: rgb(140, 143, 150);
+} /**Fixed */
 ::-webkit-scrollbar-track {
-  background: var(--c2);
-}
-
+  background: rgb(32, 33, 36);
+} /**Fixed */
 /**Hovers */
 @media (hover: hover) {
   a:hover, .a:hover {
@@ -238,8 +236,8 @@ main {
     text-decoration: underline;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--c4);
-  }
+    background: rgb(190, 195, 210);
+  } /**Fixed */
 }
 /**RWS */
 @media only screen and (min-width: 656px) {
