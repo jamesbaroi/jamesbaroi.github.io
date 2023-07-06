@@ -189,6 +189,23 @@ const runGtag = () => {
   gtag('config', 'G-4R2HPVTYL3')
 }
 
+const crtTm = () => {
+
+  let tmDiv = document.createElement('div')
+  let tmBtnDiv = document.createElement('div')
+
+  tmDiv.id = 'tm'
+  tmBtnDiv.id = 'tm-btn'
+  tmBtnDiv.innerHTML = '&#8226;'
+  tmBtnDiv.title = 'Toggle Theme'
+
+  tmDiv.append(tmBtnDiv)
+
+  let ftr = document.querySelector('footer')
+
+  if (ftr) ftr.append(tmDiv)
+}
+
 const actvThm = (e) => {
 
   if(!e) {
@@ -292,6 +309,8 @@ const actvCk = (eId, cId) => {
 
 /**Implement */
 const implCk = () => {
+
+  crtTm()
 
   let tm = document.getElementById('tm')
   let tmBtn = document.getElementById('tm-btn')
