@@ -35,8 +35,8 @@ body {
   background-color: var(--c1);
   color: var(--c3);
   display: grid;
-  font-family: monospace;
-  font-size: 12px;
+  font-family: Roboto;
+  font-size: 14px;
   line-height: 2em;
   margin: auto;
   margin-bottom: 100vh;
@@ -149,7 +149,7 @@ main {
 }
 
 #plc {
-  border-top: 0.1px solid var(--c2);
+  border-top: 1px solid var(--c2);
   display: flex;
   gap: 1em;
   justify-content: center;
@@ -242,52 +242,52 @@ main {
 /**RWS */
 @media only screen and (min-width: 656px) {
   body, .h {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media only screen and (min-width: 672px) {
   body, .h {
-    font-size: 12.2px;
+    font-size: 14.2px;
   }
 }
 @media only screen and (min-width: 688px) {
   body, .h {
-    font-size: 12.4px;
+    font-size: 14.4px;
   }
 }
 @media only screen and (min-width: 704px) {
   body, .h {
-    font-size: 12.6px;
+    font-size: 14.6px;
   }
 }
 @media only screen and (min-width: 720px) {
   body, .h {
-    font-size: 12.8px;
+    font-size: 14.8px;
   }
 }
 @media only screen and (min-width: 736px) {
   body, .h {
-    font-size: 13px;
+    font-size: 15px;
   }
 }
 @media only screen and (min-width: 752px) {
   body, .h {
-    font-size: 13.2px;
+    font-size: 15.2px;
   }
 }
 @media only screen and (min-width: 768px) {
   body, .h {
-    font-size: 13.4px;
+    font-size: 15.4px;
   }
 }
 @media only screen and (min-width: 784px) {
   body, .h {
-    font-size: 13.6px;
+    font-size: 15.6px;
   }
 }
 @media only screen and (min-width: 800px) {
   body, .h {
-    font-size: 13.8px;
+    font-size: 15.8px;
   }
 }
 @media only screen and (min-width: 816px) {
@@ -295,10 +295,10 @@ main {
     background-color: rgb(32, 33, 36);
   } /**Fixed */
   body {
-    font-size: 14px;
+    font-size: 16px;
     padding: 0 96px 96px;
   }
   .h {
-    padding-top: 14px;
+    padding-top: 16px;
   }
 }/*# sourceMappingURL=index.css.map */
