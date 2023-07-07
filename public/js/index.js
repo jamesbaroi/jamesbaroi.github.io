@@ -74,6 +74,52 @@ const hidElm = (e) => {
   dsplNn(e)
 }
 
+/**Scroll up ----------------------------------------------------------------*/
+function scrl() {
+
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
+}
+
+const crtScrl = () => {
+
+  let scrlBtn = document.createElement('div')
+
+  scrlBtn.id = 'scrl-btn'
+  scrlBtn.title = 'Scroll Up'
+  scrlBtn.addEventListener('click', () => { scrl() })
+
+  let ftr = document.querySelector('footer')
+
+  if (ftr) ftr.append(scrlBtn)
+}
+
+function implScrl(eId) {
+
+  let e = document.getElementById(eId)
+
+  if (!e) {
+
+    console.log(`The element "${e}" is not defined.`)
+
+  } else {
+
+    if (
+      document.body.scrollTop > 200 ||
+      document.documentElement.scrollTop > 200
+    ) {
+
+      e.style.opacity = '1'
+      e.style.cursor = 'pointer'
+
+    } else {
+
+      e.style.opacity = '0'
+      e.style.cursor = 'default'
+    }
+  }
+}
+
 /**Iterate blogs and append to footer ---------------------------------------*/
 const create = () => {
 
@@ -378,6 +424,20 @@ const addPlc = () => {
 }
 
 /**Implement ----------------------------------------------------------------*/
+crtScrl()
+
+window.onscroll = () => {
+
+  if (!document.getElementById('scrl-btn')) {
+
+    console.log('Element not defined.')
+
+  } else {
+
+    implScrl('scrl-btn')
+  }
+}
+
 fetch('/article/index.json').then(o => o.json()).then(d => render(d))
 
 implCk()
