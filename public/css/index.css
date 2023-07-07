@@ -1,4 +1,8 @@
 /**6.5 in */
+* {
+  scroll-behavior: smooth;
+}
+
 body.dark-theme {
   --c1: rgb(16, 16.5, 18);
   --c2: rgb(32, 33, 36);
@@ -162,15 +166,16 @@ main {
 
 /**Theme */
 #tm {
-  color: rgb(140, 143, 150); /**Fixed */
-  font-size: 48px;
   position: fixed;
   top: 16px;
   right: 16px;
 }
 
 #tm-btn {
+  background-color: rgb(140, 143, 150); /**Fixed */
+  border-radius: 50%;
   cursor: pointer;
+  padding: 6px;
 }
 
 /**Tools */
@@ -202,6 +207,10 @@ main {
 
 .p {
   text-indent: 2em;
+}
+
+.r {
+  border-bottom: 1px dashed var(--c2);
 }
 
 .u {

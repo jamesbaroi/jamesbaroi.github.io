@@ -196,7 +196,6 @@ const crtTm = () => {
 
   tmDiv.id = 'tm'
   tmBtnDiv.id = 'tm-btn'
-  tmBtnDiv.innerHTML = '&#8226;'
   tmBtnDiv.title = 'Toggle Theme'
 
   tmDiv.append(tmBtnDiv)
