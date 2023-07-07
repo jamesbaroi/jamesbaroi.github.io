@@ -1,4 +1,8 @@
 * {
   background-color: white !important;
   color: black !important;
+}
+
+#tm, #return, #plc {
+  display: none;
 }/*# sourceMappingURL=print.css.map */
