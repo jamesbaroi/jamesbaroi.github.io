@@ -156,17 +156,6 @@ main {
   padding: 8px 0;
 }
 
-@media (hover: hover) {
-  #ck-btn:hover {
-    background-color: var(--c4);
-    color: var(--c5);
-  }
-  #ck-btn:active {
-    background-color: var(--c1);
-    box-shadow: none;
-    color: var(--c5);
-  }
-}
 /**Theme */
 #tm {
   color: rgb(140, 143, 150); /**Fixed */
@@ -230,14 +219,22 @@ main {
 @media (hover: hover) {
   a:hover, .a:hover {
     color: var(--c5);
-    font-weight: bold;
   }
   .a:hover {
     text-decoration: underline;
   }
+  #ck-btn:hover {
+    background-color: var(--c4);
+    color: var(--c5);
+  }
+  #ck-btn:active {
+    background-color: var(--c1);
+    box-shadow: none;
+    color: var(--c5);
+  }
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(190, 195, 210);
-  } /**Fixed */
+    background: rgb(190, 195, 210); /**Fixed */
+  }
 }
 /**RWS */
 @media only screen and (min-width: 656px) {
