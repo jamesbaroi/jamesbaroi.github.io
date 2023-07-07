@@ -185,7 +185,7 @@ main {
 }
 
 .h {
-  padding-top: 12px;
+  padding-top: 1em;
 }
 
 .i {
@@ -238,52 +238,52 @@ main {
 }
 /**RWS */
 @media only screen and (min-width: 656px) {
-  body, .h {
+  body {
     font-size: 14px;
   }
 }
 @media only screen and (min-width: 672px) {
-  body, .h {
+  body {
     font-size: 14.2px;
   }
 }
 @media only screen and (min-width: 688px) {
-  body, .h {
+  body {
     font-size: 14.4px;
   }
 }
 @media only screen and (min-width: 704px) {
-  body, .h {
+  body {
     font-size: 14.6px;
   }
 }
 @media only screen and (min-width: 720px) {
-  body, .h {
+  body {
     font-size: 14.8px;
   }
 }
 @media only screen and (min-width: 736px) {
-  body, .h {
+  body {
     font-size: 15px;
   }
 }
 @media only screen and (min-width: 752px) {
-  body, .h {
+  body {
     font-size: 15.2px;
   }
 }
 @media only screen and (min-width: 768px) {
-  body, .h {
+  body {
     font-size: 15.4px;
   }
 }
 @media only screen and (min-width: 784px) {
-  body, .h {
+  body {
     font-size: 15.6px;
   }
 }
 @media only screen and (min-width: 800px) {
-  body, .h {
+  body {
     font-size: 15.8px;
   }
 }
@@ -294,8 +294,5 @@ main {
   body {
     font-size: 16px;
     padding: 0 96px 96px;
-  }
-  .h {
-    padding-top: 16px;
   }
 }/*# sourceMappingURL=index.css.map */
