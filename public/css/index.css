@@ -184,6 +184,7 @@ main {
   border-right: 6px solid transparent;
   border-bottom: 12px solid rgb(140, 143, 150); /**Fixed */
   height: 0;
+  opacity: 0;
   position: fixed;
   bottom: 16px;
   right: 16px;
