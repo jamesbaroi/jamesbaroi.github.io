@@ -1,7 +1,6 @@
 const siteUnderDev = () => {
 
   let dev = document.createElement('div')
-
   let ck = document.getElementById('ck')
   let plc = document.getElementById('plc')
 
