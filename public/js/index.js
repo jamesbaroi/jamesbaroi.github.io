@@ -1,123 +1,51 @@
+const errElm = 'Element not defined.'
+const apndCToP = (p, c) => { !(p && c) ? console.log(errElm) : p.append(c) }
+const rmvElm = (e) => { !e ? console.log(errElm) : e.remove() }
+const dsplBlk = (e) => { !e ? console.log(errElm) : e.style.display = 'block' }
+const dsplNn = (e) => { !e ? console.log(errElm) : e.style.display = 'none' }
+const shoElm = (p, c) => { apndCToP(p, c), dsplBlk(c) }
+const hidElm = (e) => { rmvElm(e), dsplNn(e) }
 const tgCls = (id, cls) => {
-
-  let e = document.getElementById(id)
-
-  if (!e) {
-
-    console.log(`Element not defined.`)
-
-  } else {
-
-    document.body.classList.toggle(cls)
-  }
-}
-
-const apndCToP = (p, c) => {
-
-  if (!(p && c)) {
-
-    console.log('Elements not defined.')
-
-  } else {
-
-    p.append(c)
-  }
-}
-
-const rmvElm = (e) => {
-
-  if (!e) {
-
-    console.log('Element not defined.')
-
-  } else {
-
-    e.remove()
-  }
-}
-
-const dsplBlk = (e) => {
-
-  if (!e) {
-
-    console.log('Element not defined.')
-
-  } else {
-
-    e.style.display = 'block'
-  }
-}
-
-const dsplNn = (e) => {
-
-  if (!e) {
-
-    console.log('Element not defined.')
-
-  } else {
-
-    e.style.display = 'none'
-  }
-}
-
-const shoElm = (p, c) => {
-
-  apndCToP(p, c)
-
-  dsplBlk(c)
-}
-
-const hidElm = (e) => {
-
-  rmvElm(e)
-
-  dsplNn(e)
+  
+  !document.getElementById(id) ?
+  console.log(errElm) : document.body.classList.toggle(cls)
 }
 
 /**Scroll up ----------------------------------------------------------------*/
-function scrl() {
-
-  document.body.scrollTop = 0
-  document.documentElement.scrollTop = 0
-}
-
 const crtScrl = () => {
 
+  let ftr = document.querySelector('footer')
   let scrlBtn = document.createElement('div')
 
   scrlBtn.id = 'scrl-btn'
   scrlBtn.title = 'Scroll Up'
-  scrlBtn.addEventListener('click', () => { scrl() })
 
-  let ftr = document.querySelector('footer')
+  scrlBtn.addEventListener('click', () => {
 
-  if (ftr) ftr.append(scrlBtn)
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+  })
+
+  !ftr ? console.log(errElm) : ftr.append(scrlBtn)
 }
 
-function implScrl(eId) {
+const implScrl = (eId) => {
 
   let e = document.getElementById(eId)
 
-  if (!e) {
+  !e ? console.log(errElm) : ((
 
-    console.log(`The element "${e}" is not defined.`)
+    document.body.scrollTop > 200 ||
+    document.documentElement.scrollTop > 200
 
-  } else {
+  ) ? (
 
-    if (
-      document.body.scrollTop > 200 ||
-      document.documentElement.scrollTop > 200
-    ) {
+    e.style.opacity = '1', e.style.cursor = 'pointer'
 
-      e.style.opacity = '1'
-      e.style.cursor = 'pointer'
+  ) : (
 
-    } else {
-
-      e.style.opacity = '0'
-      e.style.cursor = 'default'
-    }
-  }
+    e.style.opacity = '0', e.style.cursor = 'default'
+  ))
 }
 
 /**Iterate blogs and append to footer ---------------------------------------*/
@@ -169,7 +97,7 @@ const render = (d) => {
 
     process(d, o, i)
 
-    if (main) main.append(o.ah)
+    !main ? console.log(errElm) : main.append(o.ah)
   }
 }
 
@@ -194,49 +122,31 @@ const getCk = (cname) => {
 
     let c = ca[i]
 
-    while (c.charAt(0) == ' ') {
+    while (c.charAt(0) == ' ') { c = c.substring(1) }
 
-      c = c.substring(1)
-    }
-
-    if (c.indexOf(name) == 0) {
-
-      return c.substring(name.length, c.length)
-    }
+    if (c.indexOf(name) == 0) { return c.substring(name.length, c.length) }
   }
 
   return ''
 }
 
-const chkCk = (cname) => {
+const chkCk = (cname) => { return getCk(cname) != '' ?  getCk(cname) : false }
 
-  let cookieValue = getCk(cname)
-
-  if (cookieValue != "") {
-
-    return cookieValue
-
-  } else {
-
-    return
-  }
-}
-
+/**Google analytics */
 const runGtag = () => {
 
   window.dataLayer = window.dataLayer || []
 
-  function gtag() {
-
-    dataLayer.push(arguments)
-  }
+  function gtag() { dataLayer.push(arguments) }
 
   gtag('js', new Date())
   gtag('config', 'G-4R2HPVTYL3')
 }
 
+/**Create theme */
 const crtTm = () => {
 
+  let ftr = document.querySelector('footer')
   let tmDiv = document.createElement('div')
   let tmBtnDiv = document.createElement('div')
 
@@ -246,48 +156,38 @@ const crtTm = () => {
 
   tmDiv.append(tmBtnDiv)
 
-  let ftr = document.querySelector('footer')
-
-  if (ftr) ftr.append(tmDiv)
+  !ftr ? console.log(errElm) : ftr.append(tmDiv)
 }
 
+/**Activate theme */
 const actvThm = (e) => {
 
-  if(!e) {
-
-    console.log('Element not defined.')
-
-  } else {
+  !e ? console.log(errElm) : (
 
     e.addEventListener('click', () => {
 
       let matchMediaDark = 'screen and (prefers-color-scheme: dark)'
-
       let dark = window.matchMedia(matchMediaDark)
+      let body = document.body
+      let tmVal
 
-      if (dark.matches) {
+      dark.matches ? (
 
-        document.body.classList.toggle('light-theme')
+        body.classList.toggle('light-theme'),
+        tmVal = body.classList.contains('light-theme') ? 'light' : 'dark'
 
-        var themeValue = document.body.classList.contains('light-theme') ?
+      ) : (
 
-        'light' : 'dark'
+        body.classList.toggle('dark-theme'),
+        tmVal = body.classList.contains('dark-theme') ? 'dark' : 'light'
+      )
 
-      } else {
-
-        document.body.classList.toggle('dark-theme')
-
-        var themeValue = body.classList.contains('dark-theme') ?
-
-        'dark' : 'light'
-      }
-
-      setCk('tm', themeValue, 365)
+      setCk('tm', tmVal, 365)
     })
-  }
+  )
 }
 
-/**Create */
+/**Create cookie */
 const crtCk = () => {
 
   let ck = document.createElement('div')
@@ -315,44 +215,33 @@ const crtCk = () => {
   document.body.append(ck)
 }
 
-/**Activate */
+/**Activate cookie */
 const actvCk = (eId, cId) => {
 
   let e = document.getElementById(eId)
   let c = document.getElementById(cId)
-
   let tm = document.getElementById('tm')
   let tmBtn = document.getElementById('tm-btn')
 
-  if (!e) {
-
-    console.log('Element not defined.')
-
-    return
-
-  } else {
+  !e ? console.log(errElm) : (
 
     e.addEventListener('click', () => {
 
-      if (!c) {
+      !c ? console.log(errElm) : (
 
-        console.log('Element not defined.')
+        setCk('ck', 'true', 365),
 
-      } else {
+        runGtag(),
 
-        setCk('ck', 'true', 365)
-
-        runGtag()
-
-        c.style.display = 'none'
+        c.style.display = 'none',
 
         shoElm(tm, tmBtn)
-      }
+      )
     })
-  }
+  )
 }
 
-/**Implement */
+/**Implement cookie */
 const implCk = () => {
 
   crtTm()
@@ -364,45 +253,25 @@ const implCk = () => {
 
   actvCk('ck-btn', 'ck')
 
-  if (chkCk('ck') == 'true') {
+  chkCk('ck') == 'true' ? (
 
-    document.getElementById('ck').style.display = 'none'
-
+    document.getElementById('ck').style.display = 'none',
     shoElm(tm, tmBtn)
 
-  } else {
-
-    hidElm(tmBtn)
-  }
+  ) : hidElm(tmBtn)
 
   actvThm(tmBtn)
 
-  if (chkCk('tm') == 'light') {
+  chkCk('tm') == 'light' ? (
 
-    document.body.classList.toggle('light-theme')
+    document.body.classList.toggle('light-theme'),
+    !tmBtn ? console.log(errElm) : tmBtn.checked = false
 
-    if (!tmBtn) {
+  ) : (
 
-      console.log('Element not defined.')
-
-    } else {
-
-      tmBtn.checked = false
-    }
-
-  } else {
-
-    document.body.classList.toggle('dark-theme')
-
-    if (!tmBtn) {
-
-      console.log('Element not defined.')
-
-    } else {
-
-      tmBtn.checked = true
-    }
-  }
+    document.body.classList.toggle('dark-theme'),
+    !tmBtn ? console.log(errElm) : tmBtn.checked = true
+  )
 }
 
 /**Add polcies --------------------------------------------------------------*/
@@ -419,8 +288,7 @@ const addPlc = () => {
       </a>
     </div>
   `
-
-  if (ftr) ftr.append(ckPlc)
+  !ftr ? console.log(errElm) : ftr.append(ckPlc)
 }
 
 /**Implement ----------------------------------------------------------------*/
@@ -428,14 +296,8 @@ crtScrl()
 
 window.onscroll = () => {
 
-  if (!document.getElementById('scrl-btn')) {
-
-    console.log('Element not defined.')
-
-  } else {
-
-    implScrl('scrl-btn')
-  }
+  !document.getElementById('scrl-btn') ?
+  console.log(errElm) : implScrl('scrl-btn')
 }
 
 fetch('/article/index.json').then(o => o.json()).then(d => render(d))
