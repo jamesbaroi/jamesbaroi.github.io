@@ -9,7 +9,6 @@ html {
   --c7: yellowgreen;
   --c8: gold;
   --c9: goldenrod;
-  --c10: olive;
 }
 
 body {
@@ -65,10 +64,6 @@ a {
 
 .c9 {
   color: var(--c9);
-}
-
-.c10 {
-  color: var(--c10);
 }
 
 .btn {
