@@ -8,6 +8,7 @@ body {
   --c7: yellowgreen;
   --c8: gold;
   --c9: goldenrod;
+  --c10: olive;
   background-color: var(--c1);
   color: var(--c3);
   font-family: monospace;
@@ -31,7 +32,6 @@ h4 {
 
 section {
   border-top: 1px dashed var(--c2);
-  padding: 1em;
 }
 
 a {
@@ -60,6 +60,19 @@ a {
   color: var(--c9);
 }
 
+.c10 {
+  color: var(--c10);
+}
+
+.btn {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.pad {
+  padding: 1em;
+}
+
 ::-webkit-scrollbar {
   width: auto;
 }
@@ -75,5 +88,10 @@ a {
 @media (hover: hover) {
   ::-webkit-scrollbar-thumb:hover {
     background: var(--c4);
+  }
+  .btn:hover {
+    background-color: var(--c4);
+    color: var(--c1);
+    font-weight: bold;
   }
 }/*# sourceMappingURL=index.css.map */

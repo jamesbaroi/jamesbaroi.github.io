@@ -1,10 +1,25 @@
+const showHide = (input, output) => {
+
+  let i = document.getElementById(input)
+  let o = document.getElementById(output)
+
+  o.style.display = 'none'
+
+  i.addEventListener('click', () => {
+
+    o.style.display != 'none' ?
+    o.style.display = 'none' :
+    o.style.display = 'block'
+  })
+}
+
 const create = () => {
 
   let div = document.createElement('div')
   let des = document.createElement('div')
   let url = document.createElement('a')
 
-  div.style.margin = '1em'
+  div.style.margin = '0 2em 1em'
   url.target = '_blank'
 
   return { div, des, url }
@@ -104,3 +119,9 @@ const render = (d) => {
 }
 
 fetch('/public/json/index.json').then(o => o.json()).then(d => render(d))
+
+showHide('btn-css', 'css')
+showHide('btn-html', 'html')
+showHide('btn-jpg', 'jpg')
+showHide('btn-js', 'js')
+showHide('btn-json', 'json')
