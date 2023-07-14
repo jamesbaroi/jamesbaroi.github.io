@@ -1,5 +1,36 @@
-[
-  {
-    "key": "value"
-  }
-]
+{
+  "css": [
+    {
+      "des": "Main style for this site:",
+      "url": "https://jamesbaroi.github.io/public/css/index.css"
+    }
+  ],
+  "html": [
+    {
+      "des": "About page for this site:",
+      "url": "https://jamesbaroi.github.io/about"
+    }
+  ],
+  "jpg": [
+    {
+      "des": "Profile picture of my face:",
+      "url": "https://jamesbaroi.github.io/public/img/profile.jpg"
+    }
+  ],
+  "js": [
+    {
+      "des": "Main script for this site:",
+      "url": "https://jamesbaroi.github.io/public/js/index.js"
+    },
+    {
+      "des": "Used to post \"site under development\" notice:",
+      "url": "https://jamesbaroi.github.io/public/js/siteUnderDev.js"
+    }
+  ],
+  "json": [
+    {
+      "des": "Used to iterate list of static assets for this site:",
+      "url": "https://jamesbaroi.github.io/public/json/index.json"
+    }
+  ]
+}

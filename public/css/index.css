@@ -1,17 +1,15 @@
 body {
   --c1: rgb(16, 16.5, 18);
-  --c2: rgb(170, 175, 190);
-  --c3: rgb(52, 53, 56);
-  --c4: green;
-  --c5: goldenrod;
-  --c6: royalblue;
-  --c7: hotpink;
-  --c8: orangered;
-}
-
-body {
+  --c2: rgb(52, 53, 56);
+  --c3: rgb(170, 175, 190);
+  --c4: hotpink;
+  --c5: skyblue;
+  --c6: orangered;
+  --c7: yellowgreen;
+  --c8: gold;
+  --c9: goldenrod;
   background-color: var(--c1);
-  color: var(--c2);
+  color: var(--c3);
   font-family: monospace;
   font-size: 14px;
   line-height: 2em;
@@ -21,34 +19,25 @@ body {
           text-size-adjust: none;
 }
 
+header, main, footer {
+  border: 1px dashed var(--c2);
+  margin: 1em;
+}
+
+h4 {
+  color: var(--c4);
+  margin: 1em;
+}
+
+section {
+  border-top: 1px dashed var(--c2);
+  padding: 1em;
+}
+
 a {
   color: unset;
   text-decoration: none;
   word-break: break-all;
-}
-
-header, main, footer {
-  border-left: 1px dashed var(--c3);
-  border-right: 1px dashed var(--c3);
-  border-top: 1px dashed var(--c3);
-  margin: 1.6em;
-}
-
-.section {
-  border-bottom: 1px dashed var(--c3);
-  padding: 1em;
-}
-
-.margin {
-  margin: 1em;
-}
-
-.line {
-  border-bottom: 1px dashed var(--c3);
-}
-
-.c4 {
-  color: var(--c4);
 }
 
 .c5 {
@@ -65,4 +54,26 @@ header, main, footer {
 
 .c8 {
   color: var(--c8);
+}
+
+.c9 {
+  color: var(--c9);
+}
+
+::-webkit-scrollbar {
+  width: auto;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--c2);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--c1);
+}
+
+@media (hover: hover) {
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--c4);
+  }
 }/*# sourceMappingURL=index.css.map */

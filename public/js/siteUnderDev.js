@@ -1,5 +1,3 @@
-/** https://jamesbaroi.github.io/public/js/siteUnderDev.js */
-
 const siteUnderDev = () => {
   document.body.innerHTML = 'Site under development.'
   document.body.style = `
@@ -12,3 +10,5 @@ const siteUnderDev = () => {
     text-align: center;
   `
 }
+
+siteUnderDev()
