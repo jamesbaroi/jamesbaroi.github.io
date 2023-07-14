@@ -1,4 +1,4 @@
-html {
+body {
   --c0: rgb(22, 23, 26);
   --c1: rgb(16, 16.5, 18);
   --c2: rgb(52, 53, 56);
@@ -9,9 +9,6 @@ html {
   --c7: yellowgreen;
   --c8: gold;
   --c9: goldenrod;
-}
-
-body {
   background-color: var(--c0);
   color: var(--c3);
   font-family: monospace;
