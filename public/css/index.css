@@ -1,4 +1,7 @@
 body {
   background-color: rgb(16, 17, 18);
   color: rgb(140, 143, 150);
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
 }/*# sourceMappingURL=index.css.map */
