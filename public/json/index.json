@@ -19,21 +19,25 @@
   ],
   "js": [
     {
-      "des": "Main script for this site:",
+      "des": "Main script to implement functions for current page:",
       "url": "https://jamesbaroi.github.io/public/js/index.js"
     },
     {
-      "des": "General purpose functions:",
+      "des": "Fetches, parses, and renders json data for current page:",
+      "url": "https://jamesbaroi.github.io/public/js/renderJson.js"
+    },
+    {
+      "des": "General purpose global functions:",
       "url": "https://jamesbaroi.github.io/public/js/functions.js"
     },
     {
-      "des": "Post \"site under development\" notice:",
+      "des": "Posts \"site under development\" notice:",
       "url": "https://jamesbaroi.github.io/public/js/siteUnderDev.js"
     }
   ],
   "json": [
     {
-      "des": "Used to iterate list of static assets for this site:",
+      "des": "Lists static assets for this site:",
       "url": "https://jamesbaroi.github.io/public/json/index.json"
     }
   ]
