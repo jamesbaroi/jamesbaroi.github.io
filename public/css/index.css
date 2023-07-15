@@ -47,15 +47,9 @@ a {
 }
 
 #css, #html, #js, #json {
-  background-color: var(--c0);
+  background-color: var(--c1);
   border-top: 1px dashed var(--c2);
   padding-bottom: 0.1px;
-}
-
-#btn-css, #btn-html #btn-js, #btn-json {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 
 .c5 {
@@ -81,6 +75,9 @@ a {
 .btn {
   cursor: pointer;
   transition: 0.2s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .pad {
