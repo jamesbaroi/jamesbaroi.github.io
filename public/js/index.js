@@ -13,7 +13,6 @@ const clickElem_showBlockElem_byId = (input, output, state) => {
   })
 }
 
-/**[ IMPLEMENT ] ------------------------------------------------------------*/
 clickElem_showBlockElem_byId('css-button', 'css', 'none')
 clickElem_showBlockElem_byId('js-button', 'js', 'none')
 clickElem_showBlockElem_byId('json-button', 'json', 'none')

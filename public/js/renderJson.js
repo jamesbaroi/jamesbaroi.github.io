@@ -63,5 +63,4 @@ const implement_siteIndexDataRender_fromJsonURL = (url) => {
   fetch(url).then(o => o.json()).then(d => render_SiteIndexData(d))
 }
 
-/**[ IMPLEMENT ] ------------------------------------------------------------*/
 implement_siteIndexDataRender_fromJsonURL('/public/json/index.json')
