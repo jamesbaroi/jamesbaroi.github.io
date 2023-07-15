@@ -1,44 +1,20 @@
 {
   "css": [
     {
-      "des": "Main style for this site:",
-      "url": "https://jamesbaroi.github.io/public/css/index.css"
-    }
-  ],
-  "html": [
-    {
-      "des": "About page for this site:",
-      "url": "https://jamesbaroi.github.io/about"
-    }
-  ],
-  "jpg": [
-    {
-      "des": "Profile picture of my face:",
-      "url": "https://jamesbaroi.github.io/public/img/profile.jpg"
+      "des": "",
+      "url": ""
     }
   ],
   "js": [
     {
-      "des": "Main script to implement functions for current page:",
-      "url": "https://jamesbaroi.github.io/public/js/index.js"
-    },
-    {
-      "des": "Fetches, parses, and renders json data for current page:",
-      "url": "https://jamesbaroi.github.io/public/js/renderJson.js"
-    },
-    {
-      "des": "General purpose global functions:",
-      "url": "https://jamesbaroi.github.io/public/js/functions.js"
-    },
-    {
-      "des": "Posts \"site under development\" notice:",
+      "des": "Post \"site under development\" notice:",
       "url": "https://jamesbaroi.github.io/public/js/siteUnderDev.js"
     }
   ],
   "json": [
     {
-      "des": "Lists static assets for this site:",
-      "url": "https://jamesbaroi.github.io/public/json/index.json"
+      "des": "",
+      "url": ""
     }
   ]
 }

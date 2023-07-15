@@ -1,16 +1,13 @@
 body {
-  --c0: rgb(22, 23, 26);
-  --c1: rgb(16, 16.5, 18);
+  --c0: rgb(16, 16.5, 18);
+  --c1: rgb(22, 23, 26);
   --c2: rgb(52, 53, 56);
   --c3: rgb(170, 175, 190);
   --c4: hotpink;
   --c5: skyblue;
-  --c6: orangered;
-  --c7: yellowgreen;
-  --c8: gold;
-  --c9: goldenrod;
-  --c10: olive;
-  background-color: var(--c0);
+  --c6: goldenrod;
+  --c7: orangered;
+  background-color: var(--c1);
   color: var(--c3);
   font-family: monospace;
   font-size: 12px;
@@ -24,7 +21,7 @@ body {
 }
 
 header, main, footer {
-  background-color: var(--c1);
+  background-color: var(--c0);
   border: 1px dashed var(--c2);
   margin: 0 0 1em;
 }
@@ -48,17 +45,13 @@ a {
   word-break: break-all;
 }
 
-#css, #html, #jpg, #js, #json {
+#css, #js, #json {
   background-color: var(--c0);
   border-top: 1px dashed var(--c2);
   padding-bottom: 0.1px;
 }
 
-#html {
-  display: block;
-}
-
-#css-button, #html-button, #jpg-button, #js-button, #json-button {
+#css-button, #js-button, #json-button {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
