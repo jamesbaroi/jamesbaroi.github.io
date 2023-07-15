@@ -14,7 +14,7 @@ const implement_siteIndexDataRender_fromJsonURL = (url) => {
 
   const populate_SiteIndexData_Elem = (d, o, i) => {
 
-    !d[i].des ? o.des.innerHTML = 'None' : o.des.innerHTML = d[i].des
+    !d[i].des ? o.des.innerHTML = 'Coming soon!' : o.des.innerHTML = d[i].des
     !d[i].url ? o.url.innerHTML = '' : (
 
       o.url.innerHTML = d[i].url,
