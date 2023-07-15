@@ -9,6 +9,7 @@ body {
   --c7: yellowgreen;
   --c8: gold;
   --c9: goldenrod;
+  --c10: olive;
   background-color: var(--c0);
   color: var(--c3);
   font-family: monospace;
@@ -30,7 +31,11 @@ header, main, footer {
 
 h4 {
   color: var(--c4);
-  margin: 1em;
+  margin: 0;
+  padding: 1em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 section {
@@ -41,6 +46,18 @@ a {
   color: unset;
   text-decoration: none;
   word-break: break-all;
+}
+
+#css, #html, #jpg, #js, #json {
+  background-color: var(--c0);
+  border-top: 1px dashed var(--c2);
+  padding-bottom: 0.1px;
+}
+
+#css-button, #html-button, #jpg-button, #js-button, #json-button {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .c5 {

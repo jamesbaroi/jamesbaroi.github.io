@@ -6,7 +6,7 @@ const implement_siteIndexDataRender_fromJsonURL = (url) => {
     let des = document.createElement('div')
     let url = document.createElement('a')
   
-    div.style.margin = '0 2em 1em'
+    div.style.margin = '2em'
     url.target       = '_blank'
   
     return { div, des, url }
