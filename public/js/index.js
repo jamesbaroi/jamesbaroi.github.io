@@ -13,6 +13,7 @@ const clickElem_showBlockElem_byId = (input, output, state) => {
   })
 }
 
-clickElem_showBlockElem_byId('css-button', 'css', 'none')
-clickElem_showBlockElem_byId('js-button', 'js', 'none')
-clickElem_showBlockElem_byId('json-button', 'json', 'none')
+clickElem_showBlockElem_byId('btn-css',  'css',  'none')
+clickElem_showBlockElem_byId('btn-html', 'html', 'none')
+clickElem_showBlockElem_byId('btn-js',   'js',   'none')
+clickElem_showBlockElem_byId('btn-json', 'json', 'none')

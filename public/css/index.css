@@ -5,8 +5,9 @@ body {
   --c3: rgb(170, 175, 190);
   --c4: hotpink;
   --c5: skyblue;
-  --c6: goldenrod;
-  --c7: orangered;
+  --c6: orangered;
+  --c7: gold;
+  --c8: goldenrod;
   background-color: var(--c1);
   color: var(--c3);
   font-family: monospace;
@@ -45,13 +46,13 @@ a {
   word-break: break-all;
 }
 
-#css, #js, #json {
+#css, #html, #js, #json {
   background-color: var(--c0);
   border-top: 1px dashed var(--c2);
   padding-bottom: 0.1px;
 }
 
-#css-button, #js-button, #json-button {
+#btn-css, #btn-html #btn-js, #btn-json {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;

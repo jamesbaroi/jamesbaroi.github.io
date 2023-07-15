@@ -27,10 +27,12 @@ const implement_siteIndexDataRender_fromJsonURL = (url) => {
   const parse_SiteIndexData_ArrayTypes = (d) => {
   
     let css  = d.css
+    let html = d.html
+    let jpg  = d.jpg
     let js   = d.js
     let json = d.json
   
-    return { css, js, json }
+    return { css, html, jpg, js, json }
   }
 
   const render_SiteIndexData_ArrayTypes = (d, t, c) => {
@@ -54,11 +56,13 @@ const implement_siteIndexDataRender_fromJsonURL = (url) => {
     let r = parse_SiteIndexData_ArrayTypes(d)
 
     render_SiteIndexData_ArrayTypes(r.css,  'css',  'var(--c5)')
-    render_SiteIndexData_ArrayTypes(r.js,   'js',   'var(--c6)')
-    render_SiteIndexData_ArrayTypes(r.json, 'json', 'var(--c7)')
+    render_SiteIndexData_ArrayTypes(r.html, 'html', 'var(--c6)')
+    render_SiteIndexData_ArrayTypes(r.js,   'js',   'var(--c7)')
+    render_SiteIndexData_ArrayTypes(r.json, 'json', 'var(--c8)')
   }
 
   fetch(url).then(o => o.json()).then(d => render_SiteIndexData(d))
 }
 
+/**[ IMPLEMENT ] ------------------------------------------------------------*/
 implement_siteIndexDataRender_fromJsonURL('/public/json/index.json')
