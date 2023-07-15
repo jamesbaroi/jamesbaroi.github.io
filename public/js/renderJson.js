@@ -27,12 +27,10 @@ const implement_siteIndexDataRender_fromJsonURL = (url) => {
   const parse_SiteIndexData_ArrayTypes = (d) => {
   
     let css  = d.css
-    let html = d.html
-    let jpg  = d.jpg
     let js   = d.js
     let json = d.json
   
-    return { css, html, jpg, js, json }
+    return { css, js, json }
   }
 
   const render_SiteIndexData_ArrayTypes = (d, t, c) => {
