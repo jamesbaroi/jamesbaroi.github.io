@@ -68,10 +68,6 @@ a {
   color: var(--c8);
 }
 
-.c9 {
-  color: var(--c9);
-}
-
 .btn {
   cursor: pointer;
   transition: 0.2s;
