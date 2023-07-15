@@ -54,6 +54,10 @@ a {
   padding-bottom: 0.1px;
 }
 
+#html {
+  display: block;
+}
+
 #css-button, #html-button, #jpg-button, #js-button, #json-button {
   -webkit-user-select: none;
      -moz-user-select: none;

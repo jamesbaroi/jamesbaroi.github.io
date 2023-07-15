@@ -1,15 +1,15 @@
-const clickElem_showBlockElem_byId = (input, output) => {
+const clickElem_showBlockElem_byId = (input, output, state) => {
 
   let i = document.getElementById(input)
   let o = document.getElementById(output)
 
-  !o ? true : o.style.display = 'none'
+  !o ? true : o.style.display = state
 
   !i ? true : i.addEventListener('click', () => {
 
     o.style.display != 'none' ?
-    o.style.display  = 'none' :
-    o.style.display  = 'block'
+    o.style.display = 'none' :
+    o.style.display = 'block'
   })
 }
 
@@ -34,19 +34,16 @@ const showConsoleLog = (i, e) => {
 
     if (typeof m == 'object') {
 
-      logDiv.innerHTML += '<div>' + (
-
-        JSON && JSON.stringify ? JSON.stringify(m) : m
-
-      ) + '</div>' +
-
+      logDiv.innerHTML +=
+      '<div>' + (JSON && JSON.stringify ? JSON.stringify(m) : m) + '</div>' +
       `<small>` + Date(Date.now()).toString() + '</small>'
 
       log.append(logDiv)
 
     } else {
 
-      logDiv.innerHTML += '<div>' + m + '</div>' +
+      logDiv.innerHTML +=
+      '<div>' + m + '</div>' +
       `<small>` + Date(Date.now()).toString() + '</small>'
     
       log.append(logDiv)
