@@ -52,7 +52,16 @@
       </a>
     </section>
   </footer>
+  <script src="/public/js/functions.js"></script>
   <script src="/public/js/index.js"></script>
+  <script>
+    fetch_SiteIndexJsonData('/public/json/index.json')
+    showHide_ByElemId('btn-css', 'css')
+    showHide_ByElemId('btn-html', 'html')
+    showHide_ByElemId('btn-jpg', 'jpg')
+    showHide_ByElemId('btn-js', 'js')
+    showHide_ByElemId('btn-json', 'json')
+  </script>
   <!-- <script src="/public/js/siteUnderDev.js"></script> -->
 </body>
 </html>

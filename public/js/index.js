@@ -1,127 +1,65 @@
-const showHide = (input, output) => {
-
-  let i = document.getElementById(input)
-  let o = document.getElementById(output)
-
-  o.style.display = 'none'
-
-  i.addEventListener('click', () => {
-
-    o.style.display != 'none' ?
-    o.style.display = 'none' :
-    o.style.display = 'block'
-  })
-}
-
-const create = () => {
+const create_SiteIndexData_Elem = () => {
 
   let div = document.createElement('div')
   let des = document.createElement('div')
   let url = document.createElement('a')
 
   div.style.margin = '0 2em 1em'
-  url.target = '_blank'
+  url.target       = '_blank'
 
   return { div, des, url }
 }
 
-const process = (d, o, i) => {
+const populate_SiteIndexData_Elem = (d, o, i) => {
 
   o.des.innerHTML = d[i].des
   o.url.innerHTML = d[i].url
-  o.url.href = o.url.innerHTML.slice(28)
+  o.url.href      = o.url.innerHTML.slice(28)
 
   o.div.append(o.des, o.url)
 }
 
-const renderCSS = (d) => {
+const parse_SiteIndexData_ArrayTypes = (d) => {
 
-  for (let i = 0; i < d.css.length; i++) {
+  let css  = d.css
+  let html = d.html
+  let jpg  = d.jpg
+  let js   = d.js
+  let json = d.json
 
-    let o = create()
+  return { css, html, jpg, js, json }
+}
 
-    o.url.style.color = 'var(--c5)'
+const render_SiteIndexData_ArrayTypes = (d, t, c) => {
 
-    process(d.css, o, i)
+  for (let i = 0; i < d.length; i++) {
 
-    document.getElementById('css') ?
-    document.getElementById('css').append(o.div) : false
+    let e = document.getElementById(t)
+
+    let o = create_SiteIndexData_Elem()
+
+    o.url.style.color = c
+
+    populate_SiteIndexData_Elem(d, o, i)
+
+    e ? e.append(o.div) : false
   }
 }
 
-const renderHTML = (d) => {
+const render_SiteIndexData = (d) => {
 
-  for (let i = 0; i < d.html.length; i++) {
+  let r = parse_SiteIndexData_ArrayTypes(d)
 
-    let o = create()
-
-    o.url.style.color = 'var(--c6)'
-
-    process(d.html, o, i)
-
-    document.getElementById('html') ?
-    document.getElementById('html').append(o.div) : false
-  }
+  render_SiteIndexData_ArrayTypes(r.css,  'css',  'var(--c5)')
+  render_SiteIndexData_ArrayTypes(r.html, 'html', 'var(--c6)')
+  render_SiteIndexData_ArrayTypes(r.jpg,  'jpg',  'var(--c7)')
+  render_SiteIndexData_ArrayTypes(r.js,   'js',   'var(--c8)')
+  render_SiteIndexData_ArrayTypes(r.json, 'json', 'var(--c9)')
 }
 
-const renderJPG = (d) => {
+const fetch_SiteIndexJsonData = (url) => {
 
-  for (let i = 0; i < d.jpg.length; i++) {
-
-    let o = create()
-
-    o.url.style.color = 'var(--c7)'
-
-    process(d.jpg, o, i)
-
-    document.getElementById('jpg') ?
-    document.getElementById('jpg').append(o.div) : false
-  }
+  fetch(url)
+  .then(o => o.json())
+  .then(d => render_SiteIndexData(d))
 }
-
-const renderJS = (d) => {
-
-  for (let i = 0; i < d.js.length; i++) {
-
-    let o = create()
-
-    o.url.style.color = 'var(--c8)'
-
-    process(d.js, o, i)
-
-    document.getElementById('js') ?
-    document.getElementById('js').append(o.div) : false
-  }
-}
-
-const renderJSON = (d) => {
-
-  for (let i = 0; i < d.json.length; i++) {
-
-    let o = create()
-
-    o.url.style.color = 'var(--c9)'
-
-    process(d.json, o, i)
-
-    document.getElementById('json') ?
-    document.getElementById('json').append(o.div) : false
-  }
-}
-
-const render = (d) => {
-
-  renderCSS(d)
-  renderHTML(d)
-  renderJPG(d)
-  renderJS(d)
-  renderJSON(d)
-}
-
-fetch('/public/json/index.json').then(o => o.json()).then(d => render(d))
-
-showHide('btn-css', 'css')
-showHide('btn-html', 'html')
-showHide('btn-jpg', 'jpg')
-showHide('btn-js', 'js')
-showHide('btn-json', 'json')

@@ -23,7 +23,11 @@
       "url": "https://jamesbaroi.github.io/public/js/index.js"
     },
     {
-      "des": "Used to post \"site under development\" notice:",
+      "des": "General purpose functions:",
+      "url": "https://jamesbaroi.github.io/public/js/functions.js"
+    },
+    {
+      "des": "Post \"site under development\" notice:",
       "url": "https://jamesbaroi.github.io/public/js/siteUnderDev.js"
     }
   ],
