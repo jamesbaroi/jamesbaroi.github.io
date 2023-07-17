@@ -126,7 +126,7 @@ a {
   color: var(--c3);
   display: grid;
   justify-content: center;
-  padding: 2em;
+  padding: 16px;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -142,11 +142,10 @@ a {
 }
 
 #ck-btn {
-  background-color: var(--c4);
+  background-color: var(--c2);
   border-radius: 3px;
-  box-shadow: 1px 1px 20px var(--c2);
   box-sizing: border-box;
-  color: var(--c0);
+  color: var(--c3);
   cursor: pointer;
   font-weight: bold;
   margin: auto 0 auto auto;
@@ -208,7 +207,8 @@ a {
   }
   #ck-btn:hover {
     background-color: var(--c4);
-    color: var(--c3);
+    box-shadow: 1px 1px 20px var(--c2);
+    color: var(--c0);
   }
   #ck-btn:active {
     background-color: var(--c0);
