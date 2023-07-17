@@ -288,9 +288,57 @@ a {
     font-size: 16px;
   }
 }
-header, nav, main, footer {
+body {
   background-color: var(--c0);
-  border: 1px dashed var(--c2);
-  box-sizing: border-box;
-  margin: 0 0 1em;
-}/*# sourceMappingURL=index.css.map */
+  font-family: Roboto;
+}
+
+/**Tools */
+.a {
+  color: var(--c4);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.b {
+  font-weight: bold;
+}
+
+.c {
+  margin: auto;
+  text-align: center;
+}
+
+.d {
+  color: var(--c4);
+}
+
+.h {
+  padding-top: 1em;
+}
+
+.i {
+  font-style: italic;
+}
+
+.l {
+  color: var(--c9);
+}
+
+.p {
+  text-indent: 2em;
+}
+
+.r {
+  border-bottom: 1px dashed var(--c2);
+}
+
+.u {
+  text-decoration: underline;
+}
+
+@media (hover: hover) {
+  .r:hover {
+    color: var(--c4);
+  }
+}/*# sourceMappingURL=blog.css.map */

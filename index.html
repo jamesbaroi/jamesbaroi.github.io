@@ -11,6 +11,26 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/public/img/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/public/css/index.css">
+  <style>
+    #css, #html, #js, #json {
+      background-color: var(--c0);
+      padding-bottom: 0.1px;
+    }
+
+    .asset { padding: 2em; }
+
+    .c5 { color: var(--c5); }
+    .c6 { color: var(--c6); }
+    .c7 { color: var(--c7); }
+    .c8 { color: var(--c8); }
+
+    @media (hover: hover) {
+      .asset:hover { font-weight: bold; }
+      .asset:active { background-color: var(--c1); }
+    }
+  </style>
+  <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script>
+  <script defer src="/public/js/common.js"></script>
   <script defer src="/public/js/index.js"></script>
   <script defer src="/public/js/renderIndexJson.js"></script>
   <script defer src="/public/js/siteUnderDev.js"></script>
@@ -55,12 +75,17 @@
     </section>
   </main>
   <footer>
-    <h4>C O N T A C T</h4>
-    <section class="pad">
-      <a href="mailto:james.a.baroi@gmail.com" target="_blank">
-        james.a.baroi@gmail.com
-      </a>
-    </section>
+    <h4>R E S O U R C E S</h4>
+    <a href="mailto:james.a.baroi@gmail.com" target="_blank">
+      <section class="btn pad">
+        Contact: james.a.baroi@gmail.com
+      </section>
+    </a>
+    <a class="a" href="/policy/cookie-policy" target="_blank">
+      <div id="cplc" class='btn'>
+          Cookie Policy
+      </div>
+    </a>
   </footer>
 </body>
 </html>

@@ -1,68 +1,54 @@
-const implement_siteIndexDataRender_fromJsonURL = (url) => {
+const implement_siteIndexDataRender_fromJsonURL = (jsonSrc) => {
 
-  const create_SiteIndexData_Elem = () => {
+  let create_SiteIndexData_Elem = () => {
 
-    let div = document.createElement('div')
-    let des = document.createElement('div')
-    let url = document.createElement('a')
+    let src = document.createElement('a')
+    let des = document.createElement('section')
+    let url = document.createElement('div')
 
-    div.style.margin = '2em'
-    url.target       = '_blank'
+    des.setAttribute('class', 'asset')
+    src.target = '_blank'
 
-    return { div, des, url }
+    return { src, des, url }
   }
 
-  const populate_SiteIndexData_Elem = (d, o, i) => {
+  let populate_SiteIndexData_Elem = (d, o, i) => {
 
-    !d[i].des ? o.des.innerHTML = 'Coming soon!' : o.des.innerHTML = d[i].des
+    !d[i].des ? o.des.innerHTML = 'None' : o.des.innerHTML = d[i].des
     !d[i].url ? o.url.innerHTML = '' : (
 
       o.url.innerHTML = d[i].url,
-      o.url.href      = o.url.innerHTML.slice(28)
+      o.src.href      = o.url.innerHTML.slice(28)
     )
 
-    o.div.append(o.des, o.url)
+    o.des.append(o.url)
+    o.src.append(o.des)
   }
 
-  const parse_SiteIndexData_ArrayTypes = (d) => {
-  
-    let css  = d.css
-    let html = d.html
-    let jpg  = d.jpg
-    let js   = d.js
-    let json = d.json
-  
-    return { css, html, jpg, js, json }
-  }
+  let render_SiteIndexData_Type = (d, t, c) => {
 
-  const render_SiteIndexData_ArrayTypes = (d, t, c) => {
-
-    for (let i = 0; i < d.length; i++) {
+    for (let i = d.length -1; i >= 0; i--) {
 
       let e = document.getElementById(t)
-
       let o = create_SiteIndexData_Elem()
 
       o.url.style.color = c
 
       populate_SiteIndexData_Elem(d, o, i)
 
-      e ? e.append(o.div) : false
+      e ? e.append(o.src) : false
     }
   }
 
-  const render_SiteIndexData = (d) => {
+  let render_SiteIndexData = (d) => {
 
-    let r = parse_SiteIndexData_ArrayTypes(d)
-
-    render_SiteIndexData_ArrayTypes(r.css,  'css',  'var(--c5)')
-    render_SiteIndexData_ArrayTypes(r.html, 'html', 'var(--c6)')
-    render_SiteIndexData_ArrayTypes(r.js,   'js',   'var(--c7)')
-    render_SiteIndexData_ArrayTypes(r.json, 'json', 'var(--c8)')
+    render_SiteIndexData_Type(d.css,  'css',  'var(--c5)')
+    render_SiteIndexData_Type(d.html, 'html', 'var(--c6)')
+    render_SiteIndexData_Type(d.js,   'js',   'var(--c7)')
+    render_SiteIndexData_Type(d.json, 'json', 'var(--c8)')
   }
 
-  fetch(url).then(o => o.json()).then(d => render_SiteIndexData(d))
+  fetch(jsonSrc).then(o => o.json()).then(d => render_SiteIndexData(d))
 }
 
-/**[ IMPLEMENT ] ------------------------------------------------------------*/
 implement_siteIndexDataRender_fromJsonURL('/public/json/index.json')

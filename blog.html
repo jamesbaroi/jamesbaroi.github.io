@@ -11,7 +11,29 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/public/img/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/public/css/index.css">
+  <style>
+    .blog { padding: 2em; }
+    .title { color: var(--c5); font-weight: bold; }
+    .date { color: rgb(100, 103, 110); } /**Fixed */
+
+    @media (hover:hover) {
+      .blog:hover {
+        background-color: var(--c4);
+        color: var(--c0);
+        .title, .date { color: var(--c0); }
+      }
+      .blog:active {
+        background-color: var(--c1);
+        color: var(--c3);
+        .title { color: var(--c7); }
+        .date { color: var(--c3); }
+      }
+    }
+  </style>
+  <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script>
+  <script defer src="/public/js/common.js"></script>
   <script defer src="/public/js/index.js"></script>
+  <script defer src="/public/js/renderBlogJson.js"></script>
   <script defer src="/public/js/siteUnderDev.js"></script>
 </head>
 <body>
@@ -31,16 +53,22 @@
   <main>
     <h4>P O S T S</h4>
     <section class="pad">
-      Click on a blog post below to open in a new tab.
+      Click on a blog post below.
     </section>
+    <div id="blog"></div>
   </main>
   <footer>
-    <h4>C O N T A C T</h4>
-    <section class="pad">
-      <a href="mailto:james.a.baroi@gmail.com" target="_blank">
-        james.a.baroi@gmail.com
-      </a>
-    </section>
+    <h4>R E S O U R C E S</h4>
+    <a href="mailto:james.a.baroi@gmail.com" target="_blank">
+      <section class="btn pad">
+        Contact: james.a.baroi@gmail.com
+      </section>
+    </a>
+    <a class="a" href="/policy/cookie-policy" target="_blank">
+      <div id="cplc" class='btn'>
+          Cookie Policy
+      </div>
+    </a>
   </footer>
 </body>
 </html>

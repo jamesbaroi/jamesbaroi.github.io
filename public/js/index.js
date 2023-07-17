@@ -8,8 +8,8 @@ const clickElem_showBlockElem_byId = (input, output, state) => {
   !i ? true : i.addEventListener('click', () => {
 
     o.style.display != 'none' ?
-    o.style.display = 'none' :
-    o.style.display = 'block'
+    o.style.display  = 'none' :
+    o.style.display  = 'block'
   })
 }
 
