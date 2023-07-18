@@ -11,7 +11,7 @@ const createScroll = () => {
   let f = document.querySelector('footer')
   let s = document.createElement('div')
 
-  s.id = 'scrl-btn'
+  s.id = 'btn-scroll'
   s.title = 'Scroll Up'
 
   s.addEventListener('click', () => {
@@ -43,20 +43,20 @@ const implementScroll = (l) => {
 }
 
 /** Activate cookie policy --------------------------------------------------*/
-const setCookie = (cname, cvalue, exdays) => {
+const setCookie = (cn, cv, ex) => {
 
   let d = new Date()
 
-  d.setTime(d.getTime() + (exdays*24*60*60*1000))
+  d.setTime(d.getTime() + (ex*24*60*60*1000))
 
-  let expires = "expires="+ d.toUTCString()
+  let ed = "expires="+ d.toUTCString()
 
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"
+  document.cookie = cn + "=" + cv + ";" + ed + ";path=/"
 }
 
-const getCookie = (cname) => {
+const getCookie = (cn) => {
 
-  let name = cname + "="
+  let n = cn + "="
   let ca = document.cookie.split(';')
 
   for(let i = 0; i < ca.length; i++) {
@@ -65,15 +65,15 @@ const getCookie = (cname) => {
 
     while (c.charAt(0) == ' ') { c = c.substring(1) }
 
-    if (c.indexOf(name) == 0) { return c.substring(name.length, c.length) }
+    if (c.indexOf(n) == 0) { return c.substring(n.length, c.length) }
   }
 
   return ''
 }
 
-const checkCookie = (cname) => {
+const checkCookie = (cn) => {
 
-  return getCookie(cname) != '' ?  getCookie(cname) : false
+  return getCookie(cn) != '' ?  getCookie(cn) : false
 }
 
 const runGtag = () => {
@@ -92,8 +92,8 @@ const createTheme = () => {
   let t = document.createElement('div')
   let b = document.createElement('div')
 
-  t.id = 'tm'
-  b.id = 'tm-btn'
+  t.id = 'theme'
+  b.id = 'btn-theme'
   b.title = 'Toggle Theme'
 
   t.append(b)
@@ -107,39 +107,39 @@ const activateTheme = (e) => {
 
     e.addEventListener('click', () => {
 
-      let matchMediaDark = 'screen and (prefers-color-scheme: dark)'
-      let dark = window.matchMedia(matchMediaDark)
-      let body = document.body
-      let tmVal
+      let m = 'screen and (prefers-color-scheme: dark)'
+      let d = window.matchMedia(m)
+      let b = document.body
+      let v
 
-      dark.matches ? (
+      d.matches ? (
 
-        body.classList.toggle('light-theme'),
-        tmVal = body.classList.contains('light-theme') ? 'light' : 'dark'
+        b.classList.toggle('light-theme'),
+        v = b.classList.contains('light-theme') ? 'light' : 'dark'
 
       ) : (
 
-        body.classList.toggle('dark-theme'),
-        tmVal = body.classList.contains('dark-theme') ? 'dark' : 'light'
+        b.classList.toggle('dark-theme'),
+        v = b.classList.contains('dark-theme') ? 'dark' : 'light'
       )
 
-      setCookie('tm', tmVal, 365)
+      setCookie('theme', v, 365)
     })
   )
 }
 
 const createCookie = () => {
 
-  let ck = document.createElement('div')
-  let ftr = document.querySelector('footer')
+  let c = document.createElement('div')
+  let f = document.querySelector('footer')
 
-  ck.id = 'ck'
+  c.id = 'cookie'
 
-  ck.innerHTML = `
+  c.innerHTML = `
 
-    <div id="ck-ntc">
+    <div id="cookie-notice">
       <div>
-        <a id="ck-hd" href="/policy/cookie-policy" target="_blank">
+        <a id="cookie-heading" href="/policy/cookie-policy" target="_blank">
           <h1>
             <span>Cookie Policy</span>
           </h1>
@@ -149,19 +149,19 @@ const createCookie = () => {
           Click on "Cookie Policy" above to learn more.
         </p>
       </div>
-      <div id="ck-btn">OK</div>
+      <div id="btn-cookie">OK</div>
     </div>
   `
 
-  !ftr ? true : ftr.append(ck)
+  !f ? true : f.append(c)
 }
 
-const activateCookie = (eId, cId) => {
+const activateCookie = (ei, ci) => {
 
-  let e = document.getElementById(eId)
-  let c = document.getElementById(cId)
-  let tm = document.getElementById('tm')
-  let tmBtn = document.getElementById('tm-btn')
+  let e = document.getElementById(ei)
+  let c = document.getElementById(ci)
+  let t = document.getElementById('theme')
+  let b = document.getElementById('btn-theme')
 
   !e ? true : (
 
@@ -169,13 +169,13 @@ const activateCookie = (eId, cId) => {
 
       !c ? true : (
 
-        setCookie('ck', 'true', 365),
+        setCookie('cookie', 'true', 365),
 
         runGtag(),
 
         c.style.display = 'none',
 
-        shoElm(tm, tmBtn)
+        shoElm(t, b)
       )
     })
   )
@@ -185,31 +185,31 @@ const implementCookie = () => {
 
   createTheme()
 
-  let tm = document.getElementById('tm')
-  let tmBtn = document.getElementById('tm-btn')
+  let t = document.getElementById('theme')
+  let b = document.getElementById('btn-theme')
 
   createCookie()
 
-  activateCookie('ck-btn', 'ck')
+  activateCookie('btn-cookie', 'cookie')
 
-  checkCookie('ck') == 'true' ? (
+  checkCookie('cookie') == 'true' ? (
 
-    document.getElementById('ck').style.display = 'none',
-    shoElm(tm, tmBtn)
+    document.getElementById('cookie').style.display = 'none',
+    shoElm(t, b)
 
-  ) : hidElm(tmBtn)
+  ) : hidElm(b)
 
-  activateTheme(tmBtn)
+  activateTheme(b)
 
-  checkCookie('tm') == 'light' ? (
+  checkCookie('theme') == 'light' ? (
 
     document.body.classList.toggle('light-theme'),
-    !tmBtn ? true : tmBtn.checked = false
+    !b ? true : b.checked = false
 
   ) : (
 
     document.body.classList.toggle('dark-theme'),
-    !tmBtn ? true : tmBtn.checked = true
+    !b ? true : b.checked = true
   )
 }
 
@@ -218,7 +218,7 @@ createScroll()
 
 window.onscroll = () => {
 
-  !document.getElementById('scrl-btn') ? true : implementScroll('scrl-btn')
+  !document.getElementById('btn-scroll') ? true : implementScroll('btn-scroll')
 }
 
 implementCookie()

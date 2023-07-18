@@ -35,7 +35,7 @@ const implement_articleIndexDataRender_fromJsonUrl = (jsonSrc) => {
 
     for (let i = d.length - 1; i >= 0; i--) {
 
-      let c = document.getElementById('blog')
+      let c = document.getElementById('posts')
       let o = create_articleIndexData_Elem()
 
       populate_articleIndexData_Elem(d, o, i)

@@ -11,78 +11,70 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/public/img/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/public/css/index.css">
-  <style>
-    #css, #html, #js, #json {
-      background-color: var(--c0);
-      padding-bottom: 0.1px;
-    }
-
-    .asset { padding: 2em; }
-
-    .c5 { color: var(--c5); }
-    .c6 { color: var(--c6); }
-    .c7 { color: var(--c7); }
-    .c8 { color: var(--c8); }
-
-    @media (hover: hover) {
-      .asset:hover { font-weight: bold; }
-      .asset:active { background-color: var(--c1); }
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" media="print" href="/public/css/print.css">
   <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script>
   <script defer src="/public/js/common.js"></script>
   <script defer src="/public/js/index.js"></script>
-  <script defer src="/public/js/renderIndexJson.js"></script>
+  <script defer src="/public/js/renderBlogsJson.js"></script>
+  <script defer src="/public/js/renderAssetsJson.js"></script>
   <script defer src="/public/js/siteUnderDev.js"></script>
 </head>
 <body>
   <header>
     <h4>W E L C O M E</h4>
     <section class="pad">
-      Hello and welcome to my site. Read my blog and discover more about me.
-      Use my static assets for your projects.
+      Read my blog, learn about me, and use my static assets for your
+      projects.
     </section>
   </header>
   <nav>
-    <h4>N A V I G A T I O N</h4>
-    <a href="/about">
-      <section class="btn pad">About</section>
-    </a>
-    <a href="/blog">
-      <section class="btn pad">Blog</section>
-    </a>
+    <h4>S H O W</h4>
+    <section class="flex">
+      <div id="btn-about" class="btn pad nav">ABOUT</div>
+      <div id="btn-assets" class="btn pad nav">ASSETS</div>
+      <div id="btn-blog" class="btn pad nav">BLOG</div>
+    </section>
   </nav>
   <main>
-    <h4>A S S E T S</h4>
-    <section class="pad">
-      Click file type to expand.
-    </section>
-    <section>
-      <div id="btn-css" class="c5 btn pad">.css</div>
-      <div id="css"></div>
-    </section>
-    <section>
-      <div id="btn-html" class="c6 btn pad">.html</div>
-      <div id="html"></div>
-    </section>
-    <section>
-      <div id="btn-js" class="c7 btn pad">.js</div>
-      <div id="js"></div>
-    </section>
-    <section>
-      <div id="btn-json" class="c8 btn pad">.json</div>
-      <div id="json"></div>
-    </section>
+    <div class="section" id="about" >
+      <h4>A B O U T</h4>
+      <section class="pad">
+        Coming soon!
+      </section>
+      <a href="mailto:james.a.baroi@gmail.com" target="_blank">
+        <section class="btn pad">
+          Contact: james.a.baroi@gmail.com
+        </section>
+      </a>
+    </div>
+    <div class="section" id="assets">
+      <h4>A S S E T S</h4>
+      <section>
+        <div id="btn-css" class="c5 btn pad">.css</div>
+        <div id="css"></div>
+      </section>
+      <section>
+        <div id="btn-html" class="c6 btn pad">.html</div>
+        <div id="html"></div>
+      </section>
+      <section>
+        <div id="btn-js" class="c7 btn pad">.js</div>
+        <div id="js"></div>
+      </section>
+      <section>
+        <div id="btn-json" class="c8 btn pad">.json</div>
+        <div id="json"></div>
+      </section>
+    </div>
+    <div class="section" id="blog">
+      <h4>B L O G</h4>
+      <div id="posts"></div>
+    </div>
   </main>
   <footer>
-    <h4>R E S O U R C E S</h4>
-    <a href="mailto:james.a.baroi@gmail.com" target="_blank">
-      <section class="btn pad">
-        Contact: james.a.baroi@gmail.com
-      </section>
-    </a>
+    <h4>P O L I C Y</h4>
     <a class="a" href="/policy/cookie-policy" target="_blank">
-      <div id="cplc" class='btn'>
+      <div id="cookie-policy" class='btn'>
           Cookie Policy
       </div>
     </a>
