@@ -14,7 +14,7 @@
   <link rel="stylesheet" type="text/css" media="print" href="/public/css/print.css">
   <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script>
   <script defer src="/public/js/common.js"></script>
-  <script defer src="/public/js/index.js"></script>
+  <script defer src= "/public/js/index.js"></script>
   <script defer src="/public/js/renderBlogsJson.js"></script>
   <script defer src="/public/js/renderAssetsJson.js"></script>
   <script defer src="/public/js/siteUnderDev.js"></script>
@@ -22,51 +22,43 @@
 <body>
   <header>
     <h4>W E L C O M E</h4>
-    <section class="pad">
-      Read my blog, learn about me, and use my static assets for your
-      projects.
-    </section>
+    <div class="section pad">
+      Read my blog, learn about me, and use my assets.
+    </div>
   </header>
   <nav>
-    <h4>S H O W</h4>
-    <section class="flex">
-      <div id="btn-about" class="btn pad nav">ABOUT</div>
-      <div id="btn-assets" class="btn pad nav">ASSETS</div>
-      <div id="btn-blog" class="btn pad nav">BLOG</div>
-    </section>
+    <div id="btn-about" class="btn pad nav">ABOUT</div>
+    <div id="btn-assets" class="btn pad nav">ASSETS</div>
+    <div id="btn-blog" class="btn pad nav">BLOG</div>
   </nav>
   <main>
-    <div class="section" id="about" >
+    <div id="about" >
       <h4>A B O U T</h4>
-      <section class="pad">
-        Coming soon!
-      </section>
+      <div class="section pad">Coming soon!</div>
       <a href="mailto:james.a.baroi@gmail.com" target="_blank">
-        <section class="btn pad">
-          Contact: james.a.baroi@gmail.com
-        </section>
+        <div class="btn section pad">Contact: james.a.baroi@gmail.com</div>
       </a>
     </div>
-    <div class="section" id="assets">
+    <div id="assets">
       <h4>A S S E T S</h4>
-      <section>
+      <div class="section">
         <div id="btn-css" class="c5 btn pad">.css</div>
         <div id="css"></div>
-      </section>
-      <section>
+      </div>
+      <div class="section">
         <div id="btn-html" class="c6 btn pad">.html</div>
         <div id="html"></div>
-      </section>
-      <section>
+      </div>
+      <div class="section">
         <div id="btn-js" class="c7 btn pad">.js</div>
         <div id="js"></div>
-      </section>
-      <section>
+      </div>
+      <div class="section">
         <div id="btn-json" class="c8 btn pad">.json</div>
         <div id="json"></div>
-      </section>
+      </div>
     </div>
-    <div class="section" id="blog">
+    <div id="blog">
       <h4>B L O G</h4>
       <div id="posts"></div>
     </div>
@@ -74,10 +66,28 @@
   <footer>
     <h4>P O L I C Y</h4>
     <a class="a" href="/policy/cookie-policy" target="_blank">
-      <div id="cookie-policy" class='btn'>
+      <div class="policy" class='btn'>
           Cookie Policy
       </div>
     </a>
+    <div id="btn-scroll" title="Scroll Up"></div>
+    <div id="theme"></div>
+    <div id="cookie">
+      <div id="cookie-notice">
+        <div>
+          <a id="cookie-heading" href="/policy/cookie-policy" target="_blank">
+            <h1>
+              <span>Cookie Policy</span>
+            </h1>
+          </a>
+          <p>
+            Click "OK" to consent to the use of cookies on this site.
+            Click on "Cookie Policy" above to learn more.
+          </p>
+        </div>
+        <div id="btn-cookie">OK</div>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

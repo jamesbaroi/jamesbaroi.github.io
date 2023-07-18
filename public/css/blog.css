@@ -105,7 +105,8 @@ a {
 
 #btn-cookie {
   background-color: var(--c0);
-  border: 1px dashed var(--c2);
+  border: 1px solid var(--c2);
+  box-shadow: 1px 1px 20px var(--c0);
   box-sizing: border-box;
   color: var(--c4);
   cursor: pointer;
@@ -116,14 +117,6 @@ a {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-}
-
-#cookie-policy {
-  border-top: 1px dashed var(--c2);
-  display: flex;
-  gap: 1em;
-  justify-content: left;
-  padding: 1em;
 }
 
 /**Theme */
@@ -178,9 +171,9 @@ a {
   }
   #btn-cookie:active {
     background-color: var(--c1);
-    border: 1px dashed var(--c2);
+    border: 1px solid var(--c0);
     box-shadow: none;
-    color: var(--c3);
+    color: var(--c2);
   }
   #btn-theme:hover {
     background-color: var(--c4);

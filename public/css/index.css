@@ -105,7 +105,8 @@ a {
 
 #btn-cookie {
   background-color: var(--c0);
-  border: 1px dashed var(--c2);
+  border: 1px solid var(--c2);
+  box-shadow: 1px 1px 20px var(--c0);
   box-sizing: border-box;
   color: var(--c4);
   cursor: pointer;
@@ -116,14 +117,6 @@ a {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-}
-
-#cookie-policy {
-  border-top: 1px dashed var(--c2);
-  display: flex;
-  gap: 1em;
-  justify-content: left;
-  padding: 1em;
 }
 
 /**Theme */
@@ -178,9 +171,9 @@ a {
   }
   #btn-cookie:active {
     background-color: var(--c1);
-    border: 1px dashed var(--c2);
+    border: 1px solid var(--c0);
     box-shadow: none;
-    color: var(--c3);
+    color: var(--c2);
   }
   #btn-theme:hover {
     background-color: var(--c4);
@@ -256,15 +249,25 @@ a {
     font-size: 16px;
   }
 }
-header, nav, footer, .section {
+header, main, footer {
   background-color: var(--c0);
-  border: 1px dashed var(--c2);
+  border: 1px solid var(--c2);
   box-sizing: border-box;
   margin: 0 0 1em;
 }
 
-section {
-  border-top: 1px dashed var(--c2);
+nav {
+  background-color: var(--c1);
+  display: grid;
+  gap: 1em;
+  grid-template-columns: auto auto auto;
+  margin: 1em 0;
+}
+
+.nav {
+  background-color: var(--c0);
+  border: 1px solid var(--c2);
+  text-align: center;
 }
 
 h4 {
@@ -277,9 +280,8 @@ h4 {
           user-select: none;
 }
 
-#css, #html, #js, #json {
-  background-color: var(--c0);
-  padding-bottom: 0.1px;
+.section {
+  border-top: 1px dashed var(--c2);
 }
 
 .btn {
@@ -294,7 +296,7 @@ h4 {
   padding: 1em;
 }
 
-.blog {
+.blog, .asset {
   padding: 2em;
 }
 
@@ -304,10 +306,7 @@ h4 {
 }
 
 .date {
-  color: rgb(100, 103, 110);
-} /**Fixed */
-.asset {
-  padding: 2em;
+  color: rgb(100, 103, 110); /**Fixed */
 }
 
 .c5 {
@@ -326,23 +325,12 @@ h4 {
   color: var(--c8);
 }
 
-.flex {
+.policy {
+  border-top: 1px dashed var(--c2);
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-@media only screen and (min-width: 260px) {
-  .flex {
-    flex-wrap: nowrap;
-  }
-}
-.nav {
-  background-color: var(--c1);
-  border: 1px dashed var(--c2);
-  margin: 0.5em;
-  text-align: center;
-  width: 100%;
+  gap: 1em;
+  justify-content: left;
+  padding: 1em;
 }
 
 @media (hover: hover) {
@@ -377,6 +365,7 @@ h4 {
     background-color: var(--c4);
     color: var(--c1);
     font-weight: bold;
+    /**Override inline style */
   }
   .asset:hover div {
     color: var(--c1) !important;
@@ -384,6 +373,7 @@ h4 {
   .asset:active {
     background-color: var(--c1);
     color: var(--c2);
+    /**Override inline style */
   }
   .asset:active div {
     color: var(--c2) !important;

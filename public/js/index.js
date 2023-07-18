@@ -1,52 +1,76 @@
-const showHide_byId = (input, output, state) => {
+/**[ GET ELEMENTS ] ---------------------------------------------------------*/
 
-  let i = document.getElementById(input)
-  let o = document.getElementById(output)
+/**Buttons */
+const btn_CSS    = document.getElementById('btn-css'   )
+const btn_HTML   = document.getElementById('btn-html'  )
+const btn_JS     = document.getElementById('btn-js'    )
+const btn_JSON   = document.getElementById('btn-json'  )
+const btn_Blog   = document.getElementById('btn-blog'  )
+const btn_About  = document.getElementById('btn-about' )
+const btn_Assets = document.getElementById('btn-assets')
 
-  !o ? true : o.style.display = state
+/**Assets */
+const asset_CSS  = document.getElementById('css' )
+const asset_HTML = document.getElementById('html')
+const asset_JS   = document.getElementById('js'  )
+const asset_JSON = document.getElementById('json')
 
-  !i ? true : i.addEventListener('click', () => {
+/**Nav */
+const about  = document.getElementById('about' )
+const assets = document.getElementById('assets')
+const blog   = document.getElementById('blog'  )
 
-    o.style.display != 'none' ?
-    o.style.display  = 'none' :
-    o.style.display  = 'block'
-  })
-}
-
-const showOne_hideOthers_byId = (input, output, array, state) => {
-
-  let i0 = document.getElementById(input)
-  let o1 = document.getElementById(output)
-
-  !o1 ? true : o1.style.display = state
-
-  if (!i0) { true } else {
-
-    i0.addEventListener('click', () => {
-
-      if (o1.style.display != 'none') {
-
-        // o1.style.display  = 'none'
-
-      } else {
-
-        o1.style.display  = 'block'
-
-        for (let i = 0; i < array.length; i++) {
-
-          document.getElementById(array[i]).style.display = 'none'
-        }
-      }
-    })
-  }
-}
+/**[ CREATE ELEMENTS ] ------------------------------------------------------*/
 
 
-showOne_hideOthers_byId('btn-blog',   'blog',   ['about',  'assets'], 'block')
-showOne_hideOthers_byId('btn-about',  'about',  ['assets', 'blog'  ], 'none' )
-showOne_hideOthers_byId('btn-assets', 'assets', ['about',  'blog'  ], 'none' )
+/**[ SET ELEMENTS ] ---------------------------------------------------------*/
 
-showHide_byId('btn-css',    'css',    'none')
-showHide_byId('btn-html',   'html',   'none')
-showHide_byId('btn-js',     'js',     'none')
-showHide_byId('btn-json',   'json',   'none')
+/**Display */
+asset_CSS.style.display  = 'none'
+asset_HTML.style.display = 'none'
+asset_JS.style.display   = 'none'
+asset_JSON.style.display = 'none'
+about.style.display      = 'none'
+assets.style.display     = 'none'
+blog.style.display       = 'block'
+
+/**[ IMPLEMENT ] ------------------------------------------------------------*/
+
+/**Toggle display assets */
+btn_CSS.addEventListener('click', () => {
+  asset_CSS.style.display  != 'none' ?
+  asset_CSS.style.display   = 'none' :
+  asset_CSS.style.display   = 'block'
+})
+btn_HTML.addEventListener('click', () => {
+  asset_HTML.style.display != 'none' ?
+  asset_HTML.style.display  = 'none' :
+  asset_HTML.style.display  = 'block'
+})
+btn_JS.addEventListener('click', () => {
+  asset_JS.style.display   != 'none' ?
+  asset_JS.style.display    = 'none' :
+  asset_JS.style.display    = 'block'
+})
+btn_JSON.addEventListener('click', () => {
+  asset_JSON.style.display != 'none' ?
+  asset_JSON.style.display  = 'none' :
+  asset_JSON.style.display  = 'block'
+})
+
+/**Toggle display nav */
+btn_About.addEventListener('click', () => {
+  about.style.display  = 'block'
+  assets.style.display = 'none'
+  blog.style.display   = 'none'
+})
+btn_Assets.addEventListener('click', () => {
+  assets.style.display = 'block'
+  about.style.display  = 'none'
+  blog.style.display   = 'none'
+})
+btn_Blog.addEventListener('click', () => {
+  blog.style.display   = 'block'
+  about.style.display  = 'none'
+  assets.style.display = 'none'
+})

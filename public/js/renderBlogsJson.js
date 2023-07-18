@@ -3,13 +3,13 @@ const implement_articleIndexDataRender_fromJsonUrl = (jsonSrc) => {
   let create_articleIndexData_Elem = () => {
 
     let src = document.createElement('a')
-    let sec = document.createElement('section')
+    let sec = document.createElement('div')
     let tit = document.createElement('div')
     let sub = document.createElement('div')
     let des = document.createElement('div')
     let dat = document.createElement('div')
 
-    sec.setAttribute('class', 'blog')
+    sec.setAttribute('class', 'blog section')
     tit.setAttribute('class', 'title')
     dat.setAttribute('class', 'date')
 
