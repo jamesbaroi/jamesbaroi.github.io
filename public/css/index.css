@@ -292,7 +292,7 @@ article {
 h1 {
   background-color: var(--c10);
   color: var(--c4);
-  font-size: 1.4em;
+  font-size: 1em;
   margin: 0;
   padding: 1em;
   -webkit-user-select: none;
@@ -301,7 +301,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1em;
   margin: 0;
 }
 
