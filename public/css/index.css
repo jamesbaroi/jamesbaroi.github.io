@@ -84,39 +84,56 @@ a {
 }
 
 #cookie-notice {
-  background-color: var(--c1);
   color: var(--c3);
   display: grid;
+  font-family: monospace;
   justify-content: center;
-  padding: 16px;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 99;
 }
+#cookie-notice p {
+  line-height: 2em;
+  margin: 0;
+  padding: 16px;
+}
+
+#cookie-container {
+  background-color: var(--c0);
+  border: 1px solid var(--c8);
+  box-sizing: border-box;
+}
 
 #cookie-heading {
-  color: var(--c4);
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
+#cookie-heading h1 {
+  background-color: var(--c8);
+  color: var(--c0);
+  font-size: 2em;
+  margin: 0;
+  padding: 16px;
+}
 
 #btn-cookie {
-  background-color: var(--c0);
-  border: 1px solid var(--c2);
+  background-color: var(--c8);
   box-shadow: 1px 1px 20px var(--c0);
   box-sizing: border-box;
-  color: var(--c4);
+  color: var(--c1);
   cursor: pointer;
   font-weight: bold;
-  margin: auto 0 auto auto;
+  margin: auto 16px 16px auto;
   padding: 0.6em 1.8em;
   text-align: center;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 /**Theme */
@@ -164,16 +181,14 @@ a {
     background: var(--c4);
   }
   #btn-cookie:hover {
-    background-color: var(--c4);
-    border: 1px solid var(--c4);
+    background-color: var(--c8);
     box-shadow: 1px 1px 20px var(--c2);
     color: var(--c0);
   }
   #btn-cookie:active {
     background-color: var(--c1);
-    border: 1px solid var(--c0);
     box-shadow: none;
-    color: var(--c2);
+    color: var(--c8);
   }
   #btn-theme:hover {
     background-color: var(--c4);
@@ -186,67 +201,67 @@ a {
 @media only screen and (min-width: 656px) {
   body {
     padding: 16px;
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 @media only screen and (min-width: 672px) {
   body {
     padding: 24px;
-    font-size: 14.2px;
+    font-size: 13.2px;
   }
 }
 @media only screen and (min-width: 688px) {
   body {
     padding: 32px;
-    font-size: 14.4px;
+    font-size: 13.4px;
   }
 }
 @media only screen and (min-width: 704px) {
   body {
     padding: 40px;
-    font-size: 14.6px;
+    font-size: 13.6px;
   }
 }
 @media only screen and (min-width: 720px) {
   body {
     padding: 48px;
-    font-size: 14.8px;
+    font-size: 13.8px;
   }
 }
 @media only screen and (min-width: 736px) {
   body {
     padding: 56px;
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 @media only screen and (min-width: 752px) {
   body {
     padding: 64px;
-    font-size: 15.2px;
+    font-size: 14.2px;
   }
 }
 @media only screen and (min-width: 768px) {
   body {
     padding: 72px;
-    font-size: 15.4px;
+    font-size: 14.4px;
   }
 }
 @media only screen and (min-width: 784px) {
   body {
     padding: 80px;
-    font-size: 15.6px;
+    font-size: 14.6px;
   }
 }
 @media only screen and (min-width: 800px) {
   body {
     padding: 88px;
-    font-size: 15.8px;
+    font-size: 14.8px;
   }
 }
 @media only screen and (min-width: 816px) {
   body {
     padding: 96px;
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 header, footer, #blog, #about, #assets, #posts {

@@ -101,4 +101,5 @@ btn_Posts.addEventListener('click', () => {
   posts.style.display      != 'none' ?
   posts.style.display     = 'none' :
   posts.style.display     = 'block'
+  posts.scrollIntoView()
 })
