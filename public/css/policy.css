@@ -3,8 +3,8 @@ body {
   font-family: monospace;
   line-height: 2em;
   margin: 1em auto;
-  max-width: 512px;
-  padding: 2em 2em 100vh;
+  max-width: 624px;
+  padding: 16px;
 }
 
 a {
@@ -50,6 +50,8 @@ p {
 
 table {
   border-collapse: collapse;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
   margin: 1em 0;
   width: 100%;
 }
@@ -73,13 +75,8 @@ td {
 
 #update {
   background-color: white;
-  border-top: 0.1px solid rgb(83, 83, 83);
   line-height: 1em;
   padding: 1em;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 ::-webkit-scrollbar {

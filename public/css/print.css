@@ -3,6 +3,10 @@
   color: black !important;
 }
 
-#cplc, #return, #scrl-btn, #thanks, #tm {
+#btn-scroll,
+#cookie,
+#return,
+#thanks,
+#theme {
   display: none;
 }/*# sourceMappingURL=print.css.map */
