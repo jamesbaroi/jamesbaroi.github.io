@@ -13,8 +13,10 @@ const btn_Theme  = document.createElement('div' )
 
 /**[ SET ELEMENT ATTRIBUTES ] -----------------------------------------------*/
 
-btn_Theme.id    = 'btn-theme'
-btn_Theme.title = 'Toggle Theme'
+!btn_Theme ? true : (
+  btn_Theme.id    = 'btn-theme',
+  btn_Theme.title = 'Toggle Theme'
+)
 
 /**[ CREATE FUNCTIONS ] -----------------------------------------------------*/
 
@@ -64,22 +66,25 @@ const runGtag = () => {
 
 /**[ IMPLEMENT ] ------------------------------------------------------------*/
 
-btn_Scroll.addEventListener('click', () => {
+!btn_Scroll ? true : (
+  
+  btn_Scroll.addEventListener('click', () => {
 
-  document.body.scrollTop = 0
-  document.documentElement.scrollTop = 0
-})
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+  }),
 
-window.onscroll = () => {
+  window.onscroll = () => {
 
-  document.body.scrollTop > 200 ||
-  document.documentElement.scrollTop > 200 ?
+    document.body.scrollTop > 200 ||
+    document.documentElement.scrollTop > 200 ?
 
-  btn_Scroll.style = 'cursor: pointer; opacity: 1;' :
-  btn_Scroll.style = 'cursor: default; opacity: 0;'
-}
+    btn_Scroll.style = 'cursor: pointer; opacity: 1;' :
+    btn_Scroll.style = 'cursor: default; opacity: 0;'
+  }
+)
 
-btn_Theme.addEventListener('click', () => {
+!btn_Theme ? true : btn_Theme.addEventListener('click', () => {
 
   let v
 
@@ -97,28 +102,22 @@ btn_Theme.addEventListener('click', () => {
   setCookie('theme', v, 365)
 })
 
-btn_Cookie.addEventListener('click', () => {
+!btn_Cookie ? true : btn_Cookie.addEventListener('click', () => {
 
-  !cookie ? true : (
+  setCookie('cookie', 'true', 365)
 
-    setCookie('cookie', 'true', 365),
+  !cookie ? true : cookie.style.display = 'none'
+  !theme  ? true : theme.append(btn_Theme)
 
-    cookie.style.display = 'none',
-
-    theme.append(btn_Theme),
-
-    runGtag()
-  )
+  runGtag()
 })
 
-checkCookie('cookie') == 'true' ? (
+checkCookie('cookie') != 'true' ? true : (
 
-  cookie.style.display = 'none',
+  !cookie ? true : cookie.style.display = 'none',
+  !theme  ? true : theme.append(btn_Theme)
+)
 
-  theme.append(btn_Theme)
-
-) : btn_Theme.remove()
-
-checkCookie('theme') == 'light' ?
-document.body.classList.toggle('light-theme') :
-document.body.classList.toggle('dark-theme')
+checkCookie('theme') != 'light' ?
+document.body.classList.toggle('dark-theme') :
+document.body.classList.toggle('light-theme')

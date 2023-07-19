@@ -357,9 +357,6 @@ h3 {
 
 .policy {
   border-top: 1px dashed var(--c2);
-  display: flex;
-  gap: 1em;
-  justify-content: left;
   padding: 1em;
 }
 
