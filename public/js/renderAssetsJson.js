@@ -1,4 +1,4 @@
-let create_SiteIndexData_Elem = () => {
+const create_SiteIndexData_Elem = () => {
 
   let src = document.createElement('a')
   let des = document.createElement('div')
@@ -10,7 +10,7 @@ let create_SiteIndexData_Elem = () => {
   return { src, des, url }
 }
 
-let populate_SiteIndexData_Elem = (d, o, i) => {
+const populate_SiteIndexData_Elem = (d, o, i) => {
 
   !d[i].des ? o.des.innerHTML = 'None' : o.des.innerHTML = d[i].des
   !d[i].url ? o.url.innerHTML = '' : (
@@ -23,11 +23,12 @@ let populate_SiteIndexData_Elem = (d, o, i) => {
   o.src.append(o.des)
 }
 
-let render_SiteIndexData_Type = (d, t, c) => {
+const render_SiteIndexData_Type = (d, t, c) => {
+
+  let e = document.getElementById(t)
 
   for (let i = d.length -1; i >= 0; i--) {
 
-    let e = document.getElementById(t)
     let o = create_SiteIndexData_Elem()
 
     o.url.style.color = c
@@ -38,7 +39,7 @@ let render_SiteIndexData_Type = (d, t, c) => {
   }
 }
 
-let render_SiteIndexData = (d) => {
+const render_SiteIndexData = (d) => {
 
   render_SiteIndexData_Type(d.css,  'css',  'var(--c5)')
   render_SiteIndexData_Type(d.html, 'html', 'var(--c6)')

@@ -249,7 +249,7 @@ a {
     font-size: 16px;
   }
 }
-header, main, footer {
+header, footer, #blog, #about, #assets, #posts {
   background-color: var(--c0);
   border: 1px solid var(--c2);
   box-sizing: border-box;
@@ -260,7 +260,7 @@ nav {
   background-color: var(--c1);
   display: grid;
   gap: 1em;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr;
   margin: 1em 0;
 }
 
@@ -270,14 +270,29 @@ nav {
   text-align: center;
 }
 
-h4 {
+article {
+  word-break: keep-all;
+}
+
+h1 {
   background-color: var(--c10);
   color: var(--c4);
+  font-size: 1.4em;
   margin: 0;
   padding: 1em;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1em;
+  margin: 1em 0;
 }
 
 .section {
@@ -305,8 +320,8 @@ h4 {
   font-weight: bold;
 }
 
-.date {
-  color: rgb(100, 103, 110); /**Fixed */
+.description {
+  margin: 1em 0;
 }
 
 .c5 {
