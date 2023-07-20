@@ -10,6 +10,7 @@ body.dark-theme {
   --c8: goldenrod;
   --c9: rgb(220, 225, 230);
   --c10: rgb(16, 16.5, 18);
+  --c11: rgb(16, 16.5, 18);
 }
 
 body {
@@ -24,6 +25,7 @@ body {
   --c8: purple;
   --c9: rgb(16, 16.5, 18);
   --c10: rgb(180, 182, 185);
+  --c11: rgb(210, 210, 210);
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -39,6 +41,7 @@ body {
     --c8: goldenrod;
     --c9: rgb(220, 225, 230);
     --c10: rgb(16, 16.5, 18);
+    --c11: rgb(16, 16.5, 18);
   }
   body.light-theme {
     --c0: rgb(220, 220, 220);
@@ -52,6 +55,7 @@ body {
     --c8: purple;
     --c9: rgb(16, 16.5, 18);
     --c10: rgb(180, 182, 185);
+    --c11: rgb(210, 210, 210);
   }
 }
 * {
