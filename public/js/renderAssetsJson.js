@@ -26,8 +26,9 @@ const populate_SiteIndexData_Elem = (d, o, i) => {
 const render_SiteIndexData_Type = (d, t, c) => {
 
   let e = document.getElementById(t)
+  let dLen = d.length
 
-  for (let i = d.length -1; i >= 0; i--) {
+  for (let i = dLen -1; i >= 0; i--) {
 
     let o = create_SiteIndexData_Elem()
 

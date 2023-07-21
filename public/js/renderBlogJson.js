@@ -41,8 +41,10 @@ const render_articleIndexData = (d) => {
 
   n ? n.append(o.src): false
 
+  let dLen = d.length
+
   /**Showw posts - newest */
-  for (let i = d.length - 2; i >= 0; i--) {
+  for (let i = dLen - 2; i >= 0; i--) {
 
     let o = create_articleIndexData_Elem()
 
