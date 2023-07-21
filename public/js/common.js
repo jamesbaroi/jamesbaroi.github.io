@@ -36,7 +36,9 @@ const getCookie = (cname) => {
   let name = cname + "="
   let ca = document.cookie.split(';')
 
-  for(let i = 0; i < ca.length; i++) {
+  let caLen = ca.length
+
+  for(let i = 0; i < caLen; i++) {
 
     let c = ca[i]
 
