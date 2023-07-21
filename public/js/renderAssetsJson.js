@@ -41,10 +41,8 @@ const render_SiteIndexData_Type = (d, t, c) => {
 
 const render_SiteIndexData = (d) => {
 
-  render_SiteIndexData_Type(d.css,  'css',  'var(--c5)')
-  render_SiteIndexData_Type(d.html, 'html', 'var(--c6)')
-  render_SiteIndexData_Type(d.js,   'js',   'var(--c7)')
-  render_SiteIndexData_Type(d.json, 'json', 'var(--c8)')
+  render_SiteIndexData_Type(d.js,   'js',   'var(--c6)')
+  render_SiteIndexData_Type(d.json, 'json', 'var(--c7)')
 }
 
 fetch('/public/json/index.json')
