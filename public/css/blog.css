@@ -111,9 +111,10 @@ a {
   z-index: 99;
 }
 #cookie-notice p {
+  font-size: 0.8em;
   line-height: 2em;
   margin: 0;
-  padding: 16px;
+  padding: 8px 16px;
 }
 
 #cookie-container {
@@ -130,9 +131,9 @@ a {
 #cookie-heading h1 {
   background-color: var(--c8);
   color: var(--c0);
-  font-size: 2em;
+  font-size: 1.4em;
   margin: 0;
-  padding: 16px;
+  padding: 8px 16px;
 }
 
 #btn-cookie {
@@ -143,7 +144,7 @@ a {
   cursor: pointer;
   font-weight: bold;
   margin: auto 16px 16px auto;
-  padding: 0.6em 1.8em;
+  padding: 0.4em 1.2em;
   text-align: center;
   -webkit-user-select: none;
      -moz-user-select: none;
