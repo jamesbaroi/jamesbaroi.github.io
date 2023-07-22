@@ -1,0 +1,1152 @@
+[
+  {
+    "mos": "11B",
+    "tit": "Infantryman",
+    "des": "As an Infantry Soldier, you’ll serve in the field, working to defend our country against any threats on the ground. You’ll capture, destroy, and deter enemy forces, assist in reconnaissance, and help mobilize troops and weaponry to support the mission as the ground combat force.",
+    "cut": "87 Combat (CO)",
+    "asv": [0, 0, 87, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/ground-forces/firearms-ammunition/11b-infantryman.html"
+  },
+  {
+    "mos": "11C",
+    "tit": "Indirect Fire Infantryman",
+    "des": "As an Indirect Fire Infantryman, you’ll be a member of a mortar squad, section, or platoon. The mortar has the most power and range of any weapon in an infantry unit. In this job, you’ll carry out scout missions to spot enemy troops and gun locations, and operate two-way radios and signal equipment to relay battle orders.",
+    "cut": "87 Combat (CO)",
+    "asv": [0, 0, 87, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/ground-forces/firearms-ammunition/11c-indirect-fire-infantryman.html"
+  },
+  {
+    "mos": "11X",
+    "tit": "Infantryman Jobs",
+    "des": "As a first step toward becoming an Infantryman, you’ll train in the use of small arms, anti-tank, and other weapons systems. You will be responsible for capturing, destroying, and repelling enemy ground forces during missions. This is also the starting point for many advanced schools, such as Special Forces, Airborne School, Ranger School, Sniper School, and Pathfinder School.",
+    "cut": "87 Combat (CO)",
+    "asv": [0, 0, 87, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/ground-forces/firearms-ammunition/11x-infantryman-jobs.html"
+  },
+  {
+    "mos": "12B",
+    "tit": "Combat Engineer",
+    "des": "As a Combat Engineer, you’ll work quickly and skillfully to help Soldiers navigate while on combat missions by constructing bridges, clearing barriers with explosives, and detecting and avoiding mines and other environmental hazards. You'll provide expertise and come up with quick and creative engineering solutions, constructing fighting positions, fixed and floating bridges, and obstacles and defense positions.",
+    "cut": "87 Combat (CO)",
+    "asv": [0, 0, 87, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/design-develop/12b-combat-engineer.html"
+  },
+  {
+    "mos": "12C",
+    "tit": "Bridge Crewmember",
+    "des": "As a Bridge Crewmember, you'll help construct bridges and rafts to help Soldiers cross rough terrain, bodies of water, and barriers they might encounter in the field. You'll help create floating bridges and rafts from a boat as well as help combat engineers create safe crossings on land by building structures or demolishing obstacles.",
+    "cut": "87 Combat (CO)",
+    "asv": [0, 0, 87, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/design-develop/12c-bridge-crewmember.html"
+  },
+  {
+    "mos": "12D",
+    "tit": "Diver",
+    "des": "As a Diver, you’ll have the unique skills to conduct reconnaissance, demolition, and salvage underwater. You’ll also assist with underwater construction and specialize in either scuba diving or deep-sea diving. You’ll support special warfare and explosive ordnance disposal troops while using diving gear.",
+    "cut": "106 Skilled Technical (ST) OR (98 General Maintenance (GM) AND 107 General Technical (GT))",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 106],
+    "alt": [107, 0, 0, 0, 0, 98, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/12d-diver.html"
+  },
+  {
+    "mos": "12G",
+    "tit": "Quarrying Specialist",
+    "des": "As a Quarrying Specialist, you'll be responsible for moving earth and materials with heavy types of machinery to help construct airfields, roads, dams, and buildings. You will also operate heavy construction equipment such as rock crushers, explosives, and jackhammers to remove rock and debris from construction sites.",
+    "cut": "93 General Maintenance (GM)",
+    "asv": [0, 0, 0, 0, 0, 93, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/design-develop/12g-quarrying-specialist.html"
+  },
+  {
+    "mos": "12K",
+    "tit": "Plumber",
+    "des": "As an Army Plumber, you’ll be crucial in keeping the Army operating smoothly by installing, repairing, and making construction plans for new pipe systems and insulation. You’ll install and repair pipe systems, plumbing fixtures, vents, and insulation, and you’ll read, interpret, and make construction plans for new pipe systems.",
+    "cut": "88 General Maintenance (GM)",
+    "asv": [0, 0, 0, 0, 0, 88, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/design-develop/12k-plumber.html"
+  },
+  {
+    "mos": "12M",
+    "tit": "Firefighter",
+    "des": "As an Army Firefighter, you’ll have the vital task of protecting peoples’ lives and property from fire, much like their civilian counterparts. You’ll control and prevent fires, not only in Army structures, but also aboard aircraft and ships. You’ll supervise and conduct firefighting, rescue, salvage, and fire protection operations, and you’ll perform emergency response duties during hazardous materials incidents.",
+    "cut": "88 General Maintenance (GM)",
+    "asv": [0, 0, 0, 0, 0, 88, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/safety-order-legal/12m-firefighter.html"
+  },
+  {
+    "mos": "12N",
+    "tit": "Horizontal Construction Engineer",
+    "des": "As a Horizontal Construction Engineer, you’ll operate heavy construction equipment like bulldozers, tractors, backhoes, cranes, excavators, and road graders to help pave the way for fellow Soldiers and to make room for construction projects. Without safe roads to travel, it’s hard for Soldiers to move around, especially in unfamiliar territory. You’ll also assist Army engineers to analyze construction site needs and transport heavy construction equipment from one site to another.",
+    "cut": "90 General Maintenance (GM)",
+    "asv": [0, 0, 0, 0, 0, 90, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/design-develop/12n-horizontal-construction-engineer.html"
+  },
+  {
+    "mos": "12P",
+    "tit": "Prime Power Production Specialist",
+    "des": "As a Prime Power Production Specialist, you'll be part of the Army Corps of Engineers working to maintain the Army's electrical power plants. You'll install and inspect electrical power generators and analyze power plant equipment and systems, isolating and troubleshooting complex malfunctions if needed. Additionally, you may serve as a technical advisor to FEMA and other federal organizations.",
+    "cut": "107 Skilled Technical (ST), 107 Electronics (EL), 110 General Technical (GT)",
+    "asv": [110, 0, 0, 107, 0, 0, 0, 0, 0, 107],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/12p-prime-power-production-specialist.html"
+  },
+  {
+    "mos": "12Q",
+    "tit": "Power Distribution Specialist",
+    "des": "As a Power Distribution Specialist, you'll have the important responsibility of powering electricity to the Army. You’ll build, install, and maintain electrical distribution systems like utility poles, power lines, and electrical hardware that supply power for all operations.",
+    "cut": "93 Electronics (EL)",
+    "asv": [0, 0, 0, 93, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/12q-power-distribution-specialist.html"
+  },
+  {
+    "mos": "12R",
+    "tit": "Interior Electrician",
+    "des": "As an Interior Electrician, you'll install, maintain, and safely distribute electricity, the driving force behind today’s Army. You’ll work on interior electrical systems, including transformers, circuit breakers, electrical boxes, and lightning rods. You'll test equipment and fix any short circuits in wires and faulty equipment, and you'll learn to read blueprints and wire plans to determine layouts and repair.",
+    "cut": "93 Electronics (EL)",
+    "asv": [0, 0, 0, 93, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/design-develop/12r-interior-electrician.html"
+  },
+  {
+    "mos": "12T",
+    "tit": "Technical Engineer",
+    "des": "As a Technical Engineer, you’ll supervise and execute construction site development with technical investigation, surveys, drafts, and construction plans/specifications. You’ll also use digital equipment and software to draw topographic maps and charts to prepare detailed plans for construction projects.",
+    "cut": "101 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 101],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/design-develop/12t-technical-engineer.html"
+  },
+  {
+    "mos": "12W",
+    "tit": "Carpentry and Masonry Specialist",
+    "des": "As a Carpentry and Masonry Specialist, you'll have the skills needed to handle a variety of carpentry and masonry duties, building important structures for the Army using hand and power tools, lumber, concrete, stones, and bricks. You’ll also help combat engineers build structures to respond to rough terrain and environmental hazards.",
+    "cut": "88 General Maintenance (GM)",
+    "asv": [0, 0, 0, 0, 0, 88, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/12w-carpentry-masonry-specialist.html"
+  },
+  {
+    "mos": "12Y",
+    "tit": "Geospatial Engineer",
+    "des": "As a Geospatial Engineer, you’ll provide invaluable visualization of the land and battlefield in advance of sending troops into unfamiliar terrain. From conditions and effects of terrain and weather on vehicles and troop movements, to points of tactical interest during missions, you’ll examine all aspects of the battlefield before boots ever hit the ground. You’ll extract and analyze geographic data from satellite imagery, photography, and field reconnaissance, then use this data to create different types of maps and databases. You will also use the information you gather to support military and civilian operations for Disaster Relief and Homeland Security.",
+    "cut": "100 Skilled Technical (ST), 100 General Technical (GT)",
+    "asv": [100, 0, 0, 0, 0, 0, 0, 0, 0, 100],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/design-develop/12y-geospatial-engineer.html"
+  },
+  {
+    "mos": "13B",
+    "tit": "Cannon Crewmember",
+    "des": "As a Cannon Crewmember, you’ll play a vital role in helping the Army win during missions. You’ll work with Howitzers, some of the most technologically advanced weapons systems ever created, to support infantry and tank units. You’ll learn how to handle ammunition, operate these weapons systems, and calculate targets.",
+    "cut": "93 Field Artillery (FA)",
+    "asv": [0, 0, 0, 0, 93, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/ground-forces/explosives-artillery/13b-cannon-crewmember.html"
+  },
+  {
+    "mos": "13F",
+    "tit": "Joint Fire Support Specialist",
+    "des": "As a Joint Fire Support Specialist, you’ll gather intelligence and enemy target location to help the Army determine where and how to deploy artillery in mission-based situations. You’ll set up and operate communications systems, encode and decode messages, assist in the preparation of fire support plans, coordinate and target, operate laser range finders and target devices, and determine the target’s location using computers or manual calculations.",
+    "cut": "96 Field Artillery (FA)",
+    "asv": [0, 0, 0, 0, 96, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/ground-forces/explosives-artillery/13f-joint-fire-support-specialist.html"
+  },
+  {
+    "mos": "13J",
+    "tit": "Fire Control Specialist",
+    "des": "As a Fire Control Specialist, you’ll use strategic skills to coordinate and integrate weapons operations. You’ll process and relay tactical battlefield information to a network of joint fires in support of mission-based operations. You’ll integrate information from multiple users and sensors through the Army and other service networks, and you’ll operate computer and database systems.",
+    "cut": "93 Field Artillery (FA)",
+    "asv": [0, 0, 0, 0, 93, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/ground-forces/explosives-artillery/13j-fire-control-specialist.html"
+  },
+  {
+    "mos": "13M",
+    "tit": "Rocket System (MLRS/HIMARS) Crewmember",
+    "des": "As a Rocket System (MLRS/HIMARS) Crewmember, you’ll maintain and operate the entire multiple launch rocket system (MLRS) as well as the high mobility artillery rocket system (HIMARS). You’ll launch various missiles and munitions in quick strikes to help ensure battlefield success. This role also supports infantry and tank units while supplementing cannon artillery units.",
+    "cut": "95 Operators & Food (OF)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 95, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/ground-forces/explosives-artillery/13m-rocket-system-crewmember.html"
+  },
+  {
+    "mos": "13R",
+    "tit": "Field Artillery Firefinder Radar Operator",
+    "des": "As a Field Artillery Firefinder Radar Operator, you’ll have the vital task of detecting enemy forces with speed and accuracy using a highly specialized radar called a Firefinder, and alerting field artillery units to this critical targeting information.",
+    "cut": "98 Surveillance & Communications (SC)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 98, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/ground-forces/explosives-artillery/13r-field-artillery-radar-operator.html"
+  },
+  {
+    "mos": "14E",
+    "tit": "Patriot Fire Control Enhanced Operator / Maintainer",
+    "des": "As a Patriot Fire Control Enhanced Operator / Maintainer, you’ll be responsible for operating and maintaining the five major parts of the Patriot Fire Control system. You’ll act quickly and with precision to identify, track, and engage those identified threats using one of the world’s most advanced interceptor missile systems capable of destroying enemy air threats at a moment’s notice.",
+    "cut": "100 Mechanical Maintenance (MM)",
+    "asv": [0, 0, 0, 0, 0, 0, 100, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/detecting-aerial-threats/14e-patriot-operator-maintainer.html"
+  },
+  {
+    "mos": "14G",
+    "tit": "Air Defense Battle Management System Operator",
+    "des": "As an Air Defense Battle Management System Operator, you’ll use specialized skills to sustain air space superiority and protect against aerial and missile attacks by providing critical situational awareness, threat detection, and early warnings from airspace. Spotting an incoming threat in advance can be a crucial advantage in protecting ground forces and provide overall ease for many soldiers. Additionally, you’ll learn to evaluate intelligence data, maintain and troubleshoot systems, and establish connectivity to air defense networks.",
+    "cut": "98 General Technical (GT), 99 Mechanical Maintenance (MM)",
+    "asv": [98, 0, 0, 0, 0, 0, 99, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/detecting-aerial-threats/14g-air-defense-battle-management-system-officer.html"
+  },
+  {
+    "mos": "14H",
+    "tit": "Air Defense Enhanced Early Warning System Operator",
+    "des": "As an Air Defense Enhanced Early Warning Systems Operator, you’ll have the vital task of evaluating and communicating data about incoming enemy aerial and missile attacks and aerial surveillance. You’ll maintain computer data links and networks that provide early detection and tracking of possible air threats from the earth’s surface to space, giving units situational awareness and data needed to enable threat engagement and destruction and sustain air space superiority.",
+    "cut": "98 General Technical (GT), 99 Mechanical Maintenance (MM)",
+    "asv": [98, 0, 0, 0, 0, 0, 99, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/detecting-aerial-threats/14h-early-warning-system-operator.html"
+  },
+  {
+    "mos": "14P",
+    "tit": "Air and Missile Defense (AMD) Crewmember",
+    "des": "As an Air and Missile Defense Crewmember, you’ll be a member of the Army’s air defense artillery team and you’ll have the important task of operating and maintaining three of the Army’s surface-to-air advanced weapons systems, which provide vital mobile, short-range air defense protection against cruise missiles and other threats. You’ll reload and resupply these weapons systems, and use them to track, identify, and destroy enemy threats.",
+    "cut": "95 Operators & Food (OF)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 95, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/detecting-aerial-threats/14p-amd-crewmember.html"
+  },
+  {
+    "mos": "14S",
+    "tit": "Avenger Crewmember",
+    "des": "As an Air and Missile Defense Crewmember, you’ll prepare, operate, and fire the Avenger portable surface-to-air missile system designed to provide protection against cruise missiles, and low-flying aircraft. You’ll establish and maintain radio communications, evaluate potential targets and target engagement, use infrared to detect and engage targets, and resupply ammunition for firing.",
+    "cut": "85 Operators & Food (OF)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 85, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/detecting-aerial-threats/14s-avenger-crewmember.html"
+  },
+  {
+    "mos": "14T",
+    "tit": "Patriot Launching Station Enhanced Operator / Maintainer",
+    "des": "As a Patriot Launching Station Enhanced Operator / Maintainer, you’ll be in charge of one of the world’s most advanced missile systems called Patriot, the main weapon system of the Army’s air defense mission. You’ll ensure missiles are ready to fire the moment an airborne threat is detected and prepare the system for firing. In addition, you’ll be expected to perform crucial electronic diagnostic procedures and preventive maintenance on the launcher station and its control systems. You’ll also be expected to establish and maintain radio and wire communications and prepare tactical map overlays and analyze data.",
+    "cut": "95 Operators & Food (OF)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 95, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/detecting-aerial-threats/14t-patriot-launching-station-operator.html"
+  },
+  {
+    "mos": "15B",
+    "tit": "Aircraft Powerplant Repairer",
+    "des": "As an Aircraft Powerplant Repairer, you'll inspect and perform maintenance on aircraft turbine engines and components to make sure they are safe and ready to fly. You'll diagnose and troubleshoot problems with airplane and helicopter engines and do operational and safety checks.",
+    "cut": "104 Mechanical Maintenance (MM)",
+    "asv": [0, 0, 0, 0, 0, 0, 104, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/repairing-aircraft/15b-aircraft-powerplant-repairer.html"
+  },
+  {
+    "mos": "15D",
+    "tit": "Aircraft Powertrain Repairer",
+    "des": "As an Aircraft Powertrain Repairer, you'll inspect and perform maintenance on aircraft powertrains systems—disassembling and fixing parts such as transmissions, engines, and rotary wings. You'll adjust, balance, and align all powertrain systems to make sure planes and helicopters are safe and ready to fly.",
+    "cut": "104 Mechanical Maintenance (MM)",
+    "asv": [0, 0, 0, 0, 0, 0, 104, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/repairing-aircraft/15d-aircraft-powertrain-repairer.html"
+  },
+  {
+    "mos": "15E",
+    "tit": "Unmanned Aircraft Systems Repairer",
+    "des": "As an Unmanned Aircraft Systems Repairer, you'll work with cutting-edge technology and surveillance, maintaining unmanned aircraft by making sure they are ready to fly and able to gather and transmit important intelligence information. You’ll repair electrical, avionics, propulsions, communications, takeoff and landing, and fuel systems.",
+    "cut": "93 Electronics (EL), 104 Mechanical Maintenance (MM)",
+    "asv": [0, 0, 0, 93, 0, 0, 104, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/repairing-aircraft/15e-unmanned-aircraft-systems-repairer.html"
+  },
+  {
+    "mos": "15F",
+    "tit": "Aircraft Electrician",
+    "des": "As an Aircraft Electrician, you'll help keep today’s sophisticated Army aircraft flying safely by supervising, inspecting, troubleshooting, and performing maintenance on aircraft electrical systems.",
+    "cut": "104 Mechanical Maintenance (MM)",
+    "asv": [0, 0, 0, 0, 0, 0, 104, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/repairing-aircraft/15f-aircraft-electrician.html"
+  },
+  {
+    "mos": "15G",
+    "tit": "Aircraft Structural Repairer",
+    "des": "As an Aircraft Structural Repairer, you'll make sure Army airplanes and helicopters are safe and ready to fly by performing maintenance and repair. Using your training as a welder, you'll create new parts out of metal and fiberglass, while improving testing, safety, and technical procedures.",
+    "cut": "104 Mechanical Maintenance (MM)",
+    "asv": [0, 0, 0, 0, 0, 0, 104, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/repairing-aircraft/15g-aircraft-structural-repairer.html"
+  },
+  {
+    "mos": "15H",
+    "tit": "Aircraft Pneudraulics Repairer",
+    "des": "As an Aircraft Pneudraulics Repairer, you'll inspect and perform maintenance on airplane and helicopter pneudraulic systems — the combination of hydraulic and compressed air pressure that powers aircraft parts, such as landing gear, rudders, and brakes. You'll diagnose and troubleshoot mechanical problems and test components to make sure aircraft are safe and ready to fly.",
+    "cut": "104 Mechanical Maintenance (MM)",
+    "asv": [0, 0, 0, 0, 0, 0, 104, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/repairing-aircraft/15h-aircraft-pneudraulics-repairer.html"
+  },
+  {
+    "mos": "15N",
+    "tit": "Avionic Mechanic",
+    "des": "As an Avionic Mechanic, you’ll play a critical role in keeping Army planes and their equipment safe and up to date, performing maintenance on tactical-communications-security, communication, navigation, and flight control equipment.",
+    "cut": "93 Electronics (EL)",
+    "asv": [0, 0, 0, 93, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/repairing-aircraft/15n-avionic-mechanic.html"
+  },
+  {
+    "mos": "15P",
+    "tit": "Aviation Operations Specialist",
+    "des": "As an Aviation Operations Specialist, you'll be responsible for scheduling and dispatching tactical aircraft missions and making one the largest fleets of aircraft in the world run safely and efficiently. You will coordinate flight plans, maintain flight logs, and alert crash crews of emergencies.",
+    "cut": "91 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 91],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/managing-piloting-aircraft/15p-aviation-operations-specialist.html"
+  },
+  {
+    "mos": "15Q",
+    "tit": "Air Traffic Control (ATC) Operator",
+    "des": "As an Air Traffic Control (ATC) Operator, you'll track aircraft such as jets and helicopters to ensure mission success while maintaining critical safe flight operations. You’ll coordinate aircraft movement for takeoff and landing as well as track aircraft in flight in both tactical and non-tactical environments. You’ll have to follow specific procedures, rules, and regulations. You’ll control airborne and ground traffic for safety, process flight plan data, and you will help set up tactical air traffic control facilities on the front lines, ensuring the safety of every pilot and passenger.",
+    "cut": "101 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 101],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/managing-piloting-aircraft/15q-air-traffic-controller.html"
+  },
+  {
+    "mos": "15R",
+    "tit": "AH-64 Helicopter Repairer",
+    "des": "As an AH-64 Helicopter Repairer, you’ll maintain the AH-64 helicopters, also known as the Apache, which have been a vital part of Army missions since they were first used in the 1980s. Hundreds of Army missions depend on these helicopters, so it’ll be vital you ensure that every one of them is safe and ready to fly.",
+    "cut": "99 Mechanical Maintenance (MM)",
+    "asv": [0, 0, 0, 0, 0, 0, 99, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/repairing-aircraft/15r-ah64-helicopter-repairer.html"
+  },
+  {
+    "mos": "15T",
+    "tit": "UH-60 Helicopter Repairer",
+    "des": "As a UH-60 Helicopter Repairer, you will maintain and fix UH-60 (\"Black Hawk\") helicopters, making sure they are safe and ready to fly in hundreds of Army missions.",
+    "cut": "104 Mechanical Maintenance (MM)",
+    "asv": [0, 0, 0, 0, 0, 0, 104, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/repairing-aircraft/15t-uh-60-helicopter-repairer.html"
+  },
+  {
+    "mos": "15U",
+    "tit": "CH-47 Helicopter Repairer",
+    "des": "As a CH-47 Helicopter Repairer, you’ll maintain and repair the CH-47 helicopters (also known as the “Chinook”). As the Army’s most utilized helicopter, with hundreds of Army missions depending on them, you’ll have to ensure that they are safe and ready to fly.",
+    "cut": "104 Mechanical Maintenance (MM)",
+    "asv": [0, 0, 0, 0, 0, 0, 104, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/repairing-aircraft/15u-ch47-helicopter-repairer.html"
+  },
+  {
+    "mos": "15W",
+    "tit": "Unmanned Aircraft Systems Operator",
+    "des": "As an Unmanned Aircraft Systems Operator, you’ll be an intelligence specialist, integral to providing Army personnel with information about enemy forces and battle areas. You’ll train and utilize specialized skills to conduct air reconnaissance, surveillance, targeting missions, and analyze aerial photographs.",
+    "cut": "102 Surveillance & Communications (SC)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 102, 0],
+    "src": "https://goarmy.com/careers-and-jobs/career-match/aviation/managing-piloting-aircraft/15w-unmanned-aircraft-operator.html"
+  },
+  {
+    "mos": "15Y",
+    "tit": "AH-64 Armament / Electrical / Avionic Systems Repairer",
+    "des": "As an AH-64 Armament/Electrical/Avionic Systems Repairer, you'll repair and maintain twin-engine attack helicopters. You will troubleshoot mechanical and electrical problems and maintain and authorize modifications to weapons, firing, and targeting systems. You will do safety tests and preventive checks to make sure all helicopters are safe and ready to fly.",
+    "cut": "104 Mechanical Maintenance (MM), 98 Electronics (EL)",
+    "asv": [0, 0, 0, 98, 0, 0, 104, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/repairing-aircraft/15y-ah46-repairer.html"
+  },
+  {
+    "mos": "17C",
+    "tit": "Cyber Operations Specialist",
+    "des": "As a Cyber Operations Specialist, you’ll use your cyber security skills to defend the Army’s crucial and complex weapons systems, which include satellites, navigation, and aviation systems against both foreign and domestic cyber threats. You’ll respond to adversary attacks, while enabling commanders to gain an advantage in cyberspace by targeting adversary activities and capabilities.",
+    "cut": "110 General Technical (GT), 112 Skilled Technical (ST)",
+    "asv": [110, 0, 0, 0, 0, 0, 0, 0, 0, 112],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/locations-stats-frequencies/17c-cyber-operations-specialist.html"
+  },
+  {
+    "mos": "17E",
+    "tit": "Electromagnetic Warfare Specialist",
+    "des": "As an Electromagnetic Warfare Specialist, you’ll plan and execute electronic warfare operations. You’ll use electromagnetic and directed energy to control the electromagnetic spectrum and defeat the enemy’s electronic systems.",
+    "cut": "105 Surveillance & Communications (SC), 105 Electronics (EL), 105 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 105, 0, 0, 0, 0, 105, 105],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/locations-stats-frequencies/17e-electromagnetic-warfare-specialist.html"
+  },
+  {
+    "mos": "18B",
+    "tit": "Special Forces Weapons Sergeant",
+    "des": "As a Special Forces Weapons Sergeant, you’ll become a member of the Green Berets, one of the most highly skilled Soldiers in the world. You will operate and maintain a wide variety of domestic (United States), allied, and foreign weaponry. You’ll employ conventional and unconventional warfare tactics and techniques in individual and small arms infantry operations.",
+    "cut": "110 General Technical (GT), 100 Combat (CO)",
+    "asv": [110, 0, 100, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/ground-forces/firearms-ammunition/18b-special-forces-weapons-sergeant.html"
+  },
+  {
+    "mos": "18C",
+    "tit": "Special Forces Engineer Sergeant",
+    "des": "As a Special Forces Engineer Sergeant, you’ll become a member of the Green Berets, one of the most highly skilled Soldiers in the world. You will serve on construction projects, building critical infrastructure and creating bridges, buildings, and field barricades. As a demolitions specialist, you’ll carry out demolition raids against strategic enemy targets like railroads, fuel depots, and bridges, destroying critical components of infrastructure to give our Soldiers a tactical advantage.",
+    "cut": "110 General Technical (GT), 100 Combat (CO)",
+    "asv": [110, 0, 100, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/design-develop/18c-special-forces-engineer-sergeant.html"
+  },
+  {
+    "mos": "18D",
+    "tit": "Special Forces Medical Sergeant",
+    "des": "As a Special Forces Medical Sergeant, you'll become Green Berets, one of the most highly skilled Soldiers in the world. Though you’ll primarily train with an emphasis on first-response and trauma medicine much like a paramedic in the civilian world, you’ll also have a working knowledge of dentistry, veterinary care, public sanitation, water quality, and optometry.",
+    "cut": "110 General Technical (GT), 100 Combat (CO)",
+    "asv": [110, 0, 100, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/intensive-care/18d-special-forces-medical-sergeant.html"
+  },
+  {
+    "mos": "18E",
+    "tit": "Special Forces Communications Sergeant",
+    "des": "As a Special Forces Communications Sergeant, you’ll become a member of the Green Berets, one of the most highly skilled Soldiers in the world. You’ll supervise communications for special operations and missions. You’ll organize, train, advise, and supervise the installation, use, and operation of communications equipment, and establish and maintain tactical lines of communication with teams during missions.",
+    "cut": "110 General Technical (GT), 100 Combat (CO)",
+    "asv": [110, 0, 100, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/locations-stats-frequencies/18e-special-forces-communications-sergeant.html"
+  },
+  {
+    "mos": "18F",
+    "tit": "Special Forces Intelligence Sergeant",
+    "des": "As a Special Forces Intelligence Sergeant, you’ll become a member of the Green Berets, one of the most highly skilled Soldiers in the world. You’ll collect intelligence for special missions by employing conventional and unconventional warfare tactics and strategies, both in preparation for special missions and during operations, and provide tactical guidance to Army personnel. You’ll also be tasked with preparing reports for intelligence nets (agents who process prisoners of war, establish security plans, and maintain classified documents).",
+    "cut": "110 General Technical (GT), 105 Combat (CO)",
+    "asv": [110, 0, 100, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/languages-code/18f-special-forces-intelligence-sergeant.html"
+  },
+  {
+    "mos": "18X",
+    "tit": "Special Forces Candidate",
+    "des": "As a Special Forces Candidate, you’ll be training to become a Green Beret, one of the most highly skilled Soldiers in the world. To join the Army elite, you must complete extensive mental and physical training. There are four entry-level Special Forces Military Occupational Specialties, and your specialty will be decided based on your background, aptitude, and the needs of the Army.",
+    "cut": "110 General Technical (GT), 100 Combat (CO)",
+    "asv": [110, 0, 100, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/ground-forces/firearms-ammunition/18x-special-forces-candidate.html"
+  },
+  {
+    "mos": "19D",
+    "tit": "Cavalry Scout",
+    "des": "As a Cavalry Scout, you’ll act as the eyes and ears on the field, gathering information about enemy positions, vehicles, weapons, and activity. You’ll determine whether to call for reinforcements and when to order a retreat. With the information you’ll gather, commanders can make informed decisions about how to move troops and where and when to attack.",
+    "cut": "87 Combat (CO)",
+    "asv": [0, 0, 87, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/ground-forces/firearms-ammunition/19d-cavalry-scout.html"
+  },
+  {
+    "mos": "19K",
+    "tit": "M1 Armor Crewman",
+    "des": "As an M1 Armor Crewman, you’ll work as part of a team to operate tanks and assault vehicles and fire weapons to destroy enemy positions. You’ll need to be ready to defend our country anywhere in the world.",
+    "cut": "87 Combat (CO)",
+    "asv": [0, 0, 87, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/ground-forces/tanks-machinery/19k-m1-armor-crewman.html"
+  },
+  {
+    "mos": "25B",
+    "tit": "Information Technology Specialist",
+    "des": "As an Information Technology Specialist, you’ll maintain, process, and troubleshoot military computer systems and operations. You’ll deal with highly sensitive information and need to have technical skills and aptitude for programming and computer languages.",
+    "cut": "95 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 95],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/locations-stats-frequencies/25b-information-technology-specialist.html"
+  },
+  {
+    "mos": "25D",
+    "tit": "Cyber Network Defender",
+    "des": "As a Cyber Network Defender, you’ll carry out specialized computer network defense duties, including maintaining infrastructure, responding to crises, auditing, and managing. You’ll also detect and protect against unauthorized activity in cyberspace and use a variety of tools to analyze and respond to cyber security attacks.",
+    "cut": "105 General Technical (GT), 105 Skilled Technical (ST)",
+    "asv": [105, 0, 0, 0, 0, 0, 0, 0, 0, 105],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/languages-code/25d-cyber-network-defender.html"
+  },
+  {
+    "mos": "25H",
+    "tit": "Network Communication Systems Specialist",
+    "des": "As a Network Communications Systems Specialist, you’ll supervise network management functions while overseeing integrated network control centers and multichannel communications systems. This includes installing tactical fiber and cable wiring, along with helping troubleshoot and reengineer associated network assets to support operational requirements. You’ll also perform routine maintenance checks on assigned vehicles, power generators, and equipment.",
+    "cut": "102 Electronics (EL), 105 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 102, 0, 0, 0, 0, 0, 105],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/languages-code/25h-network-communication-systems-specialist.html"
+  },
+  {
+    "mos": "25S",
+    "tit": "Satellite Communication Systems Operator-Maintainer",
+    "des": "As a Satellite Communication Systems Operator-Maintainer, you'll be responsible for all technical aspects of satellite equipment installation, operations, configuration, and alignment in order to keep lines of communication up and running. You’ll get hands-on training in the inspection, troubleshooting, and preventive maintenance that will be a core function of your duties. You’ll install, operate, and maintain ground terminals, systems, and networks that keep the entire Army updated, informed, and situationally aware.",
+    "cut": "107 Electronics (EL)",
+    "asv": [0, 0, 0, 107, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/locations-stats-frequencies/25s-satellite-communications-system-operator.html"
+  },
+  {
+    "mos": "25U",
+    "tit": "Support Operations Specialist",
+    "des": "As a Support Operations Specialist, you’ll maintain vital signal support systems and terminal devices; the equipment that needs to consistently work in order for commanders to stay informed, track, and direct the movement of their troops. You'll perform signal support and technical assistance for computer systems, local area networks, and you’ll perform maintenance on equipment, terminal devices, power generators, and vehicles. You’ll also detect enemy signals and jam enemy radio transmissions.",
+    "cut": "95 Surveillance & Communications (SC), 95 Electronics (EL)",
+    "asv": [0, 0, 0, 95, 0, 0, 0, 0, 95, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/locations-stats-frequencies/25u-support-operations-specialist.html"
+  },
+  {
+    "mos": "27D",
+    "tit": "Paralegal Specialist",
+    "des": "As a Paralegal Specialist, you’ll be an integral part of the U.S. Army’s legal system. You’ll be expected to provide legal and administrative support in all areas of criminal law, family law, international law, civil and administrative law, contract law, and fiscal law. You’ll assist judges, Army lawyers, and unit commanders with legal matters and judicial work.",
+    "cut": "105 Clerical (CL)",
+    "asv": [0, 105, 0, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/safety-order-legal/27d-paralegal-specialist.html"
+  },
+  {
+    "mos": "31B",
+    "tit": "Military Police",
+    "des": "As a Military Police, you’ll protect peoples’ lives and property on Army installations by enforcing military laws and regulations. You’ll also control traffic, prevent crime, and respond to all emergencies. You’ll conduct force protection, anti-terrorism, area security, and police intelligence operations. You’ll also train in corrections and detention, investigations and mobility, and security around the world.",
+    "cut": "91 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 91],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/safety-order-legal/31b-military-police.html"
+  },
+  {
+    "mos": "31E",
+    "tit": "Corrections / Detention Specialist",
+    "des": "As a Corrections/Detention Specialist, you’ll be mainly responsible for overseeing the day-to-day operations in a military correctional facility or detention facility. Additionally, you’ll offer counseling and guidance to individual prisoners within a rehabilitative program.",
+    "cut": "95 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 95],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/safety-order-legal/31e-corrections-detention-specialist.html"
+  },
+  {
+    "mos": "31K",
+    "tit": "Military Working Dog Handler",
+    "des": "As a Military Working Dog Handler, you'll work with K-9 units and be responsible for training and caring for dogs, both at home and abroad, supporting missions and daily law enforcement. Military Working Dogs search for narcotic drugs or explosives and work with their human counterparts to neutralize threats in law enforcement operations.",
+    "cut": "91 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 91],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/safety-order-legal/31k-military-dog-handler.html"
+  },
+  {
+    "mos": "35F",
+    "tit": "Intelligence Analyst",
+    "des": "As an Intelligence Analyst, you’ll be responsible for providing the Army with crucial and reliable information about enemy forces and potential areas of conflict. You’ll analyze, assess, process, and distribute tactical intelligence, as well as create, document, organize, and cross-reference intelligence records and files.",
+    "cut": "101 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 101],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/languages-code/35f-intelligence-analyst.html"
+  },
+  {
+    "mos": "35G",
+    "tit": "Geospatial Intelligence Imagery Analyst",
+    "des": "As a Geospatial Intelligence Imagery Analyst, you’ll analyze visual data to provide Army leadership with critical information about enemy forces, potential battle areas, and mission support. You’ll use aerial imagery, geospatial data, full motion video, and other electronic monitoring to help determine precise target coordinates, identify enemy positions, navigate obstacles, and design defense and combat plans.",
+    "cut": "101 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 101],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/locations-stats-frequencies/35g-geospatial-intelligence-imagery-analyst.html"
+  },
+  {
+    "mos": "35L",
+    "tit": "Counterintelligence Agent",
+    "des": "As a Counterintelligence Special Agent, you’ll conduct investigations, collect and process forensic and physical evidence to identify and detect foreign intelligence and international terrorist threats, and plan the appropriate countermeasures to neutralize them.",
+    "cut": "101 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 101],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/languages-code/35l-counterintelligence-agent.html"
+  },
+  {
+    "mos": "35M",
+    "tit": "Human Intelligence Collector",
+    "des": "As a Human Intelligence Collector, you’ll collect intelligence about an adversary’s intentions, strengths, vulnerabilities, and capabilities, and you’ll share this critical information to help Army leaders better understand the enemy. You’ll debrief and interrogate human intelligence sources, analyze and prepare intelligence reports, and screen human intelligence sources and documents.",
+    "cut": "101 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 101],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/languages-code/35m-human-intelligence-collector.html"
+  },
+  {
+    "mos": "35N",
+    "tit": "Signals Intelligence Analyst",
+    "des": "As a Signals Intelligence Analyst, you’ll examine and analyze foreign communications and activity to find intelligence, and you’ll relay this critical information to senior leaders by producing strategic and tactical reports based on your analysis. You’ll help place, camouflage, and recover surveillance equipment and identify, track, and analyze a target’s operational patterns to assist leaders to formulate an attack plan. View yourself as a detective as you collect intelligence to help determine what the enemy is doing.",
+    "cut": "112 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 112],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/languages-code/35n-signals-intelligence-analyst.html"
+  },
+  {
+    "mos": "35P",
+    "tit": "Signals Intelligence Voice Interceptor",
+    "des": "As a Signals Intelligence Voice Interceptor, you’ll use your skills as a linguist to identify, categorize, translate, and summarize foreign language communications from a specific location. You’ll also operate and oversee signals equipment used in signals intelligence operations. You’ll learn intelligence skills needed to conduct military briefings, and tip the appropriate authorities when needed. This role is important because the nation’s defense depends largely on information that comes from foreign languages.",
+    "cut": "91 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 91],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/languages-code/35p-signals-intelligence-voice-interceptor.html"
+  },
+  {
+    "mos": "35S",
+    "tit": "Signals Collection Analyst",
+    "des": "As a Signals Collection Analyst, you'll gather clues from radio frequencies and electronic signals to detect and collect coded foreign intelligence messages. You'll intercept and identify these nonverbal frequencies and keep logs in order to piece together secret tactical messages.",
+    "cut": "101 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 101],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/locations-stats-frequencies/35s-signals-collection-analyst.html"
+  },
+  {
+    "mos": "35T",
+    "tit": "Military Intelligence (MI) Systems Maintainer / Integrator",
+    "des": "As a Military Intelligence (MI) Systems Maintainer / Integrator, you’ll make sure we can always find, know, and never lose the enemy by making sure the equipment used by the Military Intelligence Soldiers, including computers and networks, is kept in top working condition. You’ll maintain, test, and repair communications equipment, and you’ll assess and extract the data from fixed, portable, and wireless communication devices.",
+    "cut": "112 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 112],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/languages-code/35t-mi-systems-integrator.html"
+  },
+  {
+    "mos": "35W",
+    "tit": "Human Intelligence Collector Recruit",
+    "des": "As a Human Intelligence Collector Recruit, you’ll go to the Defense Language Institute (DLI) for language training. You’ll be responsible for providing support to key Army leaders by collecting information about the enemy force’s strengths, weaknesses, and potential battle areas by debriefing and questioning human intelligence sources and analyzing and preparing intelligence reports.",
+    "cut": "101 Skilled Technical (ST) OR (88 Mechanical Maintenance (MM) AND 92 General Technical (GT))",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 101],
+    "alt": [92, 0, 0, 0, 0, 0, 88, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/languages-code/35w-human-intelligence-collector-recruit.html"
+  },
+  {
+    "mos": "36B",
+    "tit": "Financial Management Technician",
+    "des": "As a Financial Management Technician, you'll be managing resources and financial operations as part of the Army's Finance and Comptroller Corps. You'll use your expertise in math to provide financial advice and recommendations for units looking to purchase services and supplies for their missions. You'll also be in charge of military pay, overseeing services with commercial vendors, auditing, accounting, banking operations, and more.",
+    "cut": "101 Clerical (CL)",
+    "asv": [0, 101, 0, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/admin-financial-support/36b-financial-management-technician.html"
+  },
+  {
+    "mos": "37F",
+    "tit": "Psychological Operations Specialist",
+    "des": "As a Psychological Operations Specialist, you’ll be an expert at persuasion. You’ll assess and develop the information needed to influence and engage specific audiences. You’ll broadcast important information through various mediums and assist U.S. and foreign governments, militaries, and civilian populations.",
+    "cut": "105 General Technical (GT)",
+    "asv": [105, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/languages-code/37f-psychological-operations-specialist.html"
+  },
+  {
+    "mos": "38B",
+    "tit": "Civil Affairs Specialist",
+    "des": "As a Civil Affairs Specialist, you’ll be the link between the Army and local civilians around the world. You will identify what critical resources local citizens may need during missions or in crisis situations, fostering and maintaining dialogue with civilian aid agencies and civilian relief and assistance organizations. And you’ll be responsible for coordinating, conducting, and participating in the planning and production of civil affairs related documents.",
+    "cut": "107 General Technical (GT)",
+    "asv": [107, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/ground-forces/firearms-ammunition/38b-civil-affairs-specialist.html"
+  },
+  {
+    "mos": "42A",
+    "tit": "Human Resources Specialist",
+    "des": "As a Human Resources Specialist, you’ll play a crucial role assisting your fellow Soldiers progress in their Army careers, providing promotion and future training information. You’ll ensure the necessary support is also provided to commanders across all branches. You’ll be trained in document preparation, drafting requests, and overseeing official documentation, such as ID cards and tags. You’ll also learn computer programs that keep personnel data up to date.",
+    "cut": "100 General Technical (GT), 90 Clerical (CL)",
+    "asv": [100, 90, 0, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/admin-financial-support/42a-human-resources-specialist.html"
+  },
+  {
+    "mos": "42R",
+    "tit": "Musician",
+    "des": "As a Musician, you’ll uphold a time-honored tradition of entertaining our Soldiers, performing in a variety of ensembles, and serving as a musical ambassador of our nation. A musician in the Army is an opportunity to work for the largest employer of musicians in the world. Whether it's a ceremonial performance or a concert to boost the morale of Soldiers, U.S. Army Bands members have the opportunity to serve their country while making music. In order to qualify for this honor, you must demonstrate a high level of proficiency and versatility on your instrument and pass auditions.",
+    "cut": "None. Must pass 1 or more auditions.",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/creative/42r-musician.html"
+  },
+  {
+    "mos": "42S",
+    "tit": "Special Band Musician",
+    "des": "As a Special Band Musician, you'll perform in the U.S. Army Band, U.S. Army Field Band, U.S. Military Academy Band, or the 3rd Infantry (The Old Guard) Fife and Drum Corps. You'll also plan in or lead bands, orchestras, combos, and jazz groups, and perform in street parades, concerts, and more.",
+    "cut": "None. Must pass 1 or more auditions.",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/creative/42s-special-band-musician.html"
+  },
+  {
+    "mos": "46S",
+    "tit": "Public Affairs Mass Communication Specialist",
+    "des": "As an Army Public Affairs Mass Communication Specialist, you’ll supervise and assist administration of Army public affairs programs by researching, preparing, and distributing news releases, articles, web-based material, and photographs on Army personnel and activities. You’ll gather information within your unit and around the Army, you’ll develop ideas for news articles, arrange and conduct interviews, write news releases, feature articles and editorials, and conduct media training.",
+    "cut": "107 General Technical (GT)",
+    "asv": [107, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/languages-code/46s-public-affairs-specialist.html"
+  },
+  {
+    "mos": "46T",
+    "tit": "Visual Information Equipment Operator-Maintainer",
+    "des": "As a Visual Information Equipment Operator-Maintainer, you’ll be responsible for filming, script editing, and recording military operations and news events that support Army operations.",
+    "cut": "107 Electronics (EL)",
+    "asv": [0, 0, 0, 107, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/creative/46t-visual-information-equipment-operator-maintainer.html"
+  },
+  {
+    "mos": "46V",
+    "tit": "Visual Information Specialist",
+    "des": "As a Visual Information Specialist, you’ll operate audio visual equipment and develop multimedia products that combine text, sound, graphics, animations, and video to support different areas of the Army such as Public Affairs, Military Intelligence, and Psychological Operations. You’ll create illustrations, map overlays, posters, graphs, charts, and web pages, while also performing unit level maintenance on assigned equipment.",
+    "cut": "93 Electronics (EL), 91 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 93, 0, 0, 0, 0, 0, 91],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/creative/46v-visual-information-specialist.html"
+  },
+  {
+    "mos": "56M",
+    "tit": "Religious Affairs Specialist",
+    "des": "As a Religious Affairs Specialist, you’ll have the rewarding responsibility of supporting the unit ministry team, programs, and worship services, while also providing support to the Chaplains during missions and everyday activities. You’ll assist in planning and synchronizing religious support operations and coordinating the circulation of the unit ministry team to ensure the Soldiers’ spiritual readiness. You’ll also maintain reports, files, and administrative data for religious operations, and conduct specialized peer counseling for Soldiers in need of emotional support.",
+    "cut": "90 Clerical (CL)",
+    "asv": [0, 90, 0, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/admin-financial-support/56m-religious-affairs-specialist.html"
+  },
+  {
+    "mos": "68A",
+    "tit": "Biomedical Equipment Specialist",
+    "des": "As a Biomedical Equipment Specialist, you'll be responsible for servicing and maintaining all medical equipment with mechanical, hydraulic, pneumatic, electronic, digital, optical, and radiological principles. You’ll perform calibrations and preventive maintenance, inspect equipment for serviceability, perform operational checkout procedures, troubleshoot and isolate malfunctions, replace and repair defective components, install medical equipment considering power and space requirements, and record all services performed.",
+    "cut": "107 Electronics (EL)",
+    "asv": [0, 0, 0, 107, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/research/68a-biomedical-equipment-specialist.html"
+  },
+  {
+    "mos": "68B",
+    "tit": "Orthopedic Specialist",
+    "des": "As an Orthopedic Specialist, you'll assist with all kinds of patient care at an Orthopedic clinic—where patients are treated for pain and injuries to bones, joints, and muscles. You'll help prep patients for surgery, monitor their care afterwards, and even assist orthopedic surgeons with procedures in the operating room.",
+    "cut": "107 General Technical (GT), 101 Skilled Technical (ST)",
+    "asv": [107, 0, 0, 0, 0, 0, 0, 0, 0, 101],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/general-care/68b-orthopedic-specialist.html"
+  },
+  {
+    "mos": "68C",
+    "tit": "Practical Nursing Specialist",
+    "des": "As a Practical Nursing Specialist, you'll provide the highest level of quality medical care to Soldiers and their Families by performing preventive, therapeutic, and emergency nursing care under the supervision of a physician, registered nurse, or non-commissioned Officer.",
+    "cut": "101 Skilled Technical (ST), 107 General Technical (GT)",
+    "asv": [107, 0, 0, 0, 0, 0, 0, 0, 0, 101],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/general-care/68c-practical-nursing-specialist.html"
+  },
+  {
+    "mos": "68D",
+    "tit": "Operating Room Specialist",
+    "des": "As an Operating Room Specialist, you'll assist nurses in prepping patients for surgery and providing assistance to doctors during surgical procedures. You'll ensure that operating rooms and surgical tools are properly sterilized and inspected before and after procedures.",
+    "cut": "101 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 101],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/intensive-care/68d-operating-room-specialist.html"
+  },
+  {
+    "mos": "68E",
+    "tit": "Dental Specialist",
+    "des": "As a Dental Specialist, you'll receive the specialized training needed to assist Army dentists in the examination and treatment of servicemembers’ teeth. You'll help the dentist prepare for operations by selecting and arranging instruments and by taking patient’s dental impressions and X-rays. You’ll also manage the dental offices and patient records, perform preventive cleanings, take the patient’s blood pressure, pulse, and help administer anesthesia when needed.",
+    "cut": "91 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 91],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/general-care/68e-dental-specialist.html"
+  },
+  {
+    "mos": "68F",
+    "tit": "Physical Therapy Specialist",
+    "des": "As a Physical Therapy Specialist, you'll help licensed Physical Therapists treat and rehabilitate patients suffering from a variety of injuries and illnesses in order to decrease their pain and promote a physically fit lifestyle so they can be in top physical condition. You'll receive the intensive instruction needed to provide patient care and administer physical therapy treatments that will treat disabilities and prevent future injuries.",
+    "cut": "101 Skilled Technical (ST), 107 General Technical (GT)",
+    "asv": [107, 0, 0, 0, 0, 0, 0, 0, 0, 101],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/physical-mental-health/68f-physical-therapy-specialist.html"
+  },
+  {
+    "mos": "68G",
+    "tit": "Patient Administration Specialist",
+    "des": "As a Patient Administration Specialist, you'll be entrusted with serving the military community and their Families and providing essential support to the clinical staff of a hospital. You’ll perform administrative duties for patients, and you’ll utilize your knowledge of medical terms and statistical reports to manage medical records and keep track of patient health.",
+    "cut": "90 Clerical (CL)",
+    "asv": [0, 90, 0, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/physical-mental-health/68g-patient-administration-specialist.html"
+  },
+  {
+    "mos": "68H",
+    "tit": "Optical Laboratory Specialist",
+    "des": "As an Optical Laboratory Specialist, you'll gain the specialized training needed to make and repair the eyewear that is provided to Soldiers in the Army. You'll use your knowledge of optics and ocular health to sort and forward prescriptions, prepare and make prescription lenses, inspect them for accuracy, assemble frames, and perform repairs and maintenance on optical tools and machines.",
+    "cut": "98 General Maintenance (GM)",
+    "asv": [0, 0, 0, 0, 0, 98, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/physical-mental-health/68h-optical-laboratory-specialist.html"
+  },
+  {
+    "mos": "68J",
+    "tit": "Medical Logistics Specialist",
+    "des": "As a Medical Logistics Specialist, you'll be responsible for receiving, storing, and issuing Army medical supplies. You'll budget for, order, and inventory new supplies, use machinery such as forklifts and hand trucks to load and unload crates of supplies, and perform quality control checks.",
+    "cut": "90 Clerical (CL)",
+    "asv": [0, 90, 0, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/transportation-inventory/68j-medical-logistics-specialist.html"
+  },
+  {
+    "mos": "68K",
+    "tit": "Medical Laboratory Specialist",
+    "des": "As a Medical Laboratory Specialist, you'll have the important responsibility of caring for and aiding in the diagnosis and treatment of the Soldiers. You’ll collect samples from patients and perform chemical and biological tests to help diagnose. You’ll have to work through a lot of unknowns and be willing and able to work through projects autonomously and confidently. You’ll sample blood types, perform elementary blood banking, conduct laboratory procedures, maintain laboratory equipment, and pack, unpack, inspect, store, and distribute blood and blood products.",
+    "cut": "106 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 106],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/research/68k-medical-laboratory-specialist.html"
+  },
+  {
+    "mos": "68L",
+    "tit": "Occupational Therapy Specialist",
+    "des": "As an Occupational Therapy Specialist, you'll work under a registered Occupational Therapist to supervise, test, and assist patients in performing daily life tasks after an illness or injury. Additionally, you'll help promote physical fitness and show patients lifestyle modifications to keep them happy and healthy.",
+    "cut": "101 Skilled Technical (ST), 107 General Technical (GT)",
+    "asv": [107, 0, 0, 0, 0, 0, 0, 0, 0, 101],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/physical-mental-health/68l-occupational-therapy-specialist.html"
+  },
+  {
+    "mos": "68M",
+    "tit": "Nutrition Care Specialist",
+    "des": "As a Nutrition Care Specialist, you'll provide healthy and nutritious diets for patients and medical nutrition therapy for military service members, their Families, retirees, and veterans. You’ll prepare and serve food that meets each patient’s individual medical condition for rapid recovery, disease management, and the promotion of health and wellness. You’ll work with a Registered Dietitian to create customized diets and specially balanced menus for patients, and you’ll teach wellness, nutrition, health, and good food choices.",
+    "cut": "95 Operators & Food (OF)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 95, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/physical-mental-health/68m-nutrition-care-specialist.html"
+  },
+  {
+    "mos": "68P",
+    "tit": "Radiology Specialist",
+    "des": "As a Radiology Specialist, you will operate X-rays and other medical imaging equipment to diagnose and treat injuries and diseases. You will be responsible for administering tests for all different types of imaging, such as digestive respiratory, vascular, nervous system, and prenatal, all while making sure your patients are taken care of.",
+    "cut": "106 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 106],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/general-care/68p-radiology-specialist.html"
+  },
+  {
+    "mos": "68Q",
+    "tit": "Pharmacy Specialist",
+    "des": "As a Pharmacy Specialist, you'll be an integral member of the healthcare team, preparing and issuing prescribed pharmaceuticals and medicines, while also maintaining pharmacy supplies and records under the supervision of pharmacists and doctors. You will evaluate orders, verify dosage calculations, and provide instructions to patients on how to properly take the medicine.",
+    "cut": "95 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 95],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/physical-mental-health/68q-pharmacy-specialist.html"
+  },
+  {
+    "mos": "68R",
+    "tit": "Veterinary Food Inspection Specialist",
+    "des": "As a Veterinary Food Specialist, you’ll be in charge of food safety, quality assurance, and protection from unintentional or intentional contamination of food, not that animals will consume, but the food that you and your fellow Soldiers will eat. You’ll also be responsible for supervising food inspection and combined veterinary service activities. You’ll be at the forefront of food safety and defense, using statistical sampling methods to make sure food is being inspected for freshness, proper storage and delivery, and ensure that all food items are packaged according to the Department of Defense standards.",
+    "cut": "95 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 95],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/research/68r-veterinary-food-inspection-specialist.html"
+  },
+  {
+    "mos": "68S",
+    "tit": "Preventive Medicine Specialist",
+    "des": "As a Preventive Medicine Specialist, you'll be a major contributor when it comes to keeping the Army healthy and preventing the spread of infection and disease. You'll conduct laboratory tests to monitor the spread of bacteria, keep health records, and survey and track conditions for potential risks. You’ll have the skills and training necessary to recommend proper corrective actions to ensure good health for our Soldiers.",
+    "cut": "101 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 101],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/physical-mental-health/68s-preventive-medicine-specialist.html"
+  },
+  {
+    "mos": "68T",
+    "tit": "Animal Care Specialist",
+    "des": "As an Animal Care Specialist, you'll provide medical care, management, and treatment for government-owned animals, including K-9 units, ceremonial horses, and the pets of Soldiers and their families. You will prevent and control the spread of diseases from animals to humans. You'll also help Army veterinarians conduct routine exams, administer medications, and perform surgical and emergency procedures for animals. It’ll be your responsibility to ensure the best possible treatment, so the animals can provide a great service to the Army.",
+    "cut": "91 Skilled Technician (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 91],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/general-care/68t-animal-care-specialist.html"
+  },
+  {
+    "mos": "68V",
+    "tit": "Respiratory Specialist",
+    "des": "As a Respiratory Specialist, your focus will be to help patients with chronic or sudden breathing problems. You'll be assisting doctors and advanced nurses in treating patients in both emergency and non-emergency situations, preparing blood samples for lab tests, and administering tests that check lung capacity and function.",
+    "cut": "102 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 102],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/general-care/68v-respiratory-specialist.html"
+  },
+  {
+    "mos": "68W",
+    "tit": "Combat Medic Specialist",
+    "des": "As a Combat Medic Specialist, you'll administer emergency medical care in the field in both combat and humanitarian situations. Your training will allow you to serve as a first responder and triage illnesses and injuries to save lives, much like a paramedic in the civilian world. You'll also train other Soldiers in lifesaver/first responder courses and provide care on base while not deployed.",
+    "cut": "101 Skilled Technical (ST), 107 General Technical (GT)",
+    "asv": [107, 0, 0, 0, 0, 0, 0, 0, 0, 101],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/intensive-care/68w-combat-medic-specialist.html"
+  },
+  {
+    "mos": "68X",
+    "tit": "Behavioral Health Specialist",
+    "des": "As a Behavior Health Specialist, you'll work under the supervision of psychologists, psychiatrists, and social workers to help administer mental health care to service members. You'll conduct intake interviews and counsel patients to ensure they get the treatment they need to be productive and healthy members of the Army. Additionally, you'll be needed to help your fellow soldiers learn to manage any existing mental health conditions, behavior problems, struggles with drugs and alcohol, and stresses that arise as part of Army service.",
+    "cut": "101 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 101],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/physical-mental-health/68x-behavioral-health-specialist.html"
+  },
+  {
+    "mos": "68Y",
+    "tit": "Eye Specialist",
+    "des": "As an Eye Specialist, you'll work with optometrists and ophthalmologists to conduct diagnostic vision tests and help care for and treat patients with eye or vision problems.",
+    "cut": "101 Skilled Technical (ST), 107 General Technical (GT)",
+    "asv": [107, 0, 0, 0, 0, 0, 0, 0, 0, 101],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/general-care/68y-eye-specialist.html"
+  },
+  {
+    "mos": "74D",
+    "tit": "Chemical, Biological, Radiological, and Nuclear (CBRN) Specialist",
+    "des": "As a Chemical, Biological, Radiological, and Nuclear Specialist, you’ll protect the country against the threat of CBRN weapons of mass destruction, and you’ll decontaminate hazardous material spills or accidents. You’ll employ the most advanced equipment and coordinate defense systems against these weapons of mass destruction in support of joint and combined arms operations.",
+    "cut": "100 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 100],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/safety-order-legal/74d-cbrn-specialist.html"
+  },
+  {
+    "mos": "88H",
+    "tit": "Cargo Specialist",
+    "des": "As a Cargo Specialist, you'll be the cargo handling expert for everything the Army moves by land, sea, or air. You’ll ensure the Army receives supplies, weapons, the mail, and equipment on a daily basis all over the world. You will be trained in cargo documentation, the securing of cargo, and learn how to load and unload cargo manually or by operating material handling equipment like cranes and forklifts.",
+    "cut": "88 General Maintenance (GM)",
+    "asv": [0, 0, 0, 0, 0, 88, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/transportation-inventory/88h-cargo-specialist.html"
+  },
+  {
+    "mos": "88K",
+    "tit": "Watercraft Operator",
+    "des": "As a Watercraft Operator, you’ll be responsible for navigation, cargo operations, and supervising other Soldiers on Army watercraft. As part of the piloting team, you’ll train in the basics of seamanship and vessel operations, using electronic positioning systems, handheld navigation devices, and traditional watch standing procedures. You’ll learn boat handling techniques, how to dock and undock vessels, drop and weigh anchor, interpret code signal flags, and send and receive messages via radio, beacon, and signal flag. Since safety is such an important part of this job, you’ll also learn emergency water survival, how to operate lifeboats, shipboard firefighting, and other emergency procedures.",
+    "cut": "99 Mechanical Maintenance (MM)",
+    "asv": [0, 0, 0, 0, 0, 0, 99, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/transportation-inventory/88k-watercraft-operator.html"
+  },
+  {
+    "mos": "88L",
+    "tit": "Watercraft Engineer",
+    "des": "As a Watercraft Engineer, you’ll supervise or perform maintenance and repairs on Army watercraft and auxiliary equipment on marine vessels in order to keep them running at all times. You’ll perform daily systems checks, repair and maintain gasoline and diesel engines, troubleshoot and repair watercraft propulsion machinery, and repair and service lift machinery and engine-related electrical systems. To do this, you’ll train in basic electronics, hydraulics, and shop practices, as well as in engine operation and maintenance. You’ll also train in marine operations, the preventive maintenance of steering systems, and you’ll learn how to inspect and maintain the propellers and staffs.",
+    "cut": "99 Mechanical Maintenance (MM)",
+    "asv": [0, 0, 0, 0, 0, 0, 99, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/design-develop/88l-watercraft-engineer.html"
+  },
+  {
+    "mos": "88M",
+    "tit": "Motor Transport Operator",
+    "des": "As a Motor Transport Operator, you’ll play an important part of the Army’s transportation logistics team. You’ll supervise and operate wheeled vehicles over all types of terrain to safely transport cargo, troops, and provide advanced mobility on all missions. You’ll manage loading, unloading, and report any vehicle problems or damage.",
+    "cut": "85 Operators & Food (OF)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 85, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/transportation-inventory/88m-motor-transport-operator.html"
+  },
+  {
+    "mos": "88N",
+    "tit": "Transportation Management Coordinator",
+    "des": "As a Transportation Management Coordinator, you'll plan and schedule transportation for troops, cargo, and equipment worldwide. You will document and inventory freight shipments, prepare cargo for travel, and coordinate transportation for Soldiers and other personnel.",
+    "cut": "95 Clerical (CL)",
+    "asv": [0, 95, 0, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/transportation-inventory/88n-transportation-management-coordinator.html"
+  },
+  {
+    "mos": "88U",
+    "tit": "Railway Operations Crewmember",
+    "des": "As a Railway Operations Crewmember, you'll supervise and operate the Army’s sophisticated diesel-electric locomotives that move vital supplies and equipment. You’ll train to perform car coupling and uncoupling operations, to send and receive signals, execute orders from signal towers, switches, and other personnel, and to assure the safe hauling of cargo.",
+    "cut": "92 Mechanical Maintenance (MM)",
+    "asv": [0, 0, 0, 0, 0, 0, 92, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/transportation-inventory/88u-railway-operations-crewmember.html"
+  },
+  {
+    "mos": "89A",
+    "tit": "Ammunition Stock Control and Accounting Specialist",
+    "des": "As an Ammunition Stock Control and Accounting Specialist, you’ll perform stock control and accounting duties for ammunition, explosives, and associated explosive components using hardware and software systems and manual records. You’ll perform the issue, receipt, shipment, turn-in and maintenance transfer of ammunition.",
+    "cut": "91 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 91],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/transportation-inventory/89a-ammunition-stock-control-specialist.html"
+  },
+  {
+    "mos": "89B",
+    "tit": "Ammunition Specialist",
+    "des": "As an Ammunition Specialist, you’ll be responsible for the highly specialized care and management of ammunition, explosives, and their components. You’ll perform stock control and accounting duties, and you’ll be in charge of receiving, storing, issuing, and inspecting weapon systems to determine if they need repair or need to be destroyed. This means you’ll be in charge of blowing up expired or partially used explosives and other ordnance in controlled settings, a crucial part of keeping our troops safe.",
+    "cut": "91 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 91],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/transportation-inventory/89b-ammunition-specialist.html"
+  },
+  {
+    "mos": "89D",
+    "tit": "Explosive Ordnance Disposal (EOD) Specialist",
+    "des": "As an Explosive Ordnance Disposal Specialist, you’ll be the Army’s preeminent tactical and technical explosives expert. You’ll have the advanced training and critical skills needed to disable and defeat explosive devices and weapons of mass destruction. You’ll research and identify military weapons, assist leadership in the preparation and use of advanced robotics, dispose of hazardous objects, and perform missions in support of Army units worldwide, across all environmental conditions.",
+    "cut": "105 General Maintenance (GM)",
+    "asv": [0, 0, 0, 0, 0, 105, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/ground-forces/explosives-artillery/89d-explosive-ordnance-disposal-specialist.html"
+  },
+  {
+    "mos": "91A",
+    "tit": "M1 Abrams Tank System Maintainer",
+    "des": "As an M-1 Abrams Tank System Maintainer, you’ll perform maintenance on the suspension, steering, hydraulic, auxiliary power, fire suppression, and gas systems of Abrams tanks.",
+    "cut": "99 Mechanical Maintenance (MM) OR (88 Mechanical Maintenance (MM) AND 92 General Technical (GT))",
+    "asv": [0, 0, 0, 0, 0, 0, 99, 0, 0, 0],
+    "alt": [92, 0, 0, 0, 0, 0, 88, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/91a-m1-abrams-tank-system-maintainer.html"
+  },
+  {
+    "mos": "91B",
+    "tit": "Wheeled Vehicle Mechanic",
+    "des": "As a Wheeled Vehicle Mechanic, you’ll supervise and perform maintenance, repair, and recovery operations on wheeled vehicles and select armored vehicles that serve the Army in a variety of mission-critical roles. You’ll inspect, service, maintain, repair, replace, adjust, and test wheeled vehicles, material handling equipment systems, subsystems and components, and automotive electrical systems, including wiring harnesses and starting and charging systems.",
+    "cut": "92 Mechanical Maintenance (MM) OR (87 Mechanical Maintenance (MM) AND 85 General Technical (GT))",
+    "asv": [0, 0, 0, 0, 0, 0, 92, 0, 0, 0],
+    "alt": [85, 0, 0, 0, 0, 0, 87, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/91b-wheeled-vehicle-mechanic.html"
+  },
+  {
+    "mos": "91C",
+    "tit": "Utilities Equipment Repairer",
+    "des": "As a Utilities Equipment Repairer, you’ll supervise and perform maintenance on vital utilities equipment and support systems, such as air conditioners and refrigeration units, to make sure they are kept in top working condition in any environment. You’ll train to read temperature and pressure gauges, make operating adjustments to utility equipment, test for leaks, perform preventative maintenance, troubleshoot malfunctions, and read and use technical manuals and diagnostic instruments.",
+    "cut": "98 General Maintenance (GM) OR (88 General Maintenance (GM) AND 83 General Technical (GT))",
+    "asv": [0, 0, 0, 0, 0, 98, 0, 0, 0, 0],
+    "alt": [83, 0, 0, 0, 0, 88, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/transportation-inventory/91c-utilities-equipment-repairer.html"
+  },
+  {
+    "mos": "91D",
+    "tit": "Tactical Power Generation Specialist",
+    "des": "As a Tactical Power Generation Specialist, you’ll supply the power needed to run virtually every aspect of Army activity; power that must be available whenever and wherever the Army needs it. You will supervise and perform maintenance and repairs on power-generation equipment, internal combustion engines, and associated equipment in mobile and stationary power plants. You’ll train to use high-tech test and diagnostic equipment, read complex wiring schematics and diagrams, and repair electrical components.",
+    "cut": "98 General Maintenance (GM) OR (88 General Maintenance (GM) AND 88 General Technical (GT))",
+    "asv": [0, 0, 0, 0, 0, 98, 0, 0, 0, 0],
+    "alt": [88, 0, 0, 0, 0, 88, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/design-develop/91d-tactical-power-generation-specialist.html"
+  },
+  {
+    "mos": "91E",
+    "tit": "Allied Trade Specialist",
+    "des": "As an Allied Trade Specialist, you’ll supervise the fabrication, repair, and modification of metallic and nonmetallic parts to ensure the Army’s equipment is operating reliably. You’ll operate lathes, drilling presses, grinders, welding machines, and other machine shop equipment while also serving as a welder. You will train to select the materials, tools, and equipment to do the job, and learn how to operate fabrication machines.",
+    "cut": "98 General Maintenance (GM) OR (88 General Maintenance (GM) AND 95 General Technical (GT))",
+    "asv": [0, 0, 0, 0, 0, 98, 0, 0, 0, 0],
+    "alt": [95, 0, 0, 0, 0, 88, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/91e-allied-trade-specialist.html"
+  },
+  {
+    "mos": "91F",
+    "tit": "Small Arms/Towed Artillery Repairer",
+    "des": "As a Small Arms/Towed Artillery Repairer, you’ll perform maintenance and repairs and keep a wide array of weapons, from small arms to field artillery and large ballistic missiles operating properly.",
+    "cut": "93 General Maintenance (GM) OR (88 General Maintenance (GM) AND 85 General Technical (GT))",
+    "asv": [0, 0, 0, 0, 0, 93, 0, 0, 0, 0],
+    "alt": [85, 0, 0, 0, 0, 88, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/91f-small-arms-towed-artillery-repair.html"
+  },
+  {
+    "mos": "91H",
+    "tit": "Track Vehicle Repairer",
+    "des": "As a Track Vehicle Repairer, you’ll perform maintenance on tracked vehicles and supervise activities that include fuel and electrical system repair and maintenance.",
+    "cut": "92 Mechanical Maintenance (MM) OR (87 Mechanical Maintenance (MM) AND 85 General Technical (GT))",
+    "asv": [0, 0, 0, 0, 0, 0, 92, 0, 0, 0],
+    "alt": [85, 0, 0, 0, 0, 0, 87, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/91h-track-vehicle-repairer.html"
+  },
+  {
+    "mos": "91J",
+    "tit": "Quartermaster and Chemical Equipment Repairer",
+    "des": "As a Quartermaster and Chemical Equipment Repairer, you’ll use the latest technology to supervise or diagnose, disassemble, and perform repairs on chemical equipment, quartermaster machinery, forced-air heaters, and special-purpose equipment to ensure that they are ready to support our troops.",
+    "cut": "92 Mechanical Maintenance (MM) OR (87 Mechanical Maintenance (MM) AND 85 General Technical (GT))",
+    "asv": [0, 0, 0, 0, 0, 0, 92, 0, 0, 0],
+    "alt": [85, 0, 0, 0, 0, 0, 87, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/91j-quartermaster-chemical-equipment-repairer.html"
+  },
+  {
+    "mos": "91L",
+    "tit": "Construction Equipment Repairer",
+    "des": "As a Construction Equipment Repairer, you'll keep the Army’s engineer equipment safe and operational by repairing and maintaining trucks, bulldozers, power shovels, and other heavy equipment that is needed for construction. You'll replace and perform tune-ups on brakes, motors, engines, drive pumps, water pumps, transmissions, and high-pressure hydraulic systems.",
+    "cut": "92 Mechanical Maintenance (MM) OR (87 Mechanical Maintenance (MM) AND 85 General Technical (GT))",
+    "asv": [0, 0, 0, 0, 0, 0, 92, 0, 0, 0],
+    "alt": [85, 0, 0, 0, 0, 0, 87, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/91l-construction-equipment-repairer.html"
+  },
+  {
+    "mos": "91M",
+    "tit": "Bradley Fighting Vehicle System Maintainer",
+    "des": "As a Bradley Fighting Vehicle System Maintainer, you’ll have the challenging task of performing repairs and maintenance exclusively on the range of Bradley fighting vehicles, including anti-aircraft and armored tanks. You’ll fix and maintain the fire controls for mounted artillery, and troubleshoot any problems with suspension, steering, and controls.",
+    "cut": "99 Mechanical Maintenance (MM) OR (88 Mechanical Maintenance (MM) AND 92 General Technical (GT))",
+    "asv": [0, 0, 0, 0, 0, 0, 99, 0, 0, 0],
+    "alt": [92, 0, 0, 0, 0, 0, 88, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/91m-bradley-vehicle-system-maintainer.html"
+  },
+  {
+    "mos": "91P",
+    "tit": "Self Propelled Artillery Maintainer",
+    "des": "As an Self Propelled Artillery Maintainer, you’ll supervise and gain the skills needed to perform maintenance and recovery operations on all self-propelled field artillery cannon weapon systems, including automotive, turret, fire control, and chemical protection subsystems. You’ll learn the proper methods to check the hydraulics system, maintain and repair the power drive, the weapons systems, and the computers. You will also learn to identify, use, and maintain a wide range of tools to get the job done.",
+    "cut": "99 Mechanical Maintenance (MM) OR (88 Mechanical Maintenance (MM) AND 88 General Technical (GT))",
+    "asv": [0, 0, 0, 0, 0, 0, 99, 0, 0, 0],
+    "alt": [88, 0, 0, 0, 0, 0, 88, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/91p-self-propelled-artillery-maintainer.html"
+  },
+  {
+    "mos": "91S",
+    "tit": "Stryker Systems Maintainer",
+    "des": "As a Stryker Systems Maintainer, you’ll work as part of a team to maintain the Stryker vehicles and keep the vehicles and the operating systems running smoothly. You’ll diagnose and troubleshoot malfunctions, and repair and replace components using advanced test equipment, precision hand tools, and technical manuals and diagrams.",
+    "cut": "92 Mechanical Maintenance (MM) OR (87 Mechanical Maintenance (MM) AND 85 General Technical (GT))",
+    "asv": [0, 0, 0, 0, 0, 0, 92, 0, 0, 0],
+    "alt": [85, 0, 0, 0, 0, 0, 87, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/91s-stryker-systems-maintainer.html"
+  },
+  {
+    "mos": "92A",
+    "tit": "Automated Logistical Specialist",
+    "des": "As an Automated Logistical Specialist, similar to a laborer or freight mover, you’ll perform maintenance management and warehouse functions in order to maintain equipment records. You’ll oversee incoming supplies and equipment, simplify and standardize maintenance data, and raise the quality and accuracy of performance, cost, and parts data through improved maintenance management.",
+    "cut": "90 Clerical (CL)",
+    "asv": [0, 90, 0, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/transportation-inventory/92a-automated-logistical-specialist.html"
+  },
+  {
+    "mos": "92F",
+    "tit": "Petroleum Supply Specialist",
+    "des": "As a Petroleum Supply Specialist, you’ll supply the Army with the fuel it needs to maintain a state of readiness at all times. You’ll supervise and manage the reception, storage, and shipping of bulk or packaged petroleum-based products. You’ll oversee its use, dispense it to various vehicles and aircraft, and make sure it is being transported and handled safely. You will learn how refueling systems and equipment are assembled sequentially, perform quality assurance, and you’ll supply and store fuel from a variety of sources.",
+    "cut": "86 Clerical (CL), 85 Operators & Food (OF)",
+    "asv": [0, 86, 0, 0, 0, 0, 0, 85, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/transportation-inventory/92f-petroleum-supply-specialist.html"
+  },
+  {
+    "mos": "92G",
+    "tit": "Culinary Specialist",
+    "des": "As a Culinary Specialist, you’ll cook meals and work alongside chefs to prepare meals comparable to any major restaurant, so that Soldiers can sit down and enjoy a hot meal in between training or mission deployments. You’ll be responsible for preparing and servicing meals both in the field and at home stations, as well as ordering, inspecting food supplies, and keeping the kitchen safe and sanitary.",
+    "cut": "85 Operators & Food (OF)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 85, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/creative/92g-culinary-specialist.html"
+  },
+  {
+    "mos": "92L",
+    "tit": "Petroleum Laboratory Specialist",
+    "des": "As a Petroleum Laboratory Specialist, you'll supervise and conduct laboratory tests on petroleum, oil, and lubricant products to ensure fire prevention and safety control for our troops, to ensure they meet the Army’s requirements, and our Soldiers can depend on them. You’ll train to perform physical and chemical tests on turbine aviation fuels, diesels and motor gasolines, and kerosene-based and diesel fuels in the field. Additionally, safety and fire prevention will be a daily form of life while working this job.",
+    "cut": "91 Skilled Technical (ST)",
+    "asv": [0, 0, 0, 0, 0, 0, 0, 0, 0, 91],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/research/92l-petroleum-laboratory-specialist.html"
+  },
+  {
+    "mos": "92M",
+    "tit": "Mortuary Affairs Specialist",
+    "des": "As a Mortuary Affairs Specialist, you'll draw upon specialized medical training and the upmost respect and compassion to handle the remains and personal effects of soldiers who have fallen in the line of duty. This includes locating and identifying remains in the field, ensuring safe transport of the deceased and their belongings, and assisting with arrangements and military honors at their burial site. You will also inventory and safeguard effects and serve as a specialist at the U.S. Army’s Central Identification Laboratory in Hawaii.",
+    "cut": "88 General Maintenance (GM)",
+    "asv": [0, 0, 0, 0, 0, 88, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/admin-financial-support/92m-mortuary-affairs-specialist.html"
+  },
+  {
+    "mos": "92R",
+    "tit": "Parachute Rigger",
+    "des": "As a Parachute Rigger, you’ll ensure the safety of every paratrooper you work with. You’ll inspect, test, and pack parachutes, their extraction and release systems, and all the associated components of the parachute system. You’ll be responsible for the safety and repair of all parachute equipment before, during, and after an airdrop operation. You’ll be responsible for assembling rigging components and securing all the supplies in the aircraft.",
+    "cut": "88 General Maintenance (GM), 87 Combat (CO)",
+    "asv": [0, 0, 87, 0, 0, 88, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/transportation-inventory/92r-parachute-rigger.html"
+  },
+  {
+    "mos": "92S",
+    "tit": "Shower & Laundry Specialist",
+    "des": "As a Shower & Laundry Specialist, you’ll be responsible for establishing and performing personnel laundry and shower operations.",
+    "cut": "84 General Maintenance (GM)",
+    "asv": [0, 0, 0, 0, 0, 84, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/admin-financial-support/92s-shower-laundry-clothing.html"
+  },
+  {
+    "mos": "92W",
+    "tit": "Water Treatment Specialist",
+    "des": "As a Water Treatment Specialist, you'll be responsible for supervising and installing water purification equipment and making sure clean water is stored and available anywhere it is needed. You will perform water quality tests and inspect facilities and food supplies for the presence of disease, germs, and other conditions or hazards to health and the environment.",
+    "cut": "88 General Maintenance (GM)",
+    "asv": [0, 0, 0, 0, 0, 88, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/research/92w-water-treatment-specialist.html"
+  },
+  {
+    "mos": "92Y",
+    "tit": "Unit Supply Specialist",
+    "des": "As the Unit Supply Specialist, you’ll be responsible for supervising and maintaining all Army supplies and equipment. You’ll receive, inspect, inventory, load and unload, store, issue, and deliver all supplies and equipment. You’ll also safely secure and control weapons and ammunition in security areas.",
+    "cut": "90 Clerical (CL)",
+    "asv": [0, 90, 0, 0, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/support-logistics/transportation-inventory/92y-unit-supply-specialist.html"
+  },
+  {
+    "mos": "94A",
+    "tit": "Land Combat Electronic Missile System Repairer",
+    "des": "As a Land Combat Electronic Missile System Repairer, you’ll use advanced electronic skills to perform maintenance on a variety of missile systems and determine shortcomings and malfunctions in electronic, electrical, mechanical, and circuit elements. The use of highly mobile missile launchers gives the Army a powerful edge in the field, so it’ll be vital that you keep these powerful weapons systems in top fighting shape.",
+    "cut": "102 Electronics (EL)",
+    "asv": [0, 0, 0, 102, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/94a-land-missile-system-repairer.html"
+  },
+  {
+    "mos": "94D",
+    "tit": "Air Traffic Control Equipment Repairer",
+    "des": "As an Air Traffic Control Equipment Repairer, you’ll help ensure flight safety, keeping our pilots safe by maintaining and installing air traffic control communications, navigation aids, and landing systems. You’ll test instruments, navigational controls, and simulators using electronic and electrical test equipment, replace equipment parts, and perform quality control measures.",
+    "cut": "102 Electronics (EL)",
+    "asv": [0, 0, 0, 102, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/repairing-aircraft/94d-air-traffic-control-equipment-repairer.html"
+  },
+  {
+    "mos": "94E",
+    "tit": "Radio Equipment Repairer",
+    "des": "As a Radio Equipment Repairer, you’ll perform or supervise essential preventive maintenance checks and services on radios, transmitters, communication security equipment, and other associated equipment to ensure secure communication is always available. It’ll be your responsibility to calibrate and align equipment components, and use test, measurement, and diagnostic equipment. You’ll test program sets and use interactive electronic technical manuals in order to troubleshoot and repair equipment.",
+    "cut": "102 Electronics (EL)",
+    "asv": [0, 0, 0, 102, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/locations-stats-frequencies/94e-radio-equipment-repairer.html"
+  },
+  {
+    "mos": "94F",
+    "tit": "Computer / Detection Systems Repairer",
+    "des": "As a Computer / Detection Systems Repairer, you’ll repair the most advanced computer systems to ensure they’re in top operating condition, keeping equipment functioning, and making sure the Army is never at a disadvantage. You’ll repair everything from electromechanical telecommunications equipment to field artillery digital devices, from Global Positioning System receivers to night vision devices and equipment, and even laser and fiber optic systems.",
+    "cut": "102 Electronics (EL)",
+    "asv": [0, 0, 0, 102, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/locations-stats-frequencies/94f-computer-detection-systems-repairer.html"
+  },
+  {
+    "mos": "94H",
+    "tit": "Test Measurement and Diagnostic Equipment Maintenance Support Specialist",
+    "des": "As a Test Measurement and Diagnostic Equipment Maintenance Support Specialist, you'll maintain the Army's precision instruments, keeping them in top working condition and ensuring they are always accurate. You’ll calibrate and repair test equipment, and you'll adjust and synchronize watches, clocks, and timers. You’ll learn electronic theory, how to read schematics, indirect and alternating current, and resistance and circuit analysis.",
+    "cut": "107 Electronics (EL)",
+    "asv": [0, 0, 0, 107, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/94h-diagnostic-equipment-maintenance-specialist.html"
+  },
+  {
+    "mos": "94M",
+    "tit": "Radar Repairer",
+    "des": "As a Radar Repairer, you'll maintain and repair essential on-the-ground surveillance radar equipment, one of the most sophisticated and decisive pieces of technology. You’ll inspect, test, and adjust system components and equipment used to detect enemy artillery and mortar rounds for proper defense.",
+    "cut": "107 Electronics (EL)",
+    "asv": [0, 0, 0, 107, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/signal-intelligence/locations-stats-frequencies/94m-radar-repairer.html"
+  },
+  {
+    "mos": "94P",
+    "tit": "Multiple Launch Rocket System (MLRS) Repairer",
+    "des": "As a Multiple Launch Rocket System Repairer, you’ll be an essential member of the Army’s weapons maintenance team, performing maintenance on various rocket systems, keeping hydraulics, mechanical, launcher drive, and electrical systems repaired. You’ll perform maintenance on the Multiple Launch Rocket System, High Mobility Artillery Rocket System, and the self-propelled launcher-loader.",
+    "cut": "93 Electronics (EL)",
+    "asv": [0, 0, 0, 93, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/94p-rocket-system-repairer.html"
+  },
+  {
+    "mos": "94R",
+    "tit": "Avionic and Survivability Equipment Repairer",
+    "des": "As an Avionic and Survivability Equipment Repairer, you’ll be an essential member of the Army communications maintenance team. You’ll perform field and sustainment level maintenance on avionic navigation flight control systems, stabilization systems, and equipment.",
+    "cut": "98 Electronics (EL)",
+    "asv": [0, 0, 0, 98, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/aviation/repairing-aircraft/94r-avionic-survivability-equipment-repairer.html"
+  },
+  {
+    "mos": "94S",
+    "tit": "Patriot System Repairer",
+    "des": "As a Patriot System Repairer, you’ll become one of the most highly trained Soldiers in the world. You’ll use your advanced skills to perform field-level maintenance on one of the world’s most advanced missile systems called Patriot, which features a phased array radar set and control station. You will perform tests and make repairs on specific components based on diagnostics.",
+    "cut": "107 Electronics (EL)",
+    "asv": [0, 0, 0, 107, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/94s-patriot-system-repairer.html"
+  },
+  {
+    "mos": "94T",
+    "tit": "Avenger System Repairer",
+    "des": "As a Avenger System Repairer, you’ll be one of the most highly trained technically and tactically proficient Soldiers in the world. You’ll supervise and perform maintenance and repair on the Army’s sophisticated short range air defense weapons systems. You’ll play a vital role in the defense of a nation, servicing, maintaining, and repairing the Avenger system, a complex and highly mobile weapons system used to secure battlefield air space and protect ground forces.",
+    "cut": "98 Electronics (EL)",
+    "asv": [0, 0, 0, 98, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/94t-avenger-system-repairer.html"
+  },
+  {
+    "mos": "94Y",
+    "tit": "Integrated Family Of Test Equipment (IFTE) Operator/Maintainer",
+    "des": "As an Integrated Family Of Test Equipment (IFTE) Operator/Maintainer, you'll be in charge of maintaining the electrical equipment used by the Army to perform diagnostics and test various weapons systems. You'll perform electronic maintenance and service these machines to make sure they are programmed and running accurately at all times, and you'll be called on to operate and perform preventive maintenance checks on power generators, and to locate, isolate and repair instrument parts.",
+    "cut": "107 Electronics (EL)",
+    "asv": [0, 0, 0, 107, 0, 0, 0, 0, 0, 0],
+    "src": "https://www.goarmy.com/careers-and-jobs/career-match/mechanics-engineering/test-repair/94y-automatic-test-systems-operator.html"
+  }
+]

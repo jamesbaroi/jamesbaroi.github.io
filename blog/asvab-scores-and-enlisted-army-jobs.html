@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>ASVAB Scores and Enlisted Army Jobs | jamesbaroi.com</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/public/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/public/img/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/img/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/public/css/blog.css">
+    <link rel="stylesheet" type="text/css" media="print" href="/public/css/print.css">
+    <style>
+      .output-container {
+        background-color: var(--c11);
+        border: 1px dashed var(--c2);
+        margin: 1em 0 2em;
+        padding: 1em;
+      }
+      .output-container > div {
+        margin: 0.6em 0;
+      }
+      .mos, .title {
+        color: var(--c9);
+        font-weight: bold;
+      }
+      @media (hover: hover) {
+        .output-container:hover {
+          background-color: var(--c1);
+          border-color: var(--c2);
+        }
+        .output-container:active {
+          background-color: var(--c0);
+          border-color: var(--c0);
+        }
+      }
+      #input-container {
+        background-color: var(--c11);
+        border: 1px dashed var(--c2);
+        margin: 1em auto;
+        padding: 1em 1em 1em;
+      }
+      #input {
+        display: flex;
+        flex-wrap: wrap;
+        font-family: monospace;
+        gap: 1em;
+        justify-content: center;
+        padding: 1em 0 1em;
+      }
+      input {
+        background-color: var(--c0);
+        border: 1px dashed var(--c2);
+        caret-color: var(--c5);
+        color: var(--c5);
+        font-weight: bold;
+        height: 2em;
+        outline: none;
+        text-align: right;
+        width: 4em;
+      }
+      #clear-inputs {
+        background-color: var(--c0);
+        border: 1px dashed var(--c2);
+        cursor: pointer;
+        margin: 1em auto;
+        padding: 0.4em 1.2em;
+        transition: 0.2s;
+        user-select: none;
+        width: fit-content;
+      }
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      /* Firefox */
+      input[type=number] {
+        appearance: textfield;
+        -moz-appearance: textfield;
+      }
+      @media (hover: hover) {
+      #clear-inputs:hover {
+        background-color: var(--c4);
+        color: var(--c0);
+        font-weight: bold;
+      }
+      #clear-inputs:active {
+        background-color: var(--c1);
+        color: var(--c2);
+        font-weight: bold;
+      }
+    }
+    </style>
+    <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script>
+    <script defer src="/public/js/common.js"></script>
+    <script defer src="/public/js/siteUnderDev.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="b l">Post #1: ASVAB Scores and Enlisted Army Jobs</div>
+      <div>A Tool to Determine Army Jobs Based on Line Scores</div>
+      <a class="a" href="/">J. A. Baroi</a>
+      <div>2023-07-22</div>
+    </header>
+    <main>
+      <div class="b c h l">Overview</div>
+      <div class="p">
+        <span>
+          Input your Armed Services Vocational Aptitude Battery (ASVAB)
+          composite (line) scores below to filter the U.S Army's enlisted
+          Military Occupational Specialties (MOS) for which you qualify based
+          solely on your line scores. Click on any MOS to visit
+        </span>
+        <a href="https://www.goarmy.com/" target="_blank">
+          <span class="a w">goarmy.com</span>
+        </a>
+        <span>for more information.</span>
+        <!-- <span>
+          Good luck on your enlistment and thank you for considering a career
+          with the U.S Army. If you would like to learn more about enlisting as
+          an active-duty soldier, check out my post on the
+        </span>
+        <a class="a w" href="/blog/us-army-enlistment-process">
+          U.S. Army Enlistment Process
+        </a><span>.</span> -->
+      </div>
+      <div id="input-container">
+        <div>
+          <span>Input Line Scores</span>
+          <span id="num-qualified"></span>
+        </div>
+        <div id="input">
+          <label for="input-GT">GT <input id="input-GT" type="number" min="0"></label>
+          <label for="input-CL">CL <input id="input-CL" type="number" min="0"></label>
+          <label for="input-CO">CO <input id="input-CO" type="number" min="0"></label>
+          <label for="input-EL">EL <input id="input-EL" type="number" min="0"></label>
+          <label for="input-FA">FA <input id="input-FA" type="number" min="0"></label>
+          <label for="input-GM">GM <input id="input-GM" type="number" min="0"></label>
+          <label for="input-MM">MM <input id="input-MM" type="number" min="0"></label>
+          <label for="input-OF">OF <input id="input-OF" type="number" min="0"></label>
+          <label for="input-SC">SC <input id="input-SC" type="number" min="0"></label>
+          <label for="input-ST">ST <input id="input-ST" type="number" min="0"></label>
+        </div>
+        <div id="clear-inputs">Clear</div>
+        <div class="r"></div>
+        <small>
+          Key: General Technical (GT), Clerical (CL), Combat (CO), Electronics
+          (EL), Field Artillery (FA), General Maintenance (GM), Mechanical
+          Maintenance (MM), Operators and Food (OF), Surveillance and
+          Communications (SC), Skilled Technical (ST)
+        </small>
+      </div>
+      <div class="c">
+        <small>
+          Jobs will appear below as you input your scores. All displayed by
+          default.
+        </small>
+      </div>
+      <div id="output"></div>
+      <div id="return" class="a c"><a href="/">Return</a></div>
+    </main>
+    <footer>
+      <div id="btn-scroll" title="Scroll Up"></div>
+      <div id="theme"></div>
+      <div id="cookie">
+        <div id="cookie-notice">
+          <div>
+            <a id="cookie-heading" href="/policy/cookie-policy" target="_blank">
+              <h1>
+                <span>Cookie Policy</span>
+              </h1>
+            </a>
+            <p>
+              Click "OK" to consent to the use of cookies on this site.
+              Click on "Cookie Policy" above to learn more.
+            </p>
+          </div>
+          <div id="btn-cookie">OK</div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const GT = document.getElementById('input-GT')
+      const CL = document.getElementById('input-CL')
+      const CO = document.getElementById('input-CO')
+      const EL = document.getElementById('input-EL')
+      const FA = document.getElementById('input-FA')
+      const GM = document.getElementById('input-GM')
+      const MM = document.getElementById('input-MM')
+      const OF = document.getElementById('input-OF')
+      const SC = document.getElementById('input-SC')
+      const ST = document.getElementById('input-ST')
+
+      const inputArr    = [ GT, CL, CO, EL, FA, GM, MM, OF, SC, ST ]
+      const mosScore    = []
+      const nQualified  = document.getElementById('num-qualified')
+      const clearInputs = document.getElementById('clear-inputs')
+
+      clearInputs.addEventListener('click', () => {
+
+        for (let i = 0; i < 10; i++) {
+
+          inputArr[i].value = ''
+        }
+
+        nQualified.innerHTML = ''
+
+        let mosScoreLen = mosScore.length
+
+        for (let i = 0; i < mosScoreLen; i++) {
+
+          document.getElementById(mosScore[i].mosId).style.display = 'block'
+        }
+      })
+
+      const checkInput = () => {
+
+        const inputValArr    = []
+
+        let isInpValArrEmpty = true
+        let nHidden          = 0
+
+        for (let i = 0; i < 10; i++) {
+
+          inputValArr.push(inputArr[i].value)
+        }
+
+        for (let i = 0; i < 10; i++) {
+
+          if (inputValArr[i] == '') {
+
+            isInpValArrEmpty = true
+
+          } else {
+
+            isInpValArrEmpty = false
+            break
+          }
+        }
+
+        let mosScoreLen = mosScore.length
+
+        for (let i = 0; i < mosScoreLen; i++) {
+
+          let isAsvFail  = false
+          let isAltFail  = false
+
+          for(let j = 0; j < 10; j++) {
+
+            if (inputValArr[j] - mosScore[i].mosAsv[j] < 0) {
+
+              isAsvFail = true
+              break
+            }
+          }
+
+          for(let j = 0; j < 10; j++) {
+
+            if (
+
+              mosScore[i].mosAlt && (
+
+              inputValArr[j] - mosScore[i].mosAlt[j] < 0
+
+              )
+
+            ) {
+
+              isAltFail = true
+              break
+            }
+          }
+
+          if (isInpValArrEmpty) {
+
+            document.getElementById(mosScore[i].mosId).style.display = 'block'
+
+          } else if (!isAsvFail) {
+
+            document.getElementById(mosScore[i].mosId).style.display = 'block'
+
+          } else if (mosScore[i].mosAlt && !isAltFail) {
+
+            document.getElementById(mosScore[i].mosId).style.display = 'block'
+
+          } else {
+
+            document.getElementById(mosScore[i].mosId).style.display = 'none'
+
+            nHidden++
+          }
+        }
+
+        nQualified.innerHTML =
+          `
+            - You qualify for ${mosScoreLen - nHidden} / 142 jobs.
+          `
+
+          if (mosScoreLen - nHidden == 142) {
+
+            nQualified.innerHTML =
+            ' - Congratulations! You qualify for all Army jobs!'
+          }
+
+          if (isInpValArrEmpty) nQualified.innerHTML = ''
+      }
+
+      for (let i = 0; i < 10; i++) {
+
+        inputArr[i].onkeyup = checkInput
+      }
+
+      const create_ASVABvsMOSData = () => {
+
+        let src = document.createElement('a'    )
+        let con = document.createElement('div'  )
+        let mos = document.createElement('span' )
+        let tit = document.createElement('span' )
+        let des = document.createElement('div'  )
+        let cut = document.createElement('div'  )
+        let url = document.createElement('small')
+
+        url.style.wordBreak = 'break-all'
+        src.style.wordBreak = 'keep-all'
+        src.target = '_blank'
+        con.setAttribute('class', 'output-container')
+        tit.setAttribute('class', 'title')
+        mos.setAttribute('class', 'mos')
+
+        return { src, con, mos, tit, des, cut, url }
+      }
+
+      const populate_ASVABvsMOSData = (d, o, i) => {
+
+        !d[i].tit ? o.tit.innerHTML = '' : o.tit.innerHTML = d[i].tit
+        !d[i].mos ? o.mos.innerHTML = '' : (
+
+          o.mos.innerHTML = d[i].mos + ' ',
+          o.src.id = `mos-${d[i].mos}`
+        )
+
+        !d[i].des ? o.des.innerHTML = '' : o.des.innerHTML =
+          `
+            <span class="d">Description</span>:
+            <span class="f">${d[i].des}</span>
+          `
+
+        !d[i].cut ? o.cut.innerHTML = '' : o.cut.innerHTML =
+          `
+            <small class="d">ASVAB Score</small>:
+            <small>${d[i].cut}</small>
+          `
+
+        !d[i].src ? (
+
+          o.url.innerHTML = '',
+          o.src.style.display = 'none'
+
+        ) : o.url.innerHTML = `<span>Source: </span><span>${d[i].src}</span>`
+
+        !d[i].src ? o.src.href = '/' : o.src.href = d[i].src
+
+        o.con.append(o.mos, o.tit, o.des, o.cut, o.url)
+        o.src.append(o.con)
+      }
+
+      const render_ASVABvsMOSData = (d) => {
+
+        let e = document.getElementById('output')
+
+        e.innerHTML = ''
+
+        let dLen = d.length
+
+        for (let i = 0; i < dLen; i++) {
+
+          let o = create_ASVABvsMOSData()
+
+          populate_ASVABvsMOSData(d, o, i)
+
+          if(d[i].mos && d[i].asv) {
+
+            let mosId = `mos-${d[i].mos}`
+            let mosAsv = d[i].asv
+
+            if (d[i].alt) {
+
+              let mosAlt = d[i].alt
+
+              mosScore.push({mosId, mosAsv, mosAlt})
+
+            } else {
+
+              mosScore.push({mosId, mosAsv})
+            }
+          }
+
+          !e ? true : e.append(o.src)
+        }
+      }
+
+      fetch('/public/json/us-army-enlisted-mos.json')
+      .then(o => o.json())
+      .then(d => render_ASVABvsMOSData(d))
+    </script>
+  </body>
+</html>

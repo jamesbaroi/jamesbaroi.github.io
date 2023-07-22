@@ -54,6 +54,6 @@ const render_articleIndexData = (d) => {
   }
 }
 
-fetch('/blog/index.json')
+fetch('/public/json/blog.json')
 .then(o => o.json())
 .then(d => render_articleIndexData(d))

@@ -11,8 +11,6 @@ const btn_Assets = document.getElementById('btn-assets')
 const btn_Posts  = document.getElementById('btn-posts' )
 
 /**Get assets */
-const asset_CSS  = document.getElementById('css'       )
-const asset_HTML = document.getElementById('html'      )
 const asset_JS   = document.getElementById('js'        )
 const asset_JSON = document.getElementById('json'      )
 
@@ -25,8 +23,6 @@ const posts      = document.getElementById('posts'     )
 /**[ IMPLEMENT ] ------------------------------------------------------------*/
 
 /**Display defaults */
-!asset_CSS  ? true : asset_CSS.style.display  = 'none'
-!asset_HTML ? true : asset_HTML.style.display = 'none'
 !asset_JS   ? true : asset_JS.style.display   = 'none'
 !asset_JSON ? true : asset_JSON.style.display = 'none'
 !btn_Blog   ? true : btn_Blog.style.display   = 'none'
@@ -36,18 +32,6 @@ const posts      = document.getElementById('posts'     )
 !blog       ? true : blog.style.display       = 'block'
 
 /**Toggle display assets */
-!btn_CSS ? true : btn_CSS.addEventListener('click', () => {
-  asset_CSS.style.display                    != 'none' ?
-  asset_CSS.style.display                     = 'none' :
-  asset_CSS.style.display                     = 'block'
-})
-
-!btn_HTML ? true : btn_HTML.addEventListener('click', () => {
-  asset_HTML.style.display                   != 'none' ?
-  asset_HTML.style.display                    = 'none' :
-  asset_HTML.style.display                    = 'block'
-})
-
 !btn_JS ? true : btn_JS.addEventListener('click', () => {
   asset_JS.style.display                     != 'none' ?
   asset_JS.style.display                      = 'none' :
@@ -65,8 +49,8 @@ const posts      = document.getElementById('posts'     )
   about.style.display                         = 'block'
   assets.style.display                        = 'none'
   blog.style.display                          = 'none'
-  posts.style.display                         = 'none'
-  btn_Posts.style.display                     = 'none'
+  !posts ? true : posts.style.display         = 'none'
+  !btn_Posts ? true :btn_Posts.style.display  = 'none'
   btn_About.style.display                     = 'none'
   btn_Blog.style.display                      = 'block'
   btn_Assets.style.display                    = 'block'
@@ -76,8 +60,8 @@ const posts      = document.getElementById('posts'     )
   assets.style.display                        = 'block'
   about.style.display                         = 'none'
   blog.style.display                          = 'none'
-  posts.style.display                         = 'none'
-  btn_Posts.style.display                     = 'none'
+  !posts ? true : posts.style.display         = 'none'
+  !btn_Posts ? true :btn_Posts.style.display  = 'none'
   btn_Assets.style.display                    = 'none'
   btn_Blog.style.display                      = 'block'
   btn_About.style.display                     = 'block'
@@ -87,7 +71,7 @@ const posts      = document.getElementById('posts'     )
   blog.style.display                          = 'block'
   about.style.display                         = 'none'
   assets.style.display                        = 'none'
-  btn_Posts.style.display                     = 'block'
+  !btn_Posts ? true :btn_Posts.style.display  = 'block'
   btn_Blog.style.display                      = 'none'
   btn_About.style.display                     = 'block'
   btn_Assets.style.display                    = 'block'

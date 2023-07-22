@@ -16,8 +16,8 @@ body.dark-theme {
 body {
   --c0: rgb(220, 220, 220);
   --c1: rgb(200, 201, 202);
-  --c2: rgb(32, 33, 36);
-  --c3: rgb(16, 16.5, 18);
+  --c2: rgb(82, 83, 86);
+  --c3: rgb(66, 66.5, 68);
   --c4: maroon;
   --c5: navy;
   --c6: darkgreen;
@@ -46,8 +46,8 @@ body {
   body.light-theme {
     --c0: rgb(220, 220, 220);
     --c1: rgb(200, 201, 202);
-    --c2: rgb(32, 33, 36);
-    --c3: rgb(16, 16.5, 18);
+    --c2: rgb(82, 83, 86);
+    --c3: rgb(66, 66.5, 68);
     --c4: maroon;
     --c5: navy;
     --c6: darkgreen;
@@ -65,9 +65,9 @@ body {
 body {
   background-color: var(--c1);
   color: var(--c3);
-  font-family: monospace;
-  font-size: 12px;
-  line-height: 2em;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.8em;
   margin: auto auto 100vh;
   max-width: 624px;
   padding: 16px;
@@ -80,6 +80,18 @@ a {
   color: unset;
   text-decoration: none;
   word-break: break-all;
+}
+
+.btn {
+  cursor: pointer;
+  transition: 0.2s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.pad {
+  padding: 1em;
 }
 
 /**Cookie */
@@ -181,8 +193,15 @@ a {
 }
 
 @media (hover: hover) {
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--c4);
+  .btn:hover {
+    background-color: var(--c4);
+    color: var(--c0);
+    font-weight: bold;
+  }
+  .btn:active {
+    background-color: var(--c1);
+    color: var(--c2);
+    font-weight: bold;
   }
   #btn-cookie:hover {
     background-color: var(--c8);
@@ -200,72 +219,75 @@ a {
   #btn-scroll:hover {
     border-bottom-color: var(--c4);
   }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--c4);
+  }
 }
 /**RWD */
 @media only screen and (min-width: 656px) {
   body {
     padding: 16px;
-    font-size: 13px;
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 672px) {
   body {
     padding: 24px;
-    font-size: 13.2px;
+    font-size: 16.2px;
   }
 }
 @media only screen and (min-width: 688px) {
   body {
     padding: 32px;
-    font-size: 13.4px;
+    font-size: 16.4px;
   }
 }
 @media only screen and (min-width: 704px) {
   body {
     padding: 40px;
-    font-size: 13.6px;
+    font-size: 16.6px;
   }
 }
 @media only screen and (min-width: 720px) {
   body {
     padding: 48px;
-    font-size: 13.8px;
+    font-size: 16.8px;
   }
 }
 @media only screen and (min-width: 736px) {
   body {
     padding: 56px;
-    font-size: 14px;
+    font-size: 17px;
   }
 }
 @media only screen and (min-width: 752px) {
   body {
     padding: 64px;
-    font-size: 14.2px;
+    font-size: 17.2px;
   }
 }
 @media only screen and (min-width: 768px) {
   body {
     padding: 72px;
-    font-size: 14.4px;
+    font-size: 17.4px;
   }
 }
 @media only screen and (min-width: 784px) {
   body {
     padding: 80px;
-    font-size: 14.6px;
+    font-size: 17.6px;
   }
 }
 @media only screen and (min-width: 800px) {
   body {
     padding: 88px;
-    font-size: 14.8px;
+    font-size: 17.8px;
   }
 }
 @media only screen and (min-width: 816px) {
   body {
     padding: 96px;
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 body {
@@ -273,10 +295,15 @@ body {
   font-family: Roboto;
 }
 
+small {
+  font-size: 0.8em;
+}
+
 /**Tools */
 .a {
   color: var(--c4);
   cursor: pointer;
+  font-family: Roboto;
   font-weight: bold;
 }
 
@@ -293,7 +320,12 @@ body {
   color: var(--c4);
 }
 
+.f {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
 .h {
+  font-family: Georgia, "Times New Roman", Times, serif;
   padding-top: 1em;
 }
 
@@ -306,6 +338,7 @@ body {
 }
 
 .p {
+  font-family: Georgia, "Times New Roman", Times, serif;
   text-indent: 2em;
 }
 

@@ -1,26 +1,33 @@
 const create_SiteIndexData_Elem = () => {
 
   let src = document.createElement('a')
+  let con = document.createElement('div')
+  let tit = document.createElement('div')
   let des = document.createElement('div')
   let url = document.createElement('div')
 
-  des.setAttribute('class', 'asset section')
+  con.setAttribute('class', 'asset section')
+  tit.setAttribute('class', 'title'        )
+  des.setAttribute('class', 'description'  )
+  url.setAttribute('class', 'url'          )
+  con.title  = 'Open in a new tab.'
   src.target = '_blank'
 
-  return { src, des, url }
+  return { src, con, tit, des, url }
 }
 
 const populate_SiteIndexData_Elem = (d, o, i) => {
 
-  !d[i].des ? o.des.innerHTML = 'None' : o.des.innerHTML = d[i].des
+  !d[i].tit ? o.tit.innerHTML = '' : o.tit.innerHTML = d[i].tit
+  !d[i].des ? o.des.innerHTML = '' : o.des.innerHTML = d[i].des
   !d[i].url ? o.url.innerHTML = '' : (
 
     o.url.innerHTML = d[i].url,
     o.src.href      = o.url.innerHTML.slice(28)
   )
 
-  o.des.append(o.url)
-  o.src.append(o.des)
+  o.con.append(o.tit, o.des, o.url)
+  o.src.append(o.con)
 }
 
 const render_SiteIndexData_Type = (d, t, c) => {
@@ -46,6 +53,6 @@ const render_SiteIndexData = (d) => {
   render_SiteIndexData_Type(d.json, 'json', 'var(--c7)')
 }
 
-fetch('/public/json/index.json')
+fetch('/public/json/assets.json')
 .then(o => o.json())
 .then(d => render_SiteIndexData(d))
