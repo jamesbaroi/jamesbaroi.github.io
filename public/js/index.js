@@ -31,6 +31,7 @@ const showBlog = () => {
   about.style.display                  = 'none'
   assets.style.display                 = 'none'
   posts.style.display                  = 'none'
+  !btn_Posts ? true :
   btn_Posts.style.display              = 'block'
   btn_Blog.style.display               = 'none'
   btn_About.style.display              = 'block'
@@ -42,6 +43,7 @@ const showAbout = () => {
   assets.style.display                 = 'none'
   blog.style.display                   = 'none'
   posts.style.display                  = 'none'
+  !btn_Posts ? true :
   btn_Posts.style.display              = 'none'
   btn_About.style.display              = 'none'
   btn_Blog.style.display               = 'block'
@@ -55,6 +57,7 @@ const showAssets = () => {
   asset_JS.style.display               = 'none'
   asset_JSON.style.display             = 'none'
   posts.style.display                  = 'none'
+  !btn_Posts ? true :
   btn_Posts.style.display              = 'none'
   btn_Assets.style.display             = 'none'
   btn_Blog.style.display               = 'block'

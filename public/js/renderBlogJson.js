@@ -23,7 +23,8 @@ const populate_articleIndexData_Elem = (d, o, i) => {
   !d[i].src ? o.src.href = '/404'  : o.src.href      = '/blog/' + d[i].src
   !d[i].tit ? o.tit.innerHTML = '' : o.tit.innerHTML =
 
-  'Post #' + (i + 1) + ': ' + d[i].tit
+  // 'Post #' + (i + 1) + ': ' + 
+  d[i].tit
 
   o.sec.append(o.tit, o.sub, o.des, o.dat)
   o.src.append(o.sec)
