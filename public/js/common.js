@@ -71,23 +71,15 @@ const runGtag = () => {
   gtag('config', 'G-4R2HPVTYL3')
 }
 
-const navToIndex = () => {
+const navToAbout = () => {
 
-  let site = window.location.href
-
-  if (site == site_Pro) {
-
-    console.log('production site')
-
-  } else if (site == site_Dev) {
-
-    console.log('development site')
-  }
-
-  console.log(site)
+  window.location.href = '/#about'
 }
 
-navToIndex()
+const navToAssets = () => {
+
+  window.location.href = '/#assets'
+}
 
 /**[ IMPLEMENT ] ------------------------------------------------------------*/
 

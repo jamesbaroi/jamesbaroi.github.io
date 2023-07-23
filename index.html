@@ -30,16 +30,20 @@
     </div>
   </header>
   <nav>
-    <div id="btn-blog" class="btn pad nav">BLOG</div>
-    <div id="btn-about" class="btn pad nav">ABOUT</div>
-    <div id="btn-assets" class="btn pad nav">ASSETS</div>
+    <div id="btn-blog" class="btn pad nav" onclick="showBlog()">BLOG</div>
+    <div id="btn-about" class="btn pad nav" onclick="showAbout()">ABOUT</div>
+    <div id="btn-assets" class="btn pad nav" onclick="showAssets()">ASSETS</div>
   </nav>
   <section>
     <div id="blog">
       <h1>F E A T U R E D</h1>
       <div id="newest"></div>
     </div>
-    <nav id="btn-posts" class="btn pad nav" style="grid-template-columns:auto">
+    <nav
+      id="btn-posts"
+      class="btn pad nav"
+      style="grid-template-columns:auto"
+      onclick="showPosts()">
       VIEW ALL POSTS
     </nav>
   </section>
@@ -56,11 +60,17 @@
     <div id="assets">
       <h1>A S S E T S</h1>
       <div class="section">
-        <h2 id="btn-js" class="c6 btn pad">javascript</h2>
+        <h2
+          id="btn-js"
+          class="c6 btn pad"
+          onclick="showAssetsJS()">javascript</h2>
         <div id="js"></div>
       </div>
       <div class="section">
-        <h2 id="btn-json" class="c7 btn pad">json</h2>
+        <h2
+          id="btn-json"
+          class="c7 btn pad"
+          onclick="showAssetsJSON()">json</h2>
         <div id="json"></div>
       </div>
     </div>

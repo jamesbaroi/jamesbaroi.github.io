@@ -20,67 +20,95 @@ const assets     = document.getElementById('assets'    )
 const blog       = document.getElementById('blog'      )
 const posts      = document.getElementById('posts'     )
 
-/**[ IMPLEMENT ] ------------------------------------------------------------*/
+/**[ CREATE ELEMENTS ] ------------------------------------------------------*/
 
-/**Display defaults */
-!asset_JS   ? true : asset_JS.style.display   = 'none'
-!asset_JSON ? true : asset_JSON.style.display = 'none'
-!btn_Blog   ? true : btn_Blog.style.display   = 'none'
-!posts      ? true : posts.style.display      = 'none'
-!about      ? true : about.style.display      = 'none'
-!assets     ? true : assets.style.display     = 'none'
-!blog       ? true : blog.style.display       = 'block'
+const url        = new URL(window.location.href)
 
-/**Toggle display assets */
-!btn_JS ? true : btn_JS.addEventListener('click', () => {
-  asset_JS.style.display                     != 'none' ?
-  asset_JS.style.display                      = 'none' :
-  asset_JS.style.display                      = 'block'
-})
+/**[ CREATE FUNCTIONS ] -----------------------------------------------------*/
 
-!btn_JSON ? true : btn_JSON.addEventListener('click', () => {
-  asset_JSON.style.display                   != 'none' ?
-  asset_JSON.style.display                    = 'none' :
-  asset_JSON.style.display                    = 'block'
-})
-
-/**Toggle display nav */
-!btn_About ? true : btn_About.addEventListener('click', () => {
-  about.style.display                         = 'block'
-  assets.style.display                        = 'none'
-  blog.style.display                          = 'none'
-  !posts ? true : posts.style.display         = 'none'
-  !btn_Posts ? true :btn_Posts.style.display  = 'none'
-  btn_About.style.display                     = 'none'
-  btn_Blog.style.display                      = 'block'
-  btn_Assets.style.display                    = 'block'
-})
-
-!btn_Assets ? true : btn_Assets.addEventListener('click', () => {
-  assets.style.display                        = 'block'
-  about.style.display                         = 'none'
-  blog.style.display                          = 'none'
-  !posts ? true : posts.style.display         = 'none'
-  !btn_Posts ? true :btn_Posts.style.display  = 'none'
-  btn_Assets.style.display                    = 'none'
-  btn_Blog.style.display                      = 'block'
-  btn_About.style.display                     = 'block'
-})
-
-!btn_Blog ? true : btn_Blog.addEventListener('click', () => {
+const showBlog = () => {
   blog.style.display                          = 'block'
   about.style.display                         = 'none'
   assets.style.display                        = 'none'
-  !btn_Posts ? true :btn_Posts.style.display  = 'block'
+  posts.style.display                         = 'none'
+  btn_Posts.style.display                     = 'block'
   btn_Blog.style.display                      = 'none'
   btn_About.style.display                     = 'block'
   btn_Assets.style.display                    = 'block'
-})
+}
 
-/**Toggle display posts */
-!btn_Posts ? true : btn_Posts.addEventListener('click', () => {
-  posts.style.display                        != 'none' ?
-  posts.style.display                         = 'none' :
-  posts.style.display                         = 'block'
-  posts.scrollIntoView()
-})
+const showAbout = () => {
+  about.style.display                         = 'block'
+  assets.style.display                        = 'none'
+  blog.style.display                          = 'none'
+  posts.style.display                         = 'none'
+  btn_Posts.style.display                     = 'none'
+  btn_About.style.display                     = 'none'
+  btn_Blog.style.display                      = 'block'
+  btn_Assets.style.display                    = 'block'
+}
+
+const showAssets = () => {
+  assets.style.display                        = 'block'
+  about.style.display                         = 'none'
+  blog.style.display                          = 'none'
+  asset_JS.style.display                      = 'none'
+  asset_JSON.style.display                    = 'none'
+  posts.style.display                         = 'none'
+  btn_Posts.style.display                     = 'none'
+  btn_Assets.style.display                    = 'none'
+  btn_Blog.style.display                      = 'block'
+  btn_About.style.display                     = 'block'
+}
+
+const showPosts = () => {
+  posts.style.display                        != 'none' ? (
+    posts.style.display                       = 'none',
+    document.body.scrollTop                   = 0,
+    document.documentElement.scrollTop        = 0
+  ) : (
+    posts.style.display                       = 'block',
+    blog.scrollIntoView()
+  )
+}
+
+const showAssetsJS = () => {
+  asset_JS.style.display                     != 'none' ? (
+  asset_JS.style.display                      = 'none',
+  document.body.scrollTop                   = 0,
+  document.documentElement.scrollTop        = 0
+  ) : (
+  asset_JS.style.display                      = 'block',
+  asset_JSON.style.display                    = 'none',
+  btn_JS.scrollIntoView()
+  )
+}
+
+const showAssetsJSON = () => {
+  asset_JSON.style.display                   != 'none' ? (
+  asset_JSON.style.display                    = 'none',
+  document.body.scrollTop                   = 0,
+  document.documentElement.scrollTop        = 0
+  ) : (
+  asset_JSON.style.display                    = 'block',
+  asset_JS.style.display                      = 'none',
+  btn_JSON.scrollIntoView()
+  )
+}
+
+const onPageLoad = () => {
+
+  if      (url.hash == '#about' )       showAbout()
+  else if (url.hash == '#assets')       showAssets()
+  else                                  showBlog()
+
+  history.pushState(
+    "",
+    document.title,
+    window.location.pathname + window.location.search
+  )
+}
+
+/**[ IMPLEMENT ] ------------------------------------------------------------*/
+
+onPageLoad()
