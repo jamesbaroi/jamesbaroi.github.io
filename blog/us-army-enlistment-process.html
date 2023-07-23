@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jamesbaroi.com</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/public/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/public/img/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/img/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/public/css/blog.css">
+    <link rel="stylesheet" type="text/css" media="print" href="/public/css/print.css">
+    <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script>
+    <script defer src="/public/js/common.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="b l">Post #0: Title</div>
+      <div>Sub-title</div>
+      <a class="a" href="/">J. A. Baroi</a>
+      <div>2023-07-16</div>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+      <div id="btn-scroll" title="Scroll Up"></div>
+      <div id="theme"></div>
+      <div id="cookie">
+        <div id="cookie-notice">
+          <div id="cookie-container">
+            <a id="cookie-heading" href="/policy/cookie-policy" target="_blank">
+              <h1>Cookie Policy</h1>
+            </a>
+            <p>
+              Click "OK" to consent to the use of cookies on this site.
+              Click on "Cookie Policy" above to learn more.
+            </p>
+            <div id="btn-cookie">OK</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const siteUnderDev = () => {
+      document.body.innerHTML = 'Coming soon!'
+      document.body.style = `
+        background-color: rgb(16, 16.5, 18);
+        color: rgb(140, 143, 150);
+        font-family: monospace;
+        font-size: 16px;
+        margin-top: 33vh;
+        max-width: 100%;
+        padding: 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        text-size-adjust: none;
+        text-align: center;
+      `
+    }
+
+    siteUnderDev()
+    </script>
+  </body>
+</html>
