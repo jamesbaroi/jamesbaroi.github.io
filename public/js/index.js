@@ -111,6 +111,9 @@ const onPageLoad = () => {
     window.location.pathname +
     window.location.search
   )
+
+  document.body.scrollTop            = 0
+  document.documentElement.scrollTop = 0
 }
 
 /**[ IMPLEMENT ] ------------------------------------------------------------*/
