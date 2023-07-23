@@ -13,7 +13,7 @@ const btn_Cookie = document.getElementById('btn-cookie')
 const btn_Theme  = document.createElement('div' )
 
 /**Site */
-const site_Main   = 'https://jamesbaroi.github.io/'
+const site_Main   = 'https://www.jamesbaroi.com/'
 const site_Dev    = 'http://localhost:8080/'
 
 /**[ SET ELEMENT ATTRIBUTES ] -----------------------------------------------*/
