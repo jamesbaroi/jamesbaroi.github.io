@@ -52,7 +52,7 @@
         font-family: monospace;
         gap: 1em;
         justify-content: center;
-        padding: 1em 0 1em;
+        padding: 1em 0 2em;
       }
       input {
         background-color: var(--c0);
@@ -70,11 +70,11 @@
         background-color: var(--c0);
         border: 1px dashed var(--c2);
         cursor: pointer;
-        margin: 1em auto;
+        margin: 1em auto 0;
         padding: 0.4em 1.2em;
+        text-align: center;
         transition: 0.2s;
         user-select: none;
-        width: fit-content;
       }
       /* Chrome, Safari, Edge, Opera */
       input::-webkit-outer-spin-button,
@@ -154,7 +154,6 @@
           <label for="input-SC">SC <input id="input-SC" type="number" min="0"></label>
           <label for="input-ST">ST <input id="input-ST" type="number" min="0"></label>
         </div>
-        <div id="clear-inputs">Clear</div>
         <div class="r"></div>
         <small>
           Key: General Technical (GT), Clerical (CL), Combat (CO), Electronics
@@ -162,11 +161,11 @@
           Maintenance (MM), Operators and Food (OF), Surveillance and
           Communications (SC), Skilled Technical (ST)
         </small>
+        <div id="clear-inputs">Clear</div>
       </div>
       <div class="c">
         <small>
-          Jobs will appear below as you input your scores. All displayed by
-          default.
+          Jobs will filter below as you input your scores.
         </small>
       </div>
       <div id="output"></div>
