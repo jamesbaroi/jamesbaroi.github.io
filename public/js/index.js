@@ -83,7 +83,7 @@ const showAssetsJS = () => {
   ) : (
     asset_JS.style.display             = 'block',
     asset_JSON.style.display           = 'none',
-    btn_JS.scrollIntoView()
+    assets.scrollIntoView()
   )
 }
 
@@ -95,7 +95,7 @@ const showAssetsJSON = () => {
   ) : (
     asset_JSON.style.display           = 'block',
     asset_JS.style.display             = 'none',
-    btn_JSON.scrollIntoView()
+    assets.scrollIntoView()
   )
 }
 
