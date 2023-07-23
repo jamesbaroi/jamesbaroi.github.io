@@ -13,7 +13,7 @@ const btn_Cookie = document.getElementById('btn-cookie')
 const btn_Theme  = document.createElement('div' )
 
 /**Site */
-const site_Main   = 'https://www.jamesbaroi.com/'
+const site_Pro   = 'https://www.jamesbaroi.com/'
 const site_Dev    = 'http://localhost:8080/'
 
 /**[ SET ELEMENT ATTRIBUTES ] -----------------------------------------------*/
@@ -75,13 +75,13 @@ const navToIndex = () => {
 
   let site = window.location.href
 
-  if (site == site_Main) {
+  if (site == site_Pro) {
 
-    console.log('main site')
+    console.log('production site')
 
   } else if (site == site_Dev) {
 
-    console.log('dev site')
+    console.log('development site')
   }
 
   console.log(site)
