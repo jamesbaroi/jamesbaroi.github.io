@@ -1,20 +1,17 @@
-/**[ GET ELEMENTS ] ---------------------------------------------------------*/
-
-const cookie     = document.getElementById('cookie')
-const theme      = document.getElementById('theme' )
-
-/**Buttons */
-const btn_Scroll = document.getElementById('btn-scroll')
-const btn_Cookie = document.getElementById('btn-cookie')
-
 /**[ CREATE ELEMENTS ] ------------------------------------------------------*/
 
+const cookie     = document.createElement('div'  )
+const cookie_des = document.createElement('small')
+const theme      = document.createElement('div'  )
+
 /**Buttons */
-const btn_Theme  = document.createElement('div' )
+const btn_Cookie = document.createElement('div'  )
+const btn_Theme  = document.createElement('div'  )
+const btn_Scroll = document.createElement('div'  )
 
 /**Site */
 const site_Pro   = 'https://www.jamesbaroi.com/'
-const site_Dev    = 'http://localhost:8080/'
+const site_Dev   = 'http://localhost:8080/'
 
 /**[ SET ELEMENT ATTRIBUTES ] -----------------------------------------------*/
 
@@ -71,10 +68,56 @@ const runGtag = () => {
   gtag('config', 'G-4R2HPVTYL3')
 }
 
+const createCookie = () => {
+
+  let e = cookie
+  let b = btn_Cookie
+  let s = cookie_des
+
+  e.id = 'cookie'
+  b.id = 'btn-cookie'
+
+  s.innerHTML =
+  `
+    Click "OK" to consent to the use of cookies and enable light mode.
+  `
+  b.innerHTML = 'OK'
+
+  e.append(s, b)
+
+  document.querySelector('footer').append(e)
+}
+
+const createTheme = () => {
+
+  let e = theme
+  let b = btn_Theme
+
+  e.id = 'theme'
+  b.id = 'btn-theme'
+
+  e.append(b)
+
+  document.querySelector('footer').append(e)
+}
+
+const createScroll = () => {
+
+  let e = btn_Scroll
+
+  e.id = 'btn-scroll'
+
+  document.querySelector('footer').append(e)
+}
+
 const navToAbout  = () => { window.location.href = '/#about'  }
 const navToAssets = () => { window.location.href = '/#assets' }
 
 /**[ IMPLEMENT ] ------------------------------------------------------------*/
+
+createScroll()
+createTheme()
+createCookie()
 
 !btn_Scroll ? true : (
   
@@ -110,7 +153,7 @@ const navToAssets = () => { window.location.href = '/#assets' }
   setCookie('theme', v, 365)
 })
 
-!btn_Cookie ? true : btn_Cookie.addEventListener('click', () => {
+!btn_Cookie ? console.log('no btn') : btn_Cookie.addEventListener('click', () => {
 
   setCookie('cookie', 'true', 365)
 
@@ -120,8 +163,8 @@ const navToAssets = () => { window.location.href = '/#assets' }
   runGtag()
 })
 
-checkCookie('cookie') != 'true' ? true : (
-
+checkCookie('cookie') != 'true' ? 
+  !theme  ? true : btn_Theme.remove() : (
   !cookie ? true : cookie.style.display = 'none',
   !theme  ? true : theme.append(btn_Theme)
 )
