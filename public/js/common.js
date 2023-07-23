@@ -71,7 +71,7 @@ const runGtag = () => {
   gtag('config', 'G-4R2HPVTYL3')
 }
 
-const navToAbout = () => { window.location.href = '/#about' }
+const navToAbout  = () => { window.location.href = '/#about'  }
 const navToAssets = () => { window.location.href = '/#assets' }
 
 /**[ IMPLEMENT ] ------------------------------------------------------------*/
