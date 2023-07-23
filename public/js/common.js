@@ -1,7 +1,7 @@
 /**[ GET ELEMENTS ] ---------------------------------------------------------*/
 
-const cookie = document.getElementById('cookie')
-const theme  = document.getElementById('theme' )
+const cookie     = document.getElementById('cookie')
+const theme      = document.getElementById('theme' )
 
 /**Buttons */
 const btn_Scroll = document.getElementById('btn-scroll')
@@ -9,7 +9,12 @@ const btn_Cookie = document.getElementById('btn-cookie')
 
 /**[ CREATE ELEMENTS ] ------------------------------------------------------*/
 
+/**Buttons */
 const btn_Theme  = document.createElement('div' )
+
+/**Site */
+const site_Main   = 'https://jamesbaroi.github.io/'
+const site_Dev    = 'http://localhost:8080/'
 
 /**[ SET ELEMENT ATTRIBUTES ] -----------------------------------------------*/
 
@@ -65,6 +70,24 @@ const runGtag = () => {
 
   gtag('config', 'G-4R2HPVTYL3')
 }
+
+const navToIndex = () => {
+
+  let site = window.location.href
+
+  if (site == site_Main) {
+
+    console.log('main site')
+
+  } else if (site == site_Dev) {
+
+    console.log('dev site')
+  }
+
+  console.log(site)
+}
+
+navToIndex()
 
 /**[ IMPLEMENT ] ------------------------------------------------------------*/
 
