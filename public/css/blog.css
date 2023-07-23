@@ -296,11 +296,11 @@ body {
 }
 
 .f {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .h {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif;
   padding-top: 1em;
 }
 
@@ -313,7 +313,7 @@ body {
 }
 
 .p {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif;
   text-indent: 2em;
 }
 
