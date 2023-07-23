@@ -82,6 +82,10 @@ a {
   word-break: break-all;
 }
 
+small {
+  font-size: 0.8em;
+}
+
 .btn {
   cursor: pointer;
   transition: 0.2s;
@@ -96,61 +100,34 @@ a {
 
 /**Cookie */
 #cookie {
-  display: block;
-}
-
-#cookie-notice {
+  background-color: var(--c11);
   color: var(--c3);
-  display: grid;
+  display: flex;
   font-family: Roboto;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 1em;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 99;
 }
-#cookie-notice p {
-  font-size: 0.8em;
-  line-height: 2em;
-  margin: 0;
-  padding: 8px 16px;
-}
-
-#cookie-container {
-  background-color: var(--c0);
-  border: 1px solid var(--c8);
-  box-sizing: border-box;
-}
-
-#cookie-heading {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-#cookie-heading h1 {
-  background-color: var(--c8);
-  color: var(--c0);
-  font-size: 1.4em;
-  margin: 0;
-  padding: 8px 16px;
-}
 
 #btn-cookie {
-  background-color: var(--c8);
+  background-color: var(--c0);
   box-shadow: 1px 1px 20px var(--c0);
   box-sizing: border-box;
-  color: var(--c1);
+  border: 1px solid var(--c2);
+  color: var(--c8);
   cursor: pointer;
+  font-size: 14px;
   font-weight: bold;
-  margin: auto 16px 16px auto;
-  padding: 0.4em 1.2em;
+  margin: auto 0 auto auto;
+  padding: 0.2em 1.2em;
   text-align: center;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 
 /**Theme */
@@ -212,6 +189,7 @@ a {
   #btn-cookie:active {
     background-color: var(--c1);
     box-shadow: none;
+    border: 1px solid var(--c0);
     color: var(--c8);
   }
   #btn-theme:hover {
@@ -294,10 +272,6 @@ a {
 body {
   background-color: var(--c0);
   font-family: Roboto;
-}
-
-small {
-  font-size: 0.8em;
 }
 
 /**Tools */

@@ -102,9 +102,7 @@ const navToAssets = () => { window.location.href = '/#assets' }
 
     document.body.classList.toggle('light-theme'),
     v = document.body.classList.contains('light-theme') ? 'light' : 'dark'
-
   ) : (
-
     document.body.classList.toggle('dark-theme'),
     v = document.body.classList.contains('dark-theme') ? 'dark' : 'light'
   )
