@@ -20,7 +20,10 @@ const populate_articleIndexData_Elem = (d, o, i) => {
   !d[i].sub ? o.sub.innerHTML = '' : o.sub.innerHTML = d[i].sub
   !d[i].des ? o.des.innerHTML = '' : o.des.innerHTML = d[i].des
   !d[i].dat ? o.dat.innerHTML = '' : o.dat.innerHTML = d[i].dat
-  !d[i].src ? o.src.href = '/404'  : o.src.href      = '/blog/' + d[i].src
+  !d[i].src ? o.src.href = '/404'  : o.src.href      =
+
+  '/article/' + d[i].src
+
   !d[i].tit ? o.tit.innerHTML = '' : o.tit.innerHTML =
 
   // 'Post #' + (i + 1) + ': ' + 
@@ -55,6 +58,6 @@ const render_articleIndexData = (d) => {
   }
 }
 
-fetch('/public/json/blog.json')
+fetch('/public/json/article.json')
 .then(o => o.json())
 .then(d => render_articleIndexData(d))
