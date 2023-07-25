@@ -106,7 +106,7 @@
     </style>
     <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script>
     <script defer src="/public/js/common.js"></script>
-    <script defer src="/public/js/siteUnderDev.js"></script>
+    <!-- <script defer src="/public/js/siteUnderDev.js"></script> -->
   </head>
   <body>
     <header>
@@ -195,10 +195,7 @@
 
       clearInputs.addEventListener('click', () => {
 
-        for (let i = 0; i < 10; i++) {
-
-          inputArr[i].value = ''
-        }
+        for (let i = 0; i < 10; i++) { inputArr[i].value = '' }
 
         nQualified.innerHTML = ''
 
@@ -217,18 +214,11 @@
         let isInpValArrEmpty = true
         let nHidden          = 0
 
-        for (let i = 0; i < 10; i++) {
-
-          inputValArr.push(inputArr[i].value)
-        }
+        for (let i = 0; i < 10; i++) { inputValArr.push(inputArr[i].value) }
 
         for (let i = 0; i < 10; i++) {
 
-          if (inputValArr[i] == '') {
-
-            isInpValArrEmpty = true
-
-          } else {
+          if (inputValArr[i] == '') { isInpValArrEmpty = true } else {
 
             isInpValArrEmpty = false
             break
@@ -256,12 +246,9 @@
             if (
 
               mosScore[i].mosAlt && (
-
               inputValArr[j] - mosScore[i].mosAlt[j] < 0
 
-              )
-
-            ) {
+              )) {
 
               isAltFail = true
               break
@@ -293,19 +280,16 @@
             - You qualify for ${mosScoreLen - nHidden} / 142 jobs.
           `
 
-          if (mosScoreLen - nHidden == 142) {
+        if (mosScoreLen - nHidden == 142) {
 
-            nQualified.innerHTML =
-            ' - Congratulations! You qualify for all Army jobs!'
-          }
+          nQualified.innerHTML =
+          ' - Congratulations! You qualify for all Army jobs!'
+        }
 
-          if (isInpValArrEmpty) nQualified.innerHTML = ''
+        if (isInpValArrEmpty) nQualified.innerHTML = ''
       }
 
-      for (let i = 0; i < 10; i++) {
-
-        inputArr[i].onkeyup = checkInput
-      }
+      for (let i = 0; i < 10; i++) { inputArr[i].onkeyup = checkInput }
 
       const create_ASVABvsMOSData = () => {
 
@@ -339,15 +323,13 @@
         !d[i].des ? o.des.innerHTML = '' : o.des.innerHTML =
           `
             <span class="d">Description</span>:
-            <span class="f">${d[i].des}</span>
+            <span>${d[i].des}</span>
           `
-
         !d[i].cut ? o.cut.innerHTML = '' : o.cut.innerHTML =
           `
             <small class="d">ASVAB Score</small>:
             <small>${d[i].cut}</small>
           `
-
         !d[i].src ? (
 
           o.url.innerHTML = '',
@@ -386,10 +368,7 @@
 
               mosScore.push({mosId, mosAsv, mosAlt})
 
-            } else {
-
-              mosScore.push({mosId, mosAsv})
-            }
+            } else { mosScore.push({mosId, mosAsv}) }
           }
 
           !e ? true : e.append(o.src)
