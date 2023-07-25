@@ -295,12 +295,7 @@ body {
   color: var(--c4);
 }
 
-.f {
-  font-family: "Times New Roman", Times, serif;
-}
-
 .h {
-  font-family: "Times New Roman", Times, serif;
   padding-top: 1em;
 }
 
@@ -313,7 +308,6 @@ body {
 }
 
 .p {
-  font-family: "Times New Roman", Times, serif;
   text-indent: 2em;
 }
 
