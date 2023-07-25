@@ -1,3 +1,7 @@
+/**[ GET ELEMENTS ] ---------------------------------------------------------*/
+
+const footer = document.querySelector('footer')
+
 /**[ CREATE ELEMENTS ] ------------------------------------------------------*/
 
 const cookie     = document.createElement('div'  )
@@ -85,7 +89,7 @@ const createCookie = () => {
 
   e.append(s, b)
 
-  document.querySelector('footer').append(e)
+  !footer ? true: footer.append(e)
 }
 
 const createTheme = () => {
@@ -98,7 +102,7 @@ const createTheme = () => {
 
   e.append(b)
 
-  document.querySelector('footer').append(e)
+  !footer ? true: footer.append(e)
 }
 
 const createScroll = () => {
@@ -107,7 +111,7 @@ const createScroll = () => {
 
   e.id = 'btn-scroll'
 
-  document.querySelector('footer').append(e)
+  !footer ? true: footer.append(e)
 }
 
 const navToAbout  = () => { window.location.href = '/#about'  }
