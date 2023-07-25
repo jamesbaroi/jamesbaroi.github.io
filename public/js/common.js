@@ -114,9 +114,6 @@ const createScroll = () => {
   !footer ? true: footer.append(e)
 }
 
-const navToAbout  = () => { window.location.href = '/#about'  }
-const navToAssets = () => { window.location.href = '/#assets' }
-
 /**[ IMPLEMENT ] ------------------------------------------------------------*/
 
 createScroll()
