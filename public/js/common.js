@@ -83,7 +83,10 @@ const createCookie = () => {
 
   s.innerHTML =
   `
-    Click "OK" to consent to the use of cookies and enable light mode.
+    <a class="c8 w" href="/policy/cookie-policy" target="_blank">Cookie Policy</a>
+    <span>
+      - Click "OK" to consent to the use of cookies and enable light mode.
+    </span>
   `
   b.innerHTML = 'OK'
 

@@ -82,6 +82,19 @@ a {
   word-break: break-all;
 }
 
+.a {
+  color: var(--c4);
+  cursor: pointer;
+  font-family: Roboto;
+  font-weight: bold;
+}
+
+.w {
+  display: inline-block;
+  text-indent: 0;
+  word-break: keep-all !important;
+}
+
 small {
   font-size: 0.8em;
 }
@@ -96,6 +109,22 @@ small {
 
 .pad {
   padding: 1em;
+}
+
+.c5 {
+  color: var(--c5);
+}
+
+.c6 {
+  color: var(--c6);
+}
+
+.c7 {
+  color: var(--c7);
+}
+
+.c8 {
+  color: var(--c8);
 }
 
 /**Cookie */
@@ -122,7 +151,7 @@ small {
   cursor: pointer;
   font-size: 14px;
   font-weight: bold;
-  margin: auto 0 auto auto;
+  margin: auto 0 auto 8px;
   padding: 0.2em 1.2em;
   text-align: center;
   -webkit-user-select: none;
@@ -275,13 +304,6 @@ body {
 }
 
 /**Tools */
-.a {
-  color: var(--c4);
-  cursor: pointer;
-  font-family: Roboto;
-  font-weight: bold;
-}
-
 .b {
   font-weight: bold;
 }
@@ -317,12 +339,6 @@ body {
 
 .u {
   text-decoration: underline;
-}
-
-.w {
-  display: inline-block;
-  text-indent: 0;
-  word-break: keep-all !important;
 }
 
 @media (hover: hover) {
