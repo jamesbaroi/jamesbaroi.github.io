@@ -1,21 +1,21 @@
 /**[ GET ELEMENTS ] ---------------------------------------------------------*/
 
-const footer = document.querySelector('footer')
+const footer      = document.querySelector('footer')
 
 /**[ CREATE ELEMENTS ] ------------------------------------------------------*/
 
-const cookie     = document.createElement('div'  )
-const cookie_des = document.createElement('small')
-const theme      = document.createElement('div'  )
+const cookie      = document.createElement('div'  )
+const cookie_des  = document.createElement('small')
+const theme       = document.createElement('div'  )
 
 /**Buttons */
-const btn_Cookie = document.createElement('div'  )
-const btn_Theme  = document.createElement('div'  )
-const btn_Scroll = document.createElement('div'  )
+const btn_Cookie  = document.createElement('div'  )
+const btn_Theme   = document.createElement('div'  )
+const btn_Scroll  = document.createElement('div'  )
 
 /**Site */
-const site_Pro   = 'https://www.jamesbaroi.com/'
-const site_Dev   = 'http://localhost:8080/'
+const site_Pro    = 'https://www.jamesbaroi.com/'
+const site_Dev    = 'http://localhost:8080/'
 
 /**[ SET ELEMENT ATTRIBUTES ] -----------------------------------------------*/
 
