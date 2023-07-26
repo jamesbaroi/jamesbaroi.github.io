@@ -66,7 +66,7 @@
         text-align: right;
         width: 4em;
       }
-      #clear-inputs {
+      #clear-input {
         background-color: var(--c0);
         border: 1px solid var(--c2);
         cursor: pointer;
@@ -92,12 +92,12 @@
         -webkit-appearance: none;
       }
       @media (hover: hover) {
-      #clear-inputs:hover {
+      #clear-input:hover {
         background-color: var(--c4);
         color: var(--c0);
         font-weight: bold;
       }
-      #clear-inputs:active {
+      #clear-input:active {
         background-color: var(--c1);
         color: var(--c2);
         font-weight: bold;
@@ -165,7 +165,7 @@
           Maintenance (MM), Operators and Food (OF), Surveillance and
           Communications (SC), Skilled Technical (ST)
         </small>
-        <div id="clear-inputs">Clear</div>
+        <div id="clear-input">Clear</div>
       </div>
       <div class="c">
         <small>
@@ -241,10 +241,10 @@
       const inputArr    = [ GT, CL, CO, EL, FA, GM, MM, OF, SC, ST ]
       const mosScore    = []
       const nQualified  = document.getElementById('num-qualified')
-      const clearInputs = document.getElementById('clear-inputs')
+      const clearInput  = document.getElementById('clear-input')
       const output      = document.getElementById('output')
 
-      clearInputs.addEventListener('click', () => {
+      clearInput.addEventListener('click', () => {
 
         for (let i = 0; i < 10; i++) { inputArr[i].value = '' }
 
