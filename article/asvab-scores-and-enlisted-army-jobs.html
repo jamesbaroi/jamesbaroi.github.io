@@ -242,6 +242,7 @@
       const mosScore    = []
       const nQualified  = document.getElementById('num-qualified')
       const clearInputs = document.getElementById('clear-inputs')
+      const output      = document.getElementById('output')
 
       clearInputs.addEventListener('click', () => {
 
@@ -395,9 +396,7 @@
 
       const render_ASVABvsMOSData = (d) => {
 
-        let e = document.getElementById('output')
-
-        e.innerHTML = ''
+        output.innerHTML = ''
 
         let dLen = d.length
 
@@ -421,7 +420,7 @@
             } else { mosScore.push({mosId, mosAsv}) }
           }
 
-          !e ? true : e.append(o.src)
+          !output ? true : output.append(o.src)
         }
       }
 
