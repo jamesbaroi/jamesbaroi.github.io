@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conway's Game | jamesbaroi.com</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/public/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/public/img/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/img/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/public/css/article.css">
+    <link rel="stylesheet" type="text/css" media="print" href="/public/css/print.css">
+    <style>
+      body {
+        background-color: var(--c11);
+        color: var(--c3);
+        display: grid;
+        font-family: monospace;
+        justify-content: center;
+        font-size: 16px;
+        max-width: none;
+        padding: 16px;
+      }
+
+      main {
+        display: grid;
+        gap: 16px;
+      }
+
+      #title-bar {
+        color: var(--c5);
+        font-size: 0.8em;
+        font-weight: 600;
+        grid-column: 1;
+        grid-row: 1;
+        text-align: center;
+      }
+
+      #grid-container {
+        background-color: var(--c1);
+        border: 0.1px solid var(--c2);
+        grid-column: 1;
+        grid-row: 2;
+        max-height: fit-content;
+        max-width: 100%;
+        padding: 16px;
+      }
+
+      #grid-container canvas {
+        display: block;
+        max-height: 89vh;
+        max-width: 100%;
+      }
+
+      #content {
+        grid-column: 1;
+        grid-row: 3;
+        margin: auto;
+        width: 100%;
+      }
+
+      #return { font-family: Roboto; }
+
+      @media only screen and (min-width: 1220px) {
+        #title-bar {
+          grid-column: 1 / 3;
+          grid-row: 1;
+        }
+        #grid-container {
+          grid-column: 2;
+          grid-row: 2;
+        }
+        #content {
+          grid-column: 1;
+          grid-row: 2;
+          margin: 0;
+        }
+      }
+
+      /**Output--------------------------------------------------------------*/
+      table, th, td {
+        border: 0.1px solid var(--c2);
+        border-collapse: collapse;
+      }
+
+      table {
+        font-size: 0.8em;
+        margin-bottom: 16px;
+        text-align: left;
+        width: 100%;
+      }
+
+      th, td { padding: 8px 10px; }
+      th { background-color: var(--c1); }
+      td { color: var(--c5); }
+      #count-container th { list-style-position: inside; }
+      #count-container td { text-align: center; }
+      #live-green-dot { color: var(--c5); }
+      #count-alive-out { font-size: 1.4em; }
+      #count-total-out { color: var(--c3); }
+
+      .divider {
+        color: var(--c3);
+        font-size: 0.8em;
+      }
+
+      #graph-container {
+        background-color: var(--c0);
+        border-left: 0.1px solid var(--c2);
+        border-bottom: 0.1px solid var(--c2);
+        color: var(--c3);
+        display: flex;
+        margin: 0;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        padding: 10px;
+      }
+
+      #graph-container canvas { margin: 0; }
+
+      #percent-live-out {
+        padding: 6px 0 0;
+        text-align: right;
+      }
+
+      /**Configuration-------------------------------------------------------*/
+      form {
+        border-left: 0.1px solid var(--c2);
+        border-right: 0.1px solid var(--c2);
+        border-bottom: 0.1px solid var(--c2);
+      }
+
+      legend {
+        background-color: var(--c1);
+        border-bottom: 0.1px solid var(--c2);
+        border-top: 0.1px solid var(--c2);
+        font-size: 0.8em;
+        padding: 8px 10px;
+      }
+
+      fieldset {
+        border: none;
+        padding: 10px;
+      }
+
+      .input {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: auto;
+      }
+
+      label {
+        border: none;
+        font-size: 0.8em;
+      }
+
+      .units {
+        border: none;
+        font-size: 0.8em;
+        padding: 0 10px;
+        text-align: right;
+      }
+
+      input {
+        background-color: var(--c1);
+        border: none;
+        color: var(--c3);
+        font-size: 0.8em;
+        margin: 0 0 10px;
+        padding: 4px 5px;
+        text-align: left;
+        width: 60px;
+      }
+
+      input::-webkit-inner-spin-button { margin-left: 10px; }
+
+      input[type=number] {
+        -webkit-appearance: textfield;
+          -moz-appearance: textfield;
+                appearance: textfield;
+      }
+
+      input[type=color]::-webkit-color-swatch-wrapper { padding: 0; }
+      input[type=color]::-webkit-color-swatch { border: none; }
+
+      input::-moz-color-swatch {
+        border: none;
+        border-color: transparent;
+        outline: none;
+      }
+
+      #px-color, #bg-color {
+        border: 0.1px solid var(--c2);
+        box-sizing: border-box;
+        height: 23px;
+        margin: 0 0 10px;
+        padding: 0;
+        width: 23px;
+      }
+
+      /**Buttons-------------------------------------------------------------*/
+      #btns {
+        display: flex;
+        gap: 10px;
+        justify-content: right;
+        padding: 8px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+      button, #reset {
+        background-color: var(--c0);
+        border-left: 0.1px solid var(--c3);
+        border-top: 0.1px solid var(--c3);
+        border-right: 0.1px solid var(--c1);
+        border-bottom: 0.1px solid var(--c1);
+        color: var(--c3);
+        cursor: pointer;
+        font-weight: 600;
+        height: 35px;
+        outline: none;
+        padding: 8px 10px 10px;
+        text-align: center;
+        width: 100px;
+      }
+
+      /**Hovers--------------------------------------------------------------*/
+      @media (hover: hover) {
+        button:hover, #reset:hover {
+          background-color: var(--c2);
+          border-left-color: var(--c3);
+          border-top-color: var(--c3);
+          border-bottom-color: var(--c1);
+          color: var(--c5);
+        }
+        button:active, #reset:active {
+          background-color: var(--c2);
+          border-left: none;
+          border-top-color: var(--c2);
+          border-bottom: none;
+          color: var(--c1);
+        }
+      }
+    </style>
+    <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script>
+    <script defer src="/public/js/common.js"></script>
+  </head>
+  <body>
+    <main>
+      <div id="title-bar">
+        <a
+          class="w"
+          href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
+          target="_blank">
+          <span>C o n w a y ' s &#160; G a m e</span>
+        </a>
+      </div>
+      <div id="grid-container"></div>
+      <div id="content">
+        <table>
+          <thead>
+            <tr>
+              <th>Frame</th>
+              <th>Rate</th>
+              <th>Elapsed</th>
+              <th>Latency</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="metrics-container">
+              <td id="frame-out"></td>
+              <td id="rate-out"></td>
+              <td id="elapsed-out"></td>
+              <td id="latency-out"></td>
+            </tr>
+          </tbody>
+        </table>
+        <table id="count-container">
+          <col style="width:25%">
+          <col style="width:75%">
+          <thead>
+            <tr>
+              <th>
+                <span id="live-green-dot">&#8226;</span>
+                <span>Live</span>
+              </th>
+              <th>Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div id="graph-container"></div>
+                <div id="percent-live-out"></div>
+              </td>
+              <td>
+                <span id="count-alive-out"></span>
+                <span class="divider">/</span>
+                <span id="count-total-out"></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <form id="config" name="config">
+          <legend>Configure</legend>
+          <fieldset>
+            <div class="input">
+              <label for="chance">Maximum Seed Probability</label>
+              <span>
+                <span class="units">%</span>
+                <input id="chance"
+                name="chance"
+                type="number"
+                min="0"
+                max="100"
+                step="1"
+                value="50">
+              </span>
+            </div>
+            <div class="input">
+              <label for="interval">Frame Interval</label>
+              <span>
+                <span class="units">ms</span>
+                <input id="interval"
+                name="interval"
+                type="number"
+                min="1"
+                step="1"
+                value="80">
+              </span>
+            </div>
+            <div class="input">
+              <label for="grid-y">Grid X Width</label>
+              <span>
+                <input id="grid-y"
+                name="grid-y"
+                type="number"
+                min="10"
+                max="200"
+                step="10"
+                value="200">
+              </span>
+            </div>
+            <div class="input">
+              <label for="grid-x">Grid Y Height</label>
+              <span>
+                <input id="grid-x"
+                name="grid-x"
+                type="number"
+                min="10"
+                max="200"
+                step="10"
+                value="200">
+              </span>
+            </div>
+          </fieldset>
+          <legend>Rule</legend>
+          <fieldset>
+            <div class="input">
+              <label for="rule2">Bring to life if neighbors =</label>
+              <span>
+                <input id="rule2"
+                name="rule2"
+                type="number"
+                min="0"
+                max="9"
+                step="1"
+                value="3">
+              </span>
+            </div>
+            <div class="input">
+              <label for="rule1">Do nothing if neighbors =</label>
+              <span>
+                <input id="rule1"
+                name="rule1"
+                type="number"
+                min="0"
+                max="9"
+                step="1"
+                value="2">
+              </span>
+            </div>
+          </fieldset>
+          <legend>Style</legend>
+          <fieldset>
+            <div class="input">
+              <label for="px-color">Color</label>
+              <input id="px-color"
+              name="px-color"
+              type="color"
+              value="#557AAA">
+            </div>
+            <div class="input">
+              <label for="bg-color">Background</label>
+              <input id="bg-color"
+              name="bg-color"
+              type="color"
+              value="#0a0b0c">
+            </div>
+          </fieldset>
+          <div id="btns">
+            <button id="reset" type="reset" value="Reset">Reset</button>
+            <button type="button" id="reload-btn" onclick="area.reload()">
+              Restart
+            </button>
+            <button type="button" id="pause-btn" onclick="area.pause()">
+              Pause
+            </button>
+            <button type="button" id="resume-btn" onclick="area.resume()">
+              Resume
+            </button>
+          </div>
+        </form>
+        <div class="c">
+          <small>Enable cookies to view control buttons.</small>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="return" class="a c c5 pad"><a href="/">Return</a></div>
+    </footer>
+    <script>
+      /**Get elements------------------------------------------------------- */
+
+      /**Get containers */
+      const contGrid = document.getElementById('grid-container')
+      const contGraph = document.getElementById('graph-container')
+      const contMetrics = document.getElementById('metrics-container')
+
+      /**Get output */
+      const outFrame = document.getElementById('frame-out')
+      const outRate = document.getElementById('rate-out')
+      const outElapsed = document.getElementById('elapsed-out')
+      const outLatency = document.getElementById('latency-out')
+      const outCountAlive = document.getElementById('count-alive-out')
+      const outCountTotal = document.getElementById('count-total-out')
+      const outPercentAlive = document.getElementById('percent-live-out')
+
+      /**Get configuration */
+      const cfgForm = document.getElementById('config')
+      const cfgChance = document.getElementById('chance')
+      const cfgInterval = document.getElementById('interval')
+      const cfgGridX = document.getElementById('grid-x')
+      const cfgGridY = document.getElementById('grid-y')
+      const cfgPxColor = document.getElementById('px-color')
+      const cfgBgColor = document.getElementById('bg-color')
+      const cfgRule1 = document.getElementById('rule1')
+      const cfgRule2 = document.getElementById('rule2')
+
+      /**Get buttons */
+      const btns = document.getElementById('btns')
+      const btnPause = document.getElementById('pause-btn')
+      const btnResume = document.getElementById('resume-btn')
+      const btnReload = document.getElementById('reload-btn')
+
+      /**Miscellaneous */
+      const greenDot = document.getElementById('live-green-dot')
+
+      /**Create variables--------------------------------------------------- */
+
+      /**Create configs */
+      var interval = 80 /**Set frame interval in milliseconds */
+      var chance = 0.5 /**Set max seed probability */
+
+      /**Set colors */
+      var pxColor = '#557AAA'
+      var bgColor = 'rgb(10, 11, 12)'
+
+      /**Set grid dimensions */
+      var gridRows = 200
+      var gridCols = 200
+
+      /**Set rules */
+      var rule1 = 2
+      var rule2 = 3
+
+      /**Create timestamps */
+      var ts
+      var tsPause
+      var tsResume
+
+      /**Set cell count */
+      var graphX = 0 /**Set x-var count beyond graph window */
+      var numLive = 0 /**Set live cell count */
+
+      /**Create empty arrays */
+      var cells = [] /**Create array to contain cells */
+      var xy = [] /**Create array to contain xy-coordinates */
+
+      /**Create objects----------------------------------------------------- */
+      var area = {
+
+        /**Create canvas areas */
+        grid: document.createElement('canvas'),
+        graph: document.createElement('canvas'),
+
+        start() {
+
+          /**Push canvas node */
+          contGrid.insertBefore(this.grid, contGrid.childNodes[0])
+
+          /**Get 2d context */
+          this.context = this.grid.getContext('2d')
+
+          /**Set display view */
+          this.grid.width = 2000
+          this.grid.height = 2000
+
+          /**Create grid dimensions */
+          this.cols = gridCols
+          this.rows = gridRows
+          this.matrix = this.cols * this.rows
+          this.normalizer = 100 / this.matrix
+
+          /**Create metrics */
+          this.frame = 0
+          this.ticker = 0
+          this.elapsed = new Date().getTime() - ts
+          this.latency = 0
+
+          /**Set game loop */
+          this.gameInterval = setInterval(loop, interval)
+        },
+
+        pause() {
+
+          tsPause = new Date().getTime()
+
+          /**Stop game loop */
+          clearInterval(this.gameInterval)
+
+          /**Load DOM elements */
+          btnPause.remove()
+          btnReload.remove()
+          btns.append(btnResume)
+          greenDot.style.color = '#5F6368'
+        },
+
+        resume() {
+
+          tsResume = new Date().getTime()
+
+          /**Adjust timestamp */
+          ts = ts + (tsResume - tsPause)
+
+          /**Reset game loop */
+          this.gameInterval = setInterval(loop, interval)
+
+          /**Load DOM elements */
+          outLatency.remove()
+          btnResume.remove()
+          btns.append(btnReload)
+          btns.append(btnPause)
+          greenDot.style.color = 'skyblue'
+        },
+
+        reload() {
+
+          /**Set configs */
+          interval = Number(cfgInterval.value)
+          chance = Number(cfgChance.value/100)
+          gridCols = Number(cfgGridY.value)
+          gridRows = Number(cfgGridX.value)
+          rule1 = Number(cfgRule1.value)
+          rule2 = Number(cfgRule2.value)
+          pxColor = cfgPxColor.value
+          bgColor = cfgBgColor.value
+
+          /**Reset properties */
+          this.ticker = 0
+          this.frame = 0
+          this.cols = gridCols
+          this.rows = gridRows
+          this.matrix = this.cols * this.rows
+          this.normalizer = 100 / this.matrix
+
+          /**Reset plot */
+          graphX = 0
+          xy = []
+
+          /**Clear and redraw */
+          for (let i = 0; i < cells.length; i++) {
+
+            cells[i].erase()
+            cells.splice(0)
+          }
+
+          clearInterval(this.gameInterval)
+          grid()
+          cEnv()
+
+          for (let i = 0; i < cells.length; i++) {
+
+            cells[i].draw()
+          }
+
+          /**Reset game loop */
+          this.gameInterval = setInterval(loop, interval)
+
+          /**Output latency in case pause remove applied */
+          contMetrics.append(outLatency)
+
+          ts = new Date().getTime()
+        },
+
+        plot() {
+          /**Set graph bgColor */
+          contGraph.style.backgroundColor = bgColor
+
+          /**Push canvas node */
+          contGraph.insertBefore(this.graph, contGraph.childNodes[0])
+
+          /**Get 2d context */
+          this.context.graph = this.graph.getContext('2d')
+
+          /**Set display view */
+          this.graph.height = 100
+          this.graph.width = 100
+
+          /**Transform origin to bottom left corner */
+          this.context.graph.transform(1, 0, 0, -1, 0, this.graph.height)
+        }
+      }
+
+      /** Create classes---------------------------------------------------- */
+      class Cell {
+
+        /**Set dimensions */
+        static width = 10
+        static height = 10
+
+        constructor(x, y) {
+
+          /**Set context to area */
+          this.context = area.context
+          this.x = x
+          this.y = y
+          this.live = Math.floor(Math.random() < chance)
+        }
+
+        draw() {
+
+          this.context.fillStyle = this.live ? pxColor : bgColor
+          this.context.fillRect(
+            this.x * Cell.width,
+            this.y * Cell.height,
+            Cell.width,
+            Cell.height
+          );
+        }
+
+        erase() {
+
+          area.context.clearRect(0, 0, area.grid.width, area.grid.height)
+        }
+      }
+
+      /** Create functions-------------------------------------------------- */
+
+      /**Create grid cells */
+      function grid() {
+        for (let y = 0; y < area.rows; y++) {
+
+          for (let x = 0; x < area.cols; x++) {
+
+            cells.push(new Cell(x, y))
+          }
+        }
+      }
+
+      /**Check cell environment */
+      function cEnv() {
+
+        for (let x = 0; x < area.cols; x++) {
+
+          for (let y = 0; y < area.rows; y++) {
+
+            /**Count live neighbors */
+            let n =
+              cLivz(x - 1, y - 1) +
+              cLivz(x, y - 1) +
+              cLivz(x + 1, y - 1) +
+              cLivz(x - 1, y) +
+              cLivz(x + 1, y) +
+              cLivz(x - 1, y + 1) +
+              cLivz(x, y + 1) +
+              cLivz(x + 1, y + 1)
+
+            /**Apply Conway's rules */
+            if (n == rule1) {
+
+              cells[cToA(x, y)].is = cells[cToA(x, y)].live
+            }
+
+            else if (n == rule2) {
+
+              cells[cToA(x, y)].is = true
+            }
+
+            else {
+
+              cells[cToA(x, y)].is = false
+            }
+          }
+        }
+
+        /**Load live cells */
+        for (let i = 0; i < cells.length; i++) {
+
+          cells[i].live = cells[i].is
+        }
+      }
+
+      /**Check cell lives */
+      function cLivz(x, y) {
+
+        if (x < 0 || x >= area.cols || y < 0 || y >= area.rows) {
+
+          return false
+        }
+
+        return cells[cToA(x, y)].live ? 1 : 0
+      }
+
+      /**Map cell to area */
+      function cToA(x, y) {
+
+        return x + (y * area.cols)
+      }
+
+      /** Create game------------------------------------------------------- */
+      function game() {
+
+        ts = new Date().getTime()
+        area.start()
+        area.plot()
+        grid()
+        cEnv()
+
+        for (let i = 0; i < cells.length; i++) {
+
+          cells[i].draw()
+        }
+      }
+
+      /** Create loop------------------------------------------------------- */
+      window.requestAnimationFrame(() => loop())
+
+      function loop() {
+
+        cEnv()
+
+        for (let i = 0; i < cells.length; i++) {
+
+          cells[i].draw()
+
+          if (cLivz(cells[i].x, cells[i].y)) {
+
+            /**Count live cells */
+            numLive++
+          }
+        }
+
+        /**Count or calculate metrics */
+        area.frame++
+        area.ticker += interval
+        area.elapsed = (new Date().getTime() - ts) / 1000
+        area.latency = (area.elapsed * 1000) - area.ticker
+
+        /**Push live cell count to plot */
+        xy.push({ x: area.frame, y: numLive })
+        area.plot()
+
+        /**Create trigger to loop each per frame (not all at once) */
+        let trigger = false;
+
+        for (let i = 0; i < xy.length; i++) {
+
+          /**Adjust for plotting */
+          let x = xy[i].x - graphX
+          let y = xy[i].y * area.normalizer
+          let dx = xy[i].x - area.graph.width
+
+          /**Count x-overflow and shift plot per count */
+          if (dx > 0 && !trigger) {
+
+            xy.shift()
+            graphX++
+            trigger = true
+          }
+
+          /**Render plot */
+          area.context.graph.fillStyle = pxColor
+          area.context.graph.fillRect(x, 0, 1, y * (area.graph.height / 100))
+        }
+
+        /**Render output */
+        outFrame.innerHTML = `# ${area.frame}`
+        outRate.innerHTML = `${(area.frame/(area.elapsed)).toFixed(2)} fps`
+        outElapsed.innerHTML = `${area.elapsed.toFixed(2)} s`
+        outLatency.innerHTML = `${area.latency.toFixed(0)} ms`
+        outCountAlive.innerHTML = `${numLive}`
+        outCountTotal.innerHTML = `${area.matrix}`
+        outPercentAlive.innerHTML = `${(numLive * area.normalizer).toFixed(2)} %`
+
+        /**Reset live cell count */
+        numLive = 0
+      }
+
+      /** Start------------------------------------------------------------- */
+      window.onload = game()
+      btnResume.remove()
+    </script>
+  </body>
+</html>
