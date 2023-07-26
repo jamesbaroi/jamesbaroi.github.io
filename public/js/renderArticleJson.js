@@ -26,8 +26,7 @@ const populate_articleIndexData_Elem = (d, o, i) => {
 
   !d[i].tit ? o.tit.innerHTML = '' : o.tit.innerHTML =
 
-  'Post #' + (i + 1) + ': ' + 
-  d[i].tit
+  'Post #' + (i + 1) + ': ' + d[i].tit
 
   o.sec.append(o.tit, o.sub, o.des, o.dat)
   o.src.append(o.sec)
