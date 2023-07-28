@@ -145,29 +145,42 @@ small {
   border: 1px solid var(--c2);
   color: var(--c3);
   font-family: Roboto;
-  padding: 2em;
+  line-height: 32px !important;
+  padding: 32px !important;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 99;
 }
+#cookie a, #cookie div {
+  height: -moz-fit-content;
+  height: fit-content;
+  line-height: 32px !important;
+}
 
 #cookie-header {
-  font-size: 1.4em;
+  font-size: 24px !important;
+  line-height: 32px !important;
+}
+
+#cookie-body {
+  font-size: 16px !important;
+  line-height: 32px !important;
 }
 
 #btn-cookie {
   background-color: var(--c0);
+  border: 1px solid var(--c2);
   box-shadow: 1px 1px 20px var(--c0);
   box-sizing: border-box;
-  border: 1px solid var(--c2);
   color: var(--c8);
   cursor: pointer;
-  font-size: 14px;
+  font-size: 14px !important;
   font-weight: bold;
-  margin: 1em 0 auto auto;
-  padding: 0.4em 1.2em;
+  line-height: 32px !important;
+  margin: 16px 0 auto auto;
+  padding: 4px 16px;
   text-align: center;
   -webkit-user-select: none;
      -moz-user-select: none;

@@ -4,14 +4,14 @@ const footer      = document.querySelector('footer')
 
 /**[ CREATE ELEMENTS ] ------------------------------------------------------*/
 
-const cookie      = document.createElement('div'  )
-const cookie_des  = document.createElement('small')
-const theme       = document.createElement('div'  )
+const cookie      = document.createElement('div'   )
+const cookie_body = document.createElement('div'   )
+const theme       = document.createElement('div'   )
 
 /**Buttons */
-const btn_Cookie  = document.createElement('div'  )
-const btn_Theme   = document.createElement('div'  )
-const btn_Scroll  = document.createElement('div'  )
+const btn_Cookie  = document.createElement('div'   )
+const btn_Theme   = document.createElement('div'   )
+const btn_Scroll  = document.createElement('div'   )
 
 /**Site */
 const site_Pro    = 'https://www.jamesbaroi.com/'
@@ -76,24 +76,24 @@ const createCookie = () => {
 
   let e = cookie
   let b = btn_Cookie
-  let s = cookie_des
+  let d = cookie_body
 
   e.id = 'cookie'
   b.id = 'btn-cookie'
 
-  s.innerHTML =
+  d.innerHTML =
   `
     <a class="c8 w" href="/policy/cookie-policy" target="_blank">
       <div id="cookie-header">Cookie Policy</div>
     </a>
-    <div class="cookie-body">
+    <div id="cookie-body">
       Click "OK" to consent to the use of cookies and enable light mode. Click
       "Cookie Policy" above to learn more.
     </div>
   `
   b.innerHTML = 'OK'
 
-  e.append(s, b)
+  e.append(d, b)
 
   !footer ? true: footer.append(e)
 }
