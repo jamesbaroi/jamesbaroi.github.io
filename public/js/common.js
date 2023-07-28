@@ -160,7 +160,7 @@ createCookie()
   setCookie('theme', v, 365)
 })
 
-!btn_Cookie ? console.log('no btn') : btn_Cookie.addEventListener('click', () => {
+!btn_Cookie ? true : btn_Cookie.addEventListener('click', () => {
 
   setCookie('cookie', 'true', 365)
 
