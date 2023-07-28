@@ -58,7 +58,7 @@ const getCookie = (cname) => {
 
 const checkCookie = (cname) => {
 
-  return getCookie(cname) != '' ?  getCookie(cname) : false
+  return getCookie(cname) != '' ? getCookie(cname) : false
 }
 
 const runGtag = () => {
