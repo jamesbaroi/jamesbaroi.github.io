@@ -2,7 +2,7 @@ body.dark-theme {
   --c0: rgb(22, 23, 26);
   --c1: rgb(10, 11, 12);
   --c2: rgb(52, 53, 56);
-  --c3: rgb(170, 175, 190);
+  --c3: rgb(170, 175, 195);
   --c4: yellowgreen;
   --c5: skyblue;
   --c6: goldenrod;
@@ -14,10 +14,10 @@ body.dark-theme {
 }
 
 body {
-  --c0: rgb(220, 220, 220);
+  --c0: white;
   --c1: rgb(200, 201, 202);
   --c2: rgb(82, 83, 86);
-  --c3: rgb(66, 67, 68);
+  --c3: rgb(66, 67, 78);
   --c4: maroon;
   --c5: navy;
   --c6: darkgreen;
@@ -33,7 +33,7 @@ body {
     --c0: rgb(22, 23, 26);
     --c1: rgb(10, 11, 12);
     --c2: rgb(52, 53, 56);
-    --c3: rgb(170, 175, 190);
+    --c3: rgb(170, 175, 195);
     --c4: yellowgreen;
     --c5: skyblue;
     --c6: goldenrod;
@@ -44,10 +44,10 @@ body {
     --c11: rgb(16, 17, 18);
   }
   body.light-theme {
-    --c0: rgb(220, 220, 220);
+    --c0: white;
     --c1: rgb(200, 201, 202);
     --c2: rgb(82, 83, 86);
-    --c3: rgb(66, 67, 68);
+    --c3: rgb(66, 67, 78);
     --c4: maroon;
     --c5: navy;
     --c6: darkgreen;
@@ -336,7 +336,6 @@ header, footer, #blog, #about, #assets, #posts {
 }
 
 nav {
-  background-color: var(--c1);
   display: grid;
   gap: 1em;
   grid-template-columns: 1fr 1fr;
