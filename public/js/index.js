@@ -90,11 +90,15 @@ const showAssetsJS = () => {
 const showAssetsJSON = () => {
   asset_JSON.style.display            != 'none' ? (
     asset_JSON.style.display           = 'none',
+    !btn_JSON ? true :
+    btn_JSON.style.borderBottom        = '1px solid var(--c2)',
     document.body.scrollTop            = 0,
     document.documentElement.scrollTop = 0
   ) : (
     asset_JSON.style.display           = 'block',
     asset_JS.style.display             = 'none',
+    !btn_JSON ? true :
+    btn_JSON.style.borderBottom        = 'none',
     assets.scrollIntoView()
   )
 }

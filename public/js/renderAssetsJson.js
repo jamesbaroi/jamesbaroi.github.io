@@ -6,7 +6,7 @@ const create_SiteIndexData_Elem = () => {
   let des = document.createElement('div')
   let url = document.createElement('div')
 
-  con.setAttribute('class', 'asset section')
+  con.setAttribute('class', 'asset')
   tit.setAttribute('class', 'title'        )
   des.setAttribute('class', 'description'  )
   url.setAttribute('class', 'url'          )

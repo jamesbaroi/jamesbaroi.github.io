@@ -335,11 +335,21 @@ small {
     font-size: 18px;
   }
 }
-header, footer, #blog, #about, #assets, #posts {
+header, footer, #about {
   background-color: var(--c0);
   border: 1px solid var(--c2);
   box-sizing: border-box;
   margin: 0 0 1em;
+}
+
+#posts, #blog, #assets {
+  background-color: var(--c1);
+  margin-bottom: 1em;
+}
+#posts h1, #blog h1, #assets h1 {
+  border-left: 1px solid var(--c2);
+  border-right: 1px solid var(--c2);
+  border-top: 1px solid var(--c2);
 }
 
 nav {
@@ -356,6 +366,7 @@ nav {
 }
 
 article {
+  margin-bottom: 1em;
   word-break: keep-all;
 }
 
@@ -381,10 +392,35 @@ h3 {
 }
 
 .section {
-  border-top: 1px dashed var(--c2);
+  border-top: 1px solid var(--c2);
 }
 
-.blog, .asset {
+#btn-js, #btn-json {
+  background-color: var(--c0);
+  border-left: 1px solid var(--c2);
+  border-right: 1px solid var(--c2);
+}
+
+#btn-json {
+  border-bottom: 1px solid var(--c2);
+}
+
+.asset {
+  background-color: var(--c0);
+  border: 1px solid var(--c2);
+  padding: 1em;
+  transition: 0.2s;
+}
+
+#js div, #json div {
+  margin-bottom: 1em;
+}
+
+.blog {
+  background-color: var(--c0);
+  border-bottom: 1px solid var(--c2);
+  border-left: 1px solid var(--c2);
+  border-right: 1px solid var(--c2);
   padding: 1em;
   transition: 0.2s;
 }
@@ -426,20 +462,20 @@ h3 {
   .blog:active .date {
     color: var(--c2);
   }
-  .asset:hover {
+  .asset:hover, #btn-js:hover, #btn-json:hover {
     background-color: var(--c4);
     color: var(--c1);
     /**Override inline style */
   }
-  .asset:hover div {
+  .asset:hover div, #btn-js:hover div, #btn-json:hover div {
     color: var(--c1) !important;
   }
-  .asset:active {
+  .asset:active, #btn-js:active, #btn-json:active {
     background-color: var(--c1);
     color: var(--c2);
     /**Override inline style */
   }
-  .asset:active div {
+  .asset:active div, #btn-js:active div, #btn-json:active div {
     color: var(--c2) !important;
   }
 }/*# sourceMappingURL=index.css.map */
