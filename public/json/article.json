@@ -12,5 +12,12 @@
     "des": "Cellular automaton. Try out different configurations and appreciate beautiful mathematics.",
     "dat": "2023-07-26",
     "src": "conways-game"
+  },
+  {
+    "tit": "Periodic Table ( App )",
+    "sub": "The Periodic Table of the Chemical Elements",
+    "des": "A simple, responsive, periodic table for desktop and mobile.",
+    "dat": "2023-07-28",
+    "src": "periodic-table"
   }
 ]

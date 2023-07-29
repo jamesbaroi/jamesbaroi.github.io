@@ -11,6 +11,8 @@ body.dark-theme {
   --c9: rgb(220, 225, 230);
   --c10: rgb(16, 17, 18);
   --c11: rgb(16, 17, 18);
+  --c12: rgb(10, 11, 12);
+  --c13: red;
 }
 
 body {
@@ -26,6 +28,8 @@ body {
   --c9: rgb(16, 17, 18);
   --c10: rgb(180, 182, 185);
   --c11: rgb(210, 210, 210);
+  --c12: rgb(20, 125, 210);
+  --c13: maroon;
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -42,6 +46,8 @@ body {
     --c9: rgb(220, 225, 230);
     --c10: rgb(16, 17, 18);
     --c11: rgb(16, 17, 18);
+    --c12: rgb(10, 11, 12);
+    --c13: red;
   }
   body.light-theme {
     --c0: white;
@@ -56,6 +62,8 @@ body {
     --c9: rgb(16, 17, 18);
     --c10: rgb(180, 182, 185);
     --c11: rgb(210, 210, 210);
+    --c12: rgb(20, 125, 210);
+    --c13: maroon;
   }
 }
 * {
@@ -261,7 +269,6 @@ small {
     background: var(--c4);
   }
 }
-/**RWD */
 @media only screen and (min-width: 656px) {
   body {
     padding: 16px;

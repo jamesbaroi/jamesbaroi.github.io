@@ -11,6 +11,11 @@
       "tit": "U.S. Army Enlisted Jobs",
       "des": "Array of U.S. Army enlisted Military Occupational Specialties (MOS) with description, Armed Services Vocational Aptitude Battery (ASVAB) composite (line) scores, and source of information. Note: ASVAB scores are contained in the \"asv\" array in the following order of line scores: [ GT, CL, CO, EL, FA, GM, MM, OF, SC, ST ]. Alternate scores for MOS with alternate score qualifications are contained in the \"alt\" array in the same order of line scores. The list is current as of 2023-07-20.",
       "url": "https://jamesbaroi.github.io/public/json/us-army-enlisted-mos.json"
+    },
+    {
+      "tit": "Chemical Elements",
+      "des": "Array of the chemical elements with corresponding information.",
+      "url": "https://jamesbaroi.github.io/public/json/chemical-elements.json"
     }
   ]
 }
