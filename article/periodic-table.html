@@ -60,6 +60,7 @@
       }
 
       #return {
+        font-size: 16px;
         margin: auto;
         width: fit-content;
       }
@@ -69,15 +70,13 @@
       }
 
       #elements {
-        background-color: var(--c0);
         display: grid;
-        grid-template-columns: repeat(9, 1fr);
-        height: 180vw;
-        margin: 0 auto;
-        max-height: none;
-        max-width: none;
-        overflow-y: auto;
-        padding: 16px 0;
+        grid-template-columns: repeat(18, 1fr);
+        height: 50vw;
+        margin: auto;
+        max-height: 600px;
+        max-width: 1200px;
+        padding: 32px;
         width: calc(100vw - (100vw - 100%) - 64px);
       }
 
@@ -88,8 +87,11 @@
         max-width: calc(100vw - (100vw - 100%));
       }
 
+      .flex-head,
       .flex {
         display: flex;
+        gap: 8px;
+        justify-content: space-between;
         max-width: calc(100vw - (100vw - 100%));
       }
 
@@ -104,7 +106,7 @@
 
       .number {
         color: var(--c9);
-        display: none;
+        display: block;
         font-size: 0.8em;
       }
 
@@ -114,13 +116,13 @@
 
       .name {
         color: var(--c6);
-        display: none;
+        display: block;
         font-size: 10px;
       }
 
       .weight {
         color: var(--c3)!important;
-        display: none;
+        display: block;
         font-size: 0.8em;
       }
 
@@ -132,101 +134,116 @@
         color: var(--c5)!important;
       }
 
-      @media screen and (min-width: 330px) {
+      @media screen and (max-width: 330px) {
         #elements {
-          max-height: none;
+          height: auto;
         }
       }
 
-      @media screen and (min-width: 632px) {
+      @media screen and (max-width: 632px) {
         #elements {
-          grid-template-columns: repeat(18, 1fr);
-          height: 50vw;
-          max-height: 600px;
-          max-width: 1200px;
-          padding: 32px;
+          background-color: var(--c0);
+          grid-template-columns: repeat(9, 1fr);
+          height: 180vw;
+          margin: 0 auto;
+          max-height: none;
+          max-width: none;
+          overflow-y: auto;
+          padding: 16px 0;
           width: calc(100vw - (100vw - 100%) - 64px);
         }
         .number {
-          display: block;
+          display: none;
+        }
+        .flex-head {
+          display: grid;
+          grid-template-columns: auto auto;
+          gap: 8px;
+          justify-content: space-between;
+          max-width: calc(100vw - (100vw - 100%));
         }
       }
 
-      .H, .Li, .Na, .K, .Rb, .Cs, .Fr {grid-row: 1;}
-      .Be, .Mg, .Ca, .Sr, .Ba, .Ra {grid-row: 2;}
-      .Sc, .Y, .La, .Ac, .Ce, .Th {grid-row: 3;}
-      .Ti, .Zr, .Hf, .Rf, .Pr, .Pa {grid-row: 4;}
-      .V, .Nb, .Ta, .Db, .Nd, .U {grid-row: 5;}
-      .Cr, .Mo, .W, .Sg, .Pm, .Np {grid-row: 6;}
-      .Mn, .Tc, .Re, .Bh, .Sm, .Pu {grid-row: 7;}
-      .Fe, .Ru, .Os, .Hs, .Eu, .Am {grid-row: 8;}
-      .Co, .Rh, .Ir, .Mt, .Gd, .Cm {grid-row: 9;}
-      .Ni, .Pd, .Pt, .Ds, .Tb, .Bk {grid-row: 10;}
-      .Cu, .Ag, .Au, .Rg, .Dy, .Cf {grid-row: 11;}
-      .Zn, .Cd, .Hg, .Cn, .Ho, .Es {grid-row: 12;}
-      .B, .Al, .Ga, .In, .Tl, .Nh, .Er, .Fm {grid-row: 13;}
-      .C, .Si, .Ge, .Sn, .Pb, .Fl, .Tm, .Md {grid-row: 14;}
-      .N, .P, .As, .Sb, .Bi, .Mc, .Yb, .No {grid-row: 15;}
-      .O, .S, .Se, .Te, .Po, .Lv, .Lu, .Lr {grid-row: 16;}
-      .F, .Cl, .Br, .I, .At, .Ts {grid-row: 17;}
-      .He, .Ne, .Ar, .Kr, .Xe, .Rn, .Og {grid-row: 18;}
+      .H, .Li, .Na, .K, .Rb, .Cs, .Fr {grid-column: 1;}
+      .Be, .Mg, .Ca, .Sr, .Ba, .Ra {grid-column: 2;}
+      .Sc, .Y, .La, .Ac, .Ce, .Th {grid-column: 3;}
+      .Ti, .Zr, .Hf, .Rf, .Pr, .Pa {grid-column: 4;}
+      .V, .Nb, .Ta, .Db, .Nd, .U {grid-column: 5;}
+      .Cr, .Mo, .W, .Sg, .Pm, .Np {grid-column: 6;}
+      .Mn, .Tc, .Re, .Bh, .Sm, .Pu {grid-column: 7;}
+      .Fe, .Ru, .Os, .Hs, .Eu, .Am {grid-column: 8;}
+      .Co, .Rh, .Ir, .Mt, .Gd, .Cm {grid-column: 9;}
+      .Ni, .Pd, .Pt, .Ds, .Tb, .Bk {grid-column: 10;}
+      .Cu, .Ag, .Au, .Rg, .Dy, .Cf {grid-column: 11;}
+      .Zn, .Cd, .Hg, .Cn, .Ho, .Es {grid-column: 12;}
+      .B, .Al, .Ga, .In, .Tl, .Nh, .Er, .Fm {grid-column: 13;}
+      .C, .Si, .Ge, .Sn, .Pb, .Fl, .Tm, .Md {grid-column: 14;}
+      .N, .P, .As, .Sb, .Bi, .Mc, .Yb, .No {grid-column: 15;}
+      .O, .S, .Se, .Te, .Po, .Lv, .Lu, .Lr {grid-column: 16;}
+      .F, .Cl, .Br, .I, .At, .Ts {grid-column: 17;}
+      .He, .Ne, .Ar, .Kr, .Xe, .Rn, .Og {grid-column: 18;}
 
-      .H, .He {grid-column: 9;}
-      .Li, .Be, .B, .C, .N, .O, .F, .Ne {grid-column: 8;}
-      .Na, .Mg, .Al, .Si, .P, .S, .Cl, .Ar {grid-column: 7;}
+      .H, .He {grid-row: 1;}
+      .Li, .Be, .B, .C, .N, .O, .F, .Ne {grid-row: 2;}
+      .Na, .Mg, .Al, .Si, .P, .S, .Cl, .Ar {grid-row: 3;}
       .K, .Ca, .Sc, .Ti, .V, .Cr, .Mn, .Fe, .Co,
-      .Ni, .Cu, .Zn, .Ga, .Ge, .As, .Se, .Br, .Kr {grid-column: 6;}
+      .Ni, .Cu, .Zn, .Ga, .Ge, .As, .Se, .Br, .Kr {grid-row: 4;}
       .Rb, .Sr, .Y, .Zr, .Nb, .Mo, .Tc, .Ru, .Rh,
-      .Pd, .Ag, .Cd, .In, .Sn, .Sb, .Te, .I, .Xe {grid-column: 5;}
+      .Pd, .Ag, .Cd, .In, .Sn, .Sb, .Te, .I, .Xe {grid-row: 5;}
       .Cs, .Ba, .La, .Hf, .Ta, .W, .Re, .Os, .Ir,
-      .Pt, .Au, .Hg, .Tl, .Pb, .Bi, .Po, .At, .Rn {grid-column: 4;}
+      .Pt, .Au, .Hg, .Tl, .Pb, .Bi, .Po, .At, .Rn {grid-row: 6;}
       .Fr, .Ra, .Ac, .Rf, .Db, .Sg, .Bh, .Hs, .Mt,
-      .Ds, .Rg, .Cn, .Nh, .Fl, .Mc, .Lv, .Ts, .Og {grid-column: 3;}
+      .Ds, .Rg, .Cn, .Nh, .Fl, .Mc, .Lv, .Ts, .Og {grid-row: 7;}
       .Ce, .Pr, .Nd, .Pm, .Sm, .Eu, .Gd,
-      .Tb, .Dy, .Ho, .Er, .Tm, .Yb, .Lu {grid-column: 2;}
+      .Tb, .Dy, .Ho, .Er, .Tm, .Yb, .Lu {grid-row: 8;}
       .Th, .Pa, .U, .Np, .Pu, .Am, .Cm,
-      .Bk, .Cf, .Es, .Fm, .Md, .No, .Lr {grid-column: 1;}
+      .Bk, .Cf, .Es, .Fm, .Md, .No, .Lr {grid-row: 9;}
 
-      @media screen and (min-width: 632px) {
-        .H, .Li, .Na, .K, .Rb, .Cs, .Fr {grid-column: 1;}
-        .Be, .Mg, .Ca, .Sr, .Ba, .Ra {grid-column: 2;}
-        .Sc, .Y, .La, .Ac, .Ce, .Th {grid-column: 3;}
-        .Ti, .Zr, .Hf, .Rf, .Pr, .Pa {grid-column: 4;}
-        .V, .Nb, .Ta, .Db, .Nd, .U {grid-column: 5;}
-        .Cr, .Mo, .W, .Sg, .Pm, .Np {grid-column: 6;}
-        .Mn, .Tc, .Re, .Bh, .Sm, .Pu {grid-column: 7;}
-        .Fe, .Ru, .Os, .Hs, .Eu, .Am {grid-column: 8;}
-        .Co, .Rh, .Ir, .Mt, .Gd, .Cm {grid-column: 9;}
-        .Ni, .Pd, .Pt, .Ds, .Tb, .Bk {grid-column: 10;}
-        .Cu, .Ag, .Au, .Rg, .Dy, .Cf {grid-column: 11;}
-        .Zn, .Cd, .Hg, .Cn, .Ho, .Es {grid-column: 12;}
-        .B, .Al, .Ga, .In, .Tl, .Nh, .Er, .Fm {grid-column: 13;}
-        .C, .Si, .Ge, .Sn, .Pb, .Fl, .Tm, .Md {grid-column: 14;}
-        .N, .P, .As, .Sb, .Bi, .Mc, .Yb, .No {grid-column: 15;}
-        .O, .S, .Se, .Te, .Po, .Lv, .Lu, .Lr {grid-column: 16;}
-        .F, .Cl, .Br, .I, .At, .Ts {grid-column: 17;}
-        .He, .Ne, .Ar, .Kr, .Xe, .Rn, .Og {grid-column: 18;}
 
-        .H, .He {grid-row: 1;}
-        .Li, .Be, .B, .C, .N, .O, .F, .Ne {grid-row: 2;}
-        .Na, .Mg, .Al, .Si, .P, .S, .Cl, .Ar {grid-row: 3;}
+      @media screen and (max-width: 632px) {
+        .H, .Li, .Na, .K, .Rb, .Cs, .Fr {grid-row: 1;}
+        .Be, .Mg, .Ca, .Sr, .Ba, .Ra {grid-row: 2;}
+        .Sc, .Y, .La, .Ac, .Ce, .Th {grid-row: 3;}
+        .Ti, .Zr, .Hf, .Rf, .Pr, .Pa {grid-row: 4;}
+        .V, .Nb, .Ta, .Db, .Nd, .U {grid-row: 5;}
+        .Cr, .Mo, .W, .Sg, .Pm, .Np {grid-row: 6;}
+        .Mn, .Tc, .Re, .Bh, .Sm, .Pu {grid-row: 7;}
+        .Fe, .Ru, .Os, .Hs, .Eu, .Am {grid-row: 8;}
+        .Co, .Rh, .Ir, .Mt, .Gd, .Cm {grid-row: 9;}
+        .Ni, .Pd, .Pt, .Ds, .Tb, .Bk {grid-row: 10;}
+        .Cu, .Ag, .Au, .Rg, .Dy, .Cf {grid-row: 11;}
+        .Zn, .Cd, .Hg, .Cn, .Ho, .Es {grid-row: 12;}
+        .B, .Al, .Ga, .In, .Tl, .Nh, .Er, .Fm {grid-row: 13;}
+        .C, .Si, .Ge, .Sn, .Pb, .Fl, .Tm, .Md {grid-row: 14;}
+        .N, .P, .As, .Sb, .Bi, .Mc, .Yb, .No {grid-row: 15;}
+        .O, .S, .Se, .Te, .Po, .Lv, .Lu, .Lr {grid-row: 16;}
+        .F, .Cl, .Br, .I, .At, .Ts {grid-row: 17;}
+        .He, .Ne, .Ar, .Kr, .Xe, .Rn, .Og {grid-row: 18;}
+
+        .H, .He {grid-column: 9;}
+        .Li, .Be, .B, .C, .N, .O, .F, .Ne {grid-column: 8;}
+        .Na, .Mg, .Al, .Si, .P, .S, .Cl, .Ar {grid-column: 7;}
         .K, .Ca, .Sc, .Ti, .V, .Cr, .Mn, .Fe, .Co,
-        .Ni, .Cu, .Zn, .Ga, .Ge, .As, .Se, .Br, .Kr {grid-row: 4;}
+        .Ni, .Cu, .Zn, .Ga, .Ge, .As, .Se, .Br, .Kr {grid-column: 6;}
         .Rb, .Sr, .Y, .Zr, .Nb, .Mo, .Tc, .Ru, .Rh,
-        .Pd, .Ag, .Cd, .In, .Sn, .Sb, .Te, .I, .Xe {grid-row: 5;}
+        .Pd, .Ag, .Cd, .In, .Sn, .Sb, .Te, .I, .Xe {grid-column: 5;}
         .Cs, .Ba, .La, .Hf, .Ta, .W, .Re, .Os, .Ir,
-        .Pt, .Au, .Hg, .Tl, .Pb, .Bi, .Po, .At, .Rn {grid-row: 6;}
+        .Pt, .Au, .Hg, .Tl, .Pb, .Bi, .Po, .At, .Rn {grid-column: 4;}
         .Fr, .Ra, .Ac, .Rf, .Db, .Sg, .Bh, .Hs, .Mt,
-        .Ds, .Rg, .Cn, .Nh, .Fl, .Mc, .Lv, .Ts, .Og {grid-row: 7;}
+        .Ds, .Rg, .Cn, .Nh, .Fl, .Mc, .Lv, .Ts, .Og {grid-column: 3;}
         .Ce, .Pr, .Nd, .Pm, .Sm, .Eu, .Gd,
-        .Tb, .Dy, .Ho, .Er, .Tm, .Yb, .Lu {grid-row: 8;}
+        .Tb, .Dy, .Ho, .Er, .Tm, .Yb, .Lu {grid-column: 2;}
         .Th, .Pa, .U, .Np, .Pu, .Am, .Cm,
-        .Bk, .Cf, .Es, .Fm, .Md, .No, .Lr {grid-row: 9;}
+        .Bk, .Cf, .Es, .Fm, .Md, .No, .Lr {grid-column: 1;}
       }
 
-      @media screen and (min-width: 1264px) {
+      @media screen and (max-width: 1264px) {
         .name, .weight {
-          display: block;
+          display: none;
+        }
+        #elements {
+          justify-content: center;
+          margin: auto;
         }
       }
 
@@ -249,7 +266,6 @@
       #elements::-webkit-scrollbar-corner {
         background-color: var(--c0);
       }
-      @media print{@page {size: landscape}}
     </style>
     <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script>
     <script defer src="/public/js/common.js"></script>
@@ -304,19 +320,51 @@
             display.style.padding ='32px'
             display.innerHTML =
 
-            `<div class="flex">
-              <div style="font-size:24px">
-                <div>${this.getElementsByTagName('div')[0].innerHTML}</div>
-                <div>${this.getElementsByTagName('div')[1].innerHTML}</div>
-                <div>${this.getElementsByTagName('div')[2].innerHTML}</div>
-                <div>${this.getElementsByTagName('div')[3].innerHTML}</div>
-                <div style="font-size:16px">
-                  <a href="https://en.wikipedia.org/wiki/${this.getElementsByTagName('div')[2].innerHTML}" target="_blank">Wikipedia</a>
+            `<div class="flex-head">
+              <div>
+                <div>${d[i].atomicNumber}</div>
+                <div style="font-size: 24px;">${d[i].symbol}</div>
+                <div>${d[i].name}</div>
+                <div>${d[i].atomicMass}</div>
+                <a
+                  class="w"
+                  href="https://en.wikipedia.org/wiki/${d[i].name}"
+                  target="_blank">
+                  <div style="font-size:18px; padding: 8px 0 0;">
+                    Wikipedia
+                  </div>
+                </a>
+              </div>
+              <div>
+                <div class="flex">
+                  <span>Standard Weight:</span>
+                  <span>${d[i].weightStandard}</span>
+                </div>
+                <div class="flex">
+                  <span>Electron Configuration:</span>
+                  <span>${d[i].electronConfiguration}</span>
+                </div>
+                <div class="flex">
+                  <span>Electronegativity:</span>
+                  <span>${d[i].electronegativity}</span>
+                </div>
+                <div class="flex">
+                  <span>Atomic Radius (pm):</span>
+                  <span>${d[i].atomicRadius}</span>
+                </div>
+                <div class="flex">
+                  <span>1st Ionization Energy (kJ/mol):</span>
+                  <span>${d[i].ionizationEnergy}</span>
+                </div>
+                <div class="flex">
+                  <span>Electron Affinity (kJ/mol):</span>
+                  <span>${d[i].electronAffinity}</span>
                 </div>
               </div>
             </div>`
 
-            document.querySelector('main').scrollTop = 0
+            document.body.scrollTop = 0
+            document.documentElement.scrollTop = 0
           }
 
           !elements ? true : elements.append(atom)

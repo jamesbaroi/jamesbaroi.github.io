@@ -14,7 +14,7 @@
     },
     {
       "tit": "Chemical Elements",
-      "des": "Array of the chemical elements with corresponding information.",
+      "des": "Array of the chemical elements with name, symbol, atomic number, atomic mass, standard weight, electron configuration, electronegativity, atomic radius, 1st ionization energy, and electron affinity for each element.",
       "url": "https://jamesbaroi.github.io/public/json/chemical-elements.json"
     }
   ]

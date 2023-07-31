@@ -28,4 +28,12 @@
     <loc>https://www.jamesbaroi.com/article/conways-game</loc>
     <lastmod>2023-07-26</lastmod>
   </url>
+  <url>
+    <loc>https://www.jamesbaroi.com/public/json/chemical-elements.json</loc>
+    <lastmod>2023-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://www.jamesbaroi.com/article/periodic-table</loc>
+    <lastmod>2023-07-30</lastmod>
+  </url>
 </urlset>
