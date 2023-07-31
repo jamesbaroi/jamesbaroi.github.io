@@ -1,4 +1,4 @@
-const create_appIndexData_Elem = () => {
+const create_AppIndexData_Elem = () => {
 
   let src = document.createElement('a'      )
   let sec = document.createElement('article')
@@ -15,7 +15,7 @@ const create_appIndexData_Elem = () => {
   return { src, sec, tit, sub, des, dat }
 }
 
-const populate_appIndexData_Elem = (d, o, i) => {
+const populate_AppIndexData_Elem = (d, o, i) => {
 
   !d[i].sub ? o.sub.innerHTML = '' : o.sub.innerHTML = d[i].sub
   !d[i].des ? o.des.innerHTML = '' : o.des.innerHTML = d[i].des
@@ -32,15 +32,15 @@ const populate_appIndexData_Elem = (d, o, i) => {
   o.src.append(o.sec)
 }
 
-const render_appIndexData = (d) => {
+const render_AppIndexData = (d) => {
 
   /**Show newest post */
   let n = document.getElementById('latest')
   let p = document.getElementById('app-posts' )
 
-  let o = create_appIndexData_Elem()
+  let o = create_AppIndexData_Elem()
 
-  populate_appIndexData_Elem(d, o, d.length - 1)
+  populate_AppIndexData_Elem(d, o, d.length - 1)
 
   n ? n.append(o.src): false
 
@@ -49,9 +49,9 @@ const render_appIndexData = (d) => {
   /**Showw posts - newest */
   for (let i = dLen - 2; i >= 0; i--) {
 
-    let o = create_appIndexData_Elem()
+    let o = create_AppIndexData_Elem()
 
-    populate_appIndexData_Elem(d, o, i)
+    populate_AppIndexData_Elem(d, o, i)
 
     p ? p.append(o.src) : false
   }
@@ -59,4 +59,4 @@ const render_appIndexData = (d) => {
 
 fetch('/public/json/apps.json')
 .then(o => o.json())
-.then(d => render_appIndexData(d))
+.then(d => render_AppIndexData(d))

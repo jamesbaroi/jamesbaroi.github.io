@@ -1,4 +1,4 @@
-const create_articleIndexData_Elem = () => {
+const create_ArticleIndexData_Elem = () => {
 
   let src = document.createElement('a'      )
   let sec = document.createElement('article')
@@ -15,7 +15,7 @@ const create_articleIndexData_Elem = () => {
   return { src, sec, tit, sub, des, dat }
 }
 
-const populate_articleIndexData_Elem = (d, o, i) => {
+const populate_ArticleIndexData_Elem = (d, o, i) => {
 
   !d[i].sub ? o.sub.innerHTML = '' : o.sub.innerHTML = d[i].sub
   !d[i].des ? o.des.innerHTML = '' : o.des.innerHTML = d[i].des
@@ -32,15 +32,15 @@ const populate_articleIndexData_Elem = (d, o, i) => {
   o.src.append(o.sec)
 }
 
-const render_articleIndexData = (d) => {
+const render_ArticleIndexData = (d) => {
 
   /**Show newest post */
   let n = document.getElementById('newest')
   let p = document.getElementById('blog-posts' )
 
-  let o = create_articleIndexData_Elem()
+  let o = create_ArticleIndexData_Elem()
 
-  populate_articleIndexData_Elem(d, o, d.length - 1)
+  populate_ArticleIndexData_Elem(d, o, d.length - 1)
 
   n ? n.append(o.src): false
 
@@ -49,9 +49,9 @@ const render_articleIndexData = (d) => {
   /**Showw posts - newest */
   for (let i = dLen - 2; i >= 0; i--) {
 
-    let o = create_articleIndexData_Elem()
+    let o = create_ArticleIndexData_Elem()
 
-    populate_articleIndexData_Elem(d, o, i)
+    populate_ArticleIndexData_Elem(d, o, i)
 
     p ? p.append(o.src) : false
   }
@@ -59,4 +59,4 @@ const render_articleIndexData = (d) => {
 
 fetch('/public/json/articles.json')
 .then(o => o.json())
-.then(d => render_articleIndexData(d))
+.then(d => render_ArticleIndexData(d))
