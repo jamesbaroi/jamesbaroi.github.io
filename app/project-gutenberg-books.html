@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Project Gutenberg Books | jamesbaroi.com</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/public/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/public/img/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/img/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/public/css/common.css">
+    <link rel="stylesheet" type="text/css" media="print" href="/public/css/print.css">
+    <style>
+      body {
+        background-color: var(--c0);
+        line-height: 1em;
+        max-width: none;
+        padding: 0;
+      }
+      header {
+        line-height: 1.8em;
+        padding: 48px 32px 0;
+      }
+      main {
+        background-color: var(--c1);
+        padding: 32px;
+      }
+      footer {
+        padding: 0 32px 32px;
+        text-align: center;
+      }
+      img {
+        width: 100%;
+      }
+      a {
+        word-break: normal;
+      }
+      .list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        justify-content: center;
+      }
+      .book {
+        background-color: var(--c0);
+        border: 1px solid var(--c2);
+        display: grid;
+        height: fit-content;
+        max-width: 200px;
+        width: fit-content;
+      }
+      .title {
+        border-top: 1px solid var(--c2);
+        color: var(--c5);
+        font-size: 12px;
+        max-width: 200px;
+        padding: 1em 1em 0;
+      }
+      .authors {
+        font-size: 12px;
+        max-width: 200px;
+        padding: 0 1em 1em;
+      }
+      .nav-flex {
+        display: flex;
+        gap: 4px;
+      }
+      .page-nav-1,
+      .page-nav-2 {
+        display: flex;
+        font-size: 12px;
+        gap: 16px;
+        justify-content: center;
+        user-select: none;
+        vertical-align: bottom;
+      }
+      .page-nav-1 {
+        border-bottom: 1px solid var(--c2);
+      }
+      .page-nav-2 {
+        border-top: 1px solid var(--c2);
+      }
+      #current-page,
+      #current-page-footer {
+        font-size: 12px;
+        text-align: right;
+        width: 2.4em;
+      }
+      #previous-page,
+      #next-page,
+      #previous-page-footer,
+      #next-page-footer {
+        cursor: pointer;
+      }
+      form {
+        display: inline;
+      }
+      input {
+        background-color: var(--c1);
+        border: 1px solid var(--c2);
+        border-radius: 0;
+        color: var(--c3);
+        outline: none;
+      }
+      #search {
+        display: grid;
+        gap: 1em;
+        padding: 16px 32px 32px;
+      }
+      #input-search {
+        padding: 8px;
+        text-align: left;
+        width: auto;
+      }
+      #results {
+        padding: 0 8px;
+      }
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      /* Firefox */
+      input[type=number] {
+        appearance: textfield;
+        -moz-appearance: textfield;
+      }
+      input[type="search"] {
+        appearance: none;
+        -webkit-appearance: none;
+      }
+      @media only screen and (max-width: 468px) {
+        header {
+          padding: 32px 24px 0;
+          text-align: left;
+        }
+        main {
+          padding: 16px;
+        }
+        footer {
+          padding: 0 16px 16px;
+        }
+        .list {
+          gap: 16px;
+        }
+        #search {
+          padding: 16px 24px 24px;
+        }
+      }
+      @media (hover:hover) {
+        a:hover > .book {
+          background-color: var(--c4);
+        }
+        a:hover > .book > .title {
+          color: var(--c1);
+        }
+        a:hover > .book > .authors {
+          color: var(--c1);
+        }
+        #previous-page:hover,
+        #next-page:hover,
+        #previous-page-footer:hover,
+        #next-page-footer:hover {
+          color: var(--c4);
+          font-weight: bold;
+        }
+        #previous-page:active,
+        #next-page:active,
+        #previous-page-footer:active,
+        #next-page-footer:active {
+          color: var(--c5);
+          font-weight: normal;
+        }
+      }
+    </style>
+    <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script>
+    <script defer src="/public/js/common.js"></script>
+  </head>
+  <body>
+    <header>
+      <div style="color: var(--c5); font-size: 24px; font-weight: bold; margin-bottom: 8px;">
+        Project Gutenberg Books
+      </div>
+      <div>
+        Browse all books below from Project Gutenberg in order of decending
+        popularity, or search using keywords.
+      </div>
+    </header>
+    <section>
+      <div id="search">
+        <input type="text" id="input-search" onkeydown="submitSearch(event)" placeholder="Search keywords">
+        <small id="results">
+          <span>Results for:</span>
+          <span id="results-search"></span>
+        </small>
+      </div>
+    </section>
+    <nav>
+      <div class="page-nav-1 pad">
+        <div id="previous-page" onclick="gotoPreviousPage()">&#60;&#60; Previous</div>
+        <div class="nav-flex">
+          <div>Page</div>
+          <div><input type="number" min="1" onkeydown="submitPage1(event)" id="current-page"></div>
+          <div>/</div>
+          <div id="total-pages"></div>
+        </div>
+        <div id="next-page" onclick="gotoNextPage()">Next &#62;&#62;</div>
+      </div>
+      <div style="background-color: var(--c1); text-align: center;" class="pad">
+        <small>Allow a few seconds for the page to load.</small>
+      </div>
+    </nav>
+    <main></main>
+    <nav>
+      <div class="page-nav-2 pad">
+        <div id="previous-page-footer" onclick="gotoPreviousPage()">&#60;&#60; Previous</div>
+        <div class="nav-flex">
+          <div>Page</div>
+          <div><input type="number" min="1" onkeydown="submitPage2(event)" id="current-page-footer"></div>
+          <div>/</div>
+          <div id="total-pages-footer"></div>
+        </div>
+        <div id="next-page-footer" onclick="gotoNextPage()">Next &#62;&#62;</div>
+      </div>
+    </nav>
+    <footer>
+      <div id="return" class="a c pad"><a href="/">Return</a></div>
+      <div>
+        <small>Data made available by</small>
+        <a class="a w" href="https://gutendex.com/" target="_blank">
+          <small>gutendex.com</small><small class="c3">.</small>
+        </a>
+      </div>
+    </footer>
+    <script>
+      const page_Current        = document.getElementById('current-page'        )
+      const page_Total          = document.getElementById('total-pages'         )
+      const page_Previous       = document.getElementById('previous-page'       )
+      const page_Next           = document.getElementById('next-page'           )
+      const page_CurrentFooter  = document.getElementById('current-page-footer' )
+      const page_TotalFooter    = document.getElementById('total-pages-footer'  )
+      const page_PreviousFooter = document.getElementById('previous-page-footer')
+      const page_NextFooter     = document.getElementById('next-page-footer'    )
+      const results             = document.getElementById('results'             )
+      const results_Search      = document.getElementById('results-search'      )
+      const search_Input        = document.getElementById('input-search'        )
+
+      var searchBool = false
+
+      const create_GutendexData = () => {
+
+        let link = document.createElement('a')
+        let book = document.createElement('div')
+        let cover = document.createElement('img')
+        let title = document.createElement('div')
+        let authors = document.createElement('div')
+        let author = document.createElement('div')
+
+        book.setAttribute('class', 'book')
+        title.setAttribute('class', 'title')
+        authors.setAttribute('class', 'authors')
+        link.target = '_blank'
+
+        return { link, book, cover, title, authors, author }
+      }
+
+      const populate_GutendexData = (d, o, i) => {
+
+        !d.results[i].title ?
+          o.title.innerHTML = 'No title listed for this entry' :
+          o.title.innerHTML = d.results[i].title
+
+        let authorsLen = d.results[i].authors.length
+
+        if (d.results[i].authors[0]) {
+
+          for (let j = 0; j < authorsLen; j++) {
+
+            o.author = d.results[i].authors[j].name
+
+            o.authors.append(o.author)
+          }
+
+        } else {
+
+          o.author.innerHTML = 'No authors listed for this entry.'
+
+          o.authors.append(o.author)
+        }
+
+        if (d.results[i].formats['text/html']) {
+
+          o.link.href = d.results[i].formats['text/html']
+
+        } else if (d.results[i].formats['text/html; charset=iso-8859-1']) {
+
+          o.link.href = d.results[i].formats['text/html; charset=iso-8859-1']
+
+        } else if (d.results[i].formats['text/plain']) {
+
+          o.link.href = d.results[i].formats['text/plain']
+
+        } else if (d.results[i].formats['text/plain; charset=us-ascii']) {
+
+          o.link.href = d.results[i].formats['text/plain; charset=us-ascii']
+        }
+
+        if (d.results[i].title && d.results[i].formats['image/jpeg']) {
+
+          o.cover.src = d.results[i].formats['image/jpeg']
+          o.cover.alt = `Cover image of: ${d.results[i].title}`
+        }
+
+        o.book.append(o.cover, o.title, o.authors)
+        o.link.append(o.book)
+      }
+
+      const render_GutendexData = (d) => {
+
+        document.querySelector('main').innerHTML = ''
+
+        let list = document.createElement('list')
+
+        list.setAttribute('class', 'list')
+
+        if (d.count) {
+
+
+          if (d.count % 32 == 0) {
+
+            page_Total.innerHTML = Math.trunc(d.Count / 32)
+
+          } else {
+
+            page_Total.innerHTML = (Math.trunc(Number(d.count) / 32) + 1)
+          }
+
+          page_TotalFooter.innerHTML = page_Total.innerHTML
+        }
+
+        let dResultsLen = d.results.length
+
+        for (let i = 0; i < dResultsLen; i++ ) {
+
+          let o = create_GutendexData()
+
+          populate_GutendexData(d, o, i)
+
+          list.append(o.link)
+
+          document.querySelector('main').append(list)
+        }
+
+        showHide_PreviousPage()
+        showHide_NextPage()
+        show_CurrentPage()
+      }
+
+      const fetchGutendex = (url) => {
+        fetch(url)
+        .then(o => o.json())
+        .then(d => render_GutendexData(d))
+      }
+
+      var pageNum = 1
+
+      fetchGutendex(`https://gutendex.com/books/?page=${pageNum}`)
+
+      const showHide_PreviousPage = () => {
+
+        if (pageNum == 1) {
+
+          page_Previous.style.display       = 'none'
+          page_PreviousFooter.style.display = 'none'
+
+        } else {
+
+          page_Previous.style.display       = 'block'
+          page_PreviousFooter.style.display = 'block'
+        }
+      }
+
+      const showHide_NextPage = () => {
+
+        let totalPages = Number(page_Total.innerText)
+
+        if (pageNum == totalPages) {
+
+          page_Next.style.display       = 'none'
+          page_NextFooter.style.display = 'none'
+
+        } else {
+
+          page_Next.style.display       = 'block'
+          page_NextFooter.style.display = 'block'
+        }
+      }
+
+      const show_CurrentPage = () => {
+
+        page_Current.value       = pageNum
+        page_CurrentFooter.value = pageNum
+      }
+
+      const gotoNextPage = () => {
+
+        if (searchBool != true) {
+
+          pageNum++
+
+          fetchGutendex(`https://gutendex.com/books/?page=${pageNum}`)
+
+          showHide_PreviousPage()
+          showHide_NextPage()
+          show_CurrentPage()
+
+        } else {
+
+          pageNum++
+
+          let search_Value = search_Input.value.replace(' ', '%20')
+
+          fetchGutendex(`https://gutendex.com/books/?page=${pageNum}&search=${search_Value}`)
+
+          showHide_PreviousPage()
+          showHide_NextPage()
+          show_CurrentPage()
+        }
+
+        document.body.scrollTop            = 0
+        document.documentElement.scrollTop = 0
+      }
+
+      const gotoPreviousPage = () => {
+
+        if (searchBool != true) {
+
+          if (pageNum > 1) {
+
+            pageNum--
+
+            fetchGutendex(`https://gutendex.com/books/?page=${pageNum}`)
+
+            showHide_PreviousPage()
+            showHide_NextPage()
+            show_CurrentPage()
+
+          } else {
+
+            showHide_PreviousPage()
+            showHide_NextPage()
+            show_CurrentPage()
+          }
+
+        } else {
+
+          if (pageNum > 1) {
+
+            pageNum--
+
+            let search_Value = search_Input.value.replace(' ', '%20')
+
+            fetchGutendex(`https://gutendex.com/books/?page=${pageNum}&search=${search_Value}`)
+
+            showHide_PreviousPage()
+            showHide_NextPage()
+            show_CurrentPage()
+
+          } else {
+
+            showHide_PreviousPage()
+            showHide_NextPage()
+            show_CurrentPage()
+          }
+        }
+
+        document.body.scrollTop            = 0
+        document.documentElement.scrollTop = 0
+      }
+
+      const submitPage1 = (e) => {
+
+        if (e.key == 'Enter') {
+
+          if (!page_Current.value || page_Current.value < 1) {
+
+            page_Current.value       = 1
+            page_CurrentFooter.value = 1
+          }
+
+          if (page_Current.value > Number(page_Total.innerText)) {
+
+            page_Current.value = Number(page_Total.innerText)
+            page_CurrentFooter.value = page_Current.value
+          }
+
+          page_CurrentFooter.value = page_Current.value
+
+          pageNum = Number(page_Current.value)
+
+          if (searchBool != true) {
+
+            fetchGutendex(`https://gutendex.com/books/?page=${pageNum}`)
+
+          } else {
+
+            let search_Value = search_Input.value.replace(' ', '%20')
+
+            fetchGutendex(`https://gutendex.com/books/?page=${pageNum}&search=${search_Value}`)
+          }
+
+          showHide_PreviousPage()
+          showHide_NextPage()
+          show_CurrentPage()
+
+          document.body.scrollTop            = 0
+          document.documentElement.scrollTop = 0
+        }
+      }
+
+      const submitPage2 = (e) => {
+
+        if (e.key == 'Enter') {
+
+          if (!page_CurrentFooter.value || page_CurrentFooter.value < 1) {
+
+            page_Current.value       = 1
+            page_CurrentFooter.value = 1
+          }
+
+          if (page_CurrentFooter.value > Number(page_Total.innerText)) {
+
+            page_CurrentFooter.value = Number(page_Total.innerText)
+            page_Current.value = page_CurrentFooter.value
+          }
+
+          page_Current.value = page_CurrentFooter.value
+
+          pageNum = Number(page_CurrentFooter.value)
+
+          if (searchBool != true) {
+
+            fetchGutendex(`https://gutendex.com/books/?page=${pageNum}`)
+
+            showHide_PreviousPage()
+            showHide_NextPage()
+            show_CurrentPage()
+
+          } else {
+
+            let search_Value = search_Input.value.replace(' ', '%20')
+
+            fetchGutendex(`https://gutendex.com/books/?page=${pageNum}&search=${search_Value}`)
+            showHide_PreviousPage()
+            showHide_NextPage()
+            show_CurrentPage()
+          }
+
+          document.body.scrollTop            = 0
+          document.documentElement.scrollTop = 0
+        }
+      }
+
+      results.style.display = 'none'
+
+      const submitSearch = (e) => {
+
+        if (e.key == 'Enter') {
+
+          searchBool = true
+
+          pageNum = 1
+
+          results_Search.innerHTML = ''
+
+          results.style.display = 'none'
+
+          let search_Value = search_Input.value.replace(' ', '%20')
+
+          fetchGutendex(`https://gutendex.com/books/?page=${pageNum}&search=${search_Value}`)
+
+          results_Search.innerHTML = `"${search_Input.value}"`
+
+          if (!search_Input.value) {
+
+            results.style.display = 'none'
+
+          } else {
+
+            results.style.display = 'block'
+          }
+
+          showHide_PreviousPage()
+          showHide_NextPage()
+          show_CurrentPage()
+
+          document.body.scrollTop            = 0
+          document.documentElement.scrollTop = 0
+        }
+      }
+    </script>
+  </body>
+</html>
