@@ -231,10 +231,14 @@ small {
 
 ::-webkit-scrollbar-thumb {
   background: var(--c0);
+  border-bottom: 1px solid var(--c2);
+  border-left: 1px solid var(--c2);
+  border-top: 1px solid var(--c2);
 }
 
 ::-webkit-scrollbar-track {
   background: var(--c1);
+  border-left: 1px solid var(--c2);
 }
 
 @media (hover: hover) {
