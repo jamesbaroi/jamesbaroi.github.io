@@ -18,21 +18,21 @@
   <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script>
   <script defer src="/public/js/common.js"></script>
   <script defer src= "/public/js/index.js"></script>
-  <script defer src="/public/js/renderArticleJson.js"></script>
-  <script defer src="/public/js/renderAssetsJson.js"></script>
+  <script defer src="/public/js/renderArticlesJson.js"></script>
+  <script defer src="/public/js/renderAppsJson.js"></script>
   <!-- <script defer src="/public/js/siteUnderDev.js"></script> -->
 </head>
 <body>
   <header>
     <h1>W E L C O M E</h1>
     <div class="section pad">
-      Read my blog, learn about me, and use my assets.
+      Check out my apps, learn about me, and read my blog.
     </div>
   </header>
   <nav>
-    <div id="btn-blog" class="btn pad nav" onclick="showBlog()">BLOG</div>
     <div id="btn-about" class="btn pad nav" onclick="showAbout()">ABOUT</div>
-    <div id="btn-assets" class="btn pad nav" onclick="showAssets()">ASSETS</div>
+    <div id="btn-apps" class="btn pad nav" onclick="showApps()">APPS</div>
+    <div id="btn-blog" class="btn pad nav" onclick="showBlog()">BLOG</div>
   </nav>
   <section>
     <div id="blog">
@@ -40,10 +40,22 @@
       <div id="newest"></div>
     </div>
     <nav
-      id="btn-posts"
+      id="btn-blog-posts"
       class="btn pad nav"
-      onclick="showPosts()">
+      onclick="showBlogPosts()">
       VIEW ALL POSTS
+    </nav>
+  </section>
+  <section>
+    <div id="apps">
+      <h1>F E A T U R E D</h1>
+      <div id="latest"></div>
+    </div>
+    <nav
+      id="btn-app-posts"
+      class="btn pad nav"
+      onclick="showAppPosts()">
+      VIEW ALL APPS
     </nav>
   </section>
   <main>
@@ -56,24 +68,8 @@
         <div class="btn section pad">Contact: james.a.baroi@gmail.com</div>
       </a>
     </div>
-    <div id="assets">
-      <h1>A S S E T S</h1>
-      <div class="section">
-        <h2
-          id="btn-js"
-          class="c6 btn pad"
-          onclick="showAssetsJS()">javascript</h2>
-        <div id="js"></div>
-      </div>
-      <div class="section">
-        <h2
-          id="btn-json"
-          class="c7 btn pad"
-          onclick="showAssetsJSON()">json</h2>
-        <div id="json"></div>
-      </div>
-    </div>
-    <div id="posts"><h1>P O S T S</h1></div>
+    <div id="blog-posts"><h1>P O S T S</h1></div>
+    <div id="app-posts"><h1>A P P S</h1></div>
   </main>
   <footer>
     <h1>P O L I C Y</h1>

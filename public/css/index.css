@@ -342,11 +342,11 @@ header, footer, #about {
   margin: 0 0 1em;
 }
 
-#posts, #blog, #assets {
+#blog-posts, #blog, #assets, #apps, #app-posts {
   background-color: var(--c1);
   margin-bottom: 1em;
 }
-#posts h1, #blog h1, #assets h1 {
+#blog-posts h1, #blog h1, #assets h1, #apps h1, #app-posts h1 {
   border-left: 1px solid var(--c2);
   border-right: 1px solid var(--c2);
   border-top: 1px solid var(--c2);
@@ -395,27 +395,6 @@ h3 {
   border-top: 1px solid var(--c2);
 }
 
-#btn-js, #btn-json {
-  background-color: var(--c0);
-  border-left: 1px solid var(--c2);
-  border-right: 1px solid var(--c2);
-}
-
-#btn-json {
-  border-bottom: 1px solid var(--c2);
-}
-
-.asset {
-  background-color: var(--c0);
-  border: 1px solid var(--c2);
-  padding: 1em;
-  transition: 0.2s;
-}
-
-#js div, #json div {
-  margin-bottom: 1em;
-}
-
 .blog {
   background-color: var(--c0);
   border-bottom: 1px solid var(--c2);
@@ -461,21 +440,5 @@ h3 {
   }
   .blog:active .date {
     color: var(--c2);
-  }
-  .asset:hover, #btn-js:hover, #btn-json:hover {
-    background-color: var(--c4);
-    color: var(--c1);
-    /**Override inline style */
-  }
-  .asset:hover div, #btn-js:hover div, #btn-json:hover div {
-    color: var(--c1) !important;
-  }
-  .asset:active, #btn-js:active, #btn-json:active {
-    background-color: var(--c1);
-    color: var(--c2);
-    /**Override inline style */
-  }
-  .asset:active div, #btn-js:active div, #btn-json:active div {
-    color: var(--c2) !important;
   }
 }/*# sourceMappingURL=index.css.map */

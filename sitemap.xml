@@ -1,39 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jamesbaroi.com/</loc>
-  </url>
-  <url>
     <loc>https://www.jamesbaroi.com/</loc>
-  </url>
-  <url>
-    <loc>https://www.jamesbaroi.com/#about</loc>
-  </url>
-  <url>
-    <loc>https://www.jamesbaroi.com/#assets</loc>
-  </url>
-  <url>
-    <loc>https://www.jamesbaroi.com/public/js/siteUnderDev.js</loc>
-    <lastmod>2023-07-26</lastmod>
-  </url>
-  <url>
-    <loc>https://www.jamesbaroi.com/public/json/us-army-enlisted-mos.json</loc>
-    <lastmod>2023-07-26</lastmod>
-  </url>
-  <url>
-    <loc>https://www.jamesbaroi.com/article/asvab-scores-and-enlisted-army-jobs</loc>
-    <lastmod>2023-07-25</lastmod>
-  </url>
-  <url>
-    <loc>https://www.jamesbaroi.com/article/conways-game</loc>
-    <lastmod>2023-07-26</lastmod>
-  </url>
-  <url>
-    <loc>https://www.jamesbaroi.com/public/json/chemical-elements.json</loc>
     <lastmod>2023-07-30</lastmod>
   </url>
   <url>
-    <loc>https://www.jamesbaroi.com/article/periodic-table</loc>
+    <loc>https://www.jamesbaroi.com/policy/cookie-policy</loc>
+    <lastmod>2023-07-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.jamesbaroi.com/app/asvab-scores-and-enlisted-army-jobs</loc>
+    <lastmod>2023-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://www.jamesbaroi.com/app/conways-game</loc>
+    <lastmod>2023-07-26</lastmod>
+  </url>
+  <url>
+    <loc>https://www.jamesbaroi.com/app/periodic-table</loc>
     <lastmod>2023-07-30</lastmod>
   </url>
 </urlset>

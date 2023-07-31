@@ -1,20 +1,20 @@
 [
   {
-    "tit": "ASVAB Scores and Enlisted Army Jobs ( App )",
+    "tit": "ASVAB Scores and Enlisted Army Jobs",
     "sub": "A Tool to Fliter Army Jobs Based on Line Scores",
     "des": "Input your Armed Services Vocational Aptitude Battery (ASVAB) composite scores to view the U.S. Army's enlisted jobs for which you qualify.",
     "dat": "2023-07-22",
     "src": "asvab-scores-and-enlisted-army-jobs"
   },
   {
-    "tit": "Conway's Game ( App )",
+    "tit": "Conway's Game",
     "sub": "John Conway's Game of Life",
     "des": "Cellular automaton. Try out different configurations and appreciate beautiful mathematics.",
     "dat": "2023-07-26",
     "src": "conways-game"
   },
   {
-    "tit": "Periodic Table ( App )",
+    "tit": "Periodic Table",
     "sub": "The Periodic Table of the Chemical Elements",
     "des": "A simple, responsive, periodic table for desktop and mobile.",
     "dat": "2023-07-28",
