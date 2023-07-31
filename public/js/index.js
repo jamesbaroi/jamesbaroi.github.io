@@ -83,6 +83,8 @@ const showAssetsJS = () => {
   ) : (
     asset_JS.style.display             = 'block',
     asset_JSON.style.display           = 'none',
+    !btn_JSON ? true :
+    btn_JSON.style.borderBottom        = '1px solid var(--c2)',
     assets.scrollIntoView()
   )
 }
