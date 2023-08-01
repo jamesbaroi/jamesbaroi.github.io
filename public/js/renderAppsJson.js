@@ -5,7 +5,7 @@ const create_AppIndexData_Elem = () => {
   let tit = document.createElement('h2'     )
   let sub = document.createElement('h3'     )
   let des = document.createElement('p'      )
-  let dat = document.createElement('time'   )
+  let dat = document.createElement('small'  )
 
   sec.setAttribute('class', 'blog section')
   tit.setAttribute('class', 'title'       )
