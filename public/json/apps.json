@@ -22,7 +22,7 @@
   },
   {
     "tit": "Project Gutenberg Books",
-    "sub": "Read Copyright Free Books",
+    "sub": "Read Copyright Free",
     "des": "A library of free books from Project Gutenberg developed using the gutendex.com JSON web API. Browse the entire collection by popularity or search using keywords.",
     "dat": "2023-07-31",
     "src": "project-gutenberg-books"
