@@ -74,7 +74,7 @@ body {
   background-color: var(--c1);
   color: var(--c3);
   font-family: Roboto;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.8em;
   margin: auto auto 100vh;
   max-width: 624px;
@@ -276,67 +276,67 @@ small {
 @media only screen and (min-width: 656px) {
   body {
     padding: 16px;
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 @media only screen and (min-width: 672px) {
   body {
     padding: 24px;
-    font-size: 16.2px;
+    font-size: 14.2px;
   }
 }
 @media only screen and (min-width: 688px) {
   body {
     padding: 32px;
-    font-size: 16.4px;
+    font-size: 14.4px;
   }
 }
 @media only screen and (min-width: 704px) {
   body {
     padding: 40px;
-    font-size: 16.6px;
+    font-size: 14.6px;
   }
 }
 @media only screen and (min-width: 720px) {
   body {
     padding: 48px;
-    font-size: 16.8px;
+    font-size: 14.8px;
   }
 }
 @media only screen and (min-width: 736px) {
   body {
     padding: 56px;
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 @media only screen and (min-width: 752px) {
   body {
     padding: 64px;
-    font-size: 17.2px;
+    font-size: 15.2px;
   }
 }
 @media only screen and (min-width: 768px) {
   body {
     padding: 72px;
-    font-size: 17.4px;
+    font-size: 15.4px;
   }
 }
 @media only screen and (min-width: 784px) {
   body {
     padding: 80px;
-    font-size: 17.6px;
+    font-size: 15.6px;
   }
 }
 @media only screen and (min-width: 800px) {
   body {
     padding: 88px;
-    font-size: 17.8px;
+    font-size: 15.8px;
   }
 }
 @media only screen and (min-width: 816px) {
   body {
     padding: 96px;
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 body {
