@@ -232,12 +232,6 @@
     </nav>
     <footer>
       <div id="return" class="a c pad"><a href="/">Return</a></div>
-      <div>
-        <small>Data made available by</small>
-        <a class="a w" href="https://gutendex.com/" target="_blank">
-          <small>gutendex.com</small><small class="c3">.</small>
-        </a>
-      </div>
     </footer>
     <script>
       const page_Current        = document.getElementById('current-page'        )
@@ -261,14 +255,13 @@
         let cover = document.createElement('img')
         let title = document.createElement('div')
         let authors = document.createElement('div')
-        let author = document.createElement('div')
 
         book.setAttribute('class', 'book')
         title.setAttribute('class', 'title')
         authors.setAttribute('class', 'authors')
         link.target = '_blank'
 
-        return { link, book, cover, title, authors, author }
+        return { link, book, cover, title, authors }
       }
 
       const populate_GutendexData = (d, o, i) => {
@@ -283,16 +276,16 @@
 
           for (let j = 0; j < authorsLen; j++) {
 
-            o.author = d.results[i].authors[j].name
+            let author = document.createElement('div')
 
-            o.authors.append(o.author)
+            author.innerHTML = d.results[i].authors[j].name
+
+            o.authors.append(author)
           }
 
         } else {
 
-          o.author.innerHTML = 'No authors listed for this entry.'
-
-          o.authors.append(o.author)
+          o.authors.innerHTML = 'No authors listed for this entry.'
         }
 
         if (d.results[i].formats['text/html']) {
