@@ -203,7 +203,7 @@
       </div>
     </section>
     <nav>
-      <div class="page-nav-1 pad">
+      <div id="page-nav-1" class="page-nav-1 pad">
         <div id="previous-page" onclick="gotoPreviousPage()">&#60;&#60; Previous</div>
         <div class="nav-flex">
           <div>Page</div>
@@ -219,7 +219,7 @@
     </nav>
     <main></main>
     <nav>
-      <div class="page-nav-2 pad">
+      <div id="page-nav-2" class="page-nav-2 pad">
         <div id="previous-page-footer" onclick="gotoPreviousPage()">&#60;&#60; Previous</div>
         <div class="nav-flex">
           <div>Page</div>
@@ -251,6 +251,8 @@
       const results             = document.getElementById('results'             )
       const results_Search      = document.getElementById('results-search'      )
       const search_Input        = document.getElementById('input-search'        )
+      const page_Nav_1          = document.getElementById('page-nav-1'          )
+      const page_Nav_2          = document.getElementById('page-nav-2'          )
 
       var searchBool = false
 
@@ -329,7 +331,7 @@
 
         list.setAttribute('class', 'list')
 
-        if (d.count) {
+        if (d.count && (d.count != 0)) {
 
 
           if (d.count % 32 == 0) {
@@ -342,6 +344,16 @@
           }
 
           page_TotalFooter.innerHTML = page_Total.innerHTML
+
+        } else {
+
+          page_Total.innerHTML = ''
+          page_TotalFooter.innerHTML = page_Total.innerHTML
+
+          page_Nav_1.style.display = 'none'
+          page_Nav_2.style.display = 'none'
+
+          document.querySelector('main').innerHTML = 'No results.'
         }
 
         let dResultsLen = d.results.length
