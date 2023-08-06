@@ -1,7 +1,7 @@
 body.dark-theme {
   --c0: rgb(22, 23, 26);
   --c1: rgb(10, 11, 12);
-  --c2: rgb(52, 53, 56);
+  --c2: rgb(32, 33, 36);
   --c3: rgb(170, 175, 195);
   --c4: yellowgreen;
   --c5: skyblue;
@@ -18,7 +18,7 @@ body.dark-theme {
 body {
   --c0: white;
   --c1: rgb(200, 201, 202);
-  --c2: rgb(82, 83, 86);
+  --c2: rgb(162, 163, 166);
   --c3: rgb(66, 67, 78);
   --c4: maroon;
   --c5: navy;
@@ -36,7 +36,7 @@ body {
   body {
     --c0: rgb(22, 23, 26);
     --c1: rgb(10, 11, 12);
-    --c2: rgb(52, 53, 56);
+    --c2: rgb(32, 33, 36);
     --c3: rgb(170, 175, 195);
     --c4: yellowgreen;
     --c5: skyblue;
@@ -52,7 +52,7 @@ body {
   body.light-theme {
     --c0: white;
     --c1: rgb(200, 201, 202);
-    --c2: rgb(82, 83, 86);
+    --c2: rgb(162, 163, 166);
     --c3: rgb(66, 67, 78);
     --c4: maroon;
     --c5: navy;
