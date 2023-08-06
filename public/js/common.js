@@ -80,6 +80,7 @@ const createCookie = () => {
 
   e.id = 'cookie'
   b.id = 'btn-cookie'
+  d.id = 'cookie-container'
 
   d.innerHTML =
   `

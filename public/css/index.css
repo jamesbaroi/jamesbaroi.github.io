@@ -159,22 +159,21 @@ small {
   bottom: 0;
   left: 0;
   right: 0;
+  text-align: left !important;
   z-index: 99;
 }
-#cookie a, #cookie div {
-  height: -moz-fit-content;
-  height: fit-content;
-  line-height: 32px !important;
+
+#cookie-container {
+  display: grid;
+  gap: 6px;
 }
 
 #cookie-header {
   font-size: 24px !important;
-  line-height: 32px !important;
 }
 
 #cookie-body {
   font-size: 16px !important;
-  line-height: 32px !important;
 }
 
 #btn-cookie {
@@ -186,6 +185,8 @@ small {
   cursor: pointer;
   font-size: 14px !important;
   font-weight: bold;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
   line-height: 32px !important;
   margin: 16px 0 auto auto;
   padding: 4px 16px;
