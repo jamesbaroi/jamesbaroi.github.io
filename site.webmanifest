@@ -1,8 +1,10 @@
 {
+  "id": "/",
   "name": "jamesbaroi.com",
   "short_name":"jamesbaroi",
-  "background_color": "black",
-  "theme_color": "black",
+  "description": "James A. Baroi's personal site.",
+  "background_color": "rgb(8, 11, 12)",
+  "theme_color": "rgb(8, 11, 12)",
   "start_url": "/",
   "display": "browser",
   "icons":[
