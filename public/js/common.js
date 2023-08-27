@@ -180,7 +180,7 @@ const createCookie = (element, elementBtn, elementBody, container) => {
 
   elementBody.innerHTML =
   `
-    <a href="/policy/cookie-policy">
+    <a href="/policy/cookie-policy" target="_blank">
       <h1 class="c3">Cookie Policy</h1>
     </a>
     <p>
@@ -302,3 +302,5 @@ if (developingActive) {
   document.body.classList.toggle('dark-theme') :
   document.body.classList.toggle('light-theme')
 }
+
+console.log(document.cookie)

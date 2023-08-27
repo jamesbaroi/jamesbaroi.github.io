@@ -65,7 +65,7 @@ body {
   background-color: var(--c2);
   color: var(--c1);
   line-height: 2em;
-  padding: 10px 24px 16px;
+  padding: 32px;
   position: fixed;
   bottom: 0;
   left: 0;
