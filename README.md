@@ -1,3 +1,3 @@
-# My Github Pages Site
+# Github Pages Site
 
 Available at [jamesbaroi.com](https://www.jamesbaroi.com).
