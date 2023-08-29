@@ -20,4 +20,22 @@ const siteUnderDev = () => {
   `
 }
 
-siteUnderDev()
+//----------------------------------------------------------------------------/
+
+const render = (d) => {
+
+}
+
+//----------------------------------------------------------------------------/
+
+window.onload = () => {
+
+  fetch('/json/index.json').then(o => o.json()).then(d => render(d))
+
+  if ('serviceWorker' in navigator) {
+
+    navigator.serviceWorker.register('/sw.js', { scope: '/' })
+  }
+
+  siteUnderDev()
+}
