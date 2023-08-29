@@ -7,9 +7,7 @@ self.addEventListener('install', event => {
     const cache = await caches.open(CACHE_NAME)
 
     cache.addAll([
-      '/',
-      '/public/css/index.css',
-      '/public/js/index.js'
+      '/'
     ])
   })())
 })
