@@ -24,6 +24,7 @@ const siteUnderDev = () => {
 
 const render = (d) => {
 
+  console.log(d)
 }
 
 //----------------------------------------------------------------------------/
@@ -34,7 +35,9 @@ window.onload = () => {
 
   if ('serviceWorker' in navigator) {
 
-    navigator.serviceWorker.register('/sw.js', { scope: '/' })
+    console.log(navigator.onLine ? 'online' : 'offline')
+
+    navigator.serviceWorker.register('/serviceworker.js', { scope: '/' })
   }
 
   siteUnderDev()
