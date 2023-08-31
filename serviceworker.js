@@ -2,15 +2,28 @@ const CACHE_VERSION = 'jamesbaroi-v1'
 
 const CACHE_ASSETS = [
   '/',
+  '/#return',
   '/site.webmanifest',
-  '/public/img/favicon-16x16.png',
-  '/public/img/favicon-32x32.png',
-  '/public/img/android-chrome-512x512.png',
-  '/public/img/android-chrome-192x192.png',
   '/public/img/apple-touch-icon.png',
-  '/index.html',
+  '/public/img/android-chrome-192x192.png',
+  '/public/img/android-chrome-512x512.png',
+  '/public/img/favicon-32x32.png',
+  '/public/img/favicon-16x16.png',
+  '/about',
+  '/contact',
+  '/article/template',
+  '/article/test',
+  '/policy/user-agreement',
+  '/policy/privacy-policy',
+  '/policy/cookie-policy',
+  '/public/css/common.css',
   '/public/css/index.css',
+  '/public/css/article.css',
+  '/public/css/policy.css',
+  '/public/css/print.css',
+  '/public/js/common.js',
   '/public/js/index.js',
+  '/public/js/article.js',
   '/json/index.json'
 ]
 
@@ -47,16 +60,13 @@ self.addEventListener('fetch', event => {
 
     caches.match(event.request).then(response => {
 
-      if (navigator.onLine) {
+      if (response) {
 
-        return fetch(event.request)
+        return response
 
       } else {
 
-        if (response) {
-
-          return response
-        }
+        return fetch(event.request)
       }
     })
   )

@@ -1,4 +1,10 @@
-{
-  "rootUrl": "/",
-  "siteName": "jamesbaroi.com"
-}
+[
+  {
+    "tag": "Blog",
+    "tit": "The Quick Brown Fox",
+    "sub": "Jumps over the lazy dog.",
+    "des": "The quick brown fox jumps over the lazy dog. The swallow in the spring sings and swings, flutters and utters the most lovely things.",
+    "dat": "2023-08-29",
+    "src": "template"
+  }
+]
