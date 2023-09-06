@@ -3,12 +3,12 @@ const siteUnderDev = () => {
   document.body.innerHTML = 'Site under development.'
 
   document.body.style = `
-
     background-color: black;
     color: white;
+    display: block;
     font-family: monospace;
     font-size: 14px;
-    margin-top: 33vh;
+    margin: 33vh 0 0;
     max-width: 100%;
     padding: 0;
     position: fixed;
