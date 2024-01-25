@@ -1,6 +1,6 @@
 const siteUnderDev = () => {
 
-  document.body.innerHTML = 'Site under development.'
+  document.body.innerHTML = 'Site under development. Contact (909) 910 2457.'
 
   document.body.style = `
     background-color: black;
