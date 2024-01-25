@@ -16,8 +16,9 @@ const siteUnderDev = () => {
     left: 0;
     right: 0;
     top: 0;
-    text-size-adjust: none;
     text-align: center;
+    text-decoration: none;
+    text-size-adjust: none;
   `
 }
 
