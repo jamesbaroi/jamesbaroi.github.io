@@ -1,6 +1,6 @@
 const siteUnderDev = () => {
 
-  document.body.innerHTML = '<a href="tel:+19099102457">+1 (909) 910 2457</a>
+  document.body.innerHTML = '<a href="tel:+19099102457">+1 (909) 910 2457</a>'
 
   document.body.style = `
     background-color: black;
