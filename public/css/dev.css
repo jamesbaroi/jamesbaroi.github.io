@@ -2,4 +2,11 @@ body {
   background-color: black;
   color: white;
   font-family: monospace;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 16px;
 }
