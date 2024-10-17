@@ -1,11 +1,11 @@
 body {
   background-color: #121212;
   color: darkgray;
-  font-size: 14px;
   margin: 0;
   padding: 16px;
 }
 
 pre {
   font-family: "Times New Roman";
+  font-size: 14px;
 }
