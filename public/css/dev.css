@@ -10,5 +10,6 @@ pre {
 }
 
 .main-text-style {
- font-size: 16px;
+  color: green;
+  font-size: 16px;
 }
