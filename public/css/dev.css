@@ -1,13 +1,11 @@
 body {
   background-color: #121212;
-  color: green;
-  font-size: 32px!important;
+  color: darkgray;
   margin: 0;
   padding: 32px;
 }
 
 pre {
-  color: red;
   font-family: "Times New Roman";
-  font-size: 32px!important;
+  font-size: 2em!important;
 }
