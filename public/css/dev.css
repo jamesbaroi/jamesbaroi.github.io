@@ -1,13 +1,11 @@
 body {
   background-color: #121212;
-  color: white;
-  font-family: monospace;
+  color: darkgray;
   font-size: 14px;
   margin: 0;
-  padding: 0;
+  padding: 16px;
 }
 
-header {
-  padding: 16px;
-  text-align: center;
+pre {
+  font-family: "Times New Roman";
 }
