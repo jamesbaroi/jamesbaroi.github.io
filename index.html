@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Matrix Rain</title>
+  <title>Matrix Rain with Glitching Text</title>
   <style>
     body {
       background-color: black;
@@ -12,71 +12,101 @@
     canvas {
       display: block;
     }
-    /* Centered overlay text */
-    #overlay-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #0F0;
-      font-family: monospace;
-      font-size: 1em;
-      text-align: center;
-      text-shadow: 0 0 10px #0F0, 0 0 20px #0F0;
-      pointer-events: none;
-      white-space: nowrap;
-      opacity: 0; /* Hidden until typing starts */
-    }
   </style>
 </head>
 <body>
   <canvas id="matrixCanvas"></canvas>
-  <div id="overlay-text"></div>
 
   <script>
     const canvas = document.getElementById('matrixCanvas');
     const context = canvas.getContext('2d');
-    const overlay = document.getElementById('overlay-text');
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const characters = 'ᄀᄁᄂᄃᄄᄅᄆᄇᄈᄉᄊᄋᄌᄍᄎᄏᄐᄑᄒᄓᄔᄕᄖᄗᄘᄙᄚᄛᄜᄝᄞᄟᄠᄡᄢᄣᄤᄥᄦᄧᄨᄩᄪᄫᄬᄭᄮᄯᄰᄱᄲᄳᄴᄵᄶᄷᄸᄹᄺᄻᄼᄽᄾᄿᅀᅁᅂᅃᅄᅅᅆᅇᅈᅉᅊᅋᅌᅍᅎᅏᅐᅑᅒᅓᅔᅕᅖᅗᅘᅙᅚᅛᅜᅝᅞᅡᅢᅣᅤᅥᅦᅧᅨᅩᅪᅫᅬᅭᅮᅯᅰᅱᅲᅳᅴᅵᅶᅷᅸᅹᅺᅻᅼᅽᅾᅿᆀᆁᆂᆃᆄᆅᆆᆇᆈᆉᆊᆋᆌᆍᆎᆏᆐᆑᆒᆓᆔᆕᆖᆗᆘᆙᆚᆛᆜᆝᆞᆟᆠᆡᆢᆣᆤᆥᆦᆧᆨᆩᆪᆫᆬᆭᆮᆯᆰᆱᆲᆳᆴᆵᆶᆷᆸᆹᆺᆻᆼᆽᆾᆿᇀᇁᇂᇃᇄᇅᇆᇇᇈᇉᇊᇋᇌᇍᇎᇏᇐᇑᇒᇓᇔᇕᇖᇗᇘᇙᇚᇛᇜᇝᇞᇟᇠᇡᇢᇣᇤᇥᇦᇧᇨᇩᇪᇫᇬᇭᇮᇯᇰᇱᇲᇳᇴᇵᇶᇷᇸᇹᇺᇻᇼᇽᇾᇿABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    const characters = 'アァイィウヴエェオカガキギクグケゲコゴサザシジスズセゼソゾABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    const fontSize = 16;
+    const columns = Math.floor(canvas.width / fontSize);
 
-    const fontSize = 12;
-    const columns = canvas.width / fontSize;
-    const drops = [];
-    const startDelays = [];
-    
-    // initialize all drops at the top but with a random delay before they start
-    for (let i = 0; i < columns; i++) {
-      drops[i] = 0; 
-      startDelays[i] = Math.floor(Math.random() * 200); // frames to wait before this drop starts
-    }
-    
+    // Drops and delays
+    const drops = Array(columns).fill(0);
+    const startDelays = Array(columns).fill(0).map(() => Math.floor(Math.random() * 200));
+
+    // The text we want to reveal
+    const revealText = "SITE UNDER DEVELOPMENT";
+    const revealY = Math.floor(canvas.height / 2 / fontSize); // middle row
+
+    // Letter positions + glitch state
+    const startCol = Math.floor((columns - revealText.length) / 2);
+    const letterPositions = revealText.split('').map((char, i) => ({
+      char,
+      col: startCol + i,
+      revealed: false,
+      glitching: false,
+      glitchChar: ''
+    }));
+
     function draw() {
       context.fillStyle = 'rgba(0, 0, 0, 0.05)';
       context.fillRect(0, 0, canvas.width, canvas.height);
-    
+
       context.fillStyle = '#0F0';
       context.font = fontSize + 'px monospace';
-    
+
+      // Draw rain
       for (let i = 0; i < columns; i++) {
         if (startDelays[i] > 0) {
-          startDelays[i]--; // still waiting, skip this column
+          startDelays[i]--;
           continue;
         }
-    
+
         const text = characters.charAt(Math.floor(Math.random() * characters.length));
-        context.fillText(text, i * fontSize, drops[i] * fontSize);
-    
+        const x = i * fontSize;
+        const y = drops[i] * fontSize;
+
+        context.fillText(text, x, y);
+
+        // Check if this stream hits a letter column at revealY
+        letterPositions.forEach(lp => {
+          if (!lp.revealed && lp.col === i && drops[i] === revealY) {
+            lp.revealed = true;
+          }
+        });
+
+        // Reset stream
         if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
           drops[i] = 0;
-          startDelays[i] = Math.floor(Math.random() * 200); // add delay when restarting
+          startDelays[i] = Math.floor(Math.random() * 200);
         }
-    
+
         drops[i]++;
       }
+
+      // Randomly glitch letters
+      letterPositions.forEach(lp => {
+        if (lp.revealed && !lp.glitching && Math.random() > 0.995) {
+          lp.glitching = true;
+          lp.glitchChar = characters.charAt(Math.floor(Math.random() * characters.length));
+
+          // After a short glitch, either disappear or restore
+          setTimeout(() => {
+            if (Math.random() > 0.5) {
+              lp.revealed = false; // disappear until hit again
+            }
+            lp.glitching = false;
+          }, 200);
+        }
+      });
+
+      // Draw letters (real or glitched)
+      context.font = "bold " + fontSize + "px monospace";
+      letterPositions.forEach(lp => {
+        if (lp.revealed) {
+          const x = lp.col * fontSize;
+          const y = revealY * fontSize;
+          context.fillText(lp.glitching ? lp.glitchChar : lp.char, x, y);
+        }
+      });
     }
 
     setInterval(draw, 55);
@@ -86,63 +116,6 @@
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     });
-
-    // Typing effect
-    const originalText = "SITE UNDER DEVELOPMENT";
-    let typingIndex = 0;
-
-    function typeText(callback) {
-      overlay.style.opacity = 1;
-      overlay.textContent = "";
-
-      function typeNext() {
-        if (typingIndex < originalText.length) {
-          overlay.textContent += originalText.charAt(typingIndex);
-          typingIndex++;
-          setTimeout(typeNext, 100); // typing speed
-        } else {
-          callback(); // trigger glitch after typing
-        }
-      }
-      typeNext();
-    }
-
-    // Glitch effect
-    function glitchText() {
-      const textArray = originalText.split('');
-      const glitchArray = [...textArray];
-
-      for (let i = 0; i < Math.floor(Math.random() * 4) + 1; i++) {
-        const idx = Math.floor(Math.random() * textArray.length);
-        glitchArray[idx] = characters.charAt(Math.floor(Math.random() * characters.length));
-      }
-
-      overlay.textContent = glitchArray.join('');
-
-      setTimeout(() => {
-        overlay.textContent = originalText;
-      }, 150);
-    }
-
-    // Loop typing + glitch
-    function startLoop() {
-      typingIndex = 0;
-      typeText(() => {
-        setInterval(() => {
-          if (Math.random() > 0.5) glitchText();
-        }, 500);
-
-        // restart typing after a delay
-        setTimeout(() => {
-          overlay.textContent = "";
-          typingIndex = 0;
-          typeText(() => {}); // retype
-        }, 6000);
-      });
-    }
-
-    // Start after short delay
-    setTimeout(startLoop, 1000);
   </script>
 </body>
 </html>
