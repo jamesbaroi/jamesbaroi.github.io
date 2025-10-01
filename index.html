@@ -18,55 +18,35 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: #0F0; /* Matrix green */
+      color: #0F0;
       font-family: monospace;
-      font-size: 2em;
+      font-size: 3em;
       text-align: center;
       text-shadow: 0 0 10px #0F0, 0 0 20px #0F0;
       pointer-events: none;
-      animation: flicker 2.5s infinite;
-    }
-
-    /* Flicker keyframes */
-    @keyframes flicker {
-      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-        opacity: 1;
-        text-shadow: 0 0 10px #0F0, 0 0 20px #0F0, 0 0 30px #0F0;
-      }
-      20%, 24%, 55% {
-        opacity: 0.3;
-        text-shadow: none;
-      }
-      70% {
-        opacity: 0.7;
-        text-shadow: 0 0 5px #0F0, 0 0 10px #0F0;
-      }
-      80% {
-        opacity: 0.4;
-        text-shadow: 0 0 2px #0F0;
-      }
-      90% {
-        opacity: 0.9;
-        text-shadow: 0 0 15px #0F0, 0 0 25px #0F0;
-      }
+      white-space: nowrap;
+      opacity: 0; /* Hidden until typing starts */
     }
   </style>
 </head>
 <body>
   <canvas id="matrixCanvas"></canvas>
-  <div id="overlay-text">SITE UNDER DEVELOPMENT</div>
+  <div id="overlay-text"></div>
+
   <script>
     const canvas = document.getElementById('matrixCanvas');
     const context = canvas.getContext('2d');
+    const overlay = document.getElementById('overlay-text');
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const characters = 'ᄀᄁᄂᄃᄄᄅᄆᄇᄈᄉᄊᄋᄌᄍᄎᄏᄐᄑᄒᄓᄔᄕᄖᄗᄘᄙᄚᄛᄜᄝᄞᄟᄠᄡᄢᄣᄤᄥᄦᄧᄨᄩᄪᄫ...'; // truncated for brevity
+    const characters = 'アァイィウヴエェオカガキギクグケゲコゴサザシジスズセゼソゾタダチッヂツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモヤユヨラリルレロワヲンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+
     const fontSize = 12;
     const columns = canvas.width / fontSize;
-
     const drops = [];
+
     for (let i = 0; i < columns; i++) {
       drops[i] = 1;
     }
@@ -90,11 +70,68 @@
     }
     setInterval(draw, 55);
 
-    // Handle window resize
+    // Resize handler
     window.addEventListener('resize', () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     });
+
+    // Typing effect
+    const originalText = "SITE UNDER DEVELOPMENT";
+    let typingIndex = 0;
+
+    function typeText(callback) {
+      overlay.style.opacity = 1;
+      overlay.textContent = "";
+
+      function typeNext() {
+        if (typingIndex < originalText.length) {
+          overlay.textContent += originalText.charAt(typingIndex);
+          typingIndex++;
+          setTimeout(typeNext, 100); // typing speed
+        } else {
+          callback(); // trigger glitch after typing
+        }
+      }
+      typeNext();
+    }
+
+    // Glitch effect
+    function glitchText() {
+      const textArray = originalText.split('');
+      const glitchArray = [...textArray];
+
+      for (let i = 0; i < Math.floor(Math.random() * 4) + 1; i++) {
+        const idx = Math.floor(Math.random() * textArray.length);
+        glitchArray[idx] = characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+
+      overlay.textContent = glitchArray.join('');
+
+      setTimeout(() => {
+        overlay.textContent = originalText;
+      }, 150);
+    }
+
+    // Loop typing + glitch
+    function startLoop() {
+      typingIndex = 0;
+      typeText(() => {
+        setInterval(() => {
+          if (Math.random() > 0.5) glitchText();
+        }, 500);
+
+        // restart typing after a delay
+        setTimeout(() => {
+          overlay.textContent = "";
+          typingIndex = 0;
+          typeText(() => {}); // retype
+        }, 6000);
+      });
+    }
+
+    // Start after short delay
+    setTimeout(startLoop, 1000);
   </script>
 </body>
 </html>
