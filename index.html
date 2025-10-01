@@ -4,18 +4,32 @@
   <meta charset="UTF-8">
   <title>Matrix Rain</title>
   <style>
-  body {
-    background-color: black;
-    margin: 0;
-    overflow: hidden;
-  }
-  canvas {
-    display: block;
-  }
+    body {
+      background-color: black;
+      margin: 0;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+    }
+    /* Centered overlay text */
+    #overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #0F0; /* Matrix green */
+      font-family: monospace;
+      font-size: 3em;
+      text-align: center;
+      text-shadow: 0 0 10px #0F0, 0 0 20px #0F0;
+      pointer-events: none; /* allows clicks through to canvas if needed */
+    }
   </style>
 </head>
 <body>
   <canvas id="matrixCanvas"></canvas>
+  <div id="overlay-text">SITE UNDER DEVELOPMENT</div>
   <script>
     const canvas = document.getElementById('matrixCanvas');
     const context = canvas.getContext('2d');
@@ -23,7 +37,7 @@
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const characters = 'ᄀᄁᄂᄃᄄᄅᄆᄇᄈᄉᄊᄋᄌᄍᄎᄏᄐᄑᄒᄓᄔᄕᄖᄗᄘᄙᄚᄛᄜᄝᄞᄟᄠᄡᄢᄣᄤᄥᄦᄧᄨᄩᄪᄫᄬᄭᄮᄯᄰᄱᄲᄳᄴᄵᄶᄷᄸᄹᄺᄻᄼᄽᄾᄿᅀᅁᅂᅃᅄᅅᅆᅇᅈᅉᅊᅋᅌᅍᅎᅏᅐᅑᅒᅓᅔᅕᅖᅗᅘᅙᅚᅛᅜᅝᅞᅡᅢᅣᅤᅥᅦᅧᅨᅩᅪᅫᅬᅭᅮᅯᅰᅱᅲᅳᅴᅵᅶᅷᅸᅹᅺᅻᅼᅽᅾᅿᆀᆁᆂᆃᆄᆅᆆᆇᆈᆉᆊᆋᆌᆍᆎᆏᆐᆑᆒᆓᆔᆕᆖᆗᆘᆙᆚᆛᆜᆝᆞᆟᆠᆡᆢᆣᆤᆥᆦᆧᆨᆩᆪᆫᆬᆭᆮᆯᆰᆱᆲᆳᆴᆵᆶᆷᆸᆹᆺᆻᆼᆽᆾᆿᇀᇁᇂᇃᇄᇅᇆᇇᇈᇉᇊᇋᇌᇍᇎᇏᇐᇑᇒᇓᇔᇕᇖᇗᇘᇙᇚᇛᇜᇝᇞᇟᇠᇡᇢᇣᇤᇥᇦᇧᇨᇩᇪᇫᇬᇭᇮᇯᇰᇱᇲᇳᇴᇵᇶᇷᇸᇹᇺᇻᇼᇽᇾᇿ';
+    const characters = 'ᄀᄁᄂᄃᄄᄅᄆᄇᄈᄉᄊᄋᄌᄍᄎᄏᄐᄑᄒ...'; // shortened for brevity
     const fontSize = 12;
     const columns = canvas.width / fontSize;
 
@@ -36,7 +50,7 @@
       context.fillStyle = 'rgba(0, 0, 0, 0.05)';
       context.fillRect(0, 0, canvas.width, canvas.height);
 
-      context.fillStyle = '#0F0'; 
+      context.fillStyle = '#0F0';
       context.font = fontSize + 'px monospace';
 
       for (let i = 0; i < columns; i++) {
@@ -51,7 +65,11 @@
     }
     setInterval(draw, 55);
 
-    // ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんゔゕゖ
+    // Resize handler
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
   </script>
 </body>
 </html>
