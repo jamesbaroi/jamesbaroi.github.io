@@ -3,7 +3,7 @@ const siteUnderDev = () => {
   document.body.innerHTML = '<a href="mailto:james.a.baroi@gmail.com" style="color:white;text-decoration:none;">james.a.baroi@gmail.com</a>'
   document.body.style = `
     background-color: black;
-    color: white!important;
+    color: white;
     display: block;
     font-family: monospace;
     font-size: 14px;
