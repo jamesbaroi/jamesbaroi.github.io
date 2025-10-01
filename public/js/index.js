@@ -1,6 +1,6 @@
 const siteUnderDev = () => {
 
-  document.body.innerHTML = '<a href="tel:+19099102457" style="color:white;text-decoration:none;">+1 909 910 2457</a>'
+  document.body.innerHTML = '<a href="mailto:james.a.baroi@gmail.com">james.a.baroi@gmail.com</a>'
   document.body.style = `
     background-color: black;
     color: white;
