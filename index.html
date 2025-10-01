@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Matrix Rain with Glitchy Reveal</title>
+  <title>Matrix Rain with Persistent Random Glitching</title>
   <style>
     body {
       background-color: black;
@@ -24,7 +24,7 @@
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const characters = 'ᄀᄁᄂᄃᄄᄅᄆᄇᄈᄉᄊᄋᄌᄍᄎᄏᄐᄑᄒᄓᄔᄕᄖᄗᄘᄙᄚᄛᄜᄝᄞᄟᄠᄡᄢᄣᄤᄥᄦᄧᄨᄩᄪᄫᄬᄭᄮᄯᄰᄱᄲᄳᄴᄵᄶᄷᄸᄹᄺᄻᄼᄽᄾᄿᅀᅁᅂᅃᅄᅅᅆᅇᅈᅉᅊᅋᅌᅍᅎᅏᅐᅑᅒᅓᅔᅕᅖᅗᅘᅙᅚᅛᅜᅝᅞᅡᅢᅣᅤᅥᅦᅧᅨᅩᅪᅫᅬᅭᅮᅯᅰᅱᅲᅳᅴᅵᅶᅷᅸᅹᅺᅻᅼᅽᅾᅿᆀᆁᆂᆃᆄᆅᆆᆇᆈᆉᆊᆋᆌᆍᆎᆏᆐᆑᆒᆓᆔᆕᆖᆗᆘᆙᆚᆛᆜᆝᆞᆟᆠᆡᆢᆣᆤᆥᆦᆧᆨᆩᆪᆫᆬᆭᆮᆯᆰᆱᆲᆳᆴᆵᆶᆷᆸᆹᆺᆻᆼᆽᆾᆿᇀᇁᇂᇃᇄᇅᇆᇇᇈᇉᇊᇋᇌᇍᇎᇏᇐᇑᇒᇓᇔᇕᇖᇗᇘᇙᇚᇛᇜᇝᇞᇟᇠᇡᇢᇣᇤᇥᇦᇧᇨᇩᇪᇫᇬᇭᇮᇯᇰᇱᇲᇳᇴᇵᇶᇷᇸᇹᇺᇻᇼᇽᇾᇿABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    const characters = 'アァイィウヴエェオカガキギクグケゲコゴサザシジスズセゼソゾABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     const fontSize = 16;
     const columns = Math.floor(canvas.width / fontSize);
 
@@ -44,7 +44,8 @@
       revealed: false,
       glitching: false,
       glitchChar: '',
-      glitchFrames: 0
+      glitchFrames: 0,
+      glitchTimer: Math.floor(Math.random() * 200) + 100 // random countdown for random glitches
     }));
 
     function draw() {
@@ -71,12 +72,11 @@
         letterPositions.forEach(lp => {
           if (lp.col === i && drops[i] === revealY) {
             if (!lp.revealed) {
-              // First time reveal
               lp.revealed = true;
             } else if (!lp.glitching) {
-              // Already revealed → trigger multi-frame glitch
+              // Trigger rain glitch
               lp.glitching = true;
-              lp.glitchFrames = 6; // how many flickers
+              lp.glitchFrames = 6;
             }
           }
         });
@@ -98,8 +98,17 @@
           const x = lp.col * fontSize;
           const y = revealY * fontSize;
 
+          // Handle random glitches
+          if (!lp.glitching) {
+            lp.glitchTimer--;
+            if (lp.glitchTimer <= 0) {
+              lp.glitching = true;
+              lp.glitchFrames = Math.floor(Math.random() * 8) + 3; // 3–10 flickers
+              lp.glitchTimer = Math.floor(Math.random() * 300) + 200; // next random glitch delay
+            }
+          }
+
           if (lp.glitching && lp.glitchFrames > 0) {
-            // Show random glyph for this frame
             lp.glitchChar = characters.charAt(Math.floor(Math.random() * characters.length));
             context.fillText(lp.glitchChar, x, y);
             lp.glitchFrames--;
@@ -108,7 +117,6 @@
               lp.glitching = false;
             }
           } else {
-            // Show correct char
             context.fillText(lp.char, x, y);
           }
         }
