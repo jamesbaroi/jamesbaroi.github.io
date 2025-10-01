@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Matrix Rain with Glitching Text</title>
+  <title>Matrix Rain with Glitchy Reveal</title>
   <style>
     body {
       background-color: black;
@@ -32,18 +32,19 @@
     const drops = Array(columns).fill(0);
     const startDelays = Array(columns).fill(0).map(() => Math.floor(Math.random() * 200));
 
-    // The text we want to reveal
+    // Text to reveal
     const revealText = "SITE UNDER DEVELOPMENT";
     const revealY = Math.floor(canvas.height / 2 / fontSize); // middle row
 
-    // Letter positions + glitch state
+    // Map letters to columns
     const startCol = Math.floor((columns - revealText.length) / 2);
     const letterPositions = revealText.split('').map((char, i) => ({
       char,
       col: startCol + i,
       revealed: false,
       glitching: false,
-      glitchChar: ''
+      glitchChar: '',
+      glitchFrames: 0
     }));
 
     function draw() {
@@ -66,10 +67,17 @@
 
         context.fillText(text, x, y);
 
-        // Check if this stream hits a letter column at revealY
+        // Check if stream passes a letter column at revealY
         letterPositions.forEach(lp => {
-          if (!lp.revealed && lp.col === i && drops[i] === revealY) {
-            lp.revealed = true;
+          if (lp.col === i && drops[i] === revealY) {
+            if (!lp.revealed) {
+              // First time reveal
+              lp.revealed = true;
+            } else if (!lp.glitching) {
+              // Already revealed → trigger multi-frame glitch
+              lp.glitching = true;
+              lp.glitchFrames = 6; // how many flickers
+            }
           }
         });
 
@@ -82,29 +90,27 @@
         drops[i]++;
       }
 
-      // Randomly glitch letters
-      letterPositions.forEach(lp => {
-        if (lp.revealed && !lp.glitching && Math.random() > 0.995) {
-          lp.glitching = true;
-          lp.glitchChar = characters.charAt(Math.floor(Math.random() * characters.length));
-
-          // After a short glitch, either disappear or restore
-          setTimeout(() => {
-            if (Math.random() > 0.5) {
-              lp.revealed = false; // disappear until hit again
-            }
-            lp.glitching = false;
-          }, 200);
-        }
-      });
-
-      // Draw letters (real or glitched)
+      // Draw revealed/glitching letters
       context.font = "bold " + fontSize + "px monospace";
+      context.fillStyle = '#0F0';
       letterPositions.forEach(lp => {
         if (lp.revealed) {
           const x = lp.col * fontSize;
           const y = revealY * fontSize;
-          context.fillText(lp.glitching ? lp.glitchChar : lp.char, x, y);
+
+          if (lp.glitching && lp.glitchFrames > 0) {
+            // Show random glyph for this frame
+            lp.glitchChar = characters.charAt(Math.floor(Math.random() * characters.length));
+            context.fillText(lp.glitchChar, x, y);
+            lp.glitchFrames--;
+
+            if (lp.glitchFrames === 0) {
+              lp.glitching = false;
+            }
+          } else {
+            // Show correct char
+            context.fillText(lp.char, x, y);
+          }
         }
       });
     }
