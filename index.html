@@ -46,29 +46,39 @@
     const fontSize = 12;
     const columns = canvas.width / fontSize;
     const drops = [];
-
-    // initialize each column's starting position randomly
+    const startDelays = [];
+    
+    // initialize all drops at the top but with a random delay before they start
     for (let i = 0; i < columns; i++) {
-      drops[i] = Math.floor(Math.random() * canvas.height / fontSize);
+      drops[i] = 0; 
+      startDelays[i] = Math.floor(Math.random() * 200); // frames to wait before this drop starts
     }
-
+    
     function draw() {
       context.fillStyle = 'rgba(0, 0, 0, 0.05)';
       context.fillRect(0, 0, canvas.width, canvas.height);
-
+    
       context.fillStyle = '#0F0';
       context.font = fontSize + 'px monospace';
-
+    
       for (let i = 0; i < columns; i++) {
+        if (startDelays[i] > 0) {
+          startDelays[i]--; // still waiting, skip this column
+          continue;
+        }
+    
         const text = characters.charAt(Math.floor(Math.random() * characters.length));
         context.fillText(text, i * fontSize, drops[i] * fontSize);
-
+    
         if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
           drops[i] = 0;
+          startDelays[i] = Math.floor(Math.random() * 200); // add delay when restarting
         }
+    
         drops[i]++;
       }
     }
+
     setInterval(draw, 55);
 
     // Resize handler
