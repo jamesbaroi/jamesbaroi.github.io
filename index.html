@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Matrix Rain with Persistent Random Glitching</title>
+  <title>Matrix Rain with Sharp Glitch</title>
   <style>
     body {
       background-color: black;
@@ -45,10 +45,11 @@
       glitching: false,
       glitchChar: '',
       glitchFrames: 0,
-      glitchTimer: Math.floor(Math.random() * 200) + 100 // random countdown for random glitches
+      glitchTimer: Math.floor(Math.random() * 200) + 100
     }));
 
     function draw() {
+      // Fade background only for rain, not letters
       context.fillStyle = 'rgba(0, 0, 0, 0.05)';
       context.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -74,9 +75,8 @@
             if (!lp.revealed) {
               lp.revealed = true;
             } else if (!lp.glitching) {
-              // Trigger rain glitch
               lp.glitching = true;
-              lp.glitchFrames = 6;
+              lp.glitchFrames = 6; // short burst of flickers
             }
           }
         });
@@ -90,9 +90,7 @@
         drops[i]++;
       }
 
-      // Draw revealed/glitching letters
-      context.font = "bold " + fontSize + "px monospace";
-      context.fillStyle = '#0F0';
+      // Draw letters solid every frame (no fade)
       letterPositions.forEach(lp => {
         if (lp.revealed) {
           const x = lp.col * fontSize;
@@ -103,19 +101,24 @@
             lp.glitchTimer--;
             if (lp.glitchTimer <= 0) {
               lp.glitching = true;
-              lp.glitchFrames = Math.floor(Math.random() * 8) + 3; // 3–10 flickers
-              lp.glitchTimer = Math.floor(Math.random() * 300) + 200; // next random glitch delay
+              lp.glitchFrames = Math.floor(Math.random() * 8) + 3;
+              lp.glitchTimer = Math.floor(Math.random() * 300) + 200;
             }
           }
+
+          // Always redraw solid background block behind letter to avoid fading
+          context.fillStyle = 'black';
+          context.fillRect(x, y - fontSize, fontSize, fontSize);
+
+          // Then draw character or glitchChar sharply
+          context.fillStyle = '#0F0';
+          context.font = "bold " + fontSize + "px monospace";
 
           if (lp.glitching && lp.glitchFrames > 0) {
             lp.glitchChar = characters.charAt(Math.floor(Math.random() * characters.length));
             context.fillText(lp.glitchChar, x, y);
             lp.glitchFrames--;
-
-            if (lp.glitchFrames === 0) {
-              lp.glitching = false;
-            }
+            if (lp.glitchFrames === 0) lp.glitching = false;
           } else {
             context.fillText(lp.char, x, y);
           }
