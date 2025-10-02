@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>jamesbaroi.com</title>
+  <title>Matrix Rain with Variable Speeds</title>
   <style>
     body {
       background-color: black;
@@ -28,13 +28,14 @@
     const fontSize = 16;
     const columns = Math.floor(canvas.width / fontSize);
 
-    // Drops and delays
+    // Drops, speeds and delays
     const drops = Array(columns).fill(0);
+    const speeds = Array(columns).fill(0).map(() => (Math.random() * 1.5) + 0.5); 
     const startDelays = Array(columns).fill(0).map(() => Math.floor(Math.random() * 200));
 
     // Text to reveal
     const revealText = "SITE UNDER DEVELOPMENT";
-    const revealY = Math.floor(canvas.height / 2 / fontSize); // middle row
+    const revealY = Math.floor(canvas.height / 2 / fontSize);
 
     // Map letters to columns
     const startCol = Math.floor((columns - revealText.length) / 2);
@@ -49,7 +50,7 @@
     }));
 
     function draw() {
-      // Fade background only for rain, not letters
+      // fade trail effect
       context.fillStyle = 'rgba(0, 0, 0, 0.05)';
       context.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -71,32 +72,33 @@
 
         // Check if stream passes a letter column at revealY
         letterPositions.forEach(lp => {
-          if (lp.col === i && drops[i] === revealY) {
+          if (lp.col === i && Math.floor(drops[i]) === revealY) {
             if (!lp.revealed) {
               lp.revealed = true;
             } else if (!lp.glitching) {
               lp.glitching = true;
-              lp.glitchFrames = 6; // short burst of flickers
+              lp.glitchFrames = 6;
             }
           }
         });
 
-        // Reset stream
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        // Reset stream if it goes off screen
+        if (y > canvas.height && Math.random() > 0.975) {
           drops[i] = 0;
+          speeds[i] = (Math.random() * 1.5) + 0.5; // new random speed
           startDelays[i] = Math.floor(Math.random() * 200);
         }
 
-        drops[i]++;
+        drops[i] += speeds[i];
       }
 
-      // Draw letters solid every frame (no fade)
+      // Draw revealed letters solid
       letterPositions.forEach(lp => {
         if (lp.revealed) {
           const x = lp.col * fontSize;
           const y = revealY * fontSize;
 
-          // Handle random glitches
+          // Random glitch timer
           if (!lp.glitching) {
             lp.glitchTimer--;
             if (lp.glitchTimer <= 0) {
@@ -106,11 +108,11 @@
             }
           }
 
-          // Always redraw solid background block behind letter to avoid fading
+          // Erase background behind letters to keep them sharp
           context.fillStyle = 'black';
           context.fillRect(x, y - fontSize, fontSize, fontSize);
 
-          // Then draw character or glitchChar sharply
+          // Draw glitch or real character
           context.fillStyle = '#0F0';
           context.font = "bold " + fontSize + "px monospace";
 
