@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Matrix Rain with Variable Speeds</title>
+  <title>Rainbow Matrix Rain</title>
   <style>
     body {
       background-color: black;
@@ -28,9 +28,9 @@
     const fontSize = 16;
     const columns = Math.floor(canvas.width / fontSize);
 
-    // Drops, speeds and delays
+    // Drops, speeds, and delays
     const drops = Array(columns).fill(0);
-    const speeds = Array(columns).fill(0).map(() => (Math.random() * 1.5) + 0.5); 
+    const speeds = Array(columns).fill(0).map(() => (Math.random() * 1.5) + 0.5);
     const startDelays = Array(columns).fill(0).map(() => Math.floor(Math.random() * 200));
 
     // Text to reveal
@@ -49,12 +49,16 @@
       glitchTimer: Math.floor(Math.random() * 200) + 100
     }));
 
+    let hue = 0; // 🌈 global hue
+
     function draw() {
-      // fade trail effect
+      // Fade trail effect
       context.fillStyle = 'rgba(0, 0, 0, 0.05)';
       context.fillRect(0, 0, canvas.width, canvas.height);
 
-      context.fillStyle = '#F00';
+      // Dynamic rainbow color
+      const color = `hsl(${hue}, 100%, 50%)`;
+      context.fillStyle = color;
       context.font = fontSize + 'px monospace';
 
       // Draw rain
@@ -92,7 +96,7 @@
         drops[i] += speeds[i];
       }
 
-      // Draw revealed letters solid
+      // Draw revealed letters solid (rainbow-colored too)
       letterPositions.forEach(lp => {
         if (lp.revealed) {
           const x = lp.col * fontSize;
@@ -108,12 +112,12 @@
             }
           }
 
-          // Erase background behind letters to keep them sharp
+          // Erase background behind letters
           context.fillStyle = 'black';
           context.fillRect(x, y - fontSize, fontSize, fontSize);
 
-          // Draw glitch or real character
-          context.fillStyle = '#F00';
+          // Rainbow color for letters too
+          context.fillStyle = color;
           context.font = "bold " + fontSize + "px monospace";
 
           if (lp.glitching && lp.glitchFrames > 0) {
@@ -126,6 +130,9 @@
           }
         }
       });
+
+      // 🌈 Increment hue each frame
+      hue = (hue + 0.5) % 360;
     }
 
     setInterval(draw, 55);
