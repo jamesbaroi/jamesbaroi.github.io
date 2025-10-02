@@ -54,7 +54,7 @@
       context.fillStyle = 'rgba(0, 0, 0, 0.05)';
       context.fillRect(0, 0, canvas.width, canvas.height);
 
-      context.fillStyle = '#0F0';
+      context.fillStyle = '#F00';
       context.font = fontSize + 'px monospace';
 
       // Draw rain
@@ -113,7 +113,7 @@
           context.fillRect(x, y - fontSize, fontSize, fontSize);
 
           // Draw glitch or real character
-          context.fillStyle = '#0F0';
+          context.fillStyle = '#F00';
           context.font = "bold " + fontSize + "px monospace";
 
           if (lp.glitching && lp.glitchFrames > 0) {
