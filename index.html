@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4R2HPVTYL3"></script>
@@ -10,149 +10,131 @@
   
     gtag('config', 'G-4R2HPVTYL3');
   </script>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, viewport-fit=cover">
   <title>jamesbaroi.com</title>
   <style>
-    body {
-      background-color: black;
-      margin: 0;
-      overflow: hidden;
+    #profile-image {
+      border-radius: 50%;
+      max-height: 120px;
+      transition: 0.2s;
     }
-    canvas {
-      display: block;
+    #profile-image:hover {
+      max-height: 160px;
+    }
+    #profile-name {
+      font-size: 24px;
+      font-weight: bold;
+      padding: 6px;
+    }
+    #profile-description {
+      color: goldenrod;
+      font-weight: bold;
     }
   </style>
-  <link rel="stylesheet" href="/public/css/index.css" />
+  <link rel="stylesheet" href="/public/css/style.css" />
 </head>
 <body>
-  <canvas id="matrixCanvas"></canvas>
-
-  <script>
-    const canvas = document.getElementById('matrixCanvas');
-    const context = canvas.getContext('2d');
-
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    const characters = 'ᄀᄁᄂᄃᄄᄅᄆᄇᄈᄉᄊᄋᄌᄍᄎᄏᄐᄑᄒᄓᄔᄕᄖᄗᄘᄙᄚᄛᄜᄝᄞᄟᄠᄡᄢᄣᄤᄥᄦᄧᄨᄩᄪᄫᄬᄭᄮᄯᄰᄱᄲᄳᄴᄵᄶᄷᄸᄹᄺᄻᄼᄽᄾᄿᅀᅁᅂᅃᅄᅅᅆᅇᅈᅉᅊᅋᅌᅍᅎᅏᅐᅑᅒᅓᅔᅕᅖᅗᅘᅙᅚᅛᅜᅝᅞᅡᅢᅣᅤᅥᅦᅧᅨᅩᅪᅫᅬᅭᅮᅯᅰᅱᅲᅳᅴᅵᅶᅷᅸᅹᅺᅻᅼᅽᅾᅿᆀᆁᆂᆃᆄᆅᆆᆇᆈᆉᆊᆋᆌᆍᆎᆏᆐᆑᆒᆓᆔᆕᆖᆗᆘᆙᆚᆛᆜᆝᆞᆟᆠᆡᆢᆣᆤᆥᆦᆧᆨᆩᆪᆫᆬᆭᆮᆯᆰᆱᆲᆳᆴᆵᆶᆷᆸᆹᆺᆻᆼᆽᆾᆿᇀᇁᇂᇃᇄᇅᇆᇇᇈᇉᇊᇋᇌᇍᇎᇏᇐᇑᇒᇓᇔᇕᇖᇗᇘᇙᇚᇛᇜᇝᇞᇟᇠᇡᇢᇣᇤᇥᇦᇧᇨᇩᇪᇫᇬᇭᇮᇯᇰᇱᇲᇳᇴᇵᇶᇷᇸᇹᇺᇻᇼᇽᇾᇿABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    const fontSize = 16;
-    const columns = Math.floor(canvas.width / fontSize);
-
-    // Drops, speeds, and delays
-    const drops = Array(columns).fill(0);
-    const speeds = Array(columns).fill(0).map(() => (Math.random() * 1.5) + 0.5);
-    const startDelays = Array(columns).fill(0).map(() => Math.floor(Math.random() * 200));
-
-    // Text to reveal
-    const revealText = "SITE UNDER DEVELOPMENT";
-    const revealY = Math.floor(canvas.height / 2 / fontSize);
-
-    // Map letters to columns
-    const startCol = Math.floor((columns - revealText.length) / 2);
-    const letterPositions = revealText.split('').map((char, i) => ({
-      char,
-      col: startCol + i,
-      revealed: false,
-      glitching: false,
-      glitchChar: '',
-      glitchFrames: 0,
-      glitchTimer: Math.floor(Math.random() * 200) + 100
-    }));
-
-    let hue = 0; // 🌈 global hue
-
-    function draw() {
-      // Fade trail effect
-      context.fillStyle = 'rgba(0, 0, 0, 0.05)';
-      context.fillRect(0, 0, canvas.width, canvas.height);
-
-      // Dynamic rainbow color
-      const color = `hsl(${hue}, 100%, 50%)`;
-      context.fillStyle = color;
-      context.font = fontSize + 'px monospace';
-
-      // Draw rain
-      for (let i = 0; i < columns; i++) {
-        if (startDelays[i] > 0) {
-          startDelays[i]--;
-          continue;
-        }
-
-        const text = characters.charAt(Math.floor(Math.random() * characters.length));
-        const x = i * fontSize;
-        const y = drops[i] * fontSize;
-
-        context.fillText(text, x, y);
-
-        // Check if stream passes a letter column at revealY
-        letterPositions.forEach(lp => {
-          if (lp.col === i && Math.floor(drops[i]) === revealY) {
-            if (!lp.revealed) {
-              lp.revealed = true;
-            } else if (!lp.glitching) {
-              lp.glitching = true;
-              lp.glitchFrames = 6;
-            }
-          }
-        });
-
-        // Reset stream if it goes off screen
-        if (y > canvas.height && Math.random() > 0.975) {
-          drops[i] = 0;
-          speeds[i] = (Math.random() * 1.5) + 0.5; // new random speed
-          startDelays[i] = Math.floor(Math.random() * 200);
-        }
-
-        drops[i] += speeds[i];
-      }
-
-      // Draw revealed letters solid (rainbow-colored too)
-      letterPositions.forEach(lp => {
-        if (lp.revealed) {
-          const x = lp.col * fontSize;
-          const y = revealY * fontSize;
-
-          // Random glitch timer
-          if (!lp.glitching) {
-            lp.glitchTimer--;
-            if (lp.glitchTimer <= 0) {
-              lp.glitching = true;
-              lp.glitchFrames = Math.floor(Math.random() * 8) + 3;
-              lp.glitchTimer = Math.floor(Math.random() * 300) + 200;
-            }
-          }
-
-          // Erase background behind letters
-          context.fillStyle = 'black';
-          context.fillRect(x, y - fontSize, fontSize, fontSize);
-
-          // Rainbow color for letters too
-          context.fillStyle = color;
-          context.font = "bold " + fontSize + "px monospace";
-
-          if (lp.glitching && lp.glitchFrames > 0) {
-            lp.glitchChar = characters.charAt(Math.floor(Math.random() * characters.length));
-            context.fillText(lp.glitchChar, x, y);
-            lp.glitchFrames--;
-            if (lp.glitchFrames === 0) lp.glitching = false;
-          } else {
-            context.fillText(lp.char, x, y);
-          }
-        }
-      });
-
-      // 🌈 Increment hue each frame
-      hue = (hue + 0.5) % 360;
-    }
-
-    setInterval(draw, 55);
-
-    // Resize handler
-    window.addEventListener('resize', () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    });
-  </script>
-  <script src="/public/js/index.js"></script>
+  <header>
+    <div class="center">
+      <a href="/public/html/about.html">
+        <img id="profile-image" src="/public/img/profile_image.jpg">
+      </a>
+      <div id="profile-name">SPC BAROI</div>
+      <div id="profile-description">IT SPECIALIST | U.S. ARMY</div>
+    </div>
+  </header>
+  <main>
+    <h2>Profession of Arms</h2>
+    <p>
+      I am an active duty, 25B IT Specialist, enlisted in the United States
+      Army, stationed at Joint Base Lewis McChord, in the 5th Battalion, 20th
+      Infantry Regiment.
+    </p>
+    <p>
+      I serve the people of the United States by providing mission
+      critical IT support to soldiers in my battalion. My responsibilites
+      include unclassified (NIPR) and classified (SIPR) systems management,
+      user account provisioning for the same, IT process development and
+      automation, equipment life cycle management, and Information System
+      Security Officer (ISSO) and Telephone Control Officer (TCO) services.
+    </p>
+    <h3>Certification</h3>
+    <p>
+      I hold the CompTIA Security+ (Sec+) certification and I am currently
+      working towards the Cisco Certified Network Associate (CCNA)
+      certification. Future goals include the CompTIA Cybersecurity Analyst
+      (CySA+) and Penetration Testing (PenTest+) certifications.
+    </p>
+    <p>
+      Click <a href="https://cp.certmetrics.com/comptia/en/public/verify/credential/b1263581b2bc42999eb20e9305a1839e"
+      target="_blank">here</a> to verify Sec+ certification. 
+    </p>
+    <h3>
+      Experience
+    </h3>
+    <p>
+      I joined the Army in 2023 and have over two years of experience working
+      in IT. Prior to enlistment, I worked for five years as a research
+      associate at California State University Fresno, Department of Chemistry
+      and for three years at the same teaching undergraduate chemistry.
+    </p>
+    <h3>Education</h3>
+    <p>
+      I received my Bachelor of Science in Environmental Science from the
+      University of California Riverside in 2010, and my Master of Science in
+      Chemistry from California State University Fresno in 2018.
+    </p>
+    <h3>Contribution</h3>
+    <p>
+      Listed below are my contribution to research publications. Click on each
+      publication to open in a new tab.
+    </p>
+    <a href="https://scholarworks.calstate.edu/concern/theses/zw12z682p"
+    target="_blank">
+      <p>
+        Baroi, J. A.
+        <i>Measurements of Quinones in Fine Particulate Matter</i>.
+        (Master's Thesis) California State University, Fresno 2018.
+      </p>
+    </a>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/27667959/" target="_blank">
+      <p>
+        Charrier, J. G.; McFall, A. S.; Vu, K. T.; Baroi, J.; Olea, C.; Hasson,
+        A.; Anastasio, C., A Bias in the “Mass Normalized” DTT Response – An
+        Effect of Non-Linear Concentration-Response Curves for Copper and
+        Manganese. Atmospheric Environment 2016, 144, 325-334.
+      </p>
+    </a>
+    <a href="https://ww2.arb.ca.gov/sites/default/files/classic/research/apr/past/10-314-1.pdf"
+    target="_blank">
+      <p>
+        Paulson, S. E.; Hasson, A. S.; Anastasio, C., Probing the intrinsic
+        ability of particles to generate reactive oxygen species and the
+        effects of physiologically relevant solutes. Air Resource Board
+        Contract no. 10-314 2016, Retrieved from:
+        https://www.arb.ca.gov/research/apr/past/10-314-1.pdf.
+      </p>
+    </a>
+    <a href="https://ww2.arb.ca.gov/sites/default/files/classic/research/apr/past/10-314-2.pdf"
+    target="_blank">
+      <p>
+        Paulson, S. E.; Hasson, A. S.; Anastasio, C., Probing the intrinsic
+        ability of particles to generate reactive oxygen species and the
+        effects of physiologically relevant solutes. Air Resource Board
+        Contract no. 10-314 2016, Retrieved from:
+        https://www.arb.ca.gov/research/apr/past/10-314-2.pdf.
+      </p>
+    </a>
+    <p style="text-align: center;"><a href="/">Return</a></p>
+  </main>
+  <footer>
+    <div class="center">
+      <small>
+        Copyright &#169; 2026 James A. Baroi. All rights reserved.
+      </div>
+    </small>
+  </footer>
+  <script src="/public/js/script.js"></script>
 </body>
 </html>
